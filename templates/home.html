@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>ホーム</h2>
+
+<h3>キャラクター一覧</h3>
+
+<ul>
+    {% for character in characters %}
+        <li>{{ character.name }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
