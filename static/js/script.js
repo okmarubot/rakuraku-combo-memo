@@ -1,55 +1,33 @@
+/* テストコード */
 console.log("script.js が読み込まれました");
+
+/* =========================
+   要素の取得
+========================= */
 
 const viewMode = document.getElementById("view-mode");
 const editMode = document.getElementById("edit-mode");
 
-const modeButtons = document.querySelectorAll(".mode-button");
+const editModeButton = document.getElementById("edit-mode-button");
+const completeModeButton = document.getElementById("complete-mode-button");
 
-modeButtons[0].addEventListener("click", function () {
-
-    syncDetailsState(viewDetails, editDetails);
-
-    viewMode.style.display = "none";
-    editMode.style.display = "block";
-
-});
-
-modeButtons[1].addEventListener("click", function () {
-
-    syncDetailsState(viewDetails, editDetails);
-
-    editMode.style.display = "none";
-    viewMode.style.display = "block";
-
-});
-
-let commandMode = true;
-
-const displayButtons = document.querySelectorAll(".display-button");
-
-displayButtons.forEach(button => {
-    button.addEventListener("click", function () {
-
-        commandMode = !commandMode;
-
-        const comboTexts = document.querySelectorAll(".combo-text");
-
-        comboTexts.forEach(combo => {
-
-            if (commandMode) {
-                combo.textContent = combo.dataset.command;
-            } else {
-                combo.textContent = combo.dataset.name;
-            }
-
-        })
-
-    })
-
-})
+const viewDisplayButton = document.getElementById("view-display-button");
+const editDisplayButton = document.getElementById("edit-display-button");
 
 const viewDetails = document.querySelectorAll("#view-mode details");
 const editDetails = document.querySelectorAll("#edit-mode details");
+
+const memoTextareas = document.querySelectorAll(".combo-memo-edit textarea");
+
+/* =========================
+   表示モード
+========================= */
+
+let commandMode = true;
+
+/* =========================
+   関数
+========================= */
 
 function syncDetailsState(source, target) {
 
@@ -61,7 +39,62 @@ function syncDetailsState(source, target) {
 
 }
 
-const memoTextareas = document.querySelectorAll(".combo-memo-edit textarea");
+function toggleDisplayMode() {
+
+    commandMode = !commandMode;
+
+    const comboTexts =
+        document.querySelectorAll(".combo-text");
+
+    comboTexts.forEach(combo => {
+
+        combo.textContent = commandMode
+            ? combo.dataset.command
+            : combo.dataset.name;
+
+    });
+
+}
+
+/* =========================
+   モード切替
+========================= */
+
+editModeButton.addEventListener("click", function () {
+
+    syncDetailsState(viewDetails, editDetails);
+
+    viewMode.style.display = "none";
+    editMode.style.display = "block";
+
+});
+
+completeModeButton.addEventListener("click", function () {
+
+    syncDetailsState(viewDetails, editDetails);
+
+    editMode.style.display = "none";
+    viewMode.style.display = "block";
+
+});
+
+/* =========================
+   表示切替
+========================= */
+
+viewDisplayButton.addEventListener(
+    "click",
+    toggleDisplayMode
+);
+
+editDisplayButton.addEventListener(
+    "click",
+    toggleDisplayMode
+);
+
+/* =========================
+   メモ欄
+========================= */
 
 memoTextareas.forEach(textarea => {
 
