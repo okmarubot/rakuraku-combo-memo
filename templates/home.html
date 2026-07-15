@@ -2,14 +2,26 @@
 
 {% block content %}
 
-<h2>ホーム</h2>
+<h2>ゲーム</h2>
 
-<h3>キャラクター一覧</h3>
+<div class="game-list">
+    <button>Street Fighter 6</button>
+</div>
 
-<ul>
+<h2>キャラクター</h2>
+
+<div class="character-list">
+
     {% for character in characters %}
-        <li>{{ character.name }}</li>
+        <div class="character-row">
+
+            <a href="/character/{{ character.id }}" class="character-link">
+                {{ character.name }}
+            </a>
+
+        </div>
     {% endfor %}
-</ul>
+
+</div>
 
 {% endblock %}

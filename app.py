@@ -22,6 +22,19 @@ def home():
         characters=characters
     )
 
+# キャラクター画面
+@app.route("/character/<character_id>")
+def character(character_id):
+    file_path = Path(f"data/sf6/characters/{character_id}.json")
+
+    with open(file_path, "r", encoding="utf-8") as file:
+        character = json.load(file)
+
+    return render_template(
+        "character.html",
+        character=character
+    )
+
 # 開発中のみ実行
 if __name__ == "__main__":
     app.run(debug=True)

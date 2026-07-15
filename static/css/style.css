@@ -1,3 +1,7 @@
+/* =========================
+　共通
+========================= */
+
 body {
     font-family: sans-serif;
     margin: 0;
@@ -11,4 +15,173 @@ header {
 
 main {
     padding: 20px;
+}
+
+button {
+    cursor: pointer;
+    padding: 6px 12px;
+    margin: 2px;
+}
+
+/* =========================
+　ホーム画面
+========================= */
+
+.character-list {
+    margin-top: 20px;
+}
+
+.character-row {
+    border-bottom: 1px solid #999;
+    padding: 10px 0;
+}
+
+.character-link {
+    display: block;
+    width: 30%;
+
+    color: black;
+    text-decoration: none;
+
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+.character-link:hover {
+    background-color: #f0f0f0;
+}
+
+/* =========================
+　キャラクター画面
+========================= */
+
+.toolbar {
+    margin-bottom: 20px;
+}
+
+.mode-divider {
+    margin: 30px 0;
+}
+
+.combo-container {
+    margin-top: 10px;
+}
+
+.main-group {
+    margin-bottom: 20px;
+}
+
+.sub-group {
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.main-group-title,
+.sub-group-title {
+    font-weight: bold;
+}
+
+/* =========================
+　コンボカード
+========================= */
+
+.combo-item {
+    margin-bottom: 8px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.combo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.combo-text {
+    flex: 1;
+}
+
+.combo-buttons {
+    display: flex;
+    gap: 4px;
+}
+
+/* =========================
+　メモ
+========================= */
+
+.combo-memo-view {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+    margin-top: 8px;
+}
+
+.memo-label {
+    flex-shrink: 0;
+    margin-right: 8px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.memo-text {
+    white-space: pre-wrap;
+    margin: 0;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.combo-memo-edit {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.combo-memo-edit label {
+    white-space: nowrap;
+}
+
+.combo-memo-edit textarea {
+    width: 100%;
+    max-width: 500px;
+    height: 1.5em;
+    resize: none;
+}
+
+/* =========================
+　ボタン
+========================= */
+
+/* モード */
+
+.mode-button,
+.display-button {
+    margin-right: 8px;
+}
+
+/* 編集 */
+
+.edit-button,
+.delete-button {
+    font-size: 12px;
+}
+
+/* 追加 */
+
+.add-combo-button{
+    margin-left: 20px;
+    margin-bottom: 8px;
+}
+
+.add-subheading-button{
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.add-heading-button{
+    margin-bottom: 10px;
 }

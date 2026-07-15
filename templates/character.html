@@ -1,0 +1,249 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>{{ character.name }}</h1>
+
+<!-- ==========================
+    閲覧モード
+========================== -->
+
+<div id="view-mode">
+
+    <!-- 開発確認用 -->
+    <h2>【閲覧モード】</h2>
+
+    <!-- ==========================
+        ツールバー
+    ========================== -->
+
+    <div class="toolbar">
+
+        <button class="mode-button">✏ 編集</button>
+        <button class="display-button">⇔ 表示切替</button>
+
+    </div>
+
+    <!-- コンボリスト -->
+
+    <h2>コンボリスト</h2>
+
+    <div class="combo-container">
+
+        <!-- メイン見出し -->
+
+        <details class="main-group" open>
+
+            <summary class="main-group-title">
+                中攻撃始動（2）
+            </summary>
+
+            <!-- 中見出し -->
+
+            <details class="sub-group" open>
+
+                <summary class="sub-group-title">
+                    しゃがみ中P始動（2）
+                </summary>
+
+                <!-- コンボ -->
+
+                <div class="combo-list">
+
+                    <!-- コンボ１ -->
+
+                    <div class="combo-item">
+
+                        <div class="combo-header">
+
+                            <span class="combo-text">
+                                ↓中P ⏵ ↓↘→中P
+                            </span>
+
+                        </div>
+
+                        <!-- 閲覧モード メモ -->
+
+                        <div class="combo-memo-view">
+
+                            <span class="memo-label">メモ:</span>
+                            <span class="memo-text">ノーゲージ。<br>ヒット確認必須。</span>
+
+                        </div>
+
+                    </div>
+
+                    <!-- コンボ２ -->
+
+                    <div class="combo-item">
+
+                        <div class="combo-header">
+
+                            <span class="combo-text">
+                                ↓中P ⏵ CDR ⏵ ↓強P ⏵ ↓↘→強P ⏵ ↓↘→中K ⏵ ↓↓強P
+                            </span>
+
+                        </div>
+
+                        <!-- 閲覧モード メモ -->
+
+                        <div class="combo-memo-view">
+
+                            <span class="memo-label">メモ:</span>
+                            <span class="memo-text">3ゲージ。<br>画面中央限定。</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </details>
+
+        </details>
+
+    </div>
+
+    <hr class="mode-divider">
+
+</div>
+
+<!-- ==========================
+    編集モード
+========================== -->
+
+<div id="edit-mode">
+
+    <!-- 開発確認用 -->
+    <h2>【編集モード】</h2>
+
+    <!-- ==========================
+        ツールバー
+    ========================== -->
+
+    <div class="toolbar">
+
+        <button class="mode-button">✓ 完了</button>
+        <button class="display-button">⇔ 表示切替</button>
+
+    </div>
+
+    <!-- コンボリスト -->
+
+    <h2>コンボリスト</h2>
+
+    <div class="combo-container">
+
+        <!-- メイン見出し -->
+
+        <details class="main-group" open>
+
+            <summary class="main-group-title">
+                中攻撃始動（2）
+                <button class="edit-button">✏</button>
+                <button class="delete-button">🗑</button>
+            </summary>
+
+            <div>
+
+                <!-- 中見出し -->
+
+                <details class="sub-group" open>
+                    
+                    <summary class="sub-group-title">
+                        しゃがみ中P始動（2）
+                        <button class="edit-button">✏</button>
+                        <button class="delete-button">🗑</button>
+                    </summary>
+
+                    <div>
+
+                        <!-- コンボ -->
+
+                        <div class="combo-list">
+
+                            <!-- コンボ１ -->
+
+                            <div class="combo-item">
+
+                                <div class="combo-header">
+
+                                    <span class="combo-text">
+                                        ↓中P ⏵ ↓↘→中P
+                                    </span>
+
+                                    <div class="combo-buttons">
+                                        <button class="edit-button">✏</button>
+                                        <button class="delete-button">🗑</button>
+                                    </div>
+
+                                </div>
+
+                                <!-- 編集モード メモ -->
+
+                                <div class="combo-memo-edit">
+                                    <label>メモ:</label>
+                                    <textarea rows="1" placeholder="コンボのコツや注意点を入力"></textarea>
+                                </div>
+
+
+                            </div>
+
+                            <!-- コンボ２ -->
+
+                            <div class="combo-item">
+
+                                <div class="combo-header">
+
+                                    <span class="combo-text">
+                                        ↓中P ⏵ CDR ⏵ ↓強P ⏵ ↓↘→強P ⏵ ↓↘→中K ⏵ ↓↓強P
+                                    </span>
+                                    
+                                    <div class="combo-buttons">
+                                        <button class="edit-button">✏</button>
+                                        <button class="delete-button">🗑</button>
+                                    </div>
+
+                                </div>
+
+                                <!-- 編集モード メモ -->
+
+                                <div class="combo-memo-edit">
+                                    <label>メモ:</label>
+                                    <textarea rows="1" placeholder="コンボのコツや注意点を入力"></textarea>
+                                </div>  
+
+                            </div>
+
+                        </div>
+
+                        <!-- コンボ追加 -->
+
+                        <button class="add-combo-button">＋ コンボ追加</button>
+
+                    </div>
+
+                </details>
+
+                <!-- 中見出し追加 -->
+
+                <button class="add-subheading-button">＋ 中見出し追加</button>
+            </div>
+
+        </details>
+
+    </div>
+
+    <!-- 大見出し追加 -->
+
+    <button class="add-heading-button">＋ 大見出し追加</button>
+
+    <hr class="mode-divider">
+
+</div>
+
+<!-- 戻る -->
+
+<a href="/">← ホームへ戻る</a>
+
+{% endblock %}
