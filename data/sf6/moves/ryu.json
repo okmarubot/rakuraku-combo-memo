@@ -1,0 +1,52 @@
+[
+    {
+        "id": "236lp",
+        "command": "↓↘→弱P",
+        "name": "【弱】弱波動拳"
+    },
+    {
+        "id": "236mp",
+        "command": "↓↘→中P",
+        "name": "【中】波動拳"
+    },
+    {
+        "id": "236hp",
+        "command": "↓↘→強P",
+        "name": "【強】波動拳"
+    },
+    {
+        "id": "623lp",
+        "command": "→↓↘弱P",
+        "name": "【弱】昇龍拳"
+    },
+    {
+        "id": "214lk",
+        "command": "↓↙←弱K",
+        "name": "【弱】竜巻旋風脚"
+    },
+    {
+        "id": "214mk",
+        "command": "↓↙←中K",
+        "name": "【中】竜巻旋風脚"
+    },
+    {
+        "id": "22p",
+        "command": "↓↓P",
+        "name": "電刃錬気"
+    },
+    {
+        "id": "sa1",
+        "command": "↓↘→↓↘→P",
+        "name": "SA1"
+    },
+    {
+        "id": "sa2",
+        "command": "↓↙←↓↙←P",
+        "name": "SA2"
+    },
+    {
+        "id": "sa3",
+        "command": "↓↘→↓↘→K",
+        "name": "SA3"
+    }
+]

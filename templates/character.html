@@ -55,7 +55,7 @@
 
                 <div class="combo-list">
 
-                    <!-- コンボ１ -->
+                    {% for combo in combos %}
 
                     <div class="combo-item">
 
@@ -63,10 +63,10 @@
 
                             <span 
                                 class="combo-text" 
-                                data-command="↓中P ▶ ↓↘→中P" 
-                                data-name="しゃがみ中P ▶ 中ストリボーグ"
+                                data-command="{{ combo.command }}" 
+                                data-name="{{ combo.name }}"
                             >
-                                ↓中P ⏵ ↓↘→中P
+                                {{ combo.command }}
                             </span>
 
                         </div>
@@ -76,38 +76,13 @@
                         <div class="combo-memo-view">
 
                             <span class="memo-label">メモ:</span>
-                            <span class="memo-text">ノーゲージ。<br>ヒット確認必須。</span>
+                            <span class="memo-text">{{ combo.memo }}</span>
 
                         </div>
 
                     </div>
 
-                    <!-- コンボ２ -->
-
-                    <div class="combo-item">
-
-                        <div class="combo-header">
-
-                            <span 
-                                class="combo-text"
-                                data-command="↓中P ▶ CDR ▶ ↓強P ▶ ↓↘→強P ▶ ↓↘→中K ▶ ↓↓強P"
-                                data-name="しゃがみ中P ▶ CDR ▶ しゃがみ強P ▶ 強ストリボーグ ▶ 中トルバラン ▶ 強トリグラフ"
-                            >
-                                ↓中P ⏵ CDR ⏵ ↓強P ⏵ ↓↘→強P ⏵ ↓↘→中K ⏵ ↓↓強P
-                            </span>
-
-                        </div>
-
-                        <!-- 閲覧モード メモ -->
-
-                        <div class="combo-memo-view">
-
-                            <span class="memo-label">メモ:</span>
-                            <span class="memo-text">3ゲージ。<br>画面中央限定。</span>
-
-                        </div>
-
-                    </div>
+                    {% endfor %}
 
                 </div>
 
@@ -180,51 +155,20 @@
 
                         <div class="combo-list">
 
-                            <!-- コンボ１ -->
+                            {% for combo in combos %}
 
                             <div class="combo-item">
 
                                 <div class="combo-header">
 
-                                    <span 
-                                        class="combo-text" 
-                                        data-command="↓中P ▶ ↓↘→中P" 
-                                        data-name="しゃがみ中P ▶ 中ストリボーグ"
-                                    >
-                                        ↓中P ⏵ ↓↘→中P
-                                    </span>
-
-                                    <div class="combo-buttons">
-                                        <button class="edit-button">✏</button>
-                                        <button class="delete-button">🗑</button>
-                                    </div>
-
-                                </div>
-
-                                <!-- 編集モード メモ -->
-
-                                <div class="combo-memo-edit">
-                                    <label>メモ:</label>
-                                    <textarea rows="1" placeholder="コンボのコツや注意点を入力"></textarea>
-                                </div>
-
-
-                            </div>
-
-                            <!-- コンボ２ -->
-
-                            <div class="combo-item">
-
-                                <div class="combo-header">
-
-                                    <span 
+                                    <span
                                         class="combo-text"
-                                        data-command="↓中P ▶ CDR ▶ ↓強P ▶ ↓↘→強P ▶ ↓↘→中K ▶ ↓↓強P"
-                                        data-name="しゃがみ中P ▶ CDR ▶ しゃがみ強P ▶ 強ストリボーグ ▶ 中トルバラン ▶ 強トリグラフ"
+                                        data-command="{{ combo.command }}"
+                                        data-name="{{ combo.name }}"
                                     >
-                                        ↓中P ⏵ CDR ⏵ ↓強P ⏵ ↓↘→強P ⏵ ↓↘→中K ⏵ ↓↓強P
+                                        {{ combo.command }}
                                     </span>
-                                    
+
                                     <div class="combo-buttons">
                                         <button class="edit-button">✏</button>
                                         <button class="delete-button">🗑</button>
@@ -235,11 +179,19 @@
                                 <!-- 編集モード メモ -->
 
                                 <div class="combo-memo-edit">
+
                                     <label>メモ:</label>
-                                    <textarea rows="1" placeholder="コンボのコツや注意点を入力"></textarea>
-                                </div>  
+
+                                    <textarea
+                                        rows="1"
+                                        placeholder="コンボのコツや注意点を入力"
+                                    >{{ combo.memo }}</textarea>
+
+                                </div>
 
                             </div>
+
+                            {% endfor %}
 
                         </div>
 

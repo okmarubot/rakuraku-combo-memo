@@ -56,6 +56,14 @@ function toggleDisplayMode() {
 
 }
 
+function adjustTextareaHeight(textarea) {
+
+    textarea.style.height = "auto";
+
+    textarea.style.height = textarea.scrollHeight + "px";
+
+}
+
 /* =========================
    モード切替
 ========================= */
@@ -66,12 +74,14 @@ editModeButton.addEventListener("click", function () {
 
     viewMode.style.display = "none";
     editMode.style.display = "block";
+    
+    memoTextareas.forEach(adjustTextareaHeight);
 
 });
 
 completeModeButton.addEventListener("click", function () {
 
-    syncDetailsState(viewDetails, editDetails);
+    syncDetailsState(editDetails, viewDetails);
 
     editMode.style.display = "none";
     viewMode.style.display = "block";
@@ -100,9 +110,7 @@ memoTextareas.forEach(textarea => {
 
     textarea.addEventListener("input", function () {
 
-        this.style.height = "auto";
-
-        this.style.height = this.scrollHeight + "px";
+        adjustTextareaHeight(this);
 
     });
 

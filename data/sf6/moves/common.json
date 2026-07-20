@@ -1,0 +1,62 @@
+[
+    {
+        "id": "5lp",
+        "command": "弱P",
+        "name": "立ち弱P"
+    },
+    {
+        "id": "5mp",
+        "command": "中P",
+        "name": "立ち中P"
+    },
+    {
+        "id": "2lp",
+        "command": "↓弱P",
+        "name": "しゃがみ弱P"
+    },
+    {
+        "id": "2mp",
+        "command": "↓中P",
+        "name": "しゃがみ中P"
+    },
+    {
+        "id": "2hp",
+        "command": "↓強P",
+        "name": "しゃがみ強P"
+    },
+    {
+        "id": "jlp",
+        "command": "J弱P",
+        "name": "ジャンプ弱P"
+    },
+    {
+        "id": "dr",
+        "command": "DR",
+        "name": "DR"
+    },
+    {
+        "id": "cdr",
+        "command": "CDR",
+        "name": "CDR"
+    },
+    {
+        "id": "di",
+        "command": "DI",
+        "name": "ドライブインパクト"
+    },
+    {
+        "id": "pr",
+        "command": "",
+        "name": "ドライブパリィ"
+    },
+    {
+        "id": "throw_f",
+        "command": "前投げ",
+        "name": "前投げ"
+    },
+    {
+        "id": "throw_b",
+        "command": "後ろ投げ",
+        "name": "後ろ投げ"
+    }
+]
