@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import json
 from pathlib import Path
 
@@ -6,7 +6,9 @@ from pathlib import Path
 app = Flask(__name__)
 
 
+# ==========================
 # ホーム画面
+# ==========================
 @app.route("/")
 def home():
     character_path = Path("data/sf6/characters")
@@ -23,7 +25,9 @@ def home():
     )
 
 
-# 一旦関数をここに書く
+# ==========================
+# 共通関数
+# ==========================
 def build_command_text(moves, common_moves, character_moves):
 
     command_list = []
@@ -42,6 +46,7 @@ def build_command_text(moves, common_moves, character_moves):
                 break
 
     return " ⏵ ".join(command_list)
+
 
 def build_name_text(moves, common_moves, character_moves):
 
@@ -63,61 +68,84 @@ def build_name_text(moves, common_moves, character_moves):
     return " ⏵ ".join(name_list)
 
 
+# ==========================
 # キャラクター画面
-@app.route("/character/<character_id>")
+# ==========================
+@app.route(
+        "/character/<character_id>",
+        methods=["GET","POST"]
+)
+
 def character(character_id):
 
-    # キャラクターコンボデータ
+    # ==========================
+    # POST
+    # ==========================
+    # POST処理
+    if request.method == "POST":
+
+        print("POSTを受信しました")
+
+    # ==========================
+    # データ読み込み
+    # ==========================
+    # キャラクター
     character_path = Path(f"data/sf6/characters/{character_id}.json")
 
     with open(character_path, "r", encoding="utf-8") as file:
         character = json.load(file)
 
-    # 共通技データ
+    # 共通技
     common_moves_path = Path("data/sf6/moves/common.json")
 
     with open(common_moves_path, "r", encoding="utf-8") as file:
         common_moves = json.load(file)
 
-    # キャラクター固有技データ
+    # キャラクター固有技
     character_moves_path = Path(f"data/sf6/moves/{character_id}.json")
 
     with open(character_moves_path, "r", encoding="utf-8") as file:
         character_moves = json.load(file)
 
-    # コンボデータ
-    combo_path = Path(f"data/sf6/combos/{character_id}.json")
+    # コンボ
+    combos_path = Path(f"data/sf6/combos/{character_id}.json")
 
-    with open(combo_path, "r", encoding="utf-8") as file:
+    with open(combos_path, "r", encoding="utf-8") as file:
         combos = json.load(file)
 
-    # コマンド表示文字列を作成
-    for combo in combos:
+    # ==========================
+    # コンボ表示文字列作成
+    # ==========================    
+    for group in combos["groups"]:
 
-        combo["command"] = build_command_text(
-            combo["moves"],
-            common_moves,
-            character_moves
-        )
+        for subgroup in group["subgroups"]:
 
-    # 技名表示文字列を作成
-    for combo in combos:
+            for combo in subgroup["combos"]:
 
-        combo["name"] = build_name_text(
-            combo["moves"],
-            common_moves,
-            character_moves
-        )
+                combo["command"] = build_command_text(
+                    combo["moves"],
+                    common_moves,
+                    character_moves
+                )
 
+                combo["name"] = build_name_text(
+                    combo["moves"],
+                    common_moves,
+                    character_moves
+                )
+
+    # ==========================
+    # 画面表示
+    # ==========================
     return render_template(
         "character.html",
         character=character,
-        common_moves=common_moves,
-        character_moves=character_moves,
         combos=combos
     )
 
 
+# ==========================
 # 開発中のみ実行
+# ==========================
 if __name__ == "__main__":
     app.run(debug=True)
