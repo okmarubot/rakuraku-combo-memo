@@ -140,9 +140,10 @@ def character(character_id):
     return render_template(
         "character.html",
         character=character,
-        combos=combos
+        combos=combos,
+        common_moves=common_moves,
+        character_moves=character_moves
     )
-
 
 # ==========================
 # 開発中のみ実行

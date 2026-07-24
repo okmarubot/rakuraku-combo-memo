@@ -133,14 +133,9 @@ button {
 .combo-main {
 
     display: flex;
+    justify-content: flex-start;
     align-items: center;
     gap: 8px;
-
-}
-
-.combo-view {
-
-    display: block;
 
 }
 
@@ -219,6 +214,56 @@ button {
 }
 
 /* =========================
+　技一覧パネル
+========================= */
+
+/* パネル */
+
+#move-selector-panel {
+
+    display: none;
+
+    margin-top: 20px;
+    padding: 16px;
+
+    border-top: 1px solid #ccc;
+
+    background-color: #fff;
+
+}
+
+/* パネルヘッダー */
+
+.move-selector-header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 12px;
+
+}
+
+/* タブ */
+
+.move-selector-tabs {
+
+    display: flex;
+    gap: 8px;
+
+    margin-bottom: 12px;
+
+}
+
+/* 技一覧 */
+
+.move-selector-list {
+
+    min-height: 200px;
+
+}
+
+/* =========================
 　ボタン
 ========================= */
 
@@ -236,7 +281,8 @@ button {
 .edit-button,
 .delete-button,
 .combo-complete-button,
-.combo-undo-button {
+.combo-undo-button,
+.combo-cancel-button {
 
     flex: 1;
     font-size: 12px;

@@ -65,8 +65,10 @@
 
                     {% for combo in subgroup.combos %}
 
-                    <div class="combo-item">
-
+                    <div
+                        class="combo-item"
+                        data-moves='{{ combo.moves | tojson }}'
+                    >
                         <!-- コンボヘッダー -->
 
                         <div class="combo-header">
@@ -182,8 +184,10 @@
 
                     {% for combo in subgroup.combos %}
 
-                    <div class="combo-item">
-
+                    <div
+                        class="combo-item"
+                        data-moves='{{ combo.moves | tojson }}'
+                    >
                         <!-- ==========================
                             コンボカード（通常）
                         ========================== -->
@@ -253,6 +257,8 @@
                                     <button class="combo-undo-button">↩</button>
                                     <!-- 編集完了 -->
                                     <button class="combo-complete-button">✓</button>
+                                    <!-- 編集キャンセル -->
+                                    <button class="combo-cancel-button">×</button>
 
                                 </div>
 
@@ -307,6 +313,40 @@
 
     </div>
 
+    <!-- ==========================
+        技一覧パネル
+    ========================== -->
+
+    <div id="move-selector-panel">
+
+        <div class="move-selector-header">
+
+            <span>技一覧</span>
+
+            <button id="close-move-selector-button">
+                ×
+            </button>
+
+        </div>
+
+        <div class="move-selector-tabs">
+
+            <button>通常技</button>
+            <button>特殊技</button>
+            <button>必殺技</button>
+            <button>SA</button>
+            <button>共通</button>
+
+        </div>
+
+        <div class="move-selector-list">
+
+            <!-- JavaScriptで技一覧を表示 -->
+
+        </div>
+
+    </div>
+
     <hr class="mode-divider">
 
 </div>
@@ -314,5 +354,18 @@
 <!-- 戻る -->
 
 <a href="/">← ホームへ戻る</a>
+
+<!-- 技データ -->
+
+<script>
+
+const moveData = [
+    ...{{ common_moves | tojson }},
+    ...{{ character_moves | tojson }}
+];
+
+</script>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
 
 {% endblock %}
