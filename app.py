@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 import json
 from pathlib import Path
 
@@ -84,8 +84,41 @@ def character(character_id):
     # POST処理
     if request.method == "POST":
 
-        print("POSTを受信しました")
+        data = request.get_json()
 
+        print("POSTを受信しました")
+        print(data)
+
+        combos_path = Path(f"data/sf6/combos/{character_id}.json")
+
+        with open(combos_path, "r", encoding="utf-8") as file:
+            combos = json.load(file)
+
+        found_combo = None
+
+        for group in combos["groups"]:
+            for subgroup in group["subgroups"]:
+                for combo in subgroup["combos"]:
+
+                    if combo["id"] == data["combo_id"]:
+                        found_combo = combo
+                        break
+        
+        found_combo["moves"] = data["moves"]
+
+        print(found_combo)
+
+        with open(combos_path, "w", encoding="utf-8") as file:
+
+            json.dump(
+                combos,
+                file,
+                ensure_ascii=False,
+                indent=4
+            )
+
+        return jsonify({"success": True})
+    
     # ==========================
     # データ読み込み
     # ==========================

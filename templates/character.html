@@ -67,7 +67,9 @@
 
                     <div
                         class="combo-item"
+                        data-combo-id="{{ combo.id }}"
                         data-moves='{{ combo.moves | tojson }}'
+                        data-memo="{{ combo.memo }}"
                     >
                         <!-- コンボヘッダー -->
 
@@ -186,7 +188,9 @@
 
                     <div
                         class="combo-item"
+                        data-combo-id="{{ combo.id }}"
                         data-moves='{{ combo.moves | tojson }}'
+                        data-memo="{{ combo.memo }}"
                     >
                         <!-- ==========================
                             コンボカード（通常）
@@ -331,11 +335,12 @@
 
         <div class="move-selector-tabs">
 
-            <button>通常技</button>
-            <button>特殊技</button>
-            <button>必殺技</button>
-            <button>SA</button>
-            <button>共通</button>
+            <button data-category="normal">通常技</button>
+            <button data-category="special">特殊技</button>
+            <button data-category="special_move">必殺技</button>
+            <button data-category="jump">ジャンプ</button>
+            <button data-category="sa">SA</button>
+            <button data-category="common">共通</button>
 
         </div>
 

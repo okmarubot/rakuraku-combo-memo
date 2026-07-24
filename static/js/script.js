@@ -43,22 +43,26 @@ const addMoveButtons = document.querySelectorAll(".add-move-button");
 const moveSelectorPanel = document.getElementById("move-selector-panel");
 const moveSelectorList = document.querySelector(".move-selector-list");
 const closeMoveSelectorButton = document.getElementById("close-move-selector-button");
-
+const moveCategoryButtons = document.querySelectorAll(".move-selector-tabs button");
 
 /* =========================
    表示モード
 ========================= */
 
+// 表記モードの初期表示
 let commandMode = true;
 
 // 現在編集中のコンボカード
-let currentComboItem = null;
+let editingComboItem = null;
 
 // 編集中の状態
 let currentMoves = [];
 
 // 編集開始時の状態
 let originalMoves = [];
+
+// 技一覧タブの初期表示
+let currentCategory = "normal";
 
 /* =========================
    関数
@@ -108,15 +112,21 @@ function adjustTextareaHeight(textarea) {
 function startComboEdit(comboItem) {
 
     // どのコンボへ技を追加するか覚えておく
-    currentComboItem = comboItem
+    editingComboItem = comboItem;
 
     currentMoves = JSON.parse(comboItem.dataset.moves);
 
     originalMoves = [...currentMoves];
 
+    currentMemo = comboItem.dataset.memo;
+
+    originalMemo = currentMemo;
+
     comboItem.classList.add("editing");
 
     const textarea = comboItem.querySelector("textarea");
+
+    textarea.value = currentMemo;
 
     adjustTextareaHeight(textarea);
 
@@ -124,31 +134,51 @@ function startComboEdit(comboItem) {
 
 function undoLastMove() {
 
+    if (currentMoves.length === 0) return;
+
     currentMoves.pop();
 
-    currentComboItem.dataset.moves = JSON.stringify(currentMoves);
+    editingComboItem.dataset.moves = JSON.stringify(currentMoves);
 
     updateComboDisplay();
 
 }
 
-function finishComboEdit(comboItem) {
+function finishComboEdit() {
 
-    originalMoves = [...currentMoves];
+    console.log(currentMoves);
 
-    comboItem.classList.remove("editing");
+    fetch(window.location.pathname, {
+
+        method: "POST",
+
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify({
+
+            combo_id: editingComboItem.dataset.comboId,
+
+            moves: currentMoves
+
+        })
+
+    });
+
+    editingComboItem.classList.remove("editing");
 
     closeMoveSelectorPanel();
 
 }
 
-function cancelComboEdit(comboItem) {
+function cancelComboEdit() {
 
     currentMoves = [...originalMoves];
 
     updateComboDisplay();
 
-    comboItem.classList.remove("editing");
+    editingComboItem.classList.remove("editing");
 
     closeMoveSelectorPanel();
 
@@ -156,7 +186,7 @@ function cancelComboEdit(comboItem) {
 
 /* 技一覧パネル */
 
-function openMoveSelectorPanel(comboItem) {
+function openMoveSelectorPanel() {
 
     renderMoveSelectorList();
 
@@ -165,8 +195,6 @@ function openMoveSelectorPanel(comboItem) {
 }
 
 function closeMoveSelectorPanel() {
-
-    currentComboItem = null;
 
     moveSelectorPanel.style.display = "none";
 
@@ -184,7 +212,9 @@ function renderMoveSelectorList() {
 
     moveSelectorList.innerHTML = "";
 
-    moveData.forEach(move => {
+    moveData
+        .filter(move => move.category === currentCategory)
+        .forEach(move => {
 
         const button = document.createElement("button");
 
@@ -202,25 +232,49 @@ function renderMoveSelectorList() {
 
 }
 
-function updateComboDisplay() {
+function buildCommandText(moves) {
 
-    currentComboItem.dataset.moves = JSON.stringify(currentMoves);
-
-    const comboTexts = currentComboItem.querySelectorAll(".combo-text");
-
-    const displayText = currentMoves.map(moveId => {
+    return moves.map(moveId => {
 
         const move = moveData.find(move => move.id === moveId);
 
-        return commandMode
-            ? move.command
-            : move.name;
+        return move.command;
 
-    });
+    }).join(" ⏵ ");
+
+}
+
+function buildNameText(moves) {
+
+    return moves.map(moveId => {
+
+        const move = moveData.find(move => move.id === moveId);
+
+        return move.name;
+
+    }).join(" ⏵ ");
+
+}
+
+function updateComboDisplay() {
+
+    editingComboItem.dataset.moves = JSON.stringify(currentMoves);
+
+    const comboTexts = editingComboItem.querySelectorAll(".combo-text");
+
+    const commandText = buildCommandText(currentMoves);
+
+    const nameText = buildNameText(currentMoves);
 
     comboTexts.forEach(comboText => {
 
-        comboText.textContent = displayText.join(" ⏵ ");
+        comboText.dataset.command = commandText;
+
+        comboText.dataset.name = nameText;
+
+        comboText.textContent = commandMode
+            ? commandText
+            : nameText;
 
     });
 
@@ -316,9 +370,7 @@ comboCompleteButtons.forEach(button => {
 
     button.addEventListener("click", function () {
 
-        const comboItem = this.closest(".combo-item");
-
-        finishComboEdit(comboItem);
+        finishComboEdit();
 
     });
 
@@ -330,9 +382,7 @@ comboCancelButtons.forEach(button => {
 
     button.addEventListener("click", function () {
 
-        const comboItem = this.closest(".combo-item");
-
-        cancelComboEdit(comboItem);
+        cancelComboEdit();
 
     });
 
@@ -348,9 +398,7 @@ addMoveButtons.forEach(button => {
 
     button.addEventListener("click", function () {
 
-        const comboItem = this.closest(".combo-item");
-
-        openMoveSelectorPanel(comboItem);
+        openMoveSelectorPanel();
 
     });
 
@@ -362,3 +410,17 @@ closeMoveSelectorButton.addEventListener(
     "click",
     closeMoveSelectorPanel
 );
+
+/* 技一覧タブ */
+
+moveCategoryButtons.forEach(button => {
+
+    button.addEventListener("click", function () {
+
+        currentCategory = this.dataset.category;
+
+        renderMoveSelectorList();
+
+    });
+
+});
