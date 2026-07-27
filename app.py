@@ -100,11 +100,12 @@ def character(character_id):
             for subgroup in group["subgroups"]:
                 for combo in subgroup["combos"]:
 
-                    if combo["id"] == data["combo_id"]:
+                    if combo["id"] == data["id"]:
                         found_combo = combo
                         break
         
         found_combo["moves"] = data["moves"]
+        found_combo["memo"] = data["memo"]
 
         print(found_combo)
 

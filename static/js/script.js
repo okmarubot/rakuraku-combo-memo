@@ -146,6 +146,10 @@ function undoLastMove() {
 
 function finishComboEdit() {
 
+    const textarea = editingComboItem.querySelector("textarea");
+
+    currentMemo = textarea.value;
+
     console.log(currentMoves);
 
     fetch(window.location.pathname, {
@@ -158,13 +162,20 @@ function finishComboEdit() {
 
         body: JSON.stringify({
 
-            combo_id: editingComboItem.dataset.comboId,
+            id: editingComboItem.dataset.comboId,
 
-            moves: currentMoves
+            moves: currentMoves,
+
+            memo: textarea.value
 
         })
 
     });
+
+    editingComboItem.dataset.memo = currentMemo;
+
+    const memoText = editingComboItem.querySelector(".memo-text");
+    memoText.textContent = currentMemo;
 
     editingComboItem.classList.remove("editing");
 
@@ -175,6 +186,11 @@ function finishComboEdit() {
 function cancelComboEdit() {
 
     currentMoves = [...originalMoves];
+
+    editingComboItem.dataset.memo = originalMemo;
+
+    const memoText = editingComboItem.querySelector(".memo-text");
+    memoText.textContent = originalMemo;
 
     updateComboDisplay();
 
@@ -232,25 +248,13 @@ function renderMoveSelectorList() {
 
 }
 
-function buildCommandText(moves) {
+function buildComboText(moves, type) {
 
     return moves.map(moveId => {
 
         const move = moveData.find(move => move.id === moveId);
 
-        return move.command;
-
-    }).join(" ⏵ ");
-
-}
-
-function buildNameText(moves) {
-
-    return moves.map(moveId => {
-
-        const move = moveData.find(move => move.id === moveId);
-
-        return move.name;
+        return move[type];
 
     }).join(" ⏵ ");
 
@@ -262,9 +266,15 @@ function updateComboDisplay() {
 
     const comboTexts = editingComboItem.querySelectorAll(".combo-text");
 
-    const commandText = buildCommandText(currentMoves);
+    const comboId = editingComboItem.dataset.comboId;
 
-    const nameText = buildNameText(currentMoves);
+    const viewComboItem = document.querySelector(
+        '#view-mode .combo-item[data-combo-id="' + comboId + '"]'
+    );
+
+    const commandText = buildComboText(currentMoves, "command");
+
+    const nameText = buildComboText(currentMoves, "name");
 
     comboTexts.forEach(comboText => {
 
@@ -277,6 +287,26 @@ function updateComboDisplay() {
             : nameText;
 
     });
+
+    if (viewComboItem) {
+
+        const viewComboText = viewComboItem.querySelector(".combo-text");
+
+        viewComboText.dataset.command = commandText;
+        viewComboText.dataset.name = nameText;
+
+        viewComboText.textContent = commandMode
+            ? commandText
+            : nameText;
+
+        const viewMemoText = viewComboItem.querySelector(".memo-text");
+
+        viewMemoText.textContent = currentMemo;
+
+        viewComboItem.dataset.memo = currentMemo;
+        viewComboItem.dataset.moves = JSON.stringify(currentMoves);
+
+    }
 
 }
 
