@@ -71,7 +71,10 @@ def build_name_text(moves, common_moves, character_moves):
 # ==========================
 # キャラクター画面
 # ==========================
+
+# コンボ追加
 @app.route("/character/<character_id>/new-combo", methods=["POST"])
+
 def new_combo(character_id):
 
     combos_path = Path(f"data/sf6/combos/{character_id}.json")
@@ -113,6 +116,48 @@ def new_combo(character_id):
 
     return jsonify(new_combo)
 
+# コンボ削除
+@app.route(
+    "/character/<character_id>/delete-combo",
+    methods=["POST"]
+)
+
+def delete_combo(character_id):
+
+    data = request.get_json()
+
+    combos_path = Path(f"data/sf6/combos/{character_id}.json")
+
+    with open(combos_path, "r", encoding="utf-8") as file:
+        combos = json.load(file)
+
+    for group in combos["groups"]:
+        for subgroup in group["subgroups"]:
+            
+            subgroup["combos"] = [
+
+                combo
+                for combo in subgroup["combos"]
+                if combo["id"] != data["id"]
+
+            ]
+
+    with open(combos_path, "w", encoding="utf-8") as file:
+
+        json.dump(
+            combos,
+            file,
+            ensure_ascii=False,
+            indent=4
+        )
+
+    return jsonify({
+
+        "success": True
+
+    })
+
+# コンボ編集
 @app.route(
         "/character/<character_id>",
         methods=["GET","POST"]

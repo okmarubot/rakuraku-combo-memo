@@ -114,6 +114,7 @@ function adjustTextareaHeight(textarea) {
 
 /* コンボ編集 */
 
+// コンボ編集開始
 function startComboEdit(comboItem) {
 
     // どのコンボへ技を追加するか覚えておく
@@ -137,6 +138,57 @@ function startComboEdit(comboItem) {
 
 }
 
+// コンボ削除
+async function deleteCombo(comboItem) {
+
+    const comboId = comboItem.dataset.comboId;
+
+    const response = await fetch(
+        window.location.pathname + "/delete-combo",
+        {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+
+                id: comboId
+
+            })
+
+        }
+    );
+
+    const result = await response.json();
+
+    if (!result.success) {
+
+        alert("削除に失敗しました。");
+
+        return;
+
+    }
+
+    // 編集モード側
+    comboItem.remove();
+
+    // 閲覧モード側
+    const viewComboItem = document.querySelector(
+        `#view-mode .combo-item[data-combo-id="${comboId}"]`
+    );
+
+    if (viewComboItem) {
+
+        viewComboItem.remove();
+
+    }
+
+}
+
+// Undo
 function undoLastMove() {
 
     if (currentMoves.length === 0) return;
@@ -149,6 +201,7 @@ function undoLastMove() {
 
 }
 
+// 編集完了
 function finishComboEdit() {
 
     const textarea = editingComboItem.querySelector("textarea");
@@ -224,6 +277,7 @@ function finishComboEdit() {
 
 }
 
+// 編集キャンセル
 function cancelComboEdit() {
 
     currentMoves = [...originalMoves];
@@ -241,6 +295,7 @@ function cancelComboEdit() {
 
 }
 
+// コンボ表示更新
 function updateComboDisplay() {
 
     editingComboItem.dataset.moves = JSON.stringify(currentMoves);
@@ -291,6 +346,7 @@ function updateComboDisplay() {
 
 }
 
+// コンボ追加
 async function createNewCombo() {
 
     const response = await fetch(
@@ -312,6 +368,7 @@ async function createNewCombo() {
 
 }
 
+// 閲覧モードにコンボカードを追加
 function addViewComboCard(newCombo) {
 
     const comboLists = document.querySelectorAll("#view-mode .combo-list");
@@ -324,6 +381,7 @@ function addViewComboCard(newCombo) {
 
 }
 
+// 編集モードにコンボカードを追加
 function addEditComboCard(combo) {
 
     const comboList = document.querySelector("#edit-mode .combo-list");
@@ -340,6 +398,7 @@ function addEditComboCard(combo) {
 
 }
 
+// 閲覧モードのコンボカードを作成
 function createViewComboCard(combo) {
 
     const comboItem = viewComboTemplate.content.firstElementChild.cloneNode(true);
@@ -365,6 +424,7 @@ function createViewComboCard(combo) {
 
 }
 
+// 編集モードのコンボカードを作成
 function createEditComboCard(combo) {
 
     const comboItem = editComboTemplate.content.firstElementChild.cloneNode(true);
@@ -401,6 +461,7 @@ function createEditComboCard(combo) {
 
 }
 
+// コンボカードイベント設定
 function setupEditComboCardEvents(comboItem) {
 
     comboItem
@@ -440,6 +501,18 @@ function setupEditComboCardEvents(comboItem) {
         .addEventListener("click", function () {
 
             cancelComboEdit();
+
+        });
+
+    comboItem
+        .querySelector(".delete-button")
+        .addEventListener("click", function () {
+
+            if (!confirm("このコンボを削除しますか？")) {
+                return;
+            }
+
+            deleteCombo(comboItem);
 
         });
 
@@ -579,6 +652,26 @@ comboEditButtons.forEach(button => {
         const comboItem = this.closest(".combo-item");
 
         startComboEdit(comboItem);
+
+    });
+
+});
+
+/* コンボ削除 */
+
+document.querySelectorAll(".combo-item").forEach(comboItem => {
+
+    const deleteButton = comboItem.querySelector(".delete-button");
+
+    if (!deleteButton) return;
+
+    deleteButton.addEventListener("click", function () {
+
+        if (!confirm("このコンボを削除しますか？")) {
+            return;
+        }
+
+        deleteCombo(comboItem);
 
     });
 
