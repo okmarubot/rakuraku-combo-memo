@@ -71,6 +71,48 @@ def build_name_text(moves, common_moves, character_moves):
 # ==========================
 # キャラクター画面
 # ==========================
+@app.route("/character/<character_id>/new-combo", methods=["POST"])
+def new_combo(character_id):
+
+    combos_path = Path(f"data/sf6/combos/{character_id}.json")
+
+    with open(combos_path, "r", encoding="utf-8") as file:
+        combos = json.load(file)
+
+    max_number = 0
+
+    for group in combos["groups"]:
+        for subgroup in group["subgroups"]:
+            for combo in subgroup["combos"]:
+
+                number = int(combo["id"].replace("combo-", ""))
+
+                if number > max_number:
+                    max_number = number
+
+    new_id = f"combo-{max_number + 1:03d}"
+
+    new_combo = {
+
+        "id": new_id,
+        "moves": [],
+        "memo": ""
+
+    }
+
+    combos["groups"][0]["subgroups"][0]["combos"].append(new_combo)
+
+    with open(combos_path, "w", encoding="utf-8") as file:
+
+        json.dump(
+            combos,
+            file,
+            ensure_ascii=False,
+            indent=4
+        )
+
+    return jsonify(new_combo)
+
 @app.route(
         "/character/<character_id>",
         methods=["GET","POST"]
@@ -86,9 +128,6 @@ def character(character_id):
 
         data = request.get_json()
 
-        print("POSTを受信しました")
-        print(data)
-
         combos_path = Path(f"data/sf6/combos/{character_id}.json")
 
         with open(combos_path, "r", encoding="utf-8") as file:
@@ -103,11 +142,22 @@ def character(character_id):
                     if combo["id"] == data["id"]:
                         found_combo = combo
                         break
-        
+
+        if found_combo is None:
+
+            return jsonify({
+                "success": False,
+                "message": "コンボが見つかりません"
+            }), 404
+
         found_combo["moves"] = data["moves"]
         found_combo["memo"] = data["memo"]
 
-        print(found_combo)
+        response = {
+
+            "success": True
+
+        }
 
         with open(combos_path, "w", encoding="utf-8") as file:
 
@@ -118,7 +168,7 @@ def character(character_id):
                 indent=4
             )
 
-        return jsonify({"success": True})
+        return jsonify(response)
     
     # ==========================
     # データ読み込み

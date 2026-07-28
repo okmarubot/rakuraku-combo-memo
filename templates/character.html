@@ -360,6 +360,135 @@
 
 <a href="/">← ホームへ戻る</a>
 
+<!-- コンボカードテンプレート -->
+
+<template id="view-combo-template">
+
+    <div
+        class="combo-item"
+        data-combo-id=""
+        data-moves="[]"
+        data-memo=""
+    >
+
+        <!-- コンボヘッダー -->
+
+        <div class="combo-header">
+
+            <span
+                class="combo-text"
+                data-command=""
+                data-name=""
+            >
+            </span>
+
+        </div>
+
+        <!-- メモ -->
+
+        <div class="combo-memo">
+
+            <span class="memo-label">メモ:</span>
+
+            <span class="memo-text"></span>
+
+        </div>
+
+    </div>
+
+</template>
+
+<template id="edit-combo-template">
+
+    <div
+        class="combo-item"
+        data-combo-id=""
+        data-moves="[]"
+        data-memo=""
+    >
+
+        <!-- ==========================
+            コンボカード（通常）
+        ========================== -->
+
+        <div class="combo-view">
+
+            <div class="combo-header">
+
+                <span
+                    class="combo-text"
+                    data-command=""
+                    data-name=""
+                ></span>
+
+                <div class="combo-actions">
+
+                    <button class="combo-edit-button">✏</button>
+                    <button class="delete-button">🗑</button>
+
+                </div>
+
+            </div>
+
+            <div class="combo-memo">
+
+                <span class="memo-label">メモ:</span>
+
+                <span class="memo-text"></span>
+
+            </div>
+
+        </div>
+
+        <!-- ==========================
+            コンボカード（編集）
+        ========================== -->
+
+        <div class="combo-edit">
+
+            <div class="combo-header">
+
+                <div class="combo-main">
+
+                    <span
+                        class="combo-text"
+                        data-command=""
+                        data-name=""
+                    ></span>
+
+                    <button class="add-move-button">
+                        ＋ 技を追加
+                    </button>
+
+                </div>
+
+                <div class="combo-actions">
+
+                    <button class="combo-undo-button">↩</button>
+                    <button class="combo-complete-button">✓</button>
+                    <button class="combo-cancel-button">×</button>
+
+                </div>
+
+            </div>
+
+            <div class="combo-memo">
+
+                <label>メモ:</label>
+
+                <textarea
+                    rows="1"
+                    placeholder="コンボのコツや注意点を入力"
+                ></textarea>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</template>
+
 <!-- 技データ -->
 
 <script>
@@ -370,7 +499,5 @@ const moveData = [
 ];
 
 </script>
-
-<script src="{{ url_for('static', filename='script.js') }}"></script>
 
 {% endblock %}

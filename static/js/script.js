@@ -37,6 +37,11 @@ const comboCompleteButtons = document.querySelectorAll(".combo-complete-button")
 const comboUndoButtons = document.querySelectorAll(".combo-undo-button");
 const comboCancelButtons = document.querySelectorAll(".combo-cancel-button");
 
+const addComboButtons = document.querySelectorAll(".add-combo-button");
+const comboTemplate = document.getElementById("combo-template");
+const viewComboTemplate = document.getElementById("view-combo-template");
+const editComboTemplate = document.getElementById("edit-combo-template");
+
 /* 技一覧パネル */
 
 const addMoveButtons = document.querySelectorAll(".add-move-button");
@@ -150,7 +155,7 @@ function finishComboEdit() {
 
     currentMemo = textarea.value;
 
-    console.log(currentMoves);
+    console.log(editingComboItem.dataset.comboId);
 
     fetch(window.location.pathname, {
 
@@ -166,20 +171,56 @@ function finishComboEdit() {
 
             moves: currentMoves,
 
-            memo: textarea.value
+            memo: currentMemo
 
         })
 
+    })
+    .then(response => response.json())
+    .then(result => {
+
+        // 編集モード側
+        editingComboItem.dataset.memo = currentMemo;
+
+        const editMemoText = editingComboItem.querySelector(".memo-text");
+
+        if (editMemoText) {
+            editMemoText.textContent = currentMemo;
+        }
+
+        // 閲覧モード側
+        const comboId = editingComboItem.dataset.comboId;
+
+        const viewComboItem = document.querySelector(
+            `#view-mode .combo-item[data-combo-id="${comboId}"]`
+        );
+
+        if (viewComboItem) {
+
+            viewComboItem.dataset.memo = currentMemo;
+
+            const viewMemoText = viewComboItem.querySelector(".memo-text");
+
+            if (viewMemoText) {
+                viewMemoText.textContent = currentMemo;
+            }
+
+        }
+
+        editingComboItem.classList.remove("editing");
+
+        editingComboItem = null;
+
+        closeMoveSelectorPanel();
+
+    })
+    .catch(error => {
+
+        console.error(error);
+
+        alert("保存に失敗しました。");
+
     });
-
-    editingComboItem.dataset.memo = currentMemo;
-
-    const memoText = editingComboItem.querySelector(".memo-text");
-    memoText.textContent = currentMemo;
-
-    editingComboItem.classList.remove("editing");
-
-    closeMoveSelectorPanel();
 
 }
 
@@ -197,6 +238,210 @@ function cancelComboEdit() {
     editingComboItem.classList.remove("editing");
 
     closeMoveSelectorPanel();
+
+}
+
+function updateComboDisplay() {
+
+    editingComboItem.dataset.moves = JSON.stringify(currentMoves);
+
+    const comboTexts = editingComboItem.querySelectorAll(".combo-text");
+
+    const comboId = editingComboItem.dataset.comboId;
+
+    const viewComboItem = document.querySelector(
+        '#view-mode .combo-item[data-combo-id="' + comboId + '"]'
+    );
+
+    const commandText = buildComboText(currentMoves, "command");
+
+    const nameText = buildComboText(currentMoves, "name");
+
+    comboTexts.forEach(comboText => {
+
+        comboText.dataset.command = commandText;
+
+        comboText.dataset.name = nameText;
+
+        comboText.textContent = commandMode
+            ? commandText
+            : nameText;
+
+    });
+
+    if (viewComboItem) {
+
+        const viewComboText = viewComboItem.querySelector(".combo-text");
+
+        viewComboText.dataset.command = commandText;
+        viewComboText.dataset.name = nameText;
+
+        viewComboText.textContent = commandMode
+            ? commandText
+            : nameText;
+
+        const viewMemoText = viewComboItem.querySelector(".memo-text");
+
+        viewMemoText.textContent = currentMemo;
+
+        viewComboItem.dataset.memo = currentMemo;
+        viewComboItem.dataset.moves = JSON.stringify(currentMoves);
+
+    }
+
+}
+
+async function createNewCombo() {
+
+    const response = await fetch(
+        window.location.pathname + "/new-combo",
+        {
+            method: "POST"
+        }
+    );
+
+    const combo = await response.json();
+
+    addViewComboCard(combo);
+
+    const newComboItem = addEditComboCard(combo);
+
+    startComboEdit(newComboItem);
+
+    openMoveSelectorPanel();
+
+}
+
+function addViewComboCard(newCombo) {
+
+    const comboLists = document.querySelectorAll("#view-mode .combo-list");
+
+    const comboList = comboLists[comboLists.length - 1];
+
+    const comboItem = createViewComboCard(newCombo);
+
+    comboList.appendChild(comboItem);
+
+}
+
+function addEditComboCard(combo) {
+
+    const comboList = document.querySelector("#edit-mode .combo-list");
+
+    const comboCard = createEditComboCard(combo);
+
+    setupEditComboCardEvents(comboCard);
+
+    const addButton = comboList.querySelector(".add-combo-button");
+
+    comboList.insertBefore(comboCard, addButton);
+
+    return comboCard;
+
+}
+
+function createViewComboCard(combo) {
+
+    const comboItem = viewComboTemplate.content.firstElementChild.cloneNode(true);
+
+    comboItem.dataset.comboId = combo.id;
+    comboItem.dataset.moves = JSON.stringify(combo.moves);
+    comboItem.dataset.memo = combo.memo;
+
+    const comboText = comboItem.querySelector(".combo-text");
+
+    comboText.dataset.command = buildComboText(combo.moves, "command");
+
+    comboText.dataset.name = buildComboText(combo.moves, "name");
+
+    comboText.textContent =
+        commandMode
+            ? comboText.dataset.command
+            : comboText.dataset.name;
+
+    comboItem.querySelector(".memo-text").textContent = combo.memo;
+
+    return comboItem;
+
+}
+
+function createEditComboCard(combo) {
+
+    const comboItem = editComboTemplate.content.firstElementChild.cloneNode(true);
+
+    comboItem.dataset.comboId = combo.id;
+    comboItem.dataset.moves = JSON.stringify(combo.moves);
+    comboItem.dataset.memo = combo.memo;
+
+    const comboTexts = comboItem.querySelectorAll(".combo-text");
+
+    const commandText = buildComboText(combo.moves, "command");
+
+    const nameText = buildComboText(combo.moves, "name")
+
+    comboTexts.forEach(comboText => {
+
+        comboText.dataset.command = commandText;
+        comboText.dataset.name = nameText;
+
+        comboText.textContent =
+            commandMode
+                ? commandText
+                : nameText
+
+    });
+
+    comboItem.querySelector("textarea").value = combo.memo;
+
+    comboItem
+        .querySelector(".memo-text")
+        .textContent = combo.memo;
+
+    return comboItem;
+
+}
+
+function setupEditComboCardEvents(comboItem) {
+
+    comboItem
+        .querySelector(".combo-edit-button")
+        .addEventListener("click", function () {
+
+            startComboEdit(comboItem);
+
+        });
+
+    comboItem
+        .querySelector(".add-move-button")
+        .addEventListener("click", function () {
+
+            openMoveSelectorPanel();
+
+        });
+
+    comboItem
+        .querySelector(".combo-undo-button")
+        .addEventListener("click", function () {
+
+            undoLastMove();
+
+        });
+
+    comboItem
+        .querySelector(".combo-complete-button")
+        .addEventListener("click", function () {
+
+            finishComboEdit();
+
+        });
+
+    comboItem
+        .querySelector(".combo-cancel-button")
+        .addEventListener("click", function () {
+
+            cancelComboEdit();
+
+        });
 
 }
 
@@ -260,55 +505,6 @@ function buildComboText(moves, type) {
 
 }
 
-function updateComboDisplay() {
-
-    editingComboItem.dataset.moves = JSON.stringify(currentMoves);
-
-    const comboTexts = editingComboItem.querySelectorAll(".combo-text");
-
-    const comboId = editingComboItem.dataset.comboId;
-
-    const viewComboItem = document.querySelector(
-        '#view-mode .combo-item[data-combo-id="' + comboId + '"]'
-    );
-
-    const commandText = buildComboText(currentMoves, "command");
-
-    const nameText = buildComboText(currentMoves, "name");
-
-    comboTexts.forEach(comboText => {
-
-        comboText.dataset.command = commandText;
-
-        comboText.dataset.name = nameText;
-
-        comboText.textContent = commandMode
-            ? commandText
-            : nameText;
-
-    });
-
-    if (viewComboItem) {
-
-        const viewComboText = viewComboItem.querySelector(".combo-text");
-
-        viewComboText.dataset.command = commandText;
-        viewComboText.dataset.name = nameText;
-
-        viewComboText.textContent = commandMode
-            ? commandText
-            : nameText;
-
-        const viewMemoText = viewComboItem.querySelector(".memo-text");
-
-        viewMemoText.textContent = currentMemo;
-
-        viewComboItem.dataset.memo = currentMemo;
-        viewComboItem.dataset.moves = JSON.stringify(currentMoves);
-
-    }
-
-}
 
 /* =========================
    モード切替
@@ -326,6 +522,12 @@ editModeButton.addEventListener("click", function () {
 });
 
 completeModeButton.addEventListener("click", function () {
+
+    if (editingComboItem) {
+
+        finishComboEdit();
+
+    }
 
     syncDetailsState(editDetails, viewDetails);
 
@@ -413,6 +615,18 @@ comboCancelButtons.forEach(button => {
     button.addEventListener("click", function () {
 
         cancelComboEdit();
+
+    });
+
+});
+
+/* コンボ追加 */
+
+addComboButtons.forEach(button => {
+
+    button.addEventListener("click", function () {
+
+        createNewCombo();
 
     });
 
