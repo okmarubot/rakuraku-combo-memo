@@ -1,6 +1,3 @@
-/* テストコード */
-console.log("script.js が読み込まれました");
-
 /* =========================
    要素の取得
 ========================= */
@@ -38,7 +35,6 @@ const comboUndoButtons = document.querySelectorAll(".combo-undo-button");
 const comboCancelButtons = document.querySelectorAll(".combo-cancel-button");
 
 const addComboButtons = document.querySelectorAll(".add-combo-button");
-const comboTemplate = document.getElementById("combo-template");
 const viewComboTemplate = document.getElementById("view-combo-template");
 const editComboTemplate = document.getElementById("edit-combo-template");
 
@@ -207,8 +203,6 @@ function finishComboEdit() {
     const textarea = editingComboItem.querySelector("textarea");
 
     currentMemo = textarea.value;
-
-    console.log(editingComboItem.dataset.comboId);
 
     fetch(window.location.pathname, {
 
@@ -677,6 +671,72 @@ document.querySelectorAll(".combo-item").forEach(comboItem => {
 
 });
 
+/* コンボ並び替え */
+
+const comboLists = document.querySelectorAll("#edit-mode .combo-list");
+
+comboLists.forEach(comboList => {
+
+    new Sortable(comboList, {
+
+        animation: 150,
+
+        draggable: ".combo-item",
+
+        onEnd: function () {
+
+            const comboItems = comboList.querySelectorAll(".combo-item");
+
+            const comboOrder = [];
+
+            comboItems.forEach(comboItem => {
+
+                comboOrder.push(comboItem.dataset.comboId);
+
+            });
+
+            const viewComboList = document.querySelector("#view-mode .combo-list");
+
+            comboOrder.forEach(comboId => {
+
+                const viewComboItem = viewComboList.querySelector(
+                    `.combo-item[data-combo-id="${comboId}"]`
+                );
+
+                if (viewComboItem) {
+                    viewComboList.appendChild(viewComboItem);
+                }
+
+            });
+
+            fetch(window.location.pathname + "/sort-combos", {
+
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify({
+
+                    comboOrder: comboOrder
+
+                })
+
+            })
+            .then(response => response.json())
+            .catch(error => {
+
+                console.error(error);
+
+            });
+
+        }
+
+    });
+
+});
+
 /* Undo */
 
 comboUndoButtons.forEach(button => {
@@ -724,6 +784,8 @@ addComboButtons.forEach(button => {
     });
 
 });
+
+
 
 /* =========================
    技一覧パネル

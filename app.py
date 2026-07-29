@@ -157,6 +157,53 @@ def delete_combo(character_id):
 
     })
 
+# コンボ並び替え
+@app.route(
+    "/character/<character_id>/sort-combos",
+    methods=["POST"]
+)
+
+def sort_combos(character_id):
+
+    data = request.get_json()
+
+    combos_path = Path(f"data/sf6/combos/{character_id}.json")
+
+    with open(combos_path, "r", encoding="utf-8") as file:
+        combos = json.load(file)
+
+    combo_order = data["comboOrder"]
+
+    for group in combos["groups"]:
+        for subgroup in group["subgroups"]:
+
+            combo_dict = {}
+
+            for combo in subgroup["combos"]:
+                combo_dict[combo["id"]] = combo
+
+            subgroup["combos"] = []
+
+            for combo_id in combo_order:
+
+                if combo_id in combo_dict:
+                    subgroup["combos"].append(combo_dict[combo_id])
+
+    with open(combos_path, "w", encoding="utf-8") as file:
+
+        json.dump(
+            combos,
+            file,
+            ensure_ascii=False,
+            indent=4
+        )
+
+    return jsonify({
+
+        "success": True
+
+    })
+
 # コンボ編集
 @app.route(
         "/character/<character_id>",
