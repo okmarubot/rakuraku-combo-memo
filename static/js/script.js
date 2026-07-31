@@ -58,9 +58,11 @@ let editingComboItem = null;
 
 // 編集中の状態
 let currentMoves = [];
+let currentMemo = "";
 
 // 編集開始時の状態
 let originalMoves = [];
+let originalMemo = "";
 
 // 技一覧タブの初期表示
 let currentCategory = "normal";
@@ -69,7 +71,7 @@ let currentCategory = "normal";
    関数
 ========================= */
 
-/* details */
+/* ---------- details ---------- */
 
 function syncDetailsState(source, target) {
 
@@ -81,7 +83,7 @@ function syncDetailsState(source, target) {
 
 }
 
-/* 表示切替 */
+/* ---------- 表示切替 ---------- */
 
 function toggleDisplayMode() {
 
@@ -99,7 +101,7 @@ function toggleDisplayMode() {
 
 }
 
-/* メモ */
+/* ---------- メモ ---------- */
 
 function adjustTextareaHeight(textarea) {
 
@@ -108,7 +110,7 @@ function adjustTextareaHeight(textarea) {
 
 }
 
-/* コンボ編集 */
+/* ---------- コンボ編集 ---------- */
 
 // コンボ編集開始
 function startComboEdit(comboItem) {
@@ -134,55 +136,73 @@ function startComboEdit(comboItem) {
 
 }
 
-// コンボ削除
-async function deleteCombo(comboItem) {
+/* カード作成 */
 
-    const comboId = comboItem.dataset.comboId;
+// 閲覧モードのコンボカードを作成
+function createViewComboCard(combo) {
 
-    const response = await fetch(
-        window.location.pathname + "/delete-combo",
-        {
+    const comboItem = viewComboTemplate.content.firstElementChild.cloneNode(true);
 
-            method: "POST",
+    setupComboDataset(comboItem, combo);
 
-            headers: {
-                "Content-Type": "application/json"
-            },
+    setupComboTexts(comboItem, combo);
 
-            body: JSON.stringify({
+    comboItem.querySelector(".memo-text").textContent = combo.memo;
 
-                id: comboId
-
-            })
-
-        }
-    );
-
-    const result = await response.json();
-
-    if (!result.success) {
-
-        alert("削除に失敗しました。");
-
-        return;
-
-    }
-
-    // 編集モード側
-    comboItem.remove();
-
-    // 閲覧モード側
-    const viewComboItem = document.querySelector(
-        `#view-mode .combo-item[data-combo-id="${comboId}"]`
-    );
-
-    if (viewComboItem) {
-
-        viewComboItem.remove();
-
-    }
+    return comboItem;
 
 }
+
+// 編集モードのコンボカードを作成
+function createEditComboCard(combo) {
+
+    const comboItem = editComboTemplate.content.firstElementChild.cloneNode(true);
+
+    setupComboDataset(comboItem, combo);
+
+    setupComboTexts(comboItem, combo);
+
+    comboItem.querySelector("textarea").value = combo.memo;
+
+    comboItem
+        .querySelector(".memo-text")
+        .textContent = combo.memo;
+
+    return comboItem;
+
+}
+
+// 閲覧モードにコンボカードを追加
+function addViewComboCard(newCombo) {
+
+    const comboLists = document.querySelectorAll("#view-mode .combo-list");
+
+    const comboList = comboLists[comboLists.length - 1];
+
+    const comboItem = createViewComboCard(newCombo);
+
+    comboList.appendChild(comboItem);
+
+}
+
+// 編集モードにコンボカードを追加
+function addEditComboCard(combo) {
+
+    const comboList = document.querySelector("#edit-mode .combo-list");
+
+    const comboCard = createEditComboCard(combo);
+
+    setupEditComboCardEvents(comboCard);
+
+    const addButton = comboList.querySelector(".add-combo-button");
+
+    comboList.insertBefore(comboCard, addButton);
+
+    return comboCard;
+
+}
+
+/* カード編集 */
 
 // Undo
 function undoLastMove() {
@@ -289,6 +309,55 @@ function cancelComboEdit() {
 
 }
 
+/* 共通処理 */
+
+// コンボカードのデータセットを設定
+function setupComboDataset(comboItem, combo) {
+
+    comboItem.dataset.comboId = combo.id;
+    comboItem.dataset.moves = JSON.stringify(combo.moves);
+    comboItem.dataset.memo = combo.memo;
+
+}
+
+// コンボカードの表示文字列を設定
+function setupComboTexts(comboItem, combo) {
+
+    const comboTexts = comboItem.querySelectorAll(".combo-text");
+
+    const commandText = buildComboText(combo.moves, "command");
+
+    const nameText = buildComboText(combo.moves, "name");
+
+    comboTexts.forEach(comboText => {
+
+        comboText.dataset.command = commandText;
+        comboText.dataset.name = nameText;
+
+        comboText.textContent =
+            commandMode
+                ? commandText
+                : nameText;
+
+    });
+
+}
+
+// コンボ表示文字列作成
+function buildComboText(moves, type) {
+
+    return moves.map(moveId => {
+
+        const move = moveData.find(move => move.id === moveId);
+
+        return move[type];
+
+    }).join(" ⏵ ");
+
+}
+
+/* データ更新 */
+
 // コンボ表示更新
 function updateComboDisplay() {
 
@@ -340,6 +409,57 @@ function updateComboDisplay() {
 
 }
 
+
+// コンボ削除
+async function deleteCombo(comboItem) {
+
+    const comboId = comboItem.dataset.comboId;
+
+    const response = await fetch(
+        window.location.pathname + "/delete-combo",
+        {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+
+                id: comboId
+
+            })
+
+        }
+    );
+
+    const result = await response.json();
+
+    if (!result.success) {
+
+        alert("削除に失敗しました。");
+
+        return;
+
+    }
+
+    // 編集モード側
+    comboItem.remove();
+
+    // 閲覧モード側
+    const viewComboItem = document.querySelector(
+        `#view-mode .combo-item[data-combo-id="${comboId}"]`
+    );
+
+    if (viewComboItem) {
+
+        viewComboItem.remove();
+
+    }
+
+}
+
 // コンボ追加
 async function createNewCombo() {
 
@@ -362,98 +482,144 @@ async function createNewCombo() {
 
 }
 
-// 閲覧モードにコンボカードを追加
-function addViewComboCard(newCombo) {
+// コンボの並び順を保存
+function saveComboOrder(comboList) {
 
-    const comboLists = document.querySelectorAll("#view-mode .combo-list");
+    const comboItems = comboList.querySelectorAll(".combo-item");
 
-    const comboList = comboLists[comboLists.length - 1];
+    const comboOrder = [];
 
-    const comboItem = createViewComboCard(newCombo);
+    comboItems.forEach(comboItem => {
 
-    comboList.appendChild(comboItem);
-
-}
-
-// 編集モードにコンボカードを追加
-function addEditComboCard(combo) {
-
-    const comboList = document.querySelector("#edit-mode .combo-list");
-
-    const comboCard = createEditComboCard(combo);
-
-    setupEditComboCardEvents(comboCard);
-
-    const addButton = comboList.querySelector(".add-combo-button");
-
-    comboList.insertBefore(comboCard, addButton);
-
-    return comboCard;
-
-}
-
-// 閲覧モードのコンボカードを作成
-function createViewComboCard(combo) {
-
-    const comboItem = viewComboTemplate.content.firstElementChild.cloneNode(true);
-
-    comboItem.dataset.comboId = combo.id;
-    comboItem.dataset.moves = JSON.stringify(combo.moves);
-    comboItem.dataset.memo = combo.memo;
-
-    const comboText = comboItem.querySelector(".combo-text");
-
-    comboText.dataset.command = buildComboText(combo.moves, "command");
-
-    comboText.dataset.name = buildComboText(combo.moves, "name");
-
-    comboText.textContent =
-        commandMode
-            ? comboText.dataset.command
-            : comboText.dataset.name;
-
-    comboItem.querySelector(".memo-text").textContent = combo.memo;
-
-    return comboItem;
-
-}
-
-// 編集モードのコンボカードを作成
-function createEditComboCard(combo) {
-
-    const comboItem = editComboTemplate.content.firstElementChild.cloneNode(true);
-
-    comboItem.dataset.comboId = combo.id;
-    comboItem.dataset.moves = JSON.stringify(combo.moves);
-    comboItem.dataset.memo = combo.memo;
-
-    const comboTexts = comboItem.querySelectorAll(".combo-text");
-
-    const commandText = buildComboText(combo.moves, "command");
-
-    const nameText = buildComboText(combo.moves, "name")
-
-    comboTexts.forEach(comboText => {
-
-        comboText.dataset.command = commandText;
-        comboText.dataset.name = nameText;
-
-        comboText.textContent =
-            commandMode
-                ? commandText
-                : nameText
+        comboOrder.push(comboItem.dataset.comboId);
 
     });
 
-    comboItem.querySelector("textarea").value = combo.memo;
+    fetch(window.location.pathname + "/sort-combos", {
 
-    comboItem
-        .querySelector(".memo-text")
-        .textContent = combo.memo;
+        method: "POST",
 
-    return comboItem;
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify({
+
+            comboOrder: comboOrder
+
+        })
+
+    })
+    .then(response => response.json())
+    .catch(error => {
+
+        console.error(error);
+
+    });
 
 }
+
+// コンボの並び順を同期
+function syncViewComboOrder(comboList) {
+
+    const comboItems = comboList.querySelectorAll(".combo-item");
+
+    const comboOrder = [];
+
+    comboItems.forEach(comboItem => {
+
+        comboOrder.push(comboItem.dataset.comboId);
+
+    });
+
+    const viewComboList = document.querySelector("#view-mode .combo-list");
+
+    comboOrder.forEach(comboId => {
+
+        const viewComboItem = viewComboList.querySelector(
+
+            `.combo-item[data-combo-id="${comboId}"]`
+
+        );
+
+        if (viewComboItem) {
+
+            viewComboList.appendChild(viewComboItem);
+
+        }
+
+    });
+
+}
+
+/* ---------- 技一覧パネル ---------- */
+
+// 技一覧パネルを開く
+function openMoveSelectorPanel() {
+
+    renderMoveSelectorList();
+
+    moveSelectorPanel.style.display = "block";
+
+}
+
+// 技一覧パネルを閉じる
+function closeMoveSelectorPanel() {
+
+    moveSelectorPanel.style.display = "none";
+
+}
+
+// 技一覧表示
+function renderMoveSelectorList() {
+
+    moveSelectorList.innerHTML = "";
+
+    moveData
+        .filter(move => move.category === currentCategory)
+        .forEach(move => {
+
+        const button = document.createElement("button");
+
+        button.textContent = move.command;
+
+        button.addEventListener("click", function () {
+
+            addMove(move.id);
+
+        });
+
+        moveSelectorList.appendChild(button);
+
+    });
+
+}
+
+// 技追加
+function addMove(moveId) {
+
+    currentMoves.push(moveId);
+
+    updateComboDisplay();
+
+}
+
+/* ---------- 見出し編集 ---------- */
+
+/* 共通処理 */
+
+// 編集モードの最後の大見出しを取得
+function getLastMainGroup() {
+
+    const groups = document.querySelectorAll(
+        "#edit-mode .main-group"
+    );
+
+    return groups[groups.length - 1];
+
+}
+
+/* ---------- イベント登録 ---------- */
 
 // コンボカードイベント設定
 function setupEditComboCardEvents(comboItem) {
@@ -509,317 +675,130 @@ function setupEditComboCardEvents(comboItem) {
             deleteCombo(comboItem);
 
         });
-
-}
-
-/* 技一覧パネル */
-
-function openMoveSelectorPanel() {
-
-    renderMoveSelectorList();
-
-    moveSelectorPanel.style.display = "block";
-
-}
-
-function closeMoveSelectorPanel() {
-
-    moveSelectorPanel.style.display = "none";
-
-}
-
-function addMove(moveId) {
-
-    currentMoves.push(moveId);
-
-    updateComboDisplay();
-
-}
-
-function renderMoveSelectorList() {
-
-    moveSelectorList.innerHTML = "";
-
-    moveData
-        .filter(move => move.category === currentCategory)
-        .forEach(move => {
-
-        const button = document.createElement("button");
-
-        button.textContent = move.command;
-
-        button.addEventListener("click", function () {
-
-            addMove(move.id);
-
-        });
-
-        moveSelectorList.appendChild(button);
-
-    });
-
-}
-
-function buildComboText(moves, type) {
-
-    return moves.map(moveId => {
-
-        const move = moveData.find(move => move.id === moveId);
-
-        return move[type];
-
-    }).join(" ⏵ ");
-
-}
-
-
-/* =========================
-   モード切替
-========================= */
-
-editModeButton.addEventListener("click", function () {
-
-    syncDetailsState(viewDetails, editDetails);
-
-    viewMode.style.display = "none";
-    editMode.style.display = "block";
-    
-    memoTextareas.forEach(adjustTextareaHeight);
-
-});
-
-completeModeButton.addEventListener("click", function () {
-
-    if (editingComboItem) {
-
-        finishComboEdit();
-
-    }
-
-    syncDetailsState(editDetails, viewDetails);
-
-    editMode.style.display = "none";
-    viewMode.style.display = "block";
-
-});
-
-/* =========================
-   表示切替
-========================= */
-
-viewDisplayButton.addEventListener(
-    "click",
-    toggleDisplayMode
-);
-
-editDisplayButton.addEventListener(
-    "click",
-    toggleDisplayMode
-);
-
-/* =========================
-   メモ欄
-========================= */
-
-memoTextareas.forEach((textarea, index) => {
+    // メモ自動伸縮
+    const textarea = comboItem.querySelector("textarea");
 
     textarea.addEventListener("input", function () {
 
         adjustTextareaHeight(this);
 
-        memoTexts[index].textContent = this.value;
+        comboItem.querySelector(".memo-text").textContent = this.value;
 
     });
 
-});
+}
 
-/* =========================
-   コンボ編集
-========================= */
+// イベント登録
+function registerEvents() {
 
-/* 編集開始 */
+    /* モード切替 */
 
-comboEditButtons.forEach(button => {
+    editModeButton.addEventListener("click", function () {
 
-    button.addEventListener("click", function () {
+        syncDetailsState(viewDetails, editDetails);
 
-        const comboItem = this.closest(".combo-item");
+        viewMode.style.display = "none";
+        editMode.style.display = "block";
 
-        startComboEdit(comboItem);
-
-    });
-
-});
-
-/* コンボ削除 */
-
-document.querySelectorAll(".combo-item").forEach(comboItem => {
-
-    const deleteButton = comboItem.querySelector(".delete-button");
-
-    if (!deleteButton) return;
-
-    deleteButton.addEventListener("click", function () {
-
-        if (!confirm("このコンボを削除しますか？")) {
-            return;
-        }
-
-        deleteCombo(comboItem);
+        memoTextareas.forEach(adjustTextareaHeight);
 
     });
 
-});
+    completeModeButton.addEventListener("click", function () {
 
-/* コンボ並び替え */
+        if (editingComboItem) {
 
-const comboLists = document.querySelectorAll("#edit-mode .combo-list");
-
-comboLists.forEach(comboList => {
-
-    new Sortable(comboList, {
-
-        animation: 150,
-
-        draggable: ".combo-item",
-
-        onEnd: function () {
-
-            const comboItems = comboList.querySelectorAll(".combo-item");
-
-            const comboOrder = [];
-
-            comboItems.forEach(comboItem => {
-
-                comboOrder.push(comboItem.dataset.comboId);
-
-            });
-
-            const viewComboList = document.querySelector("#view-mode .combo-list");
-
-            comboOrder.forEach(comboId => {
-
-                const viewComboItem = viewComboList.querySelector(
-                    `.combo-item[data-combo-id="${comboId}"]`
-                );
-
-                if (viewComboItem) {
-                    viewComboList.appendChild(viewComboItem);
-                }
-
-            });
-
-            fetch(window.location.pathname + "/sort-combos", {
-
-                method: "POST",
-
-                headers: {
-                    "Content-Type": "application/json"
-                },
-
-                body: JSON.stringify({
-
-                    comboOrder: comboOrder
-
-                })
-
-            })
-            .then(response => response.json())
-            .catch(error => {
-
-                console.error(error);
-
-            });
+            finishComboEdit();
 
         }
 
-    });
+        syncDetailsState(editDetails, viewDetails);
 
-});
-
-/* Undo */
-
-comboUndoButtons.forEach(button => {
-
-    button.addEventListener("click", function () {
-
-        undoLastMove();
+        editMode.style.display = "none";
+        viewMode.style.display = "block";
 
     });
 
-});
+    /* 表示切替 */
 
-/* 編集完了 */
+    viewDisplayButton.addEventListener(
+        "click",
+        toggleDisplayMode
+    );
 
-comboCompleteButtons.forEach(button => {
+    editDisplayButton.addEventListener(
+        "click",
+        toggleDisplayMode
+    );
 
-    button.addEventListener("click", function () {
+    /* コンボ編集 */
 
-        finishComboEdit();
+    //コンボカードイベント登録
+    document.querySelectorAll("#edit-mode .combo-item").forEach(comboItem => {
 
-    });
-
-});
-
-/* 編集キャンセル */
-
-comboCancelButtons.forEach(button => {
-
-    button.addEventListener("click", function () {
-
-        cancelComboEdit();
+        setupEditComboCardEvents(comboItem);
 
     });
 
-});
+    //コンボ追加
+    addComboButtons.forEach(button => {
 
-/* コンボ追加 */
+        button.addEventListener("click", function () {
 
-addComboButtons.forEach(button => {
+            createNewCombo();
 
-    button.addEventListener("click", function () {
-
-        createNewCombo();
+        });
 
     });
 
-});
+    //コンボ並び替え
+    const comboLists = document.querySelectorAll("#edit-mode .combo-list");
 
+    comboLists.forEach(comboList => {
 
+        new Sortable(comboList, {
+
+            animation: 150,
+
+            draggable: ".combo-item",
+
+            onEnd: function () {
+
+                saveComboOrder(comboList);
+
+                syncViewComboOrder(comboList);
+
+            }
+
+        });
+
+    });
+
+    /* 技一覧パネル */
+
+    //パネルを閉じる
+    closeMoveSelectorButton.addEventListener(
+        "click",
+        closeMoveSelectorPanel
+    );
+
+    //技一覧タブ
+    moveCategoryButtons.forEach(button => {
+
+        button.addEventListener("click", function () {
+
+            currentCategory = this.dataset.category;
+
+            renderMoveSelectorList();
+
+        });
+
+    });
+
+}
 
 /* =========================
-   技一覧パネル
+   イベント登録
 ========================= */
 
-/* パネルを開く */
-
-addMoveButtons.forEach(button => {
-
-    button.addEventListener("click", function () {
-
-        openMoveSelectorPanel();
-
-    });
-
-});
-
-/* パネルを閉じる */
-
-closeMoveSelectorButton.addEventListener(
-    "click",
-    closeMoveSelectorPanel
-);
-
-/* 技一覧タブ */
-
-moveCategoryButtons.forEach(button => {
-
-    button.addEventListener("click", function () {
-
-        currentCategory = this.dataset.category;
-
-        renderMoveSelectorList();
-
-    });
-
-});
+registerEvents();

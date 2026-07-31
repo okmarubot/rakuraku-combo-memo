@@ -28,6 +28,7 @@ def home():
 # ==========================
 # 共通関数
 # ==========================
+# コンボ表示文字列作成
 def build_command_text(moves, common_moves, character_moves):
 
     command_list = []
@@ -67,6 +68,81 @@ def build_name_text(moves, common_moves, character_moves):
 
     return " ⏵ ".join(name_list)
 
+def prepare_combo_display(
+    combos,
+    common_moves,
+    character_moves
+):
+
+    for group in combos["groups"]:
+
+        for subgroup in group["subgroups"]:
+
+            for combo in subgroup["combos"]:
+
+                combo["command"] = build_command_text(
+                    combo["moves"],
+                    common_moves,
+                    character_moves
+                )
+
+                combo["name"] = build_name_text(
+                    combo["moves"],
+                    common_moves,
+                    character_moves
+                )
+
+# コンボデータ読込・保存
+def load_combos(character_id):
+
+    combos_path = Path(f"data/sf6/combos/{character_id}.json")
+
+    with open(combos_path, "r", encoding="utf-8") as file:
+        return json.load(file)
+
+
+def save_combos(character_id, combos):
+
+    combos_path = Path(f"data/sf6/combos/{character_id}.json")
+
+    with open(combos_path, "w", encoding="utf-8") as file:
+
+        json.dump(
+            combos,
+            file,
+            ensure_ascii=False,
+            indent=4
+        )
+
+# その他データ読込
+def load_character(character_id):
+
+    character_path = Path(
+        f"data/sf6/characters/{character_id}.json"
+    )
+
+    with open(character_path, "r", encoding="utf-8") as file:
+        return json.load(file)
+
+
+def load_common_moves():
+
+    common_moves_path = Path(
+        "data/sf6/moves/common.json"
+    )
+
+    with open(common_moves_path, "r", encoding="utf-8") as file:
+        return json.load(file)
+
+
+def load_character_moves(character_id):
+
+    character_moves_path = Path(
+        f"data/sf6/moves/{character_id}.json"
+    )
+
+    with open(character_moves_path, "r", encoding="utf-8") as file:
+        return json.load(file)
 
 # ==========================
 # キャラクター画面
@@ -77,10 +153,7 @@ def build_name_text(moves, common_moves, character_moves):
 
 def new_combo(character_id):
 
-    combos_path = Path(f"data/sf6/combos/{character_id}.json")
-
-    with open(combos_path, "r", encoding="utf-8") as file:
-        combos = json.load(file)
+    combos = load_combos(character_id)
 
     max_number = 0
 
@@ -105,14 +178,7 @@ def new_combo(character_id):
 
     combos["groups"][0]["subgroups"][0]["combos"].append(new_combo)
 
-    with open(combos_path, "w", encoding="utf-8") as file:
-
-        json.dump(
-            combos,
-            file,
-            ensure_ascii=False,
-            indent=4
-        )
+    save_combos(character_id, combos)
 
     return jsonify(new_combo)
 
@@ -126,11 +192,8 @@ def delete_combo(character_id):
 
     data = request.get_json()
 
-    combos_path = Path(f"data/sf6/combos/{character_id}.json")
-
-    with open(combos_path, "r", encoding="utf-8") as file:
-        combos = json.load(file)
-
+    combos = load_combos(character_id)
+    
     for group in combos["groups"]:
         for subgroup in group["subgroups"]:
             
@@ -142,14 +205,7 @@ def delete_combo(character_id):
 
             ]
 
-    with open(combos_path, "w", encoding="utf-8") as file:
-
-        json.dump(
-            combos,
-            file,
-            ensure_ascii=False,
-            indent=4
-        )
+    save_combos(character_id, combos)
 
     return jsonify({
 
@@ -167,10 +223,7 @@ def sort_combos(character_id):
 
     data = request.get_json()
 
-    combos_path = Path(f"data/sf6/combos/{character_id}.json")
-
-    with open(combos_path, "r", encoding="utf-8") as file:
-        combos = json.load(file)
+    combos = load_combos(character_id)
 
     combo_order = data["comboOrder"]
 
@@ -189,14 +242,7 @@ def sort_combos(character_id):
                 if combo_id in combo_dict:
                     subgroup["combos"].append(combo_dict[combo_id])
 
-    with open(combos_path, "w", encoding="utf-8") as file:
-
-        json.dump(
-            combos,
-            file,
-            ensure_ascii=False,
-            indent=4
-        )
+    save_combos(character_id, combos)
 
     return jsonify({
 
@@ -212,18 +258,12 @@ def sort_combos(character_id):
 
 def character(character_id):
 
-    # ==========================
-    # POST
-    # ==========================
     # POST処理
     if request.method == "POST":
 
         data = request.get_json()
 
-        combos_path = Path(f"data/sf6/combos/{character_id}.json")
-
-        with open(combos_path, "r", encoding="utf-8") as file:
-            combos = json.load(file)
+        combos = load_combos(character_id)
 
         found_combo = None
 
@@ -245,74 +285,29 @@ def character(character_id):
         found_combo["moves"] = data["moves"]
         found_combo["memo"] = data["memo"]
 
-        response = {
+        save_combos(character_id, combos)
 
+        return jsonify({
             "success": True
+        })
 
-        }
-
-        with open(combos_path, "w", encoding="utf-8") as file:
-
-            json.dump(
-                combos,
-                file,
-                ensure_ascii=False,
-                indent=4
-            )
-
-        return jsonify(response)
-    
-    # ==========================
     # データ読み込み
-    # ==========================
-    # キャラクター
-    character_path = Path(f"data/sf6/characters/{character_id}.json")
+    character = load_character(character_id)
 
-    with open(character_path, "r", encoding="utf-8") as file:
-        character = json.load(file)
+    common_moves = load_common_moves()
 
-    # 共通技
-    common_moves_path = Path("data/sf6/moves/common.json")
+    character_moves = load_character_moves(character_id)
 
-    with open(common_moves_path, "r", encoding="utf-8") as file:
-        common_moves = json.load(file)
+    combos = load_combos(character_id)
 
-    # キャラクター固有技
-    character_moves_path = Path(f"data/sf6/moves/{character_id}.json")
+    # コンボ表示文字列作成  
+    prepare_combo_display(
+        combos,
+        common_moves,
+        character_moves
+    )
 
-    with open(character_moves_path, "r", encoding="utf-8") as file:
-        character_moves = json.load(file)
-
-    # コンボ
-    combos_path = Path(f"data/sf6/combos/{character_id}.json")
-
-    with open(combos_path, "r", encoding="utf-8") as file:
-        combos = json.load(file)
-
-    # ==========================
-    # コンボ表示文字列作成
-    # ==========================    
-    for group in combos["groups"]:
-
-        for subgroup in group["subgroups"]:
-
-            for combo in subgroup["combos"]:
-
-                combo["command"] = build_command_text(
-                    combo["moves"],
-                    common_moves,
-                    character_moves
-                )
-
-                combo["name"] = build_name_text(
-                    combo["moves"],
-                    common_moves,
-                    character_moves
-                )
-
-    # ==========================
     # 画面表示
-    # ==========================
     return render_template(
         "character.html",
         character=character,
