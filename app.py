@@ -150,8 +150,12 @@ def load_character_moves(character_id):
 
 # コンボ追加
 @app.route("/character/<character_id>/new-combo", methods=["POST"])
-
 def new_combo(character_id):
+
+    data = request.get_json()
+
+    group_id = data["groupId"]
+    subgroup_id = data["subgroupId"]
 
     combos = load_combos(character_id)
 
@@ -176,17 +180,32 @@ def new_combo(character_id):
 
     }
 
-    combos["groups"][0]["subgroups"][0]["combos"].append(new_combo)
+    # 追加先を探す
+    for group in combos["groups"]:
 
-    save_combos(character_id, combos)
+        if group["id"] != group_id:
+            continue
 
-    return jsonify(new_combo)
+        for subgroup in group["subgroups"]:
+
+            if subgroup["id"] != subgroup_id:
+                continue
+
+            subgroup["combos"].append(new_combo)
+
+            save_combos(character_id, combos)
+
+            return jsonify(new_combo)
+
+    return jsonify({
+
+        "success": False,
+        "message": "追加先の中見出しが見つかりません"
+
+    }), 404
 
 # コンボ削除
-@app.route(
-    "/character/<character_id>/delete-combo",
-    methods=["POST"]
-)
+@app.route("/character/<character_id>/delete-combo", methods=["POST"])
 
 def delete_combo(character_id):
 
@@ -214,10 +233,7 @@ def delete_combo(character_id):
     })
 
 # コンボ並び替え
-@app.route(
-    "/character/<character_id>/sort-combos",
-    methods=["POST"]
-)
+@app.route("/character/<character_id>/sort-combos", methods=["POST"])
 
 def sort_combos(character_id):
 
@@ -250,11 +266,98 @@ def sort_combos(character_id):
 
     })
 
+# 大見出し追加
+@app.route("/character/<character_id>/new-main-group", methods=["POST"])
+
+def new_main_group(character_id):
+
+    combos = load_combos(character_id)
+
+    max_number = 0
+
+    for group in combos["groups"]:
+
+        number = int(group["id"].replace("group-", ""))
+
+        if number > max_number:
+            max_number = number
+
+    new_id = f"group-{max_number + 1:03d}"
+
+    new_group = {
+
+        "id": new_id,
+        "title": "新しい大見出し",
+        "subgroups": []
+
+    }
+
+    combos["groups"].append(new_group)
+
+    save_combos(character_id, combos)
+
+    return jsonify(new_group)
+
+# 大見出し削除
+@app.route("/character/<character_id>/delete-main-group", methods=["POST"])
+
+def delete_main_group(character_id):
+
+    data = request.get_json()
+
+    combos = load_combos(character_id)
+
+    group_id = data["id"]
+
+    combos["groups"] = [
+
+        group
+        for group in combos["groups"]
+        if group["id"] != group_id
+
+    ]
+
+    save_combos(character_id, combos)
+
+    return jsonify({
+
+        "success": True
+
+    })
+
+# 大見出し並び替え
+@app.route("/character/<character_id>/sort-main-groups", methods=["POST"])
+
+def sort_main_groups(character_id):
+
+    data = request.get_json()
+
+    combos = load_combos(character_id)
+
+    group_order = data["groupOrder"]
+
+    group_dict = {}
+
+    for group in combos["groups"]:
+        group_dict[group["id"]] = group
+
+    combos["groups"] = []
+
+    for group_id in group_order:
+
+        if group_id in group_dict:
+            combos["groups"].append(group_dict[group_id])
+
+    save_combos(character_id, combos)
+
+    return jsonify({
+
+        "success": True
+
+    })
+
 # コンボ編集
-@app.route(
-        "/character/<character_id>",
-        methods=["GET","POST"]
-)
+@app.route("/character/<character_id>", methods=["GET","POST"])
 
 def character(character_id):
 
@@ -265,6 +368,34 @@ def character(character_id):
 
         combos = load_combos(character_id)
 
+        # 大見出し編集
+        if data.get("type") == "main-group":
+
+            found_group = None
+
+            for group in combos["groups"]:
+
+                if group["id"] == data["id"]:
+
+                    found_group = group
+                    break
+
+            if found_group is None:
+
+                return jsonify({
+                    "success": False,
+                    "message": "大見出しが見つかりません"
+                }), 404
+
+            found_group["title"] = data["title"]
+
+            save_combos(character_id, combos)
+
+            return jsonify({
+                "success": True
+            })
+
+        # コンボ編集
         found_combo = None
 
         for group in combos["groups"]:

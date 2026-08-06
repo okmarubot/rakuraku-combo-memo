@@ -1,9 +1,11 @@
 {
     "groups": [
         {
+            "id": "group-001",
             "title": "中攻撃始動",
             "subgroups": [
                 {
+                    "id": "subgroup-001",
                     "title": "しゃがみ中P始動",
                     "combos": [
                         {
@@ -13,8 +15,7 @@
                                 "cdr",
                                 "2hp",
                                 "236hp",
-                                "214mk",
-                                "sa3"
+                                "214mk"
                             ],
                             "memo": "3ゲージ。\n画面中央限定。"
                         },
@@ -32,6 +33,11 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": "group-002",
+            "title": "テスト",
+            "subgroups": []
         }
     ]
 }

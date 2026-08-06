@@ -87,12 +87,71 @@ button {
 
 }
 
+/* =========================
+　見出し
+========================= */
+
 .main-group {
 
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 
 }
 
+/* detailsの▾を消す*/
+.main-group-title::-webkit-details-marker {
+
+    display: none;
+
+}
+
+.sub-group::-webkit-details-marker {
+
+    display: none;
+
+}
+
+/* 大見出しタイトル*/
+.main-group-title {
+
+    display: flex;
+    align-items: center;
+
+    padding: 12px 4px;
+
+    border-bottom: 1px solid #d2d2d7;
+
+    cursor: pointer;
+    list-style: none;
+
+}
+
+.main-group-view,
+.main-group-edit {
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+}
+
+.main-group-title-text {
+
+    flex: 1;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+.main-group[open] .main-group-title {
+
+    border-bottom: none;
+    background-color: #f5f5f7;
+    border-radius: 6px 6px 0 0;
+
+}
+
+/* 中見出しタイトル */
 .sub-group {
 
     margin-left: 20px;
@@ -101,10 +160,51 @@ button {
 
 }
 
-.main-group-title,
 .sub-group-title {
 
-    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    padding: 0 8px 6px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    border-bottom: 1px solid #e5e5e7;
+
+    cursor: pointer;
+    
+}
+
+.sub-group-title::before {
+
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 18px;
+    margin-right: 5px;
+    vertical-align: -2px;
+    border-radius: 2px;
+    background: #999;
+
+}
+
+/* 見出し編集切替 */
+
+.main-group-edit {
+
+    display: none;
+
+}
+
+.main-group.editing .main-group-view {
+
+    display: none;
+
+}
+
+.main-group.editing .main-group-edit {
+
+    display: block;
 
 }
 
@@ -278,14 +378,58 @@ button {
 
 /* コンボカード操作 */
 
-.edit-button,
-.delete-button,
+.combo-edit-button,
+.combo-delete-button,
 .combo-complete-button,
 .combo-undo-button,
 .combo-cancel-button {
 
     flex: 1;
-    font-size: 12px;
+    font-size: 14px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: none;
+
+    padding: 8px 12px;
+
+    cursor: pointer;
+
+}
+
+/* 大見出し操作 */
+.group-edit-button,
+.group-delete-button,
+.group-complete-button,
+.group-cancel-button {
+
+    font-size: 14px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: none;
+
+    padding: 8px 12px;
+
+    cursor: pointer;
+
+}
+
+/* 中見出し操作 */
+.sub-group-edit-button,
+.sub-group-delete-button,
+.sub-group-complete-button,
+.sub-group-cancel-button {
+
+    font-size: 14px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: none;
+
+    padding: 8px 12px;
+
+    cursor: pointer;
 
 }
 

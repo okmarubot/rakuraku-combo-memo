@@ -41,20 +41,32 @@
 
         {% for group in combos.groups %}
 
-        <details class="main-group" open>
+        <details 
+            class="main-group"
+            data-group-id="{{ group.id }}"
+            open
+        >
 
             <summary class="main-group-title">
-                {{ group.title }}
+
+                <span class="main-group-title-text">{{ group.title }}</span>
+
             </summary>
 
             <!-- 中見出しループ -->
 
             {% for subgroup in group.subgroups %}
 
-            <details class="sub-group" open>
+            <details
+                class="sub-group"
+                data-subgroup-id="{{ subgroup.id }}"
+                open
+            >
 
                 <summary class="sub-group-title">
-                    {{ subgroup.title }}
+
+                    <span class="sub-group-title-text">{{ subgroup.title }}</span>
+                    
                 </summary>
 
                 <!-- コンボ一覧 -->
@@ -158,24 +170,58 @@
 
         {% for group in combos.groups %}
 
-        <details class="main-group" open>
+        <details
+            class="main-group"
+            data-group-id="{{ group.id }}"
+            open
+         >
 
             <summary class="main-group-title">
-                {{ group.title }}
-                <button class="edit-button">✏</button>
-                <button class="delete-button">🗑</button>
+
+                <!-- 大見出し（通常）-->
+                
+                <div class="main-group-view">
+
+                    <span class="main-group-title-text">{{ group.title }}</span>
+
+                    <button class="group-edit-button">✏</button>
+                    <button class="group-delete-button">🗑</button>
+
+                </div>
+
+                <!-- 大見出し（編集）-->
+                
+                <div class="main-group-edit">
+
+                    <input
+                        class="main-group-title-input"
+                        value="{{ group.title }}"
+                    >
+
+                    <button class="group-complete-button">✓</button>
+                    <button class="group-cancel-button">×</button>
+
+                </div>
+
             </summary>
 
             <!-- 中見出しループ -->
 
             {% for subgroup in group.subgroups %}
 
-            <details class="sub-group" open>
+            <details
+                class="sub-group"
+                data-subgroup-id="{{ subgroup.id }}"
+                open
+            >
                 
                 <summary class="sub-group-title">
-                    {{ subgroup.title }}
-                    <button class="edit-button">✏</button>
-                    <button class="delete-button">🗑</button>
+
+                    <span class="sub-group-title-text">{{ subgroup.title }}</span>
+
+                    <button class="sub-group-edit-button">✏</button>
+                    <button class="sub-group-delete-button">🗑</button>
+
                 </summary>
 
                 <!-- コンボ一覧 -->
@@ -213,7 +259,7 @@
                                 <div class="combo-actions">
 
                                     <button class="combo-edit-button">✏</button>
-                                    <button class="delete-button">🗑</button>
+                                    <button class="combo-delete-button">🗑</button>
 
                                 </div>
 
@@ -424,7 +470,7 @@
                 <div class="combo-actions">
 
                     <button class="combo-edit-button">✏</button>
-                    <button class="delete-button">🗑</button>
+                    <button class="combo-delete-button">🗑</button>
 
                 </div>
 
@@ -491,14 +537,59 @@
 
 <!-- 大見出しテンプレート -->
 
-<template id="main-group-template">
+<template id="view-main-group-template">
 
-    <details class="main-group" open>
+    <details
+        class="main-group"
+        data-group-id=""
+        open
+    >
 
         <summary class="main-group-title">
-            新しい大見出し
-            <button class="edit-button">✏</button>
-            <button class="delete-button">🗑</button>
+
+            <span class="main-group-title-text"></span>
+
+        </summary>
+
+    </details>
+
+</template>
+
+<template id="edit-main-group-template">
+
+    <details
+        class="main-group"
+        data-group-id=""
+        open
+    >
+
+        <summary class="main-group-title">
+
+            <!-- 大見出し（通常）-->
+             
+            <div class="main-group-view">
+
+                <span class="main-group-title-text"></span>
+
+                <button class="group-edit-button">✏</button>
+                <button class="group-delete-button">🗑</button>
+
+            </div>
+
+            <!-- 大見出し（編集）-->
+
+            <div class="main-group-edit">
+
+                <input
+                    class="main-group-title-input"
+                    type="text"
+                >
+
+                <button class="group-complete-button">✓</button>
+                <button class="group-cancel-button">×</button>
+
+            </div>
+
         </summary>
 
         <button class="add-subheading-button">＋ 中見出し追加</button>

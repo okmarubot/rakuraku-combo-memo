@@ -46,6 +46,10 @@ const moveSelectorList = document.querySelector(".move-selector-list");
 const closeMoveSelectorButton = document.getElementById("close-move-selector-button");
 const moveCategoryButtons = document.querySelectorAll(".move-selector-tabs button");
 
+/* 見出し編集 */
+const viewMainGroupTemplate = document.getElementById("view-main-group-template");
+const editMainGroupTemplate = document.getElementById("edit-main-group-template");
+
 /* =========================
    表示モード
 ========================= */
@@ -56,16 +60,22 @@ let commandMode = true;
 // 現在編集中のコンボカード
 let editingComboItem = null;
 
-// 編集中の状態
+// コンボカード編集中の状態
 let currentMoves = [];
 let currentMemo = "";
 
-// 編集開始時の状態
+// コンボカード編集開始時の状態
 let originalMoves = [];
 let originalMemo = "";
 
 // 技一覧タブの初期表示
 let currentCategory = "normal";
+
+// 現在編集中の大見出し
+let editingMainGroup = null;
+
+// 大見出し編集開始時の状態
+let originalMainGroupTitle = "";
 
 /* =========================
    関数
@@ -218,33 +228,41 @@ function undoLastMove() {
 }
 
 // 編集完了
-function finishComboEdit() {
+async function finishComboEdit() {
 
     const textarea = editingComboItem.querySelector("textarea");
 
     currentMemo = textarea.value;
 
-    fetch(window.location.pathname, {
+    try {
 
-        method: "POST",
+        const response = await fetch(window.location.pathname, {
 
-        headers: {
-            "Content-Type": "application/json"
-        },
+            method: "POST",
 
-        body: JSON.stringify({
+            headers: {
+                "Content-Type": "application/json"
+            },
 
-            id: editingComboItem.dataset.comboId,
+            body: JSON.stringify({
 
-            moves: currentMoves,
+                id: editingComboItem.dataset.comboId,
 
-            memo: currentMemo
+                moves: currentMoves,
 
-        })
+                memo: currentMemo
 
-    })
-    .then(response => response.json())
-    .then(result => {
+            })
+
+        });
+
+        const result = await response.json();
+
+        if (!result.success) {
+
+            throw new Error("保存に失敗しました。");
+
+        }
 
         // 編集モード側
         editingComboItem.dataset.memo = currentMemo;
@@ -280,14 +298,18 @@ function finishComboEdit() {
 
         closeMoveSelectorPanel();
 
-    })
-    .catch(error => {
+        return true;
+
+    }
+    catch (error) {
 
         console.error(error);
 
         alert("保存に失敗しました。");
 
-    });
+        return false;
+
+    }
 
 }
 
@@ -356,7 +378,7 @@ function buildComboText(moves, type) {
 
 }
 
-/* データ更新 */
+/* コンボデータ更新 */
 
 // コンボ表示更新
 function updateComboDisplay() {
@@ -409,7 +431,6 @@ function updateComboDisplay() {
 
 }
 
-
 // コンボ削除
 async function deleteCombo(comboItem) {
 
@@ -461,12 +482,28 @@ async function deleteCombo(comboItem) {
 }
 
 // コンボ追加
-async function createNewCombo() {
+async function createNewCombo(subGroup) {
+
+    const groupId = subGroup.closest(".main-group").dataset.groupId;
+    const subgroupId = subGroup.dataset.subgroupId;
 
     const response = await fetch(
         window.location.pathname + "/new-combo",
         {
-            method: "POST"
+
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+
+                groupId: groupId,
+                subgroupId: subgroupId
+
+            })
+
         }
     );
 
@@ -537,9 +574,7 @@ function syncViewComboOrder(comboList) {
     comboOrder.forEach(comboId => {
 
         const viewComboItem = viewComboList.querySelector(
-
             `.combo-item[data-combo-id="${comboId}"]`
-
         );
 
         if (viewComboItem) {
@@ -606,16 +641,349 @@ function addMove(moveId) {
 
 /* ---------- 見出し編集 ---------- */
 
+// 大見出し編集開始
+function startGroupEdit(mainGroup) {
+
+    // どの大見出しを編集しているか覚えておく
+    editingMainGroup = mainGroup;
+
+    // 現在の見出しタイトルを取得
+    const titleText = mainGroup.querySelector(".main-group-title-text");
+
+    // 編集用inputを取得
+    const titleInput = mainGroup.querySelector(".main-group-title-input");
+
+    // 編集開始前のタイトルを保存
+    originalMainGroupTitle = titleText.textContent;
+
+    // 現在のタイトルをinputに入れる
+    titleInput.value = titleText.textContent;
+
+    // 編集中状態にする
+    mainGroup.classList.add("editing");
+
+}
+
 /* 共通処理 */
 
 // 編集モードの最後の大見出しを取得
 function getLastMainGroup() {
 
-    const groups = document.querySelectorAll(
-        "#edit-mode .main-group"
-    );
+    const groups = document.querySelectorAll("#edit-mode .main-group");
 
     return groups[groups.length - 1];
+
+}
+
+/* 見出し作成 */
+
+// 閲覧モードの大見出しを作成
+function createViewMainGroup(group) {
+
+    const mainGroup = viewMainGroupTemplate.content.firstElementChild.cloneNode(true);
+
+    mainGroup.dataset.groupId = group.id;
+
+    mainGroup.querySelector(".main-group-title-text").textContent = group.title;
+
+    return mainGroup;
+
+}
+
+// 編集モードの大見出しを作成
+function createEditMainGroup(group) {
+
+    const mainGroup = editMainGroupTemplate.content.firstElementChild.cloneNode(true);
+
+    mainGroup.dataset.groupId = group.id;
+    
+    mainGroup.querySelector(".main-group-title-text").textContent = group.title;
+
+    setupEditMainGroupEvents(mainGroup);
+
+    return mainGroup;
+
+}
+
+// 閲覧モードに大見出しを追加
+function addViewMainGroup(group) {
+
+    const container = document.querySelector("#view-mode .combo-container");
+
+    const mainGroup = createViewMainGroup(group);
+
+    const divider = container.querySelector(".mode-divider");
+
+    container.insertBefore(mainGroup, divider);
+
+}
+
+// 編集モードに大見出しを追加
+function addEditMainGroup(group) {
+
+    const container = document.querySelector("#edit-mode .combo-container");
+
+    const mainGroup = createEditMainGroup(group);
+
+    const addButton = container.querySelector(".add-heading-button");
+
+    container.insertBefore(mainGroup, addButton);
+
+    return mainGroup;
+
+}
+
+/* 大見出し編集 */
+
+// 大見出し編集完了
+async function finishGroupEdit() {
+
+    const titleInput = editingMainGroup.querySelector(".main-group-title-input");
+
+    const title = titleInput.value;
+
+    const groupId = editingMainGroup.dataset.groupId;
+
+    try {
+
+        const response = await fetch(window.location.pathname, {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+
+                type: "main-group",
+                id: groupId,
+                title: title
+
+            })
+
+        });
+
+        const result = await response.json();
+
+        if (!result.success) {
+
+            alert("保存に失敗しました。");
+
+            return false;
+
+        }
+
+        // 編集モード側
+        const editTitleText = editingMainGroup.querySelector(
+            ".main-group-title-text"
+        );
+
+        editTitleText.textContent = title;
+
+        // 閲覧モード側
+        const viewMainGroup = document.querySelector(
+            `#view-mode .main-group[data-group-id="${groupId}"]`
+        );
+
+        if (viewMainGroup) {
+
+            const viewTitleText = viewMainGroup.querySelector(
+                ".main-group-title-text"
+            );
+
+            viewTitleText.textContent = title;
+
+        }
+
+        // 編集中状態を解除
+        editingMainGroup.classList.remove("editing");
+
+        editingMainGroup = null;
+
+        return true;
+
+    }
+    catch (error) {
+
+        console.error(error);
+
+        alert("保存に失敗しました。");
+
+        return false;
+
+    }
+
+}
+
+// 大見出し編集キャンセル
+function cancelGroupEdit() {
+
+    // 編集中の大見出しを元のタイトルに戻す
+    const titleText = editingMainGroup.querySelector(".main-group-title-text");
+
+    titleText.textContent = originalMainGroupTitle;
+
+    // inputも元のタイトルに戻す
+    const titleInput = editingMainGroup.querySelector(".main-group-title-input");
+
+    titleInput.value = originalMainGroupTitle;
+
+    // 編集中状態を解除
+    editingMainGroup.classList.remove("editing");
+
+    // 編集対象を解除
+    editingMainGroup = null;
+
+}
+
+/* 大見出しデータ更新 */
+
+// 大見出し削除
+async function deleteMainGroup(mainGroup) {
+
+    const groupId = mainGroup.dataset.groupId;
+
+    const response = await fetch(
+        window.location.pathname + "/delete-main-group",
+        {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+
+                id: groupId
+
+            })
+
+        }
+    );
+
+    const result = await response.json();
+
+    if (!result.success) {
+
+        alert("削除に失敗しました。");
+
+        return;
+
+    }
+
+    // 編集モード側
+    mainGroup.remove();
+
+    // 閲覧モード側
+    const viewMainGroup = document.querySelector(
+        `#view-mode .main-group[data-group-id="${groupId}"]`
+    );
+
+    if (viewMainGroup) {
+
+        viewMainGroup.remove();
+
+    }
+
+}
+
+// 大見出し追加
+async function createNewMainGroup() {
+
+    const response = await fetch(
+        window.location.pathname + "/new-main-group",
+        {
+            method: "POST"
+        }
+    );
+
+    const group = await response.json();
+
+    addViewMainGroup(group);
+    
+    const newMainGroup = addEditMainGroup(group);
+
+    startGroupEdit(newMainGroup);
+
+}
+
+// 大見出しの並び順を保存
+function saveMainGroupOrder() {
+
+    const mainGroups = document.querySelectorAll("#edit-mode .main-group");
+
+    const groupOrder = [];
+
+    mainGroups.forEach(mainGroup => {
+
+        groupOrder.push(mainGroup.dataset.groupId);
+
+    });
+
+    fetch(window.location.pathname + "/sort-main-groups", {
+
+        method: "POST",
+
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify({
+
+            groupOrder: groupOrder
+
+        })
+
+    })
+    .then(response => response.json())
+    .then(result => {
+
+        if (!result.success) {
+
+            alert("大見出しの並び順保存に失敗しました。");
+
+        }
+
+    })
+    .catch(error => {
+
+        console.error(error);
+
+    });
+
+}
+
+
+// 大見出しの並び順を同期
+function syncViewMainGroupOrder() {
+
+    const mainGroups = document.querySelectorAll("#edit-mode .main-group");
+
+    const groupOrder = [];
+
+    mainGroups.forEach(mainGroup => {
+
+        groupOrder.push(mainGroup.dataset.groupId);
+
+    });
+
+    const viewContainer = document.querySelector("#view-mode .combo-container");
+
+    groupOrder.forEach(groupId => {
+
+        const viewMainGroup = viewContainer.querySelector(
+            `.main-group[data-group-id="${groupId}"]`
+        );
+
+        if (viewMainGroup) {
+
+            viewContainer.appendChild(viewMainGroup);
+
+        }
+
+    });
 
 }
 
@@ -650,9 +1018,9 @@ function setupEditComboCardEvents(comboItem) {
 
     comboItem
         .querySelector(".combo-complete-button")
-        .addEventListener("click", function () {
+        .addEventListener("click", async function () {
 
-            finishComboEdit();
+            await finishComboEdit();
 
         });
 
@@ -665,7 +1033,7 @@ function setupEditComboCardEvents(comboItem) {
         });
 
     comboItem
-        .querySelector(".delete-button")
+        .querySelector(".combo-delete-button")
         .addEventListener("click", function () {
 
             if (!confirm("このコンボを削除しますか？")) {
@@ -675,6 +1043,7 @@ function setupEditComboCardEvents(comboItem) {
             deleteCombo(comboItem);
 
         });
+
     // メモ自動伸縮
     const textarea = comboItem.querySelector("textarea");
 
@@ -686,6 +1055,44 @@ function setupEditComboCardEvents(comboItem) {
 
     });
 
+}
+
+// 大見出しイベント設定
+function setupEditMainGroupEvents(mainGroup) {
+
+    mainGroup
+        .querySelector(".group-edit-button")
+        .addEventListener("click", function () {
+
+            startGroupEdit(mainGroup);
+
+        });
+    mainGroup
+        .querySelector(".group-complete-button")
+        .addEventListener("click", async function () {
+
+            await finishGroupEdit();
+
+        });
+    mainGroup
+        .querySelector(".group-cancel-button")
+        .addEventListener("click", function () {
+
+            cancelGroupEdit();
+
+        });
+
+    mainGroup
+        .querySelector(".group-delete-button")
+        .addEventListener("click", function () {
+
+            if (!confirm("この大見出しを削除しますか？")) {
+                return;
+            }   
+
+            deleteMainGroup(mainGroup);
+
+        });
 }
 
 // イベント登録
@@ -704,11 +1111,25 @@ function registerEvents() {
 
     });
 
-    completeModeButton.addEventListener("click", function () {
+    completeModeButton.addEventListener("click", async function () {
 
         if (editingComboItem) {
 
-            finishComboEdit();
+            const success = await finishComboEdit();
+
+            if (!success) {
+                return;
+            }
+
+        }
+
+        if (editingMainGroup) {
+
+            const success = await finishGroupEdit();
+
+            if (!success) {
+                return;
+            }
 
         }
 
@@ -745,7 +1166,9 @@ function registerEvents() {
 
         button.addEventListener("click", function () {
 
-            createNewCombo();
+            const subGroup = button.closest(".sub-group");
+            
+            createNewCombo(subGroup);
 
         });
 
@@ -792,6 +1215,43 @@ function registerEvents() {
             renderMoveSelectorList();
 
         });
+
+    });
+
+    /* 見出し編集 */
+
+    // 大見出しイベント登録
+    document.querySelectorAll("#edit-mode .main-group").forEach(mainGroup => {
+
+        setupEditMainGroupEvents(mainGroup);
+
+    });
+
+    // 大見出し追加
+    const addHeadingButton = document.querySelector(".add-heading-button");
+
+    addHeadingButton.addEventListener("click", function () {
+
+        createNewMainGroup();
+
+    });
+
+    // 大見出し並び替え
+    const mainGroupContainer = document.querySelector("#edit-mode .combo-container");
+
+    new Sortable(mainGroupContainer, {
+
+        animation: 150,
+
+        draggable: ".main-group",
+
+        onEnd: function () {
+
+            saveMainGroupOrder();
+
+            syncViewMainGroupOrder();
+
+        }
 
     });
 
