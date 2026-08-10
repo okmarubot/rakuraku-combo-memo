@@ -241,30 +241,52 @@ def sort_combos(character_id):
 
     combos = load_combos(character_id)
 
+    group_id = data["groupId"]
+    subgroup_id = data["subgroupId"]
     combo_order = data["comboOrder"]
 
+    # 対象の大見出しを探す
     for group in combos["groups"]:
+
+        if group["id"] != group_id:
+            continue
+
+        # 対象の中見出しを探す
         for subgroup in group["subgroups"]:
+
+            if subgroup["id"] != subgroup_id:
+                continue
 
             combo_dict = {}
 
             for combo in subgroup["combos"]:
                 combo_dict[combo["id"]] = combo
 
-            subgroup["combos"] = []
+            new_combos = []
 
+            # 並び替え後の順番で追加
             for combo_id in combo_order:
 
                 if combo_id in combo_dict:
-                    subgroup["combos"].append(combo_dict[combo_id])
 
-    save_combos(character_id, combos)
+                    new_combos.append(
+                        combo_dict[combo_id]
+                    )
+
+            subgroup["combos"] = new_combos
+
+            save_combos(character_id, combos)
+
+            return jsonify({
+                "success": True
+            })
 
     return jsonify({
 
-        "success": True
+        "success": False,
+        "message": "並び替え対象の中見出しが見つかりません"
 
-    })
+    }), 404
 
 # 大見出し追加
 @app.route("/character/<character_id>/new-main-group", methods=["POST"])
@@ -356,6 +378,130 @@ def sort_main_groups(character_id):
 
     })
 
+# 中見出し追加
+@app.route("/character/<character_id>/new-subgroup", methods=["POST"])
+
+def new_subgroup(character_id):
+
+    data = request.get_json()
+
+    group_id = data["groupId"]
+
+    combos = load_combos(character_id)
+
+    # 既存の中見出しIDから最大番号を取得
+    max_number = 0
+
+    for group in combos["groups"]:
+
+        for subgroup in group["subgroups"]:
+
+            number = int(
+                subgroup["id"].replace("subgroup-", "")
+            )
+
+            if number > max_number:
+                max_number = number
+
+    new_id = f"subgroup-{max_number + 1:03d}"
+
+    new_subgroup = {
+
+        "id": new_id,
+        "title": "新しい中見出し",
+        "combos": []
+
+    }
+
+    # 追加先の大見出しを探す
+    for group in combos["groups"]:
+
+        if group["id"] != group_id:
+            continue
+
+        group["subgroups"].append(new_subgroup)
+
+        save_combos(character_id, combos)
+
+        return jsonify(new_subgroup)
+
+    return jsonify({
+
+        "success": False,
+        "message": "追加先の大見出しが見つかりません"
+
+    }), 404
+
+# 中見出し削除
+@app.route("/character/<character_id>/delete-sub-group", methods=["POST"])
+
+def delete_sub_group(character_id):
+
+    data = request.get_json()
+
+    combos = load_combos(character_id)
+
+    subgroup_id = data["id"]
+
+    for group in combos["groups"]:
+
+        group["subgroups"] = [
+
+            subgroup
+            for subgroup in group["subgroups"]
+            if subgroup["id"] != subgroup_id
+
+        ]
+
+    save_combos(character_id, combos)
+
+    return jsonify({
+
+        "success": True
+
+    })
+
+# 中見出し並び替え
+@app.route("/character/<character_id>/sort-subgroups", methods=["POST"])
+
+def sort_subgroups(character_id):
+
+    data = request.get_json()
+
+    combos = load_combos(character_id)
+
+    group_id = data["groupId"]
+    sub_group_order = data["subGroupOrder"]
+
+    for group in combos["groups"]:
+
+        if group["id"] != group_id:
+            continue
+
+        sub_group_dict = {}
+
+        for subgroup in group["subgroups"]:
+
+            sub_group_dict[subgroup["id"]] = subgroup
+
+        group["subgroups"] = []
+
+        for subgroup_id in sub_group_order:
+
+            if subgroup_id in sub_group_dict:
+
+                group["subgroups"].append(
+                    sub_group_dict[subgroup_id]
+                )
+
+        break
+
+    save_combos(character_id, combos)
+
+    return jsonify({
+        "success": True
+    })
+
 # コンボ編集
 @app.route("/character/<character_id>", methods=["GET","POST"])
 
@@ -388,6 +534,37 @@ def character(character_id):
                 }), 404
 
             found_group["title"] = data["title"]
+
+            save_combos(character_id, combos)
+
+            return jsonify({
+                "success": True
+            })
+
+        # 中見出し編集
+        if data.get("type") == "sub-group":
+
+            found_subgroup = None
+
+            for group in combos["groups"]:
+                for subgroup in group["subgroups"]:
+
+                    if subgroup["id"] == data["id"]:
+
+                        found_subgroup = subgroup
+                        break
+
+                if found_subgroup is not None:
+                    break
+
+            if found_subgroup is None:
+
+                return jsonify({
+                    "success": False,
+                    "message": "中見出しが見つかりません"
+                }), 404
+
+            found_subgroup["title"] = data["title"]
 
             save_combos(character_id, combos)
 

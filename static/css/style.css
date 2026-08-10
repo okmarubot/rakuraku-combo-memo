@@ -188,7 +188,7 @@ button {
 
 }
 
-/* 見出し編集切替 */
+/* 大見出し編集切替 */
 
 .main-group-edit {
 
@@ -203,6 +203,26 @@ button {
 }
 
 .main-group.editing .main-group-edit {
+
+    display: block;
+
+}
+
+/* 中見出し編集切替 */
+
+.sub-group-edit {
+
+    display: none;
+
+}
+
+.sub-group.editing .sub-group-view {
+
+    display: none;
+
+}
+
+.sub-group.editing .sub-group-edit {
 
     display: block;
 

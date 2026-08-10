@@ -195,6 +195,7 @@
 
                     <input
                         class="main-group-title-input"
+                        type="text"
                         value="{{ group.title }}"
                     >
 
@@ -217,10 +218,29 @@
                 
                 <summary class="sub-group-title">
 
-                    <span class="sub-group-title-text">{{ subgroup.title }}</span>
+                    <!-- 中見出し（通常） -->
+                    <div class="sub-group-view">
 
-                    <button class="sub-group-edit-button">✏</button>
-                    <button class="sub-group-delete-button">🗑</button>
+                        <span class="sub-group-title-text">{{ subgroup.title }}</span>
+
+                        <button class="sub-group-edit-button">✏</button>
+                        <button class="sub-group-delete-button">🗑</button>
+
+                    </div>
+
+                    <!-- 中見出し（編集） -->
+                    <div class="sub-group-edit">
+
+                        <input
+                            class="sub-group-title-input"
+                            type="text"
+                            value="{{ subgroup.title }}"
+                        >
+
+                        <button class="sub-group-complete-button">✓</button>
+                        <button class="sub-group-cancel-button">×</button>
+
+                    </div>
 
                 </summary>
 
@@ -406,6 +426,140 @@
 
 <a href="/">← ホームへ戻る</a>
 
+<!-- 大見出しテンプレート -->
+
+<template id="view-main-group-template">
+
+    <details
+        class="main-group"
+        data-group-id=""
+        open
+    >
+
+        <summary class="main-group-title">
+
+            <span class="main-group-title-text"></span>
+
+        </summary>
+
+    </details>
+
+</template>
+
+<template id="edit-main-group-template">
+
+    <details
+        class="main-group"
+        data-group-id=""
+        open
+    >
+
+        <summary class="main-group-title">
+
+            <!-- 大見出し（通常）-->
+             
+            <div class="main-group-view">
+
+                <span class="main-group-title-text"></span>
+
+                <button class="group-edit-button">✏</button>
+                <button class="group-delete-button">🗑</button>
+
+            </div>
+
+            <!-- 大見出し（編集）-->
+
+            <div class="main-group-edit">
+
+                <input
+                    class="main-group-title-input"
+                    type="text"
+                >
+
+                <button class="group-complete-button">✓</button>
+                <button class="group-cancel-button">×</button>
+
+            </div>
+
+        </summary>
+
+        <button class="add-subheading-button">＋ 中見出し追加</button>
+
+    </details>
+
+</template>
+
+<!-- 中見出しテンプレート -->
+
+<template id="view-sub-group-template">
+
+    <details
+        class="sub-group"
+        data-subgroup-id=""
+        open
+    >
+
+        <summary class="sub-group-title">
+
+            <span class="sub-group-title-text"></span>
+
+        </summary>
+
+        <div class="combo-list">
+
+        </div>
+
+    </details>
+
+</template>
+
+<template id="edit-sub-group-template">
+
+    <details
+        class="sub-group"
+        data-subgroup-id=""
+        open
+    >
+
+        <summary class="sub-group-title">
+
+            <!-- 中見出し（通常）-->
+
+            <div class="sub-group-view">
+
+                <span class="sub-group-title-text"></span>
+
+                <button class="sub-group-edit-button">✏</button>
+                <button class="sub-group-delete-button">🗑</button>
+
+            </div>
+
+            <!-- 中見出し（編集）-->
+
+            <div class="sub-group-edit">
+
+                <input
+                    class="sub-group-title-input"
+                    type="text"
+                >
+
+                <button class="sub-group-complete-button">✓</button>
+                <button class="sub-group-cancel-button">×</button>
+
+            </div>
+
+        </summary>
+
+        <div class="combo-list">
+
+            <button class="add-combo-button">＋ コンボ追加</button>
+
+        </div>
+
+    </details>
+
+</template>
+
 <!-- コンボカードテンプレート -->
 
 <template id="view-combo-template">
@@ -532,69 +686,6 @@
         </div>
 
     </div>
-
-</template>
-
-<!-- 大見出しテンプレート -->
-
-<template id="view-main-group-template">
-
-    <details
-        class="main-group"
-        data-group-id=""
-        open
-    >
-
-        <summary class="main-group-title">
-
-            <span class="main-group-title-text"></span>
-
-        </summary>
-
-    </details>
-
-</template>
-
-<template id="edit-main-group-template">
-
-    <details
-        class="main-group"
-        data-group-id=""
-        open
-    >
-
-        <summary class="main-group-title">
-
-            <!-- 大見出し（通常）-->
-             
-            <div class="main-group-view">
-
-                <span class="main-group-title-text"></span>
-
-                <button class="group-edit-button">✏</button>
-                <button class="group-delete-button">🗑</button>
-
-            </div>
-
-            <!-- 大見出し（編集）-->
-
-            <div class="main-group-edit">
-
-                <input
-                    class="main-group-title-input"
-                    type="text"
-                >
-
-                <button class="group-complete-button">✓</button>
-                <button class="group-cancel-button">×</button>
-
-            </div>
-
-        </summary>
-
-        <button class="add-subheading-button">＋ 中見出し追加</button>
-
-    </details>
 
 </template>
 

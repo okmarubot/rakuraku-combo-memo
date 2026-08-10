@@ -6,38 +6,57 @@
             "subgroups": [
                 {
                     "id": "subgroup-001",
-                    "title": "しゃがみ中P始動",
+                    "title": "新しい中見出し１",
                     "combos": [
                         {
                             "id": "combo-002",
                             "moves": [
-                                "2mp",
-                                "cdr",
-                                "2hp",
-                                "236hp",
-                                "214mk"
+                                "2lp",
+                                "2lp",
+                                "2lp"
                             ],
-                            "memo": "3ゲージ。\n画面中央限定。"
+                            "memo": "いいい"
                         },
                         {
                             "id": "combo-001",
                             "moves": [
-                                "2mp",
-                                "236hp",
-                                "2lp",
                                 "5lp",
-                                "2hk"
+                                "5lp"
                             ],
-                            "memo": "新しいメモだよ。\n大丈夫！"
+                            "memo": "あ"
+                        }
+                    ]
+                },
+                {
+                    "id": "subgroup-002",
+                    "title": "新しい中見出し２",
+                    "combos": [
+                        {
+                            "id": "combo-003",
+                            "moves": [
+                                "5hp"
+                            ],
+                            "memo": ""
                         }
                     ]
                 }
             ]
         },
         {
-            "id": "group-002",
-            "title": "テスト",
-            "subgroups": []
+            "id": "group-003",
+            "title": "新しい大見出し①",
+            "subgroups": [
+                {
+                    "id": "subgroup-003",
+                    "title": "新しい中見出し３",
+                    "combos": []
+                },
+                {
+                    "id": "subgroup-004",
+                    "title": "新しい中見出し４",
+                    "combos": []
+                }
+            ]
         }
     ]
 }
