@@ -1,0 +1,236 @@
+[
+    {
+        "id": "3mp",
+        "category": "unique",
+        "command": "↘中P",
+        "name": "↘中P"
+    },
+    {
+        "id": "6hp",
+        "category": "unique",
+        "command": "→強P",
+        "name": "→強P"
+    },
+    {
+        "id": "6hk",
+        "category": "unique",
+        "command": "→強K",
+        "name": "→強K"
+    },
+    {
+        "id": "5lp_target",
+        "category": "unique",
+        "command": "弱Pタゲコン",
+        "name": "弱Pタゲコン",
+        "variants": [
+            {
+                "id": "5lp_5lp",
+                "command": "弱P>弱P",
+                "name": "弱P>弱P"
+            }
+        ]
+    },
+    {
+        "id": "5hp_target",
+        "category": "unique",
+        "command": "強Pタゲコン",
+        "name": "強Pタゲコン",
+        "variants": [
+            {
+                "id": "5hp_5hp",
+                "command": "強P>強P",
+                "name": "強P>強P"
+            }
+        ]
+    },
+    {
+        "id": "j2hp",
+        "category": "jump",
+        "command": "前J↓強P",
+        "name": "前J↓強P"
+    },
+    {
+        "id": "214lp_variants",
+        "category": "special",
+        "command": "↓↙←弱P",
+        "name": "紫煙砲",
+        "variants": [
+            {
+                "id": "214lp",
+                "command": "↓↙←弱P",
+                "name": "紫煙砲"
+            },
+            {
+                "id": "214lp_hp",
+                "command": "↓↙←弱P>→P",
+                "name": "紫煙砲>→P"
+            }
+        ]
+    },
+    {
+        "id": "214pp_variants",
+        "category": "special",
+        "command": "↓↙←PP",
+        "name": "【OD】紫煙砲",
+        "variants": [
+            {
+                "id": "214pp",
+                "command": "↓↙←PP",
+                "name": "【OD】紫煙砲"
+            },
+            {
+                "id": "214pp_hp",
+                "command": "↓↙←PP>→P",
+                "name": "【OD】紫煙砲>→P"
+            }
+        ]
+    },
+    {
+        "id": "214mp",
+        "category": "special",
+        "command": "↓↙←中P",
+        "name": "紫泡泉"
+    },
+    {
+        "id": "214hp",
+        "category": "special",
+        "command": "↓↙←強P",
+        "name": "紫泡撒"
+    },
+    {
+        "id": "236lp",
+        "category": "special",
+        "command": "↓↘→弱P",
+        "name": "【弱】蛇頭鞭"
+    },
+    {
+        "id": "236mp",
+        "category": "special",
+        "command": "↓↘→中P",
+        "name": "【中】蛇頭鞭"
+    },
+    {
+        "id": "236hp",
+        "category": "special",
+        "command": "↓↘→強P",
+        "name": "【強】蛇頭鞭"
+    },
+    {
+        "id": "236pp",
+        "category": "special",
+        "command": "↓↘→PP",
+        "name": "【OD】蛇頭鞭"
+    },
+    {
+        "id": "214lk",
+        "category": "special",
+        "command": "↓↙←弱K",
+        "name": "【弱】凶襲突"
+    },
+    {
+        "id": "214mk",
+        "category": "special",
+        "command": "↓↙←中K",
+        "name": "【中】凶襲突"
+    },
+    {
+        "id": "214hk",
+        "category": "special",
+        "command": "↓↙←強K",
+        "name": "【強】凶襲突"
+    },
+    {
+        "id": "214kk",
+        "category": "special",
+        "command": "↓↙←KK",
+        "name": "【OD】凶襲突"
+    },
+    {
+        "id": "236lk",
+        "category": "special",
+        "command": "↓↘→弱K",
+        "name": "【弱】蛇軽功"
+    },
+    {
+        "id": "236mk",
+        "category": "special",
+        "command": "↓↘→中K",
+        "name": "【中】蛇軽功"
+    },
+    {
+        "id": "236hk",
+        "category": "special",
+        "command": "↓↘→強K",
+        "name": "【強】蛇軽功"
+    },
+    {
+        "id": "236kk",
+        "category": "special",
+        "command": "↓↘→KK",
+        "name": "【OD】蛇軽功"
+    },
+    {
+        "id": "2pp_variants",
+        "category": "special",
+        "command": "↓PP",
+        "name": "悪鬼蛇行",
+        "variants": [
+            {
+                "id": "2pp",
+                "command": "↓PP",
+                "name": "悪鬼蛇行"
+            },
+            {
+                "id": "2pp_p",
+                "command": "↓PP>P",
+                "name": "悪鬼蛇行>P"
+            },
+            {
+                "id": "2pp_k",
+                "command": "↓PP>K",
+                "name": "悪鬼蛇行>K"
+            },
+            {
+                "id": "2pp_throw",
+                "command": "↓PP>弱P弱K",
+                "name": "悪鬼蛇行>投げ"
+            }
+        ]
+    },
+    {
+        "id": "sa1",
+        "category": "sa",
+        "command": "↓↘→↓↘→K",
+        "name": "SA1"
+    },
+    {
+        "id": "sa2_lp",
+        "category": "sa",
+        "command": "↓↙←↓↙←弱P",
+        "name": "【弱】SA2"
+    },
+    {
+        "id": "sa2_mp",
+        "category": "sa",
+        "command": "↓↙←↓↙←中P",
+        "name": "【中】SA2"
+    },
+    {
+        "id": "sa2_hp",
+        "category": "sa",
+        "command": "↓↙←↓↙←強P",
+        "name": "【強】SA2"
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "command": "↓↘→↓↘→P",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "command": "【CA】↓↘→↓↘→P",
+        "name": "CA"
+    }
+]

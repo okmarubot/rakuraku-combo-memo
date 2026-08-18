@@ -1,0 +1,277 @@
+[
+    {
+        "id": "5hph",
+        "category": "normal",
+        "command": "強P(ホールド)",
+        "name": "強P(ホールド)"
+    },
+    {
+        "id": "5hkh",
+        "category": "normal",
+        "command": "強K(ホールド)",
+        "name": "強K(ホールド)"
+    },
+    {
+        "id": "2throw",
+        "category": "common",
+        "command": "↓投げ",
+        "name": "↓投げ"
+    },
+    {
+        "id": "2pp_variants",
+        "category": "unique",
+        "command": "↓PP",
+        "name": "ブレイカー・スタンス",
+        "variants": [
+            {
+                "id": "2pp",
+                "command": "↓PP",
+                "name": "ブレイカー・スタンス"
+            },
+            {
+                "id": "2pp_6",
+                "command": "→",
+                "name": "→"
+            },
+            {
+                "id": "2pp_4",
+                "command": "←",
+                "name": "←"
+            },
+            {
+                "id": "2pp_6lp",
+                "command": "→弱P",
+                "name": "→弱P"
+            },
+            {
+                "id": "2pp_6mp",
+                "command": "→中P",
+                "name": "→中P"
+            },
+            {
+                "id": "2pp_6hp",
+                "command": "→強P",
+                "name": "→強P"
+            },
+            {
+                "id": "2pp_lp",
+                "command": "弱P",
+                "name": "弱P"
+            },
+            {
+                "id": "2pp_mp",
+                "command": "中P",
+                "name": "中P"
+            },
+            {
+                "id": "2pp_hp",
+                "command": "強P",
+                "name": "強P"
+            },
+            {
+                "id": "2pp_hph",
+                "command": "強P(ホールド)",
+                "name": "強P(ホールド)"
+            },
+            {
+                "id": "2pp_lk",
+                "command": "弱K",
+                "name": "弱K"
+            },
+            {
+                "id": "2pp_mk",
+                "command": "中K",
+                "name": "中K"
+            },
+            {
+                "id": "2pp_hk",
+                "command": "強K",
+                "name": "強K"
+            },
+            {
+                "id": "2pp_hkhk",
+                "command": "強K>強K",
+                "name": "強K>強K"
+            },
+            {
+                "id": "2pp_throw",
+                "command": "弱P弱K",
+                "name": "投げ"
+            },
+            {
+                "id": "2pp_2throw",
+                "command": "↓弱P弱K",
+                "name": "↓投げ"
+            }
+        ]
+    },
+    {
+        "id": "6mp",
+        "category": "unique",
+        "command": "→中P",
+        "name": "→中P"
+    },
+    {
+        "id": "4mk",
+        "category": "unique",
+        "command": "←中K",
+        "name": "←中K"
+    },
+    {
+        "id": "j2hp",
+        "category": "jump",
+        "command": "前J↓強P",
+        "name": "前J↓強P"
+    },
+    {
+        "id": "5mp_target",
+        "category": "unique",
+        "command": "中Pタゲコン",
+        "name": "中Pタゲコン",
+        "variants": [
+            {
+                "id": "5mp_5hp",
+                "command": "中P>強P",
+                "name": "中P>強P"
+            }
+        ]
+    },
+    {
+        "id": "2lk_target",
+        "category": "unique",
+        "command": "↓弱Kタゲコン",
+        "name": "↓弱Kタゲコン",
+        "variants": [
+            {
+                "id": "2lk_2hk",
+                "command": "↓弱K>↓強K",
+                "name": "↓弱K>↓強K"
+            }
+        ]
+    },
+    {
+        "id": "236lp",
+        "category": "special",
+        "command": "↓↘→弱P",
+        "name": "【弱】フラッシュアックス"
+    },
+    {
+        "id": "236mp",
+        "category": "special",
+        "command": "↓↘→中P",
+        "name": "【中】フラッシュアックス"
+    },
+    {
+        "id": "236hp",
+        "category": "special",
+        "command": "↓↘→強P",
+        "name": "フラッシュチョップ"
+    },
+    {
+        "id": "236pp",
+        "category": "special",
+        "command": "↓↘→PP",
+        "name": "【OD】フラッシュチョップ"
+    },
+    {
+        "id": "623lk",
+        "category": "special",
+        "command": "→↓↘弱K",
+        "name": "【弱】エアニースマッシュ"
+    },
+    {
+        "id": "623mk",
+        "category": "special",
+        "command": "→↓↘中K",
+        "name": "【中】エアニースマッシュ"
+    },
+    {
+        "id": "623hk",
+        "category": "special",
+        "command": "→↓↘強K",
+        "name": "【強】エアニースマッシュ"
+    },
+    {
+        "id": "623kk",
+        "category": "special",
+        "command": "→↓↘KK",
+        "name": "【OD】エアニースマッシュ"
+    },
+    {
+        "id": "624lp",
+        "category": "special",
+        "command": "→↘↓↙←弱P",
+        "name": "【弱】パワーボム"
+    },
+    {
+        "id": "624mp",
+        "category": "special",
+        "command": "→↘↓↙←中P",
+        "name": "【中】パワーボム"
+    },
+    {
+        "id": "624hp",
+        "category": "special",
+        "command": "→↘↓↙←強P",
+        "name": "【強】パワーボム"
+    },
+    {
+        "id": "624pp",
+        "category": "special",
+        "command": "→↘↓↙←PP",
+        "name": "【OD】パワーボム"
+    },
+    {
+        "id": "624p_pd",
+        "category": "special",
+        "command": "→↘↓↙←P",
+        "name": "パワードロップ"
+    },
+    {
+        "id": "624pp_pd_variants",
+        "category": "special",
+        "command": "→↘↓↙←PP",
+        "name": "【OD】パワードロップ",
+        "variants": [
+            {
+                "id": "624pp_pd",
+                "command": "→↘↓↙←PP",
+                "name": "【OD】パワードロップ"
+            },
+            {
+                "id": "624pp_pd_6",
+                "command": "→↘↓↙←PP>→",
+                "name": "【OD】パワードロップ>→"
+            },
+            {
+                "id": "624pp_pd_pp",
+                "command": "→↘↓↙←PP>PP(SA2)",
+                "name": "【OD】パワードロップ>PP(SA2)"
+            }
+        ]
+    },
+    {
+        "id": "sa1",
+        "category": "sa",
+        "command": "↓↘→↓↘→K",
+        "name": "SA1"
+    },
+    {
+        "id": "sa2",
+        "category": "sa",
+        "command": "↓↙←↓↙←P",
+        "name": "SA2"
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "command": "↓↘→↓↘→P",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "command": "【CA】↓↘→↓↘→P",
+        "name": "CA"
+    }
+]

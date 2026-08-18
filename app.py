@@ -24,7 +24,6 @@ def home():
         characters=characters
     )
 
-
 # ==========================
 # 共通関数
 # ==========================
@@ -40,9 +39,26 @@ def build_command_text(moves, common_moves, character_moves):
 
         for move in all_moves:
 
+            # 通常の技
             if move["id"] == move_id:
 
                 command_list.append(move["command"])
+
+                break
+
+            # variants内の技
+            if "variants" in move:
+
+                for variant in move["variants"]:
+
+                    if variant["id"] == move_id:
+
+                        command_list.append(variant["command"])
+
+                        break
+
+                else:
+                    continue
 
                 break
 
@@ -60,9 +76,26 @@ def build_name_text(moves, common_moves, character_moves):
 
         for move in all_moves:
 
+            # 通常の技
             if move["id"] == move_id:
 
                 name_list.append(move["name"])
+
+                break
+
+            # variants内の技
+            if "variants" in move:
+
+                for variant in move["variants"]:
+
+                    if variant["id"] == move_id:
+
+                        name_list.append(variant["name"])
+
+                        break
+
+                else:
+                    continue
 
                 break
 

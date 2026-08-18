@@ -3,109 +3,109 @@
         "id": "5lp",
         "category": "normal",
         "command": "弱P",
-        "name": "立ち弱P"
+        "name": "弱P"
     },
     {
         "id": "5mp",
         "category": "normal",
         "command": "中P",
-        "name": "立ち中P"
+        "name": "中P"
     },
     {
         "id": "5hp",
         "category": "normal",
         "command": "強P",
-        "name": "立ち強P"
+        "name": "強P"
     },
     {
         "id": "5lk",
         "category": "normal",
         "command": "弱K",
-        "name": "立ち弱K"
+        "name": "弱K"
     },
     {
         "id": "5mk",
         "category": "normal",
         "command": "中K",
-        "name": "立ち中K"
+        "name": "中K"
     },
     {
         "id": "5hk",
         "category": "normal",
         "command": "強K",
-        "name": "立ち強K"
+        "name": "強K"
     },
     {
         "id": "2lp",
         "category": "normal",
         "command": "↓弱P",
-        "name": "しゃがみ弱P"
+        "name": "↓弱P"
     },
     {
         "id": "2mp",
         "category": "normal",
         "command": "↓中P",
-        "name": "しゃがみ中P"
+        "name": "↓中P"
     },
     {
         "id": "2hp",
         "category": "normal",
         "command": "↓強P",
-        "name": "しゃがみ強P"
+        "name": "↓強P"
     },
     {
         "id": "2lk",
         "category": "normal",
         "command": "↓弱K",
-        "name": "しゃがみ弱K"
+        "name": "↓弱K"
     },
     {
         "id": "2mk",
         "category": "normal",
         "command": "↓中K",
-        "name": "しゃがみ中K"
+        "name": "↓中K"
     },
     {
         "id": "2hk",
         "category": "normal",
         "command": "↓強K",
-        "name": "しゃがみ強K"
+        "name": "↓強K"
     },
     {
         "id": "jlp",
         "category": "jump",
         "command": "J弱P",
-        "name": "ジャンプ弱P"
+        "name": "J弱P"
     },
-        {
+    {
         "id": "jmp",
         "category": "jump",
         "command": "J中P",
-        "name": "ジャンプ中P"
+        "name": "J中P"
     },
     {
         "id": "jhp",
         "category": "jump",
         "command": "J強P",
-        "name": "ジャンプ強P"
+        "name": "J強P"
     },
     {
         "id": "jlk",
         "category": "jump",
         "command": "J弱K",
-        "name": "ジャンプ弱K"
+        "name": "J弱K"
     },
     {
         "id": "jmk",
         "category": "jump",
         "command": "J中K",
-        "name": "ジャンプ中K"
+        "name": "J中K"
     },
     {
         "id": "jhk",
         "category": "jump",
         "command": "J強K",
-        "name": "ジャンプ強K"
+        "name": "J強K"
     },
     {
         "id": "dr",
@@ -123,13 +123,43 @@
         "id": "di",
         "category": "common",
         "command": "DI",
-        "name": "ドライブインパクト"
+        "name": "DI"
     },
     {
         "id": "dp",
         "category": "common",
         "command": "DP",
-        "name": "ドライブパリィ"
+        "name": "DP"
+    },
+    {
+        "id": "jump",
+        "category": "common",
+        "command": "垂直ジャンプ",
+        "name": "垂直ジャンプ"
+    },
+    {
+        "id": "jump_f",
+        "category": "common",
+        "command": "前ジャンプ",
+        "name": "前ジャンプ"
+    },
+    {
+        "id": "jump_b",
+        "category": "common",
+        "command": "後ジャンプ",
+        "name": "後ジャンプ"
+    },
+    {
+        "id": "step",
+        "category": "common",
+        "command": "前ステ",
+        "name": "前ステ"
+    },
+    {
+        "id": "step_b",
+        "category": "common",
+        "command": "後ステ",
+        "name": "後ステ"
     },
     {
         "id": "throw_f",
@@ -140,7 +170,7 @@
     {
         "id": "throw_b",
         "category": "common",
-        "command": "後ろ投げ",
-        "name": "後ろ投げ"
+        "command": "後投げ",
+        "name": "後投げ"
     }
 ]

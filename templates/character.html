@@ -53,73 +53,77 @@
 
             </summary>
 
-            <!-- 中見出しループ -->
+            <div class="main-group-content">
 
-            {% for subgroup in group.subgroups %}
+                <!-- 中見出しループ -->
 
-            <details
-                class="sub-group"
-                data-subgroup-id="{{ subgroup.id }}"
-                open
-            >
+                {% for subgroup in group.subgroups %}
 
-                <summary class="sub-group-title">
+                <details
+                    class="sub-group"
+                    data-subgroup-id="{{ subgroup.id }}"
+                    open
+                >
 
-                    <span class="sub-group-title-text">{{ subgroup.title }}</span>
-                    
-                </summary>
+                    <summary class="sub-group-title">
 
-                <!-- コンボ一覧 -->
+                        <span class="sub-group-title-text">{{ subgroup.title }}</span>
+                        
+                    </summary>
 
-                <div class="combo-list">
+                    <!-- コンボ一覧 -->
 
-                    <!-- コンボループ -->
+                    <div class="combo-list">
 
-                    {% for combo in subgroup.combos %}
+                        <!-- コンボループ -->
 
-                    <div
-                        class="combo-item"
-                        data-combo-id="{{ combo.id }}"
-                        data-moves='{{ combo.moves | tojson }}'
-                        data-memo="{{ combo.memo }}"
-                    >
-                        <!-- コンボヘッダー -->
+                        {% for combo in subgroup.combos %}
 
-                        <div class="combo-header">
+                        <div
+                            class="combo-item"
+                            data-combo-id="{{ combo.id }}"
+                            data-moves='{{ combo.moves | tojson }}'
+                            data-memo="{{ combo.memo }}"
+                        >
+                            <!-- コンボヘッダー -->
 
-                            <span 
-                                class="combo-text" 
-                                data-command="{{ combo.command }}" 
-                                data-name="{{ combo.name }}"
-                            >
-                                {{ combo.command }}
-                            </span>
+                            <div class="combo-header">
+
+                                <span 
+                                    class="combo-text" 
+                                    data-command="{{ combo.command }}" 
+                                    data-name="{{ combo.name }}"
+                                >
+                                    {{ combo.command }}
+                                </span>
+
+                            </div>
+
+                            <!-- メモ -->
+
+                            <div class="combo-memo">
+
+                                <span class="memo-label">メモ:</span>
+
+                                <span class="memo-text">{{ combo.memo }}</span>
+
+                            </div>
 
                         </div>
 
-                        <!-- メモ -->
+                        {% endfor %}
 
-                        <div class="combo-memo">
-
-                            <span class="memo-label">メモ:</span>
-
-                            <span class="memo-text">{{ combo.memo }}</span>
-
-                        </div>
+                        <!-- /コンボループ -->
 
                     </div>
 
-                    {% endfor %}
+                </details>
 
-                    <!-- /コンボループ -->
+                {% endfor %}
 
-                </div>
+                <!-- /中見出しループ -->
 
-            </details>
-
-            {% endfor %}
-
-            <!-- /中見出しループ -->
+            </div>
 
         </details>
 
@@ -206,108 +210,69 @@
 
             </summary>
 
-            <!-- 中見出しループ -->
+            <div class="main-group-content">
 
-            {% for subgroup in group.subgroups %}
+                <!-- 中見出しループ -->
 
-            <details
-                class="sub-group"
-                data-subgroup-id="{{ subgroup.id }}"
-                open
-            >
-                
-                <summary class="sub-group-title">
+                {% for subgroup in group.subgroups %}
 
-                    <!-- 中見出し（通常） -->
-                    <div class="sub-group-view">
+                <details
+                    class="sub-group"
+                    data-subgroup-id="{{ subgroup.id }}"
+                    open
+                >
+                    
+                    <summary class="sub-group-title">
 
-                        <span class="sub-group-title-text">{{ subgroup.title }}</span>
+                        <!-- 中見出し（通常） -->
+                        <div class="sub-group-view">
 
-                        <button class="sub-group-edit-button">✏</button>
-                        <button class="sub-group-delete-button">🗑</button>
+                            <span class="sub-group-title-text">{{ subgroup.title }}</span>
 
-                    </div>
-
-                    <!-- 中見出し（編集） -->
-                    <div class="sub-group-edit">
-
-                        <input
-                            class="sub-group-title-input"
-                            type="text"
-                            value="{{ subgroup.title }}"
-                        >
-
-                        <button class="sub-group-complete-button">✓</button>
-                        <button class="sub-group-cancel-button">×</button>
-
-                    </div>
-
-                </summary>
-
-                <!-- コンボ一覧 -->
-
-                <div class="combo-list">
-
-                    <!-- コンボループ -->
-
-                    {% for combo in subgroup.combos %}
-
-                    <div
-                        class="combo-item"
-                        data-combo-id="{{ combo.id }}"
-                        data-moves='{{ combo.moves | tojson }}'
-                        data-memo="{{ combo.memo }}"
-                    >
-                        <!-- ==========================
-                            コンボカード（通常）
-                        ========================== -->
-
-                        <div class="combo-view">
-
-                            <!-- コンボヘッダー -->
-
-                            <div class="combo-header">
-
-                                <span
-                                    class="combo-text"
-                                    data-command="{{ combo.command }}"
-                                    data-name="{{ combo.name }}"
-                                >
-                                    {{ combo.command }}
-                                </span>
-
-                                <div class="combo-actions">
-
-                                    <button class="combo-edit-button">✏</button>
-                                    <button class="combo-delete-button">🗑</button>
-
-                                </div>
-
-                            </div>
-
-                            <!-- メモ -->
-
-                            <div class="combo-memo">
-
-                                <span class="memo-label">メモ:</span>
-
-                                <span class="memo-text">{{ combo.memo }}</span>
-
-                            </div>
+                            <button class="sub-group-edit-button">✏</button>
+                            <button class="sub-group-delete-button">🗑</button>
 
                         </div>
 
-                        <!-- ==========================
-                            コンボカード（編集）
-                        ========================== -->
+                        <!-- 中見出し（編集） -->
+                        <div class="sub-group-edit">
 
-                        <div class="combo-edit">
+                            <input
+                                class="sub-group-title-input"
+                                type="text"
+                                value="{{ subgroup.title }}"
+                            >
 
-                            <!-- コンボヘッダー -->
+                            <button class="sub-group-complete-button">✓</button>
+                            <button class="sub-group-cancel-button">×</button>
 
-                            <div class="combo-header">
+                        </div>
 
-                                <div class="combo-main">
+                    </summary>
+
+                    <!-- コンボ一覧 -->
+
+                    <div class="combo-list">
+
+                        <!-- コンボループ -->
+
+                        {% for combo in subgroup.combos %}
+
+                        <div
+                            class="combo-item"
+                            data-combo-id="{{ combo.id }}"
+                            data-moves='{{ combo.moves | tojson }}'
+                            data-memo="{{ combo.memo }}"
+                        >
+                            <!-- ==========================
+                                コンボカード（通常）
+                            ========================== -->
+
+                            <div class="combo-view">
+
+                                <!-- コンボヘッダー -->
+
+                                <div class="combo-header">
 
                                     <span
                                         class="combo-text"
@@ -317,59 +282,102 @@
                                         {{ combo.command }}
                                     </span>
 
-                                    <button class="add-move-button">＋ 技を追加</button>
+                                    <div class="combo-actions">
+
+                                        <button class="combo-edit-button">✏</button>
+                                        <button class="combo-delete-button">🗑</button>
+
+                                    </div>
 
                                 </div>
 
-                                <div class="combo-actions">
+                                <!-- メモ -->
 
-                                    <!-- Undo -->
-                                    <button class="combo-undo-button">↩</button>
-                                    <!-- 編集完了 -->
-                                    <button class="combo-complete-button">✓</button>
-                                    <!-- 編集キャンセル -->
-                                    <button class="combo-cancel-button">×</button>
+                                <div class="combo-memo">
+
+                                    <span class="memo-label">メモ:</span>
+
+                                    <span class="memo-text">{{ combo.memo }}</span>
 
                                 </div>
 
                             </div>
 
-                            <!-- メモ -->
+                            <!-- ==========================
+                                コンボカード（編集）
+                            ========================== -->
 
-                            <div class="combo-memo">
+                            <div class="combo-edit">
 
-                                <label>メモ:</label>
+                                <!-- コンボヘッダー -->
 
-                                <textarea
-                                    rows="1"
-                                    placeholder="コンボのコツや注意点を入力"
-                                >{{ combo.memo }}</textarea>
+                                <div class="combo-header">
+
+                                    <div class="combo-main">
+
+                                        <span
+                                            class="combo-text"
+                                            data-command="{{ combo.command }}"
+                                            data-name="{{ combo.name }}"
+                                        >
+                                            {{ combo.command }}
+                                        </span>
+
+                                        <button class="add-move-button">＋ 技を追加</button>
+
+                                    </div>
+
+                                    <div class="combo-actions">
+
+                                        <!-- Undo -->
+                                        <button class="combo-undo-button">↩</button>
+                                        <!-- 編集完了 -->
+                                        <button class="combo-complete-button">✓</button>
+                                        <!-- 編集キャンセル -->
+                                        <button class="combo-cancel-button">×</button>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- メモ -->
+
+                                <div class="combo-memo">
+
+                                    <label>メモ:</label>
+
+                                    <textarea
+                                        rows="1"
+                                        placeholder="コンボのコツや注意点を入力"
+                                    >{{ combo.memo }}</textarea>
+
+                                </div>
 
                             </div>
 
                         </div>
 
+                        {% endfor %}
+
+                        <!-- /コンボループ -->
+
+                        <!-- コンボ追加 -->
+
+                        <button class="add-combo-button">＋ コンボ追加</button>
+
                     </div>
 
-                    {% endfor %}
+                </details>
 
-                    <!-- /コンボループ -->
+                {% endfor %}
 
-                    <!-- コンボ追加 -->
+                <!-- /中見出しループ -->
 
-                    <button class="add-combo-button">＋ コンボ追加</button>
+                <!-- 中見出し追加 -->
 
-                </div>
+                <button class="add-subheading-button">＋ 中見出し追加</button>
 
-            </details>
-
-            {% endfor %}
-
-            <!-- /中見出しループ -->
-
-            <!-- 中見出し追加 -->
-
-            <button class="add-subheading-button">＋ 中見出し追加</button>
+            </div>
 
         </details>
 
@@ -402,11 +410,13 @@
         <div class="move-selector-tabs">
 
             <button data-category="normal">通常技</button>
-            <button data-category="special">特殊技</button>
-            <button data-category="special_move">必殺技</button>
+            <button data-category="unique">特殊技</button>
+            <button data-category="special">必殺技</button>
             <button data-category="jump">ジャンプ</button>
             <button data-category="sa">SA</button>
             <button data-category="common">共通</button>
+
+            <div class="move-tab-indicator"></div>
 
         </div>
 
@@ -441,6 +451,12 @@
             <span class="main-group-title-text"></span>
 
         </summary>
+
+        <div class="main-group-content">
+
+            <!-- 中見出しループ -->
+
+        </div>
 
     </details>
 
@@ -483,7 +499,13 @@
 
         </summary>
 
-        <button class="add-subheading-button">＋ 中見出し追加</button>
+        <div class="main-group-content">
+
+            <!-- 中見出しループ -->
+
+            <button class="add-subheading-button">＋ 中見出し追加</button>
+
+        </div>
 
     </details>
 

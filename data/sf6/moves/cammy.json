@@ -1,0 +1,385 @@
+[
+    {
+        "id": "throw_j",
+        "category": "jump",
+        "command": "空中投げ",
+        "name": "空中投げ"
+    },
+    {
+        "id": "4mp",
+        "category": "unique",
+        "command": "←中P",
+        "name": "←中P"
+    },
+    {
+        "id": "6hk",
+        "category": "unique",
+        "command": "→強K",
+        "name": "→強K"
+    },
+    {
+        "id": "4hk",
+        "category": "unique",
+        "command": "←強K",
+        "name": "←強K"
+    },
+    {
+        "id": "4mp_target",
+        "category": "unique",
+        "command": "←中Pタゲコン",
+        "name": "←中Pタゲコン",
+        "variants": [
+            {
+                "id": "4mp_5hk",
+                "command": "←中P>強K",
+                "name": "←中P>強K"
+            }
+        ]
+    },
+    {
+        "id": "5hp_target",
+        "category": "unique",
+        "command": "強Pタゲコン",
+        "name": "強Pタゲコン",
+        "variants": [
+            {
+                "id": "5hp_5hk",
+                "command": "強P>強K",
+                "name": "強P>強K"
+            }
+        ]
+    },
+    {
+        "id": "236lk",
+        "category": "special",
+        "command": "↓↘→弱K",
+        "name": "【弱】スパイラルアロー"
+    },
+    {
+        "id": "236mk",
+        "category": "special",
+        "command": "↓↘→中K",
+        "name": "【中】スパイラルアロー"
+    },
+    {
+        "id": "236hk",
+        "category": "special",
+        "command": "↓↘→強K",
+        "name": "【強】スパイラルアロー"
+    },
+    {
+        "id": "236hkh",
+        "category": "special",
+        "command": "↓↘→強K(ホールド)",
+        "name": "【強】スパイラルアロー(ホールド)"
+    },
+    {
+        "id": "236kk",
+        "category": "special",
+        "command": "↓↘→KK",
+        "name": "【OD】スパイラルアロー"
+    },
+    {
+        "id": "623lk",
+        "category": "special",
+        "command": "→↓↘弱K",
+        "name": "【弱】キャノンスパイク"
+    },
+    {
+        "id": "623mk",
+        "category": "special",
+        "command": "→↓↘中K",
+        "name": "【中】キャノンスパイク"
+    },
+    {
+        "id": "623hk",
+        "category": "special",
+        "command": "→↓↘強K",
+        "name": "【強】キャノンスパイク"
+    },
+    {
+        "id": "623hk_h",
+        "category": "special",
+        "command": "→↓↘強K(ホールド)",
+        "name": "【強】キャノンスパイク(ホールド)"
+    },
+    {
+        "id": "623kk",
+        "category": "special",
+        "command": "→↓↘KK",
+        "name": "【OD】キャノンスパイク"
+    },
+    {
+        "id": "214lp",
+        "category": "special",
+        "command": "↓↙←弱P",
+        "name": "【弱】アクセルスピンナックル"
+    },
+    {
+        "id": "214mp",
+        "category": "special",
+        "command": "↓↙←中P",
+        "name": "【中】アクセルスピンナックル"
+    },
+    {
+        "id": "214hp",
+        "category": "special",
+        "command": "↓↙←強P",
+        "name": "【強】アクセルスピンナックル"
+    },
+    {
+        "id": "214pp",
+        "category": "special",
+        "command": "↓↙←PP",
+        "name": "【OD】アクセルスピンナックル"
+    },
+    {
+        "id": "j214lk",
+        "category": "special",
+        "command": "前J↓↙←弱K",
+        "name": "【弱】キャノンストライク"
+    },
+    {
+        "id": "j214mk",
+        "category": "special",
+        "command": "前J↓↙←中K",
+        "name": "【中】キャノンストライク"
+    },
+    {
+        "id": "j214hk",
+        "category": "special",
+        "command": "前J↓↙←強K",
+        "name": "【強】キャノンストライク"
+    },
+    {
+        "id": "j214kk",
+        "category": "special",
+        "command": "前J↓↙←KK",
+        "name": "【OD】キャノンストライク"
+    },
+    {
+        "id": "236lp_variants",
+        "category": "special",
+        "command": "↓↘→弱P",
+        "name": "【弱】フーリガン",
+        "variants": [
+            {
+                "id": "236lp",
+                "command": "↓↘→弱P",
+                "name": "【弱】フーリガン"
+            },
+            {
+                "id": "236lp_lK",
+                "command": "↓↘→弱P>弱K",
+                "name": "【弱】フーリガン>弱K"
+            },
+            {
+                "id": "236lp_mK",
+                "command": "↓↘→弱P>中K",
+                "name": "【弱】フーリガン>中K"
+            },
+            {
+                "id": "236lp_hK",
+                "command": "↓↘→弱P>強K",
+                "name": "【弱】フーリガン>強K"
+            },
+            {
+                "id": "236lp_2k",
+                "command": "↓↘→弱P>↓K",
+                "name": "【弱】フーリガン>↓K"
+            },
+            {
+                "id": "236lp_throw",
+                "command": "↓↘→弱P>弱P弱K",
+                "name": "【弱】フーリガン>投げ"
+            },
+            {
+                "id": "236lp_p",
+                "command": "↓↘→弱P>P",
+                "name": "【弱】フーリガン>P"
+            }
+        ]
+    },
+    {
+        "id": "236mp_variants",
+        "category": "special",
+        "command": "↓↘→中P",
+        "name": "【中】フーリガン",
+        "variants": [
+            {
+                "id": "236mp",
+                "command": "↓↘→中P",
+                "name": "【中】フーリガン"
+            },
+            {
+                "id": "236mp_lk",
+                "command": "↓↘→中P>弱K",
+                "name": "【中】フーリガン>弱K"
+            },
+            {
+                "id": "236mp_mk",
+                "command": "↓↘→中P>中K",
+                "name": "【中】フーリガン>中K"
+            },
+            {
+                "id": "236mp_hk",
+                "command": "↓↘→中P>強K",
+                "name": "【中】フーリガン>強K"
+            },
+            {
+                "id": "236mp_2k",
+                "command": "↓↘→中P>↓K",
+                "name": "【中】フーリガン>↓K"
+            },
+            {
+                "id": "236mp_throw",
+                "command": "↓↘→中P>弱P弱K",
+                "name": "【中】フーリガン>投げ"
+            },
+            {
+                "id": "236mp_p",
+                "command": "↓↘→中P>P",
+                "name": "【中】フーリガン>P"
+            }
+        ]
+    },
+    {
+        "id": "236hp_variants",
+        "category": "special",
+        "command": "↓↘→強P",
+        "name": "【強】フーリガン",
+        "variants": [
+            {
+                "id": "236hp",
+                "command": "↓↘→強P",
+                "name": "【強】フーリガン"
+            },
+            {
+                "id": "236hp_lk",
+                "command": "↓↘→強P>弱K",
+                "name": "【強】フーリガン>弱K"
+            },
+            {
+                "id": "236hp_mk",
+                "command": "↓↘→強P>中K",
+                "name": "【強】フーリガン>中K"
+            },
+            {
+                "id": "236hp_hk",
+                "command": "↓↘→強P>強K",
+                "name": "【強】フーリガン>強K"
+            },
+            {
+                "id": "236hp_2k",
+                "command": "↓↘→強P>↓K",
+                "name": "【強】フーリガン>↓K"
+            },
+            {
+                "id": "236hp_throw",
+                "command": "↓↘→強P>弱P弱K",
+                "name": "【強】フーリガン>投げ"
+            },
+            {
+                "id": "236hp_p",
+                "command": "↓↘→強P>P",
+                "name": "【強】フーリガン>P"
+            }
+        ]
+    },
+    {
+        "id": "236hp_h_variants",
+        "category": "special",
+        "command": "↓↘→強P(ホールド)",
+        "name": "【強】フーリガン(ホールド)",
+        "variants": [
+            {
+                "id": "236hp_h",
+                "command": "↓↘→強P(ホールド)",
+                "name": "【強】フーリガン(ホールド)"
+            },
+            {
+                "id": "236hp_h_k",
+                "command": "↓↘→強P(ホールド)>K",
+                "name": "【強】フーリガン(ホールド)>K"
+            },
+            {
+                "id": "236hp_h_2k",
+                "command": "↓↘→強P(ホールド)>↓K",
+                "name": "【強】フーリガン(ホールド)>↓K"
+            },
+            {
+                "id": "236hp_h_throw",
+                "command": "↓↘→強P(ホールド)>弱P弱K",
+                "name": "【強】フーリガン(ホールド)>投げ"
+            },
+            {
+                "id": "236hp_h_p",
+                "command": "↓↘→強P(ホールド)>P",
+                "name": "【強】フーリガン(ホールド)>P"
+            }
+        ]
+    },
+    {
+        "id": "236pp_variants",
+        "category": "special",
+        "command": "↓↘→PP",
+        "name": "【OD】フーリガン",
+        "variants": [
+            {
+                "id": "236pp",
+                "command": "↓↘→PP",
+                "name": "【OD】フーリガン"
+            },
+            {
+                "id": "236pp_k",
+                "command": "↓↘→PP>K",
+                "name": "【OD】フーリガン>K"
+            },
+            {
+                "id": "236pp_2k",
+                "command": "↓↘→PP>↓K",
+                "name": "【OD】フーリガン>↓K"
+            },
+            {
+                "id": "236pp_throw",
+                "command": "↓↘→PP>弱P弱K",
+                "name": "【OD】フーリガン>投げ"
+            },
+            {
+                "id": "236pp_p",
+                "command": "↓↘→PP>P",
+                "name": "【OD】フーリガン>P"
+            }
+        ]
+    },
+    {
+        "id": "sa1",
+        "category": "sa",
+        "command": "↓↘→↓↘→K",
+        "name": "SA1"
+    },
+    {
+        "id": "sa2",
+        "category": "sa",
+        "command": "↓↙←↓↙←K",
+        "name": "SA2"
+    },
+    {
+        "id": "j_sa2",
+        "category": "sa",
+        "command": "前J↓↙←↓↙←K",
+        "name": "空中SA2"
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "command": "↓↘→↓↘→P",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "command": "【CA】↓↘→↓↘→P",
+        "name": "CA"
+    }
+]

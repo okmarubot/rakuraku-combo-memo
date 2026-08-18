@@ -45,6 +45,7 @@ const moveSelectorPanel = document.getElementById("move-selector-panel");
 const moveSelectorList = document.querySelector(".move-selector-list");
 const closeMoveSelectorButton = document.getElementById("close-move-selector-button");
 const moveCategoryButtons = document.querySelectorAll(".move-selector-tabs button");
+const moveTabIndicator = document.querySelector(".move-tab-indicator");
 
 /* 見出し編集 */
 const viewMainGroupTemplate = document.getElementById("view-main-group-template");
@@ -117,6 +118,10 @@ function toggleDisplayMode() {
             : combo.dataset.name;
 
     });
+
+    if (moveSelectorPanel.style.display !== "none") {
+        renderMoveSelectorList();
+    }
 
 }
 
@@ -407,17 +412,50 @@ function setupComboTexts(comboItem, combo) {
 
 }
 
-// コンボ表示文字列作成
-function buildComboText(moves, type) {
+// 技IDから技データを取得する
+function findMoveById(moveId) {
 
-    return moves.map(moveId => {
+    // 通常の技を検索
+    const normalMove = moveData.find(move => move.id === moveId);
 
-        const move = moveData.find(move => move.id === moveId);
+    if (normalMove) {
+        return normalMove;
+    }
 
-        return move[type];
+    // variants内を検索
+    for (const move of moveData) {
 
-    }).join(" ⏵ ");
+        if (!move.variants) {
+            continue;
+        }
 
+        const variant = move.variants.find(variant => variant.id === moveId);
+
+        if (variant) {
+            return variant;
+        }
+    }
+
+    return undefined;
+}
+
+function buildComboText(moves, displayType) {
+
+    return moves
+        .map(moveId => {
+
+            const move = findMoveById(moveId);
+
+            if (!move) {
+                console.warn("技データが見つかりません:", moveId)
+                return "";
+            }
+
+            return move[displayType];
+
+        })
+        .filter(text => text !== "")
+        .join(" ⏵ ")
 }
 
 /* コンボデータ更新 */
@@ -555,7 +593,7 @@ async function createNewCombo(subGroup) {
 
     await startComboEdit(newComboItem);
 
-    openMoveSelectorPanel();
+    openMoveSelectorPanel(newComboItem);
 
 }
 
@@ -673,18 +711,41 @@ function syncViewComboOrder(comboList) {
 /* ---------- 技一覧パネル ---------- */
 
 // 技一覧パネルを開く
-function openMoveSelectorPanel() {
+function openMoveSelectorPanel(targetComboItem) {
 
     renderMoveSelectorList();
 
-    moveSelectorPanel.style.display = "block";
+    // 技一覧のスクロール位置を先頭に戻す
+    moveSelectorList.scrollTop = 0;
+
+    document.body.classList.add("move-selector-open");
+
+    updateMoveTabIndicator();
+
+    if (targetComboItem) {
+
+        const panelHeight = moveSelectorPanel.offsetHeight;
+        const extraSpace = 20;
+
+        const panelTop = window.innerHeight - panelHeight;
+
+        const targetBottom = targetComboItem.getBoundingClientRect().bottom;
+
+        const scrollAmount = targetBottom - (panelTop - extraSpace);
+
+        window.scrollBy({
+            top: scrollAmount,
+            behavior: "smooth"
+        });
+
+    }
 
 }
 
 // 技一覧パネルを閉じる
 function closeMoveSelectorPanel() {
 
-    moveSelectorPanel.style.display = "none";
+    document.body.classList.remove("move-selector-open");
 
 }
 
@@ -693,13 +754,78 @@ function renderMoveSelectorList() {
 
     moveSelectorList.innerHTML = "";
 
-    moveData
-        .filter(move => move.category === currentCategory)
-        .forEach(move => {
+    moveSelectorList.className = "move-selector-list " + `category-${currentCategory}`;
 
+    const categoryMoves = moveData.filter(move => move.category === currentCategory);
+
+    categoryMoves.forEach(move => {
+
+        // variantsを持つ技
+        if (move.variants && move.variants.length > 0) {
+
+            const variantGroup = document.createElement("div");
+
+            variantGroup.className = "move-variant-group";
+
+            // 親技
+            const parentButton = document.createElement("button");
+
+            parentButton.className = "move-variant-parent";
+
+            parentButton.textContent = commandMode
+                ? move.command
+                : move.name;
+
+            // 開閉用
+            const variantList = document.createElement("div");
+
+            variantList.className = "move-variant-list";
+
+            parentButton.addEventListener("click", function () {
+
+                variantGroup.classList.toggle("open");
+
+            });
+
+            variantGroup.appendChild(parentButton);
+
+            // 子技
+            move.variants.forEach(variant => {
+
+                const variantButton = document.createElement("button");
+
+                variantButton.className = "move-variant-button";
+
+                variantButton.textContent = commandMode
+                    ? variant.command
+                    : variant.name;
+
+                variantButton.addEventListener("click", function () {
+
+                    addMove(variant.id);
+
+                });
+
+                variantList.appendChild(variantButton);
+
+            });
+
+            variantGroup.appendChild(variantList);
+
+            moveSelectorList.appendChild(variantGroup);
+
+            return;
+
+        }
+
+        // 通常の技
         const button = document.createElement("button");
 
-        button.textContent = move.command;
+        button.className = "move-selector-button";
+
+        button.textContent = commandMode
+            ? move.command
+            : move.name;
 
         button.addEventListener("click", function () {
 
@@ -710,6 +836,22 @@ function renderMoveSelectorList() {
         moveSelectorList.appendChild(button);
 
     });
+
+}
+
+// 技一覧タブの下線を移動
+function updateMoveTabIndicator() {
+
+    const activeButton = document.querySelector(
+        `.move-selector-tabs button[data-category="${currentCategory}"]`
+    );
+
+    if (!activeButton || !moveTabIndicator) {
+        return;
+    }
+
+    moveTabIndicator.style.width = `${activeButton.offsetWidth}px`;
+    moveTabIndicator.style.left = `${activeButton.offsetLeft}px`;
 
 }
 
@@ -951,9 +1093,7 @@ async function createNewMainGroup() {
 
     addViewMainGroup(group);
     
-    const newMainGroup = addEditMainGroup(group);
-
-    await startGroupEdit(newMainGroup);
+    addEditMainGroup(group);
 
 }
 
@@ -1280,7 +1420,7 @@ function addEditSubGroup(subGroup, mainGroup) {
 
     const addButton = mainGroup.querySelector(".add-subheading-button");
 
-    mainGroup.insertBefore(subGroupElement,addButton);
+    addButton.parentElement.insertBefore(subGroupElement,addButton);
 
     return subGroupElement;
 
@@ -1315,8 +1455,6 @@ async function createNewSubGroup(mainGroup) {
     addViewSubGroup(subGroup,viewMainGroup);
 
     const newSubGroup = addEditSubGroup(subGroup,mainGroup);
-
-    await startSubGroupEdit(newSubGroup);
 
     return newSubGroup;
 
@@ -1492,7 +1630,7 @@ function setupEditComboCardEvents(comboItem) {
         .querySelector(".add-move-button")
         .addEventListener("click", function () {
 
-            openMoveSelectorPanel();
+            openMoveSelectorPanel(comboItem);
 
         });
 
@@ -1802,6 +1940,8 @@ function registerEvents() {
             currentCategory = this.dataset.category;
 
             renderMoveSelectorList();
+
+            updateMoveTabIndicator();
 
         });
 

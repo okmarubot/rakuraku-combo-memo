@@ -1,0 +1,48 @@
+{
+    "groups": [
+        {
+            "id": "group-001",
+            "title": "新しい大見出し",
+            "subgroups": [
+                {
+                    "id": "subgroup-001",
+                    "title": "新しい中見出し",
+                    "combos": [
+                        {
+                            "id": "combo-001",
+                            "moves": [
+                                "5mp",
+                                "236kk",
+                                "214lp_hp",
+                                "5lp_5lp"
+                            ],
+                            "memo": ""
+                        },
+                        {
+                            "id": "combo-002",
+                            "moves": [
+                                "5lp",
+                                "5lp",
+                                "5lp"
+                            ],
+                            "memo": ""
+                        },
+                        {
+                            "id": "combo-003",
+                            "moves": [
+                                "5mp",
+                                "5mk"
+                            ],
+                            "memo": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "group-002",
+            "title": "新しい大見出し",
+            "subgroups": []
+        }
+    ]
+}

@@ -1,43 +1,224 @@
 [
     {
+        "id": "6mp",
+        "category": "unique",
+        "command": "→中P",
+        "name": "→中P"
+    },
+    {
+        "id": "6hp",
+        "category": "unique",
+        "command": "→強P",
+        "name": "→強P"
+    },
+    {
+        "id": "4hp",
+        "category": "unique",
+        "command": "←強P",
+        "name": "←強P"
+    },
+    {
+        "id": "4hk",
+        "category": "unique",
+        "command": "←強K",
+        "name": "←強K"
+    },
+    {
+        "id": "6hk",
+        "category": "unique",
+        "command": "→強K",
+        "name": "→強K"
+    },
+    {
+        "id": "5hp_target",
+        "category": "unique",
+        "command": "強Pタゲコン",
+        "name": "強Pタゲコン",
+        "variants": [
+            {
+                "id": "5hp_5hk",
+                "command": "強P>強K",
+                "name": "強P>強K"
+            }
+        ]
+    },
+    {
+        "id": "5mp_target",
+        "category": "unique",
+        "command": "中Pタゲコン",
+        "name": "中Pタゲコン",
+        "variants": [
+            {
+                "id": "5mp_5lk",
+                "command": "中P>弱K",
+                "name": "中P>弱K"
+            },
+            {
+                "id": "5mp_5lk_5hk",
+                "command": "中P>弱K>強K",
+                "name": "中P>弱K>強K"
+            }
+        ]
+    },
+    {
         "id": "236lp",
-        "category": "special_move",
+        "category": "special",
         "command": "↓↘→弱P",
-        "name": "【弱】弱波動拳"
+        "name": "【弱】波動拳"
     },
     {
         "id": "236mp",
-        "category": "special_move",
+        "category": "special",
         "command": "↓↘→中P",
         "name": "【中】波動拳"
     },
     {
         "id": "236hp",
-        "category": "special_move",
+        "category": "special",
         "command": "↓↘→強P",
         "name": "【強】波動拳"
     },
     {
+        "id": "236hp_denjin",
+        "category": "special",
+        "command": "【電刃】↓↘→強P",
+        "name": "【電刃】波動拳"
+    },
+    {
+        "id": "236pp",
+        "category": "special",
+        "command": "↓↘→PP",
+        "name": "【OD】波動拳"
+    },
+    {
+        "id": "236pp_denjin",
+        "category": "special",
+        "command": "【電刃】↓↘→PP",
+        "name": "【電刃OD】波動拳"
+    },
+    {
         "id": "623lp",
-        "category": "special_move",
+        "category": "special",
         "command": "→↓↘弱P",
         "name": "【弱】昇龍拳"
     },
     {
+        "id": "623mp",
+        "category": "special",
+        "command": "→↓↘中P",
+        "name": "【中】昇龍拳"
+    },
+    {
+        "id": "623hp",
+        "category": "special",
+        "command": "→↓↘強P",
+        "name": "【強】昇龍拳"
+    },
+    {
+        "id": "623pp",
+        "category": "special",
+        "command": "→↓↘PP",
+        "name": "【OD】昇龍拳"
+    },
+    {
         "id": "214lk",
-        "category": "special_move",
+        "category": "special",
         "command": "↓↙←弱K",
         "name": "【弱】竜巻旋風脚"
     },
     {
         "id": "214mk",
-        "category": "special_move",
+        "category": "special",
         "command": "↓↙←中K",
         "name": "【中】竜巻旋風脚"
     },
     {
+        "id": "214hk",
+        "category": "special",
+        "command": "↓↙←強K",
+        "name": "【強】竜巻旋風脚"
+    },
+    {
+        "id": "214kk",
+        "category": "special",
+        "command": "↓↙←KK",
+        "name": "【OD】竜巻旋風脚"
+    },
+    {
+        "id": "j214k",
+        "category": "special",
+        "command": "空中↓↙←K",
+        "name": "空中竜巻旋風脚"
+    },
+    {
+        "id": "j214kk",
+        "category": "special",
+        "command": "空中↓↙←KK",
+        "name": "【OD】空中竜巻旋風脚"
+    },
+    {
+        "id": "236lk",
+        "category": "special",
+        "command": "↓↘→弱K",
+        "name": "【弱】上段足刀蹴り"
+    },
+    {
+        "id": "236mk",
+        "category": "special",
+        "command": "↓↘→中K",
+        "name": "【中】上段足刀蹴り"
+    },
+    {
+        "id": "236hk",
+        "category": "special",
+        "command": "↓↘→強K",
+        "name": "【強】上段足刀蹴り"
+    },
+    {
+        "id": "236kk",
+        "category": "special",
+        "command": "↓↘→KK",
+        "name": "【OD】上段足刀蹴り"
+    },
+    {
+        "id": "214lp",
+        "category": "special",
+        "command": "↓↙←弱P",
+        "name": "【弱】波掌撃"
+    },
+    {
+        "id": "214mp",
+        "category": "special",
+        "command": "↓↙←中P",
+        "name": "【中】波掌撃"
+    },
+    {
+        "id": "214hp",
+        "category": "special",
+        "command": "↓↙←強P",
+        "name": "【強】波掌撃"
+    },
+    {
+        "id": "214hp_denjin",
+        "category": "special",
+        "command": "【電刃】↓↙←強P",
+        "name": "【電刃】波掌撃"
+    },
+    {
+        "id": "214pp",
+        "category": "special",
+        "command": "↓↙←PP",
+        "name": "【OD】波掌撃"
+    },
+    {
+        "id": "214pp_denjin",
+        "category": "special",
+        "command": "【電刃】↓↙←PP",
+        "name": "【電刃OD】波掌撃"
+    },
+    {
         "id": "22p",
-        "category": "special_move",
+        "category": "special",
         "command": "↓↓P",
         "name": "電刃錬気"
     },
@@ -48,15 +229,58 @@
         "name": "SA1"
     },
     {
-        "id": "sa2",
+        "id": "sa1_denjin",
         "category": "sa",
-        "command": "↓↙←↓↙←P",
-        "name": "SA2"
+        "command": "【電刃】↓↘→↓↘→P",
+        "name": "【電刃】SA1"
+    },
+    {
+        "id": "sa2_lv1",
+        "category": "sa",
+        "command": "↓↙←↓↙←P(Lv1)",
+        "name": "SA2(Lv1)"
+    },
+    {
+        "id": "sa2_lv2",
+        "category": "sa",
+        "command": "↓↙←↓↙←P(Lv2)",
+        "name": "SA2(Lv2)"
+    },
+    {
+        "id": "sa2_lv3",
+        "category": "sa",
+        "command": "↓↙←↓↙←P(Lv3)",
+        "name": "SA2(Lv3)"
+    },
+    {
+        "id": "sa2_lv1_denjin",
+        "category": "sa",
+        "command": "【電刃】↓↙←↓↙←P(Lv1)",
+        "name": "【電刃】SA2(Lv1)"
+    },
+    {
+        "id": "sa2_lv2_denjin",
+        "category": "sa",
+        "command": "【電刃】↓↙←↓↙←P(Lv2)",
+        "name": "【電刃】SA2(Lv2)"
+    },
+    {
+        "id": "sa2_lv3_denjin",
+        "category": "sa",
+        "command": "【電刃】↓↙←↓↙←P(Lv3)",
+        "name": "【電刃】SA2(Lv3)"
     },
     {
         "id": "sa3",
         "category": "sa",
         "command": "↓↘→↓↘→K",
         "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "command": "【CA】↓↘→↓↘→K",
+        "name": "CA"
     }
+
 ]
