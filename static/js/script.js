@@ -2,7 +2,7 @@
    要素の取得
 ========================= */
 
-/* モード */
+/* 閲覧/編集モード */
 
 const viewMode = document.getElementById("view-mode");
 const editMode = document.getElementById("edit-mode");
@@ -10,10 +10,14 @@ const editMode = document.getElementById("edit-mode");
 const editModeButton = document.getElementById("edit-mode-button");
 const completeModeButton = document.getElementById("complete-mode-button");
 
-/* 表示切替 */
+/* 表記モード切替 */
 
 const viewDisplayButton = document.getElementById("view-display-button");
 const editDisplayButton = document.getElementById("edit-display-button");
+
+/* 操作モード切替 */
+
+const modeSelectors = document.querySelectorAll(".mode-selector-select");
 
 /* details */
 
@@ -61,6 +65,9 @@ const editSubGroupTemplate = document.getElementById("edit-sub-group-template");
 // 表記モードの初期表示
 let commandMode = true;
 
+// 現在の操作モード
+const currentMode = document.body.dataset.mode;
+
 // 現在編集中のコンボカード
 let editingComboItem = null;
 
@@ -90,6 +97,15 @@ let originalSubGroupTitle = "";
 /* =========================
    関数
 ========================= */
+
+/* ---------- URL取得 ---------- */
+
+// 現在のページURLにmodeを維持したパスを作る
+function getModeUrl(path) {
+
+    return path + window.location.search;
+
+}
 
 /* ---------- details ---------- */
 
@@ -122,6 +138,27 @@ function toggleDisplayMode() {
     if (moveSelectorPanel.style.display !== "none") {
         renderMoveSelectorList();
     }
+
+}
+
+/* ---------- 操作モード管理 ---------- */
+
+// Classic / Modernを切り替える
+function switchMode(mode) {
+
+    const url = new URL(window.location.href);
+
+    if (mode === "modern") {
+
+        url.searchParams.set("mode", "modern");
+
+    } else {
+
+        url.searchParams.delete("mode");
+
+    }
+
+    window.location.href = url.toString();
 
 }
 
@@ -263,7 +300,7 @@ async function finishComboEdit() {
 
     try {
 
-        const response = await fetch(window.location.pathname, {
+        const response = await fetch(getModeUrl(window.location.pathname), {
 
             method: "POST",
 
@@ -515,7 +552,7 @@ async function deleteCombo(comboItem) {
     const comboId = comboItem.dataset.comboId;
 
     const response = await fetch(
-        window.location.pathname + "/delete-combo",
+        getModeUrl(window.location.pathname + "/delete-combo"),
         {
 
             method: "POST",
@@ -566,7 +603,7 @@ async function createNewCombo(subGroup) {
     const subgroupId = subGroup.dataset.subgroupId;
 
     const response = await fetch(
-        window.location.pathname + "/new-combo",
+        getModeUrl(window.location.pathname + "/new-combo"),
         {
 
             method: "POST",
@@ -616,7 +653,7 @@ function saveComboOrder(comboList) {
     const groupId = mainGroup.dataset.groupId;
     const subgroupId = subGroup.dataset.subgroupId;
 
-    fetch(window.location.pathname + "/sort-combos", {
+    fetch(getModeUrl(window.location.pathname + "/sort-combos"), {
 
         method: "POST",
 
@@ -772,6 +809,10 @@ function renderMoveSelectorList() {
 
             parentButton.className = "move-variant-parent";
 
+            if (move.str) {
+                parentButton.classList.add(`str-${move.str}`);
+            }
+
             parentButton.textContent = commandMode
                 ? move.command
                 : move.name;
@@ -795,6 +836,10 @@ function renderMoveSelectorList() {
                 const variantButton = document.createElement("button");
 
                 variantButton.className = "move-variant-button";
+
+                if (variant.str) {
+                    variantButton.classList.add(`str-${variant.str}`);
+                }
 
                 variantButton.textContent = commandMode
                     ? variant.command
@@ -822,6 +867,10 @@ function renderMoveSelectorList() {
         const button = document.createElement("button");
 
         button.className = "move-selector-button";
+
+        if (move.str) {
+            button.classList.add(`str-${move.str}`);
+        }
 
         button.textContent = commandMode
             ? move.command
@@ -924,7 +973,7 @@ async function finishGroupEdit() {
 
     try {
 
-        const response = await fetch(window.location.pathname, {
+        const response = await fetch(getModeUrl(window.location.pathname), {
 
             method: "POST",
 
@@ -1083,7 +1132,7 @@ function addEditMainGroup(group) {
 async function createNewMainGroup() {
 
     const response = await fetch(
-        window.location.pathname + "/new-main-group",
+        getModeUrl(window.location.pathname + "/new-main-group"),
         {
             method: "POST"
         }
@@ -1103,7 +1152,7 @@ async function deleteMainGroup(mainGroup) {
     const groupId = mainGroup.dataset.groupId;
 
     const response = await fetch(
-        window.location.pathname + "/delete-main-group",
+        getModeUrl(window.location.pathname + "/delete-main-group"),
         {
 
             method: "POST",
@@ -1160,7 +1209,7 @@ function saveMainGroupOrder() {
 
     });
 
-    fetch(window.location.pathname + "/sort-main-groups", {
+    fetch(getModeUrl(window.location.pathname + "/sort-main-groups"), {
 
         method: "POST",
 
@@ -1274,7 +1323,7 @@ async function finishSubGroupEdit() {
 
     try {
 
-        const response = await fetch(window.location.pathname, {
+        const response = await fetch(getModeUrl(window.location.pathname), {
 
             method: "POST",
 
@@ -1434,7 +1483,7 @@ async function createNewSubGroup(mainGroup) {
     const groupId = mainGroup.dataset.groupId;
 
     const response = await fetch(
-        window.location.pathname + "/new-subgroup",
+        getModeUrl(window.location.pathname + "/new-subgroup"),
         {
             method: "POST",
 
@@ -1469,7 +1518,7 @@ async function deleteSubGroup(subGroup) {
     const groupId = mainGroup.dataset.groupId;
 
     const response = await fetch(
-        window.location.pathname + "/delete-sub-group",
+        getModeUrl(window.location.pathname + "/delete-sub-group"),
         {
 
             method: "POST",
@@ -1536,7 +1585,7 @@ function saveSubGroupOrder(mainGroup) {
 
     const groupId = mainGroup.dataset.groupId;
 
-    fetch(window.location.pathname + "/sort-subgroups", {
+    fetch(getModeUrl(window.location.pathname + "/sort-subgroups"), {
 
         method: "POST",
 
@@ -1614,6 +1663,28 @@ function syncViewSubGroupOrder(mainGroup) {
 }
 
 /* ---------- イベント登録 ---------- */
+
+// 操作モード切替UIのイベント設定
+function setupModeSelector() {
+
+    if (!modeSelectors.length) {
+        return;
+    }
+
+    // mode変更時
+    modeSelectors.forEach(selector => {
+
+        selector.value = currentMode;
+
+        selector.addEventListener("change", function () {
+
+            switchMode(this.value)
+
+        });
+
+    });
+
+}
 
 // コンボカード編集イベント設定
 function setupEditComboCardEvents(comboItem) {
@@ -1793,7 +1864,9 @@ function setupAddComboButton(subGroup) {
 // 中見出し並び替えイベント設定
 function setupSubGroupSortable(mainGroup) {
 
-    new Sortable(mainGroup, {
+    const mainGroupContent = mainGroup.querySelector(".main-group-content");
+
+    new Sortable(mainGroupContent, {
 
         animation: 150,
 
@@ -1837,7 +1910,7 @@ function setupComboSortable(subGroup) {
 // イベント登録
 function registerEvents() {
 
-    /* モード切替 */
+    /* 閲覧/編集モード切替 */
 
     editModeButton.addEventListener("click", function () {
 
@@ -1889,7 +1962,7 @@ function registerEvents() {
 
     });
 
-    /* 表示切替 */
+    /* 表記モード切替 */
 
     viewDisplayButton.addEventListener(
         "click",
@@ -1900,6 +1973,10 @@ function registerEvents() {
         "click",
         toggleDisplayMode
     );
+
+    /* 操作モード切替 */
+
+    setupModeSelector();
 
     /* コンボ編集 */
 

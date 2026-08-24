@@ -1,129 +1,87 @@
 [
     {
-        "id": "5lp",
+        "id": "5l",
         "category": "normal",
         "str": "low",
-        "command": "弱P",
-        "name": "弱P"
+        "command": "弱",
+        "name": "弱"
     },
     {
-        "id": "5mp",
+        "id": "5m",
         "category": "normal",
         "str": "mid",
-        "command": "中P",
-        "name": "中P"
+        "command": "中",
+        "name": "中"
     },
     {
-        "id": "5hp",
+        "id": "5h",
         "category": "normal",
         "str": "high",
-        "command": "強P",
-        "name": "強P"
+        "command": "強",
+        "name": "強"
     },
     {
-        "id": "5lk",
+        "id": "2l",
         "category": "normal",
         "str": "low",
-        "command": "弱K",
-        "name": "弱K"
+        "command": "↓弱",
+        "name": "↓弱"
     },
     {
-        "id": "5mk",
+        "id": "2m",
         "category": "normal",
         "str": "mid",
-        "command": "中K",
-        "name": "中K"
+        "command": "↓中",
+        "name": "↓中"
     },
     {
-        "id": "5hk",
+        "id": "2h",
         "category": "normal",
         "str": "high",
-        "command": "強K",
-        "name": "強K"
+        "command": "↓強",
+        "name": "↓強"
     },
     {
-        "id": "2lp",
-        "category": "normal",
-        "str": "low",
-        "command": "↓弱P",
-        "name": "↓弱P"
-    },
-    {
-        "id": "2mp",
-        "category": "normal",
-        "str": "mid",
-        "command": "↓中P",
-        "name": "↓中P"
-    },
-    {
-        "id": "2hp",
-        "category": "normal",
-        "str": "high",
-        "command": "↓強P",
-        "name": "↓強P"
-    },
-    {
-        "id": "2lk",
-        "category": "normal",
-        "str": "low",
-        "command": "↓弱K",
-        "name": "↓弱K"
-    },
-    {
-        "id": "2mk",
-        "category": "normal",
-        "str": "mid",
-        "command": "↓中K",
-        "name": "↓中K"
-    },
-    {
-        "id": "2hk",
-        "category": "normal",
-        "str": "high",
-        "command": "↓強K",
-        "name": "↓強K"
-    },
-    {
-        "id": "jlp",
+        "id": "jl",
         "category": "jump",
         "str": "low",
-        "command": "J弱P",
-        "name": "J弱P"
+        "command": "J弱",
+        "name": "J弱"
     },
     {
-        "id": "jmp",
+        "id": "jm",
         "category": "jump",
         "str": "mid",
-        "command": "J中P",
-        "name": "J中P"
+        "command": "J中",
+        "name": "J中"
     },
     {
-        "id": "jhp",
+        "id": "jh",
         "category": "jump",
         "str": "high",
-        "command": "J強P",
-        "name": "J強P"
+        "command": "J強",
+        "name": "J強"
     },
     {
-        "id": "jlk",
+        "id": "jal",
         "category": "jump",
         "str": "low",
-        "command": "J弱K",
-        "name": "J弱K"
+        "command": "J AUTO弱",
+        "name": "J AUTO弱"
     },
     {
-        "id": "jmk",
+        "id": "jam",
         "category": "jump",
+        "command": "J AUTO中",
         "str": "mid",
-        "command": "J中K",
-        "name": "J中K"
+        "name": "J AUTO中"
     },
     {
-        "id": "jhk",
+        "id": "jah",
         "category": "jump",
         "str": "high",
-        "command": "J強K",
-        "name": "J強K"
+        "command": "J AUTO強",
+        "name": "J AUTO強"
     },
     {
         "id": "dr",

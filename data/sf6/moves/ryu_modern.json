@@ -1,0 +1,428 @@
+[
+    {
+        "id": "assist_l_variants",
+        "category": "normal",
+        "str": "low",
+        "command": "AUTO弱",
+        "name": "AUTO弱",
+        "variants": [
+            {
+                "id":"assist_l",
+                "str": "low",
+                "command": "AUTO弱",
+                "name": "AUTO弱"
+            },
+            {
+                "id":"assist_l_2",
+                "str": "low",
+                "command": "AUTO弱>弱",
+                "name": "AUTO弱>弱"
+            },
+            {
+                "id":"assist_2l",
+                "str": "low",
+                "command": "AUTO↓弱",
+                "name": "AUTO↓弱"
+            },
+            {
+                "id":"assist_2l_2",
+                "str": "low",
+                "command": "AUTO↓弱>弱",
+                "name": "AUTO↓弱>弱"
+            },
+            {
+                "id":"assist_2l_3",
+                "str": "low",
+                "command": "AUTO↓弱>弱>弱",
+                "name": "AUTO↓弱>弱>弱"
+            }
+        ]
+    },
+    {
+        "id": "assist_m_variants",
+        "category": "normal",
+        "str": "mid",
+        "command": "AUTO中",
+        "name": "AUTO中",
+        "variants": [
+            {
+                "id":"assist_m",
+                "str": "mid",
+                "command": "AUTO中",
+                "name": "AUTO中"
+            },
+            {
+                "id":"assist_m_2",
+                "str": "mid",
+                "command": "AUTO中>中",
+                "name": "AUTO中>中"
+            },
+            {
+                "id":"assist_m_3",
+                "str": "mid",
+                "command": "AUTO中>中>中",
+                "name": "AUTO中>中>中"
+            }
+        ]
+    },
+    {
+        "id": "assist_h_variants",
+        "category": "normal",
+        "str": "high",
+        "command": "AUTO強",
+        "name": "AUTO強",
+        "variants": [
+            {
+                "id":"assist_h",
+                "str": "high",
+                "command": "AUTO強",
+                "name": "AUTO強"
+            },
+            {
+                "id":"assist_h_2",
+                "str": "high",
+                "command": "AUTO強>強",
+                "name": "AUTO強>強"
+            },
+            {
+                "id":"assist_h_3",
+                "str": "high",
+                "command": "AUTO強>強>強",
+                "name": "AUTO強>強>強"
+            },
+            {
+                "id":"assist_h_4",
+                "str": "high",
+                "command": "AUTO強>強>強>強",
+                "name": "AUTO強>強>強>強"
+            }
+        ]
+    },
+    {
+        "id": "6m",
+        "category": "unique",
+        "str": "mid",
+        "command": "→中",
+        "name": "→中"
+    },
+    {
+        "id": "4h",
+        "category": "unique",
+        "str": "high",
+        "command": "←強",
+        "name": "←強"
+    },
+    {
+        "id": "6h",
+        "category": "unique",
+        "str": "high",
+        "command": "→強",
+        "name": "→強"
+    },
+    {
+        "id": "3h",
+        "category": "unique",
+        "str": "high",
+        "command": "↘強",
+        "name": "↘強"
+    },
+    {
+        "id": "5h_target",
+        "category": "unique",
+        "str": "high",
+        "command": "強タゲコン",
+        "name": "強タゲコン",
+        "variants": [
+            {
+                "id": "5h_5h",
+                "str": "high",
+                "command": "強>強",
+                "name": "強>強"
+            }
+        ]
+    },
+    {
+        "id": "5m_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "中タゲコン",
+        "name": "中タゲコン",
+        "variants": [
+            {
+                "id": "5m_5m",
+                "str": "mid",
+                "command": "中>中",
+                "name": "中>中"
+            },
+            {
+                "id": "5m_5m_5m",
+                "str": "mid",
+                "command": "中>中>中",
+                "name": "中>中>中"
+            }
+        ]
+    },
+    {
+        "id": "236l",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱",
+        "name": "【弱】波動拳"
+    },
+    {
+        "id": "236m",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中",
+        "name": "【中】波動拳"
+    },
+    {
+        "id": "236h",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強(SP)",
+        "name": "【強】波動拳"
+    },
+    {
+        "id": "236h_denjin",
+        "category": "special",
+        "str": "high",
+        "command": "【電刃】↓↘→強(SP)",
+        "name": "【電刃】波動拳"
+    },
+    {
+        "id": "236pp",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→〇〇(AUTO SP)",
+        "name": "【OD】波動拳"
+    },
+    {
+        "id": "236pp_denjin",
+        "category": "special",
+        "str": "other",
+        "command": "【電刃】↓↘→〇〇(AUTO SP)",
+        "name": "【電刃OD】波動拳"
+    },
+    {
+        "id": "623l",
+        "category": "special",
+        "str": "low",
+        "command": "→↓↘弱",
+        "name": "【弱】昇龍拳"
+    },
+    {
+        "id": "623m",
+        "category": "special",
+        "str": "mid",
+        "command": "→↓↘中",
+        "name": "【中】昇龍拳"
+    },
+    {
+        "id": "623h",
+        "category": "special",
+        "str": "high",
+        "command": "→↓↘強(→SP)",
+        "name": "【強】昇龍拳"
+    },
+    {
+        "id": "623pp",
+        "category": "special",
+        "str": "other",
+        "command": "→↓↘〇〇(AUTO →SP)",
+        "name": "【OD】昇龍拳"
+    },
+    {
+        "id": "4sp",
+        "category": "special",
+        "str": "mid",
+        "command": "←SP",
+        "name": "【中】竜巻旋風脚"
+    },
+    {
+        "id": "auto_4sp",
+        "category": "special",
+        "str": "other",
+        "command": "AUTO ←SP",
+        "name": "【OD】竜巻旋風脚"
+    },
+    {
+        "id": "j214k",
+        "category": "special",
+        "str": "other",
+        "command": "前J↓↙←〇(SP)",
+        "name": "空中竜巻旋風脚"
+    },
+    {
+        "id": "j214kk",
+        "category": "special",
+        "str": "other",
+        "command": "前J↓↙←〇〇(AUTO SP)",
+        "name": "【OD】空中竜巻旋風脚"
+    },
+    {
+        "id": "1sp",
+        "category": "special",
+        "str": "low",
+        "command": "↙SP",
+        "name": "【弱】上段足刀蹴り"
+    },
+    {
+        "id": "2sp",
+        "category": "special",
+        "str": "mid",
+        "command": "↓SP",
+        "name": "【中】上段足刀蹴り"
+    },
+    {
+        "id": "3sp",
+        "category": "special",
+        "str": "high",
+        "command": "↘SP",
+        "name": "【強】上段足刀蹴り"
+    },
+    {
+        "id": "auto_2sp",
+        "category": "special",
+        "str": "other",
+        "command": "AUTO ↓SP",
+        "name": "【OD】上段足刀蹴り"
+    },
+    {
+        "id": "214l",
+        "category": "special",
+        "str": "low",
+        "command": "↓↙←弱",
+        "name": "【弱】波掌撃"
+    },
+    {
+        "id": "214m",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↙←中",
+        "name": "【中】波掌撃"
+    },
+    {
+        "id": "214h",
+        "category": "special",
+        "str": "high",
+        "command": "↓↙←強",
+        "name": "【強】波掌撃"
+    },
+    {
+        "id": "214h_denjin",
+        "category": "special",
+        "str": "other",
+        "command": "【電刃】↓↙←強",
+        "name": "【電刃】波掌撃"
+    },
+    {
+        "id": "214pp",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←〇〇",
+        "name": "【OD】波掌撃"
+    },
+    {
+        "id": "214pp_denjin",
+        "category": "special",
+        "str": "other",
+        "command": "【電刃】↓↙←〇〇",
+        "name": "【電刃OD】波掌撃"
+    },
+    {
+        "id": "22p",
+        "category": "special",
+        "str": "other",
+        "command": "↓↓〇",
+        "name": "電刃錬気"
+    },
+    {
+        "id": "sa1_variants",
+        "category": "sa",
+        "str": "low",
+        "command": "↓↘→↓↘→弱(SP強)",
+        "name": "SA1",
+        "variants": [
+            {
+                "id": "sa1",
+                "category": "sa",
+                "str": "low",
+                "command": "↓↘→↓↘→弱(SP強)",
+                "name": "SA1"
+            },
+            {
+                "id": "sa1_denjin",
+                "category": "sa",
+                "str": "low",
+                "command": "【電刃】↓↘→↓↘→弱(SP強)",
+                "name": "【電刃】SA1"
+            }
+        ]
+    },
+    {
+        "id": "sa2_variants",
+        "category": "sa",
+        "str": "mid",
+        "command": "↓↙←↓↙←中(←SP強)",
+        "name": "SA2",
+        "variants": [
+            {
+                "id": "sa2_lv1",
+                "category": "sa",
+                "str": "mid",
+                "command": "↓↙←↓↙←中(←SP強)(Lv1)",
+                "name": "SA2(Lv1)"
+            },
+            {
+                "id": "sa2_lv2",
+                "category": "sa",
+                "str": "mid",
+                "command": "↓↙←↓↙←中(←SP強)(Lv2)",
+                "name": "SA2(Lv2)"
+            },
+            {
+                "id": "sa2_lv3",
+                "category": "sa",
+                "str": "mid",
+                "command": "↓↙←↓↙←中(←SP強)(Lv3)",
+                "name": "SA2(Lv3)"
+            },
+            {
+                "id": "sa2_lv1_denjin",
+                "category": "sa",
+                "str": "mid",
+                "command": "【電刃】↓↙←↓↙←中(←SP強)(Lv1)",
+                "name": "【電刃】SA2(Lv1)"
+            },
+            {
+                "id": "sa2_lv2_denjin",
+                "category": "sa",
+                "str": "mid",
+                "command": "【電刃】↓↙←↓↙←中(←SP強)(Lv2)",
+                "name": "【電刃】SA2(Lv2)"
+            },
+            {
+                "id": "sa2_lv3_denjin",
+                "category": "sa",
+                "str": "mid",
+                "command": "【電刃】↓↙←↓↙←中(←SP強)(Lv3)",
+                "name": "【電刃】SA2(Lv3)"
+            }
+        ]
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "↓↘→↓↘→強(↓SP強)",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "high",
+        "command": "【CA】↓↘→↓↘→強(↓SP強)",
+        "name": "CA"
+    }
+]

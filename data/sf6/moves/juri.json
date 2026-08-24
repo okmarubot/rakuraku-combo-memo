@@ -85,40 +85,40 @@
         "name": "歳破衝"
     },
     {
-        "id": "236_lk",
+        "id": "236_lk_stock_variants",
         "category": "special",
         "command": "【強化】↓↘→弱K",
         "name": "【強化】歳破衝",
         "variants": [
             {
-                "id": "236_lk",
+                "id": "236_lk_stock",
                 "command": "【強化】↓↘→弱K",
                 "name": "【強化】歳破衝"
             },
             {
-                "id": "236_lk_mk",
+                "id": "236_lk_stock_mk",
                 "command": "【強化】↓↘→弱K>中K",
                 "name": "【強化】歳破衝>中K"
             },
             {
-                "id": "236_lk_hk",
+                "id": "236_lk_stock_hk",
                 "command": "【強化】↓↘→弱K>強K",
                 "name": "【強化】歳破衝>強K"
             },
             {
-                "id": "236_lk_mk_hk",
+                "id": "236_lk_stock_mk_hk",
                 "command": "【強化】↓↘→弱K>中K>強K",
                 "name": "【強化】歳破衝>中K>強K"
             },
             {
-                "id": "236_lk_hk_mk",
+                "id": "236_lk_stock_hk_mk",
                 "command": "【強化】↓↘→弱K>強K>中K",
                 "name": "【強化】歳破衝>強K>中K"
             }
         ]
     },
     {
-        "id": "236_lkmk",
+        "id": "236_lkmk_variants",
         "category": "special",
         "command": "↓↘→弱K中K",
         "name": "【OD】歳破衝",
@@ -157,140 +157,140 @@
         "name": "暗剣殺"
     },
     {
-        "id": "236_mk",
+        "id": "236_mk_stock_variants",
         "category": "special",
         "command": "【強化】↓↘→中K",
         "name": "【強化】暗剣殺",
         "variants": [
             {
-                "id": "236_mk",
+                "id": "236_mk_stock",
                 "command": "【強化】↓↘→中K",
                 "name": "【強化】暗剣殺"
             },
             {
-                "id": "236_mk_lk",
+                "id": "236_mk_stock_lk",
                 "command": "【強化】↓↘→中K>弱K",
                 "name": "【強化】暗剣殺>弱K"
             },
             {
-                "id": "236_mk_hk",
+                "id": "236_mk_stock_hk",
                 "command": "【強化】↓↘→中K>強K",
                 "name": "【強化】暗剣殺>強K"
             },
             {
-                "id": "236_mk_lk_hk",
+                "id": "236_mk_stock_lk_hk",
                 "command": "【強化】↓↘→中K>弱K>強K",
                 "name": "【強化】暗剣殺>弱K>強K"
             },
             {
-                "id": "236_mk_hk_lk",
+                "id": "236_mk_stock_hk_lk",
                 "command": "【強化】↓↘→中K>強K>弱K",
                 "name": "【強化】暗剣殺>強K>弱K"
             }
         ]
     },
     {
-        "id": "236_lkmk",
+        "id": "236_lkhk_variants",
         "category": "special",
-        "command": "↓↘→中K中K",
+        "command": "↓↘→弱K強K",
         "name": "【OD】暗剣殺",
         "variants": [
             {
-                "id": "236_lkmk",
-                "command": "↓↘→中K中K",
+                "id": "236_lkhk",
+                "command": "↓↘→弱K強K",
                 "name": "【OD】暗剣殺"
             },
             {
-                "id": "236_lkmk_mk",
-                "command": "↓↘→中K中K>中K",
-                "name": "【OD】暗剣殺>中K"
+                "id": "236_lkhk_lk",
+                "command": "↓↘→弱K強K>弱K",
+                "name": "【OD】暗剣殺>弱K"
             },
             {
-                "id": "236_lkmk_hk",
-                "command": "↓↘→中K中K>強K",
+                "id": "236_lkhk_hk",
+                "command": "↓↘→弱K強K>強K",
                 "name": "【OD】暗剣殺>強K"
             },
             {
-                "id": "236_lkmk_mk_hk",
-                "command": "↓↘→中K中K>中K>強K",
-                "name": "【OD】暗剣殺>中K>強K"
+                "id": "236_lkhk_lk_hk",
+                "command": "↓↘→弱K強K>弱K>強K",
+                "name": "【OD】暗剣殺>弱K>強K"
             },
             {
-                "id": "236_lkmk_hk_mk",
-                "command": "↓↘→弱K中K>強K>中K",
-                "name": "【OD】暗剣殺>強K>中K"
+                "id": "236_lkhk_hk_lk",
+                "command": "↓↘→弱K強K>強K>弱K",
+                "name": "【OD】暗剣殺>強K>弱K"
             }
         ]
     },
     {
-        "id": "236_lk",
+        "id": "236_hk",
         "category": "special",
-        "command": "↓↘→弱K",
-        "name": "歳破衝"
+        "command": "↓↘→強K",
+        "name": "五黄殺"
     },
     {
-        "id": "236_lk",
+        "id": "236_hk_stock_variants",
         "category": "special",
-        "command": "【強化】↓↘→弱K",
-        "name": "【強化】歳破衝",
+        "command": "【強化】↓↘→強K",
+        "name": "【強化】五黄殺",
         "variants": [
             {
-                "id": "236_lk",
-                "command": "【強化】↓↘→弱K",
-                "name": "【強化】歳破衝"
+                "id": "236_hk_stock",
+                "command": "【強化】↓↘→強K",
+                "name": "【強化】五黄殺"
             },
             {
-                "id": "236_lk_mk",
-                "command": "【強化】↓↘→弱K>中K",
-                "name": "【強化】歳破衝>中K"
+                "id": "236_hk_stock_lk",
+                "command": "【強化】↓↘→強K>弱K",
+                "name": "【強化】五黄殺>弱K"
             },
             {
-                "id": "236_lk_hk",
-                "command": "【強化】↓↘→弱K>強K",
-                "name": "【強化】歳破衝>強K"
+                "id": "236_hk_stock_mk",
+                "command": "【強化】↓↘→強K>中K",
+                "name": "【強化】五黄殺>中K"
             },
             {
-                "id": "236_lk_mk_hk",
-                "command": "【強化】↓↘→弱K>中K>強K",
-                "name": "【強化】歳破衝>中K>強K"
+                "id": "236_hk_stock_lk_mk",
+                "command": "【強化】↓↘→強K>弱K>中K",
+                "name": "【強化】五黄殺>弱K>中K"
             },
             {
-                "id": "236_lk_hk_mk",
-                "command": "【強化】↓↘→弱K>強K>中K",
-                "name": "【強化】歳破衝>強K>中K"
+                "id": "236_hk_stock_mk_lk",
+                "command": "【強化】↓↘→強K>中K>弱K",
+                "name": "【強化】五黄殺>中K>弱K"
             }
         ]
     },
     {
-        "id": "236_lkmk",
+        "id": "236_mkhk_variants",
         "category": "special",
-        "command": "↓↘→弱K中K",
-        "name": "【OD】歳破衝",
+        "command": "↓↘→中K強K",
+        "name": "【OD】五黄殺",
         "variants": [
             {
-                "id": "236_lkmk",
-                "command": "↓↘→弱K中K",
-                "name": "【OD】歳破衝"
+                "id": "236_mkhk",
+                "command": "↓↘→中K強K",
+                "name": "【OD】五黄殺"
             },
             {
-                "id": "236_lkmk_mk",
-                "command": "↓↘→弱K中K>中K",
-                "name": "【OD】歳破衝>中K"
+                "id": "236_mkhk_lk",
+                "command": "↓↘→中K強K>弱K",
+                "name": "【OD】五黄殺>弱K"
             },
             {
-                "id": "236_lkmk_hk",
-                "command": "↓↘→弱K中K>強K",
-                "name": "【OD】歳破衝>強K"
+                "id": "236_mkhk_mk",
+                "command": "↓↘→中K強K>中K",
+                "name": "【OD】五黄殺>中K"
             },
             {
-                "id": "236_lkmk_mk_hk",
-                "command": "↓↘→弱K中K>中K>強K",
-                "name": "【OD】歳破衝>中K>強K"
+                "id": "236_mkhk_lk_mk",
+                "command": "↓↘→中K強K>弱K>中K",
+                "name": "【OD】五黄殺>弱K>中K"
             },
             {
-                "id": "236_lkmk_hk_mk",
-                "command": "↓↘→弱K中K>強K>中K",
-                "name": "【OD】歳破衝>強K>中K"
+                "id": "236_mkhk_mk_lk",
+                "command": "↓↘→中K強K>中K>弱K",
+                "name": "【OD】五黄殺>中K>弱K"
             }
         ]
     },
@@ -319,40 +319,70 @@
         "name": "【OD】天穿輪"
     },
     {
-        "id": "214mk_jump",
+        "id": "214k_jump_variants",
         "category": "special",
-        "command": "前J↓↙←中K",
-        "name": "【中】歳破衝"
+        "command": "前J↓↙←K",
+        "name": "疾空閃",
+        "variants": [
+            {
+                "id": "214k_jump",
+                "command": "前J↓↙←K",
+                "name": "疾空閃"
+            },
+            {
+                "id": "214k_jump_k",
+                "command": "前J↓↙←K>K",
+                "name": "疾空閃>K"
+            }
+        ]
     },
     {
-        "id": "214lk_jump",
-        "category": "special",
-        "command": "前J↓↙←弱K",
-        "name": "【弱】歳破衝"
-    },
-    {
-        "id": "214hk_jump",
-        "category": "special",
-        "command": "前J↓↙←強K",
-        "name": "【強】歳破衝"
-    },
-    {
-        "id": "214kk_jump",
+        "id": "214kk_jump_variants",
         "category": "special",
         "command": "前J↓↙←KK",
-        "name": "【OD】歳破衝"
+        "name": "【OD】疾空閃",
+        "variants": [
+            {
+                "id": "214kk_jump",
+                "command": "前J↓↙←KK",
+                "name": "【OD】疾空閃"
+            },
+            {
+                "id": "214kk_jump_k",
+                "command": "前J↓↙←KK>K",
+                "name": "【OD】疾空閃>K"
+            }
+        ]
     },
     {
-        "id": "236236p",
+        "id": "236236k",
         "category": "sa",
-        "command": "↓↘→↓↘→P",
+        "command": "↓↘→↓↘→K",
         "name": "SA1"
+    },
+    {
+        "id": "236236kh",
+        "category": "sa",
+        "command": "【強化】↓↘→↓↘→K(ホールド)",
+        "name": "【強化】SA1"
     },
     {
         "id": "214214p",
         "category": "sa",
         "command": "↓↙←↓↙←P",
-        "name": "SA2"
+        "name": "SA2",
+        "variants": [
+            {
+                "id": "214214p",
+                "command": "↓↙←↓↙←P",
+                "name": "SA2"
+            },
+            {
+                "id": "214214p_ph",
+                "command": "↓↙←↓↙←P>P(ホールド)",
+                "name": "SA2>P(ホールド)"
+            }
+        ]
     },
     {
         "id": "214214k",

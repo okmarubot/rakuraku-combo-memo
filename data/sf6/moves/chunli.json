@@ -292,7 +292,7 @@
     {
         "id": "j_sa1",
         "category": "sa",
-        "command": "空中↓↘→↓↘→P",
+        "command": "J↓↘→↓↘→P",
         "name": "空中SA1"
     },
     {

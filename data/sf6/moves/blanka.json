@@ -164,25 +164,25 @@
     {
         "id": "j4h6lp",
         "category": "special",
-        "command": "空中⇐→弱P",
+        "command": "J⇐→弱P",
         "name": "【弱】エリアルローリング"
     },
     {
         "id": "j4h6mp",
         "category": "special",
-        "command": "空中⇐→中P",
+        "command": "J⇐→中P",
         "name": "【中】エリアルローリング"
     },
     {
         "id": "j4h6hp",
         "category": "special",
-        "command": "空中⇐→強P",
+        "command": "J⇐→強P",
         "name": "【強】エリアルローリング"
     },
     {
         "id": "j4h6pp",
         "category": "special",
-        "command": "空中⇐→PP",
+        "command": "J⇐→PP",
         "name": "【OD】エリアルローリング"
     },
     {

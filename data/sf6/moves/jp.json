@@ -24,7 +24,7 @@
         "name": "→強K"
     },
     {
-        "id": "4mk",
+        "id": "4mp",
         "category": "unique",
         "command": "←中P",
         "name": "←中P"
@@ -163,6 +163,7 @@
     },
     {
         "id": "214hp_shadow",
+        "category": "special",
         "command": "↓↙←強P",
         "name": "起爆"
     },

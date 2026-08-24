@@ -194,8 +194,27 @@ button {
     width: 4px;
     height: 22px;
     margin-right: 5px;
-    border-radius: 2px;
+    border-radius: 1px;
     background: #999;
+
+}
+
+.sub-group-view,
+.sub-group-edit {
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+}
+
+.sub-group-title-text {
+
+    margin-right: 8px;
+
+    font-size: 18px;
+    font-weight: 600;
 
 }
 
@@ -365,7 +384,7 @@ button {
 　技一覧パネル
 ========================= */
 
-/* パネル */
+/* ---------- パネル ---------- */
 
 #move-selector-panel {
 
@@ -391,7 +410,7 @@ body.move-selector-open #move-selector-panel {
     
 }
 
-/* パネルヘッダー */
+/* ---------- パネルヘッダー ---------- */
 
 .move-selector-header {
 
@@ -403,7 +422,7 @@ body.move-selector-open #move-selector-panel {
 
 }
 
-/* タブ */
+/* ---------- タブ ---------- */
 
 .move-selector-tabs {
 
@@ -457,7 +476,7 @@ transition:
 
 }
 
-/* 技一覧 */
+/* ---------- 技一覧 ---------- */
 
 .move-selector-list {
 
@@ -472,8 +491,19 @@ gap: 8px;
 
 .move-selector-button {
 
-width: 100%;
-margin: 0;
+    width: 95%;
+    margin-left: 5px;
+
+    padding: 8px 4px;
+
+    border: none;
+    border-bottom: 1px solid #999;
+
+    background: none;
+
+    text-align: left;
+
+    cursor: pointer;
 
 }
 
@@ -485,17 +515,37 @@ display: block;
 
 .move-variant-parent {
 
-width: 100%;
-margin: 0;
+    width: 95%;
+    margin-left: 5px;
+
+    padding: 8px 4px;
+
+    border: none;
+    border-bottom: 3px double #999;
+
+    background: none;
+
+    text-align: left;
+
+    cursor: pointer;
+
+}
+
+.move-variant-group.open .move-variant-parent {
+
+    border-bottom: none;
 
 }
 
 .move-variant-list {
 
-display: none;
+    display: none;
 
-margin-top: 4px;
-padding-left: 16px;
+    margin-top: 4px;
+    margin-left: 12px;
+    padding-left: 12px;
+
+    border-left: 1px solid #aaa;
 
 }
 
@@ -507,14 +557,51 @@ padding-left: 16px;
 
 .move-variant-button {
 
-display: block;
+    display: block;
 
-width: 100%;
-margin: 2px 0;
+    width: 95%;
+    margin: 2px 0;
 
-text-align: left;
+    padding: 6px 4px;
+
+    border: none;
+    border-bottom: 1px solid #999;
+
+    background: none;
+
+    text-align: left;
+
+    cursor: pointer;
 
 }
+
+/* 技の強度 */
+
+.str-low {
+
+    border-bottom-color: #5bc0eb;
+
+}
+
+.str-mid {
+
+    border-bottom-color: #e6c84f;
+
+}
+
+.str-high {
+
+    border-bottom-color: #e57373;
+
+}
+
+.str-other {
+
+    border-bottom-color: #999;
+
+}
+
+/* ---------- カテゴリ ---------- */
 
 .move-selector-list.category-normal,
 .move-selector-list.category-jump {
@@ -522,6 +609,8 @@ text-align: left;
 display: grid;
 grid-template-columns: repeat(3, minmax(0, 1fr));
 gap: 8px;
+
+align-content: start;
 
 }
 
@@ -572,73 +661,124 @@ body.move-selector-open {
 　ボタン
 ========================= */
 
-/* モード */
+/* ----------　モード　---------- */
 
 .mode-button,
 .display-button {
 
+    min-width: 96px;
+    height: 40px;
+
     margin-right: 8px;
+    padding: 8px 16px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #333;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    background-color: #f5f5f5;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
 
 }
 
-/* コンボカード操作 */
+.mode-button:hover,
+.display-button:hover {
+
+    background-color: #eaeaea;
+
+}
+
+/* ---------- 編集・削除系ボタン ---------- */
 
 .combo-edit-button,
 .combo-delete-button,
 .combo-complete-button,
 .combo-undo-button,
-.combo-cancel-button {
+.combo-cancel-button,
 
-    flex: 1;
-    font-size: 14px;
-
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background: none;
-
-    padding: 8px 12px;
-
-    cursor: pointer;
-
-}
-
-/* 大見出し操作 */
 .group-edit-button,
 .group-delete-button,
 .group-complete-button,
-.group-cancel-button {
+.group-cancel-button,
 
-    font-size: 14px;
-
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background: none;
-
-    padding: 8px 12px;
-
-    cursor: pointer;
-
-}
-
-/* 中見出し操作 */
 .sub-group-edit-button,
 .sub-group-delete-button,
 .sub-group-complete-button,
 .sub-group-cancel-button {
 
+    width: 36px;
+    height: 36px;
+
+    padding: 0;
+
     font-size: 14px;
 
     border: 1px solid #ccc;
     border-radius: 8px;
     background: none;
 
-    padding: 8px 12px;
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+}
+
+.combo-edit-button:hover,
+.combo-delete-button:hover,
+.combo-complete-button:hover,
+.combo-undo-button:hover,
+.combo-cancel-button:hover,
+
+.group-edit-button:hover,
+.group-delete-button:hover,
+.group-complete-button:hover,
+.group-cancel-button:hover,
+
+.sub-group-edit-button:hover,
+.sub-group-delete-button:hover,
+.sub-group-complete-button:hover,
+.sub-group-cancel-button:hover {
+
+    background-color: #f5f5f5;
+
+}
+
+/* ---------- 追加 ---------- */
+
+/* 見出し追加 */
+
+.add-heading-button,
+.add-subheading-button {
+
+    padding: 8px 16px;
+
+    border: 1px solid #bbb;
+    border-radius: 8px;
+
+    background-color: #f5f5f5;
+
+    font-size: 14px;
+    font-weight: 500;
 
     cursor: pointer;
 
 }
 
-/* 追加 */
+.add-heading-button:hover,
+.add-subheading-button:hover {
+
+    background-color: #e7e7e7;
+
+}
+
+/* 大見出し追加 */
 
 .add-heading-button {
 
@@ -646,13 +786,41 @@ body.move-selector-open {
 
 }
 
+/* 中見出し追加 */
+
 .add-subheading-button {
 
-    margin-left: 20px;
+    margin-left: 0;
     margin-top: 10px;
     margin-bottom: 10px;
 
 }
+
+/* コンボ・技追加 */
+
+.add-combo-button,
+.add-move-button {
+
+    padding: 6px 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 7px;
+
+    background-color: #f5f5f5;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+}
+
+.add-combo-button:hover {
+
+    background-color: #e7e7e7;
+
+}
+
+/* コンボ追加 */
 
 .add-combo-button {
 
@@ -661,11 +829,30 @@ body.move-selector-open {
 
 }
 
+/* 技を追加 */
+
 .add-move-button {
 
-    margin-left: 12px;
+    margin-left: 0;
     margin-right: auto;
+
+    padding: 6px 14px;
+
+    border: 1px dashed #aaa;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+
     white-space: nowrap;
     flex-shrink: 0;
+
+}
+
+.add-move-button:hover {
+
+    background-color: #e7e7e7;
 
 }

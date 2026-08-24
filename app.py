@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, jsonify
 import json
 from pathlib import Path
 
+DATA_DIR = Path("data/sf6")
+
 # Flaskアプリを作成
 app = Flask(__name__)
 
@@ -125,57 +127,68 @@ def prepare_combo_display(
                     character_moves
                 )
 
-# コンボデータ読込・保存
-def load_combos(character_id):
+# コンボデータ読込
+def load_combos(character_id, mode="classic"):
 
-    combos_path = Path(f"data/sf6/combos/{character_id}.json")
+    if mode == "modern":
+        file_name = f"{character_id}_modern.json"
+    else:
+        file_name = f"{character_id}.json"
 
-    with open(combos_path, "r", encoding="utf-8") as file:
-        return json.load(file)
+    combos_path = DATA_DIR / "combos" / file_name
 
+    if not combos_path.exists():
+        return []
 
-def save_combos(character_id, combos):
+    with open(combos_path, "r", encoding="utf-8") as f:
+        return json.load(f)
 
-    combos_path = Path(f"data/sf6/combos/{character_id}.json")
+# コンボデータ保存
+def save_combos(character_id, combos, mode="classic"):
 
-    with open(combos_path, "w", encoding="utf-8") as file:
+    if mode == "modern":
+        file_name = f"{character_id}_modern.json"
+    else:
+        file_name = f"{character_id}.json"
 
-        json.dump(
-            combos,
-            file,
-            ensure_ascii=False,
-            indent=4
-        )
+    combos_path = DATA_DIR / "combos" / file_name
+
+    with open(combos_path, "w", encoding="utf-8") as f:
+        json.dump(combos, f, ensure_ascii=False, indent=4)
 
 # その他データ読込
 def load_character(character_id):
 
     character_path = Path(
-        f"data/sf6/characters/{character_id}.json"
+        DATA_DIR / "characters" / f"{character_id}.json"
     )
 
     with open(character_path, "r", encoding="utf-8") as file:
         return json.load(file)
 
+def load_common_moves(mode="classic"):
 
-def load_common_moves():
+    if mode == "modern":
+        file_name = "common_modern.json"
+    else:
+        file_name = "common.json"
 
-    common_moves_path = Path(
-        "data/sf6/moves/common.json"
-    )
+    path = DATA_DIR / "moves" / file_name
+    
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
 
-    with open(common_moves_path, "r", encoding="utf-8") as file:
-        return json.load(file)
+def load_character_moves(character_id, mode="classic"):
 
+    if mode == "modern":
+        file_name = f"{character_id}_modern.json"
+    else:
+        file_name = f"{character_id}.json"
 
-def load_character_moves(character_id):
+    path = DATA_DIR / "moves" / file_name
 
-    character_moves_path = Path(
-        f"data/sf6/moves/{character_id}.json"
-    )
-
-    with open(character_moves_path, "r", encoding="utf-8") as file:
-        return json.load(file)
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
 
 # ==========================
 # キャラクター画面
@@ -190,7 +203,9 @@ def new_combo(character_id):
     group_id = data["groupId"]
     subgroup_id = data["subgroupId"]
 
-    combos = load_combos(character_id)
+    mode = request.args.get("mode", "classic")
+
+    combos = load_combos(character_id, mode)
 
     max_number = 0
 
@@ -226,7 +241,7 @@ def new_combo(character_id):
 
             subgroup["combos"].append(new_combo)
 
-            save_combos(character_id, combos)
+            save_combos(character_id, combos, mode)
 
             return jsonify(new_combo)
 
@@ -244,7 +259,9 @@ def delete_combo(character_id):
 
     data = request.get_json()
 
-    combos = load_combos(character_id)
+    mode = request.args.get("mode", "classic")
+
+    combos = load_combos(character_id, mode)
     
     for group in combos["groups"]:
         for subgroup in group["subgroups"]:
@@ -257,7 +274,7 @@ def delete_combo(character_id):
 
             ]
 
-    save_combos(character_id, combos)
+    save_combos(character_id, combos, mode)
 
     return jsonify({
 
@@ -272,7 +289,9 @@ def sort_combos(character_id):
 
     data = request.get_json()
 
-    combos = load_combos(character_id)
+    mode = request.args.get("mode", "classic")
+
+    combos = load_combos(character_id, mode)
 
     group_id = data["groupId"]
     subgroup_id = data["subgroupId"]
@@ -308,7 +327,7 @@ def sort_combos(character_id):
 
             subgroup["combos"] = new_combos
 
-            save_combos(character_id, combos)
+            save_combos(character_id, combos, mode)
 
             return jsonify({
                 "success": True
@@ -326,7 +345,9 @@ def sort_combos(character_id):
 
 def new_main_group(character_id):
 
-    combos = load_combos(character_id)
+    mode = request.args.get("mode", "classic")
+
+    combos = load_combos(character_id, mode)
 
     max_number = 0
 
@@ -349,7 +370,7 @@ def new_main_group(character_id):
 
     combos["groups"].append(new_group)
 
-    save_combos(character_id, combos)
+    save_combos(character_id, combos, mode)
 
     return jsonify(new_group)
 
@@ -360,7 +381,9 @@ def delete_main_group(character_id):
 
     data = request.get_json()
 
-    combos = load_combos(character_id)
+    mode = request.args.get("mode", "classic")
+
+    combos = load_combos(character_id, mode)
 
     group_id = data["id"]
 
@@ -372,7 +395,7 @@ def delete_main_group(character_id):
 
     ]
 
-    save_combos(character_id, combos)
+    save_combos(character_id, combos, mode)
 
     return jsonify({
 
@@ -387,7 +410,9 @@ def sort_main_groups(character_id):
 
     data = request.get_json()
 
-    combos = load_combos(character_id)
+    mode = request.args.get("mode", "classic")
+
+    combos = load_combos(character_id, mode)
 
     group_order = data["groupOrder"]
 
@@ -403,7 +428,7 @@ def sort_main_groups(character_id):
         if group_id in group_dict:
             combos["groups"].append(group_dict[group_id])
 
-    save_combos(character_id, combos)
+    save_combos(character_id, combos, mode)
 
     return jsonify({
 
@@ -420,7 +445,9 @@ def new_subgroup(character_id):
 
     group_id = data["groupId"]
 
-    combos = load_combos(character_id)
+    mode = request.args.get("mode", "classic")
+
+    combos = load_combos(character_id, mode)
 
     # 既存の中見出しIDから最大番号を取得
     max_number = 0
@@ -454,7 +481,7 @@ def new_subgroup(character_id):
 
         group["subgroups"].append(new_subgroup)
 
-        save_combos(character_id, combos)
+        save_combos(character_id, combos, mode)
 
         return jsonify(new_subgroup)
 
@@ -472,7 +499,9 @@ def delete_sub_group(character_id):
 
     data = request.get_json()
 
-    combos = load_combos(character_id)
+    mode = request.args.get("mode", "classic")
+
+    combos = load_combos(character_id, mode)
 
     subgroup_id = data["id"]
 
@@ -486,7 +515,7 @@ def delete_sub_group(character_id):
 
         ]
 
-    save_combos(character_id, combos)
+    save_combos(character_id, combos, mode)
 
     return jsonify({
 
@@ -501,7 +530,9 @@ def sort_subgroups(character_id):
 
     data = request.get_json()
 
-    combos = load_combos(character_id)
+    mode = request.args.get("mode", "classic")
+
+    combos = load_combos(character_id, mode)
 
     group_id = data["groupId"]
     sub_group_order = data["subGroupOrder"]
@@ -529,7 +560,7 @@ def sort_subgroups(character_id):
 
         break
 
-    save_combos(character_id, combos)
+    save_combos(character_id, combos, mode)
 
     return jsonify({
         "success": True
@@ -545,7 +576,9 @@ def character(character_id):
 
         data = request.get_json()
 
-        combos = load_combos(character_id)
+        mode = request.args.get("mode", "classic")
+
+        combos = load_combos(character_id, mode)
 
         # 大見出し編集
         if data.get("type") == "main-group":
@@ -568,7 +601,7 @@ def character(character_id):
 
             found_group["title"] = data["title"]
 
-            save_combos(character_id, combos)
+            save_combos(character_id, combos, mode)
 
             return jsonify({
                 "success": True
@@ -599,7 +632,7 @@ def character(character_id):
 
             found_subgroup["title"] = data["title"]
 
-            save_combos(character_id, combos)
+            save_combos(character_id, combos, mode)
 
             return jsonify({
                 "success": True
@@ -626,20 +659,27 @@ def character(character_id):
         found_combo["moves"] = data["moves"]
         found_combo["memo"] = data["memo"]
 
-        save_combos(character_id, combos)
+        save_combos(character_id, combos, mode)
 
         return jsonify({
             "success": True
         })
 
     # データ読み込み
+
+    # modeを取得
+    mode = request.args.get("mode", "classic")
+
+    if mode not in ("classic", "modern"):
+        mode = "classic"
+
     character = load_character(character_id)
 
-    common_moves = load_common_moves()
+    common_moves = load_common_moves(mode)
 
-    character_moves = load_character_moves(character_id)
+    character_moves = load_character_moves(character_id, mode)
 
-    combos = load_combos(character_id)
+    combos = load_combos(character_id, mode)
 
     # コンボ表示文字列作成  
     prepare_combo_display(
@@ -654,7 +694,8 @@ def character(character_id):
         character=character,
         combos=combos,
         common_moves=common_moves,
-        character_moves=character_moves
+        character_moves=character_moves,
+        mode=mode
     )
 
 # ==========================

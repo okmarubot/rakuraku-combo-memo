@@ -2,30 +2,20 @@
     "groups": [
         {
             "id": "group-001",
-            "title": "中攻撃始動",
+            "title": "大見出し①",
             "subgroups": [
                 {
                     "id": "subgroup-001",
-                    "title": "新しい中見出し１",
+                    "title": "中見出し①",
                     "combos": [
                         {
                             "id": "combo-002",
                             "moves": [
                                 "2lp",
                                 "2lp",
-                                "2lp",
-                                "236lp",
-                                "214pp_denjin"
+                                "2lp"
                             ],
                             "memo": "いいい"
-                        },
-                        {
-                            "id": "combo-001",
-                            "moves": [
-                                "5lp",
-                                "5lp"
-                            ],
-                            "memo": "あ"
                         },
                         {
                             "id": "combo-004",
@@ -40,7 +30,7 @@
                 },
                 {
                     "id": "subgroup-002",
-                    "title": "新しい中見出し２",
+                    "title": "中見出し②",
                     "combos": [
                         {
                             "id": "combo-003",
@@ -61,11 +51,28 @@
                     "id": "subgroup-003",
                     "title": "新しい中見出し３",
                     "combos": []
-                },
+                }
+            ]
+        },
+        {
+            "id": "group-004",
+            "title": "新しい大見出し②",
+            "subgroups": [
                 {
                     "id": "subgroup-004",
                     "title": "新しい中見出し４",
-                    "combos": []
+                    "combos": [
+                        {
+                            "id": "combo-005",
+                            "moves": [
+                                "5mp",
+                                "cdr",
+                                "5hp",
+                                "214hp"
+                            ],
+                            "memo": "これは？"
+                        }
+                    ]
                 }
             ]
         }
