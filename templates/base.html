@@ -2,10 +2,19 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <title>らくらくコンボメモ</title>
 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/mobile.css') }}"
+        media="(max-width: 600px)"
+    >
 </head>
 <body data-mode="{{ mode }}">
 
@@ -17,6 +26,25 @@
         {% block content %}
         {% endblock %}
     </main>
+
+    <!-- 削除確認UI -->
+    <div id="delete-confirm" class="delete-confirm">
+
+        <div class="delete-confirm-content">
+
+            <p id="delete-confirm-message"></p>
+
+            <div class="delete-confirm-buttons">
+
+                <button type="button" id="delete-confirm-cancel">キャンセル</button>
+
+                <button type="button" id="delete-confirm-ok">削除する</button>
+
+            </div>
+
+        </div>
+
+    </div>
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 

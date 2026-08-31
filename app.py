@@ -702,4 +702,4 @@ def character(character_id):
 # 開発中のみ実行
 # ==========================
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", debug=True)

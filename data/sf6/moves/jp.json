@@ -2,41 +2,48 @@
     {
         "id": "throw_j",
         "category": "jump",
+        "str": "other",
         "command": "空中投げ",
         "name": "空中投げ"
     },
     {
         "id": "6mk",
         "category": "unique",
+        "str": "mid",
         "command": "→中K",
         "name": "→中K"
     },
     {
         "id": "3hp",
         "category": "unique",
+        "str": "high",
         "command": "↘強P",
         "name": "↘強P"
     },
     {
         "id": "6hk",
         "category": "unique",
+        "str": "high",
         "command": "→強K",
         "name": "→強K"
     },
     {
         "id": "4mp",
         "category": "unique",
+        "str": "mid",
         "command": "←中P",
         "name": "←中P"
     },
     {
         "id": "4mp_target",
         "category": "unique",
+        "str": "mid",
         "command": "←中Pタゲコン",
         "name": "←中Pタゲコン",
         "variants": [
             {
                 "id": "4mp_mp",
+                "str": "mid",
                 "command": "←中P>中P",
                 "name": "←中P>中P"
             }
@@ -45,21 +52,25 @@
     {
         "id": "5hk_target",
         "category": "unique",
+        "str": "high",
         "command": "強Kタゲコン",
         "name": "強Kタゲコン",
         "variants": [
             {
                 "id": "5hk_hp",
+                "str": "high",
                 "command": "強K>強P",
                 "name": "強K>強P"
             },
             {
                 "id": "5hk_hp_hp",
+                "str": "high",
                 "command": "強K>強P>強P",
                 "name": "強K>強P>強P"
             },
             {
                 "id": "5hk_hp_hk",
+                "str": "high",
                 "command": "強K>強P>強K",
                 "name": "強K>強P>強K"
             }
@@ -68,174 +79,229 @@
     {
         "id": "22lp",
         "category": "special",
+        "str": "low",
         "command": "↓↓弱P",
         "name": "【弱】トリグラフ"
     },
     {
         "id": "22mp",
         "category": "special",
+        "str": "mid",
         "command": "↓↓中P",
         "name": "【中】トリグラフ"
     },
     {
         "id": "22hp",
         "category": "special",
+        "str": "high",
         "command": "↓↓強P",
         "name": "【強】トリグラフ"
     },
     {
-        "id": "22lpmp",
+        "id": "22pp_variants",
         "category": "special",
-        "command": "↓↓弱P中P",
-        "name": "【OD弱】トリグラフ"
-    },
-    {
-        "id": "22lphp",
-        "category": "special",
-        "command": "↓↓弱P強P",
-        "name": "【OD中】トリグラフ"
-    },
-    {
-        "id": "22mphp",
-        "category": "special",
-        "command": "↓↓中P強P",
-        "name": "【OD強】トリグラフ"
+        "str": "other",
+        "command": "↓↓PP",
+        "name": "【OD】トリグラフ",
+        "variants": [
+            {
+                "id": "22lpmp",
+                "str": "other",
+                "command": "↓↓弱P中P",
+                "name": "【OD弱】トリグラフ"
+            },
+            {
+                "id": "22lphp",
+                "str": "other",
+                "command": "↓↓弱P強P",
+                "name": "【OD中】トリグラフ"
+            },
+            {
+                "id": "22mphp",
+                "str": "other",
+                "command": "↓↓中P強P",
+                "name": "【OD強】トリグラフ"
+            }
+        ]
     },
     {
         "id": "236lp",
         "category": "special",
+        "str": "low",
         "command": "↓↘→弱P",
         "name": "【弱】ストリボーグ"
     },
     {
         "id": "236mp",
         "category": "special",
+        "str": "mid",
         "command": "↓↘→中P",
         "name": "【中】ストリボーグ"
     },
     {
         "id": "236hp",
         "category": "special",
+        "str": "high",
         "command": "↓↘→強P",
         "name": "【強】ストリボーグ"
     },
     {
         "id": "236pp",
         "category": "special",
+        "str": "other",
         "command": "↓↘→PP",
         "name": "【OD】ストリボーグ"
     },
     {
         "id": "214lp",
         "category": "special",
+        "str": "low",
         "command": "↓↙←弱P",
         "name": "【弱】ヴィーハト"
     },
     {
         "id": "214mp",
         "category": "special",
+        "str": "mid",
         "command": "↓↙←中P",
         "name": "【中】ヴィーハト"
     },
     {
         "id": "214hp",
         "category": "special",
+        "str": "high",
         "command": "↓↙←強P",
         "name": "【強】ヴィーハト"
     },
     {
-        "id": "214pp",
+        "id": "214pp_variants",
         "category": "special",
+        "str": "other",
         "command": "↓↙←PP",
-        "name": "【OD】ヴィーハト"
+        "name": "【OD】ヴィーハト",
+        "variants": [
+            {
+                "id": "214lpmp",
+                "str": "other",
+                "command": "↓↙←弱P中P",
+                "name": "【OD弱】ヴィーハト"
+            },
+            {
+                "id": "214lphp",
+                "str": "other",
+                "command": "↓↙←弱P強P",
+                "name": "【OD中】ヴィーハト"
+            },
+            {
+                "id": "214mphp",
+                "str": "other",
+                "command": "↓↙←中P強P",
+                "name": "【OD強】ヴィーハト"
+            }
+        ]
     },
     {
         "id": "214lp_warp",
         "category": "special",
+        "str": "low",
         "command": "↓↙←弱P(ワープ)",
         "name": "【弱】ワープ"
     },
     {
         "id": "214mp_warp",
         "category": "special",
+        "str": "mid",
         "command": "↓↙←中P(ワープ)",
         "name": "【中】ワープ"
     },
     {
         "id": "214hp_shadow",
         "category": "special",
+        "str": "high",
         "command": "↓↙←強P",
         "name": "起爆"
     },
     {
         "id": "22k",
         "category": "special",
+        "str": "other",
         "command": "↓↓K",
         "name": "アムネジア"
     },
     {
         "id": "22kk",
         "category": "special",
+        "str": "other",
         "command": "↓↓KK",
         "name": "【OD】アムネジア"
     },
     {
         "id": "236lk",
         "category": "special",
+        "str": "low",
         "command": "↓↘→弱K",
         "name": "【弱】トルバラン"
     },
     {
         "id": "236mk",
         "category": "special",
+        "str": "mid",
         "command": "↓↘→中K",
         "name": "【中】トルバラン"
     },
     {
         "id": "236hk",
         "category": "special",
+        "str": "high",
         "command": "↓↘→強K",
         "name": "【強】トルバラン"
     },
     {
         "id": "236kk",
         "category": "special",
+        "str": "other",
         "command": "↓↘→KK",
         "name": "【OD】トルバラン"
     },
     {
         "id": "214k",
         "category": "special",
+        "str": "other",
         "command": "↓↙←K",
         "name": "アブニマーチ"
     },
     {
         "id": "214kk",
         "category": "special",
+        "str": "other",
         "command": "↓↙←KK",
         "name": "【OD】アブニマーチ"
     },
     {
         "id": "sa1",
         "category": "sa",
+        "str": "low",
         "command": "↓↘→↓↘→P",
         "name": "SA1"
     },
     {
         "id": "sa2",
         "category": "sa",
+        "str": "mid",
         "command": "↓↙←↓↙←P",
         "name": "SA2"
     },
     {
         "id": "sa3",
         "category": "sa",
+        "str": "high",
         "command": "↓↘→↓↘→K",
         "name": "SA3"
     },
     {
         "id": "ca",
         "category": "sa",
+        "str": "other",
         "command": "【CA】↓↘→↓↘→K",
         "name": "CA"
     }

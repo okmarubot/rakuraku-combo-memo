@@ -2,104 +2,124 @@
     {
         "id": "5hph",
         "category": "normal",
+        "str": "high",
         "command": "強P(ホールド)",
         "name": "強P(ホールド)"
     },
     {
         "id": "5hkh",
         "category": "normal",
+        "str": "high",
         "command": "強K(ホールド)",
         "name": "強K(ホールド)"
     },
     {
         "id": "2throw",
         "category": "common",
+        "str": "other",
         "command": "↓投げ",
         "name": "↓投げ"
     },
     {
         "id": "2pp_variants",
         "category": "unique",
+        "str": "other",
         "command": "↓PP",
         "name": "ブレイカー・スタンス",
         "variants": [
             {
                 "id": "2pp",
+                "str": "other",
                 "command": "↓PP",
                 "name": "ブレイカー・スタンス"
             },
             {
                 "id": "2pp_6",
+                "str": "other",
                 "command": "→",
                 "name": "→"
             },
             {
                 "id": "2pp_4",
+                "str": "other",
                 "command": "←",
                 "name": "←"
             },
             {
                 "id": "2pp_6lp",
+                "str": "low",
                 "command": "→弱P",
                 "name": "→弱P"
             },
             {
                 "id": "2pp_6mp",
+                "str": "mid",
                 "command": "→中P",
                 "name": "→中P"
             },
             {
                 "id": "2pp_6hp",
+                "str": "high",
                 "command": "→強P",
                 "name": "→強P"
             },
             {
                 "id": "2pp_lp",
+                "str": "low",
                 "command": "弱P",
                 "name": "弱P"
             },
             {
                 "id": "2pp_mp",
+                "str": "mid",
                 "command": "中P",
                 "name": "中P"
             },
             {
                 "id": "2pp_hp",
+                "str": "high",
                 "command": "強P",
                 "name": "強P"
             },
             {
                 "id": "2pp_hph",
+                "str": "high",
                 "command": "強P(ホールド)",
                 "name": "強P(ホールド)"
             },
             {
                 "id": "2pp_lk",
+                "str": "low",
                 "command": "弱K",
                 "name": "弱K"
             },
             {
                 "id": "2pp_mk",
+                "str": "mid",
                 "command": "中K",
                 "name": "中K"
             },
             {
                 "id": "2pp_hk",
+                "str": "high",
                 "command": "強K",
                 "name": "強K"
             },
             {
                 "id": "2pp_hkhk",
+                "str": "high",
                 "command": "強K>強K",
                 "name": "強K>強K"
             },
             {
                 "id": "2pp_throw",
+                "str": "other",
                 "command": "弱P弱K",
                 "name": "投げ"
             },
             {
                 "id": "2pp_2throw",
+                "str": "other",
                 "command": "↓弱P弱K",
                 "name": "↓投げ"
             }
@@ -108,29 +128,34 @@
     {
         "id": "6mp",
         "category": "unique",
+        "str": "mid",
         "command": "→中P",
         "name": "→中P"
     },
     {
         "id": "4mk",
         "category": "unique",
+        "str": "mid",
         "command": "←中K",
         "name": "←中K"
     },
     {
         "id": "j2hp",
         "category": "jump",
+        "str": "high",
         "command": "前J↓強P",
         "name": "前J↓強P"
     },
     {
         "id": "5mp_target",
         "category": "unique",
+        "str": "mid",
         "command": "中Pタゲコン",
         "name": "中Pタゲコン",
         "variants": [
             {
                 "id": "5mp_5hp",
+                "str": "mid",
                 "command": "中P>強P",
                 "name": "中P>強P"
             }
@@ -139,11 +164,13 @@
     {
         "id": "2lk_target",
         "category": "unique",
+        "str": "low",
         "command": "↓弱Kタゲコン",
         "name": "↓弱Kタゲコン",
         "variants": [
             {
                 "id": "2lk_2hk",
+                "str": "low",
                 "command": "↓弱K>↓強K",
                 "name": "↓弱K>↓強K"
             }
@@ -152,99 +179,116 @@
     {
         "id": "236lp",
         "category": "special",
+        "str": "low",
         "command": "↓↘→弱P",
         "name": "【弱】フラッシュアックス"
     },
     {
         "id": "236mp",
         "category": "special",
+        "str": "mid",
         "command": "↓↘→中P",
         "name": "【中】フラッシュアックス"
     },
     {
         "id": "236hp",
         "category": "special",
+        "str": "high",
         "command": "↓↘→強P",
         "name": "フラッシュチョップ"
     },
     {
         "id": "236pp",
         "category": "special",
+        "str": "other",
         "command": "↓↘→PP",
         "name": "【OD】フラッシュチョップ"
     },
     {
         "id": "623lk",
         "category": "special",
+        "str": "low",
         "command": "→↓↘弱K",
         "name": "【弱】エアニースマッシュ"
     },
     {
         "id": "623mk",
         "category": "special",
+        "str": "mid",
         "command": "→↓↘中K",
         "name": "【中】エアニースマッシュ"
     },
     {
         "id": "623hk",
         "category": "special",
+        "str": "high",
         "command": "→↓↘強K",
         "name": "【強】エアニースマッシュ"
     },
     {
         "id": "623kk",
         "category": "special",
+        "str": "other",
         "command": "→↓↘KK",
         "name": "【OD】エアニースマッシュ"
     },
     {
         "id": "624lp",
         "category": "special",
+        "str": "low",
         "command": "→↘↓↙←弱P",
         "name": "【弱】パワーボム"
     },
     {
         "id": "624mp",
         "category": "special",
+        "str": "mid",
         "command": "→↘↓↙←中P",
         "name": "【中】パワーボム"
     },
     {
         "id": "624hp",
         "category": "special",
+        "str": "high",
         "command": "→↘↓↙←強P",
         "name": "【強】パワーボム"
     },
     {
         "id": "624pp",
         "category": "special",
+        "str": "other",
         "command": "→↘↓↙←PP",
         "name": "【OD】パワーボム"
     },
     {
         "id": "624p_pd",
         "category": "special",
+        "str": "other",
         "command": "→↘↓↙←P",
         "name": "パワードロップ"
     },
     {
         "id": "624pp_pd_variants",
         "category": "special",
+        "str": "other",
         "command": "→↘↓↙←PP",
         "name": "【OD】パワードロップ",
         "variants": [
             {
                 "id": "624pp_pd",
+                "str": "other",
                 "command": "→↘↓↙←PP",
                 "name": "【OD】パワードロップ"
             },
             {
                 "id": "624pp_pd_6",
+                "str": "other",
                 "command": "→↘↓↙←PP>→",
                 "name": "【OD】パワードロップ>→"
             },
             {
                 "id": "624pp_pd_pp",
+                "str": "other",
                 "command": "→↘↓↙←PP>PP(SA2)",
                 "name": "【OD】パワードロップ>PP(SA2)"
             }
@@ -253,24 +297,28 @@
     {
         "id": "sa1",
         "category": "sa",
+        "str": "low",
         "command": "↓↘→↓↘→K",
         "name": "SA1"
     },
     {
         "id": "sa2",
         "category": "sa",
+        "str": "mid",
         "command": "↓↙←↓↙←P",
         "name": "SA2"
     },
     {
         "id": "sa3",
         "category": "sa",
+        "str": "high",
         "command": "↓↘→↓↘→P",
         "name": "SA3"
     },
     {
         "id": "ca",
         "category": "sa",
+        "str": "other",
         "command": "【CA】↓↘→↓↘→P",
         "name": "CA"
     }

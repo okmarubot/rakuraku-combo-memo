@@ -58,6 +58,12 @@ const editMainGroupTemplate = document.getElementById("edit-main-group-template"
 const viewSubGroupTemplate = document.getElementById("view-sub-group-template");
 const editSubGroupTemplate = document.getElementById("edit-sub-group-template");
 
+/* 削除確認UI */
+const deleteConfirm = document.querySelector("#delete-confirm");
+const deleteConfirmMessage = document.querySelector("#delete-confirm-message");
+const deleteConfirmCancel = document.querySelector("#delete-confirm-cancel");
+const deleteConfirmOk = document.querySelector("#delete-confirm-ok");
+
 /* =========================
    表示モード
 ========================= */
@@ -127,20 +133,27 @@ function toggleDisplayMode() {
 
     const comboTexts = document.querySelectorAll(".combo-text");
 
-    comboTexts.forEach(combo => {
+    comboTexts.forEach(comboText => {
 
-        combo.textContent = commandMode
-            ? combo.dataset.command
-            : combo.dataset.name;
+        const comboItem = comboText.closest(".combo-item");
+
+        if (!comboItem) {
+            return;
+        }
+
+        const moves = JSON.parse(comboItem.dataset.moves);
+
+        setComboText(
+            comboText,
+            moves,
+            commandMode ? "command" : "name"
+        );
 
     });
 
-    if (moveSelectorPanel.style.display !== "none") {
-        renderMoveSelectorList();
-    }
+    renderMoveSelectorList();
 
 }
-
 /* ---------- 操作モード管理 ---------- */
 
 // Classic / Modernを切り替える
@@ -171,12 +184,60 @@ function adjustTextareaHeight(textarea) {
 
 }
 
+/* ---------- 削除確認UI ---------- */
+
+function showDeleteConfirm(message, deleteAction) {
+
+    deleteConfirmMessage.textContent = message;
+
+    deleteConfirm.style.display = "flex";
+
+    deleteConfirmCancel.onclick = function () {
+
+        deleteConfirm.style.display = "none";
+
+        deleteConfirmOk.onclick = null;
+
+    };
+
+    deleteConfirmOk.onclick = async function () {
+
+        deleteConfirm.style.display = "none";
+
+        deleteConfirmOk.onclick = null;
+
+        await deleteAction();
+
+    };
+
+}
+
 /* ---------- コンボ編集 ---------- */
 
 // コンボ編集開始
 async function startComboEdit(comboItem) {
 
-    // 別のコンボカードが編集中なら、先に編集完了する
+    // 編集中の見出し・コンボカードがある場合は完了
+    if (editingMainGroup) {
+
+        const success = await finishGroupEdit();
+
+        if (!success) {
+            return;
+        }
+
+    }
+
+    if (editingSubGroup) {
+
+        const success = await finishSubGroupEdit();
+
+        if (!success) {
+            return;
+        }
+
+    }
+
     if (editingComboItem && editingComboItem !== comboItem) {
 
         const success = await finishComboEdit();
@@ -426,29 +487,6 @@ function setupComboDataset(comboItem, combo) {
 
 }
 
-// コンボカードの表示文字列を設定
-function setupComboTexts(comboItem, combo) {
-
-    const comboTexts = comboItem.querySelectorAll(".combo-text");
-
-    const commandText = buildComboText(combo.moves, "command");
-
-    const nameText = buildComboText(combo.moves, "name");
-
-    comboTexts.forEach(comboText => {
-
-        comboText.dataset.command = commandText;
-        comboText.dataset.name = nameText;
-
-        comboText.textContent =
-            commandMode
-                ? commandText
-                : nameText;
-
-    });
-
-}
-
 // 技IDから技データを取得する
 function findMoveById(moveId) {
 
@@ -476,23 +514,56 @@ function findMoveById(moveId) {
     return undefined;
 }
 
-function buildComboText(moves, displayType) {
+// コンボカードの表示文字列を設定
+function setComboText(comboText, moves, displayType) {
 
-    return moves
-        .map(moveId => {
+    comboText.innerHTML = "";
 
-            const move = findMoveById(moveId);
+    moves.forEach((moveId, index) => {
 
-            if (!move) {
-                console.warn("技データが見つかりません:", moveId)
-                return "";
-            }
+        const move = findMoveById(moveId);
 
-            return move[displayType];
+        if (!move) {
+            return;
+        }
 
-        })
-        .filter(text => text !== "")
-        .join(" ⏵ ")
+        const moveSpan = document.createElement("span");
+
+        moveSpan.className = "combo-move";
+        moveSpan.textContent = move[displayType];
+
+        comboText.appendChild(moveSpan);
+
+        // 最後の技以外には矢印を追加
+        if (index < moves.length - 1) {
+
+            const separator = document.createElement("span");
+
+            separator.className = "combo-separator";
+            separator.textContent = " ⏵ ";
+
+            comboText.appendChild(separator);
+
+        }
+
+    });
+
+}
+
+function setupComboTexts(comboItem, combo) {
+
+    const comboTexts = comboItem.querySelectorAll(".combo-text");
+
+    comboTexts.forEach(comboText => {
+
+        setComboText(
+            comboText,
+            combo.moves,
+            commandMode ? "command" : "name"
+        );
+
+    });
+
 }
 
 /* コンボデータ更新 */
@@ -508,19 +579,13 @@ function updateComboDisplay() {
 
     const viewComboItem = document.querySelector('#view-mode .combo-item[data-combo-id="' + comboId + '"]');
 
-    const commandText = buildComboText(currentMoves, "command");
-
-    const nameText = buildComboText(currentMoves, "name");
-
     comboTexts.forEach(comboText => {
 
-        comboText.dataset.command = commandText;
-
-        comboText.dataset.name = nameText;
-
-        comboText.textContent = commandMode
-            ? commandText
-            : nameText;
+        setComboText(
+            comboText,
+            currentMoves,
+            commandMode ? "command" : "name"
+        );
 
     });
 
@@ -528,12 +593,11 @@ function updateComboDisplay() {
 
         const viewComboText = viewComboItem.querySelector(".combo-text");
 
-        viewComboText.dataset.command = commandText;
-        viewComboText.dataset.name = nameText;
-
-        viewComboText.textContent = commandMode
-            ? commandText
-            : nameText;
+        setComboText(
+            viewComboText,
+            currentMoves,
+            commandMode ? "command" : "name"
+        );
 
         const viewMemoText = viewComboItem.querySelector(".memo-text");
 
@@ -826,6 +890,30 @@ function renderMoveSelectorList() {
 
                 variantGroup.classList.toggle("open");
 
+                // variantsを開いた場合
+                if (variantGroup.classList.contains("open")) {
+
+                    // 展開後の位置を取得する
+                    const variantRect = variantList.getBoundingClientRect();
+                    const listRect = moveSelectorList.getBoundingClientRect();
+
+                    // 子要素が技一覧の表示範囲より下にはみ出している場合
+                    if (variantRect.bottom > listRect.bottom) {
+
+                        const scrollAmount =
+                            variantRect.bottom - listRect.bottom;
+
+                        moveSelectorList.scrollBy({
+
+                            top: scrollAmount,
+                            behavior: "smooth"
+
+                        });
+
+                    }
+
+                }
+
             });
 
             variantGroup.appendChild(parentButton);
@@ -918,7 +1006,27 @@ function addMove(moveId) {
 // 大見出し編集開始
 async function startGroupEdit(mainGroup) {
 
-    // 編集中の大見出しがある場合は完了
+    // 編集中の見出し・コンボカードがある場合は完了
+    if (editingComboItem) {
+
+        const success = await finishComboEdit();
+
+        if (!success) {
+            return;
+        }
+
+    }
+
+    if (editingSubGroup) {
+
+        const success = await finishSubGroupEdit();
+
+        if (!success) {
+            return;
+        }
+
+    }
+
     if (editingMainGroup && editingMainGroup !== mainGroup) {
 
         const success = await finishGroupEdit();
@@ -1279,7 +1387,27 @@ function syncViewMainGroupOrder() {
 // 中見出し編集開始
 async function startSubGroupEdit(subGroup) {
 
-    // 別の中見出しが編集中なら、先に編集完了する
+    // 編集中の見出し・コンボカードがある場合は完了
+    if (editingComboItem) {
+
+        const success = await finishComboEdit();
+
+        if (!success) {
+            return;
+        }
+
+    }
+
+    if (editingMainGroup) {
+
+        const success = await finishGroupEdit();
+
+        if (!success) {
+            return;
+        }
+
+    }
+
     if (editingSubGroup && editingSubGroup !== subGroup) {
 
         const success = await finishSubGroupEdit();
@@ -1733,11 +1861,10 @@ function setupEditComboCardEvents(comboItem) {
         .querySelector(".combo-delete-button")
         .addEventListener("click", function () {
 
-            if (!confirm("このコンボを削除しますか？")) {
-                return;
-            }
-
-            deleteCombo(comboItem);
+            showDeleteConfirm(
+                "このコンボを削除しますか？",
+                () => deleteCombo(comboItem)
+            );
 
         });
 
@@ -1783,13 +1910,13 @@ function setupEditMainGroupEvents(mainGroup) {
         .querySelector(".group-delete-button")
         .addEventListener("click", function () {
 
-            if (!confirm("この大見出しを削除しますか？")) {
-                return;
-            }   
-
-            deleteMainGroup(mainGroup);
+            showDeleteConfirm(
+                "この大見出しを削除しますか？",
+                () => deleteMainGroup(mainGroup)
+            );
 
         });
+
 }
 
 // 中見出し編集イベント設定
@@ -1823,13 +1950,10 @@ function setupEditSubGroupEvents(subGroup) {
         .querySelector(".sub-group-delete-button")
         .addEventListener("click", function () {
 
-            if (!confirm("この中見出しを削除しますか？")) {
-
-                return;
-
-            }
-
-            deleteSubGroup(subGroup);
+            showDeleteConfirm(
+                "この中見出しを削除しますか？",
+                () => deleteSubGroup(subGroup)
+            );
 
         });
 
@@ -1872,6 +1996,8 @@ function setupSubGroupSortable(mainGroup) {
 
         draggable: ".sub-group",
 
+        handle: ".sub-group-sort-handle",
+
         onEnd: function () {
 
             saveSubGroupOrder(mainGroup);
@@ -1894,6 +2020,8 @@ function setupComboSortable(subGroup) {
         animation: 150,
 
         draggable: ".combo-item",
+
+        handle: ".combo-sort-handle",
 
         onEnd: function () {
 
@@ -1980,7 +2108,14 @@ function registerEvents() {
 
     /* コンボ編集 */
 
-    //コンボカードイベント登録
+    // コンボカード表示
+    document.querySelectorAll(".combo-item").forEach(comboItem => {
+
+        setupComboTexts(comboItem, { moves: JSON.parse(comboItem.dataset.moves) });
+
+    });
+
+    // コンボカードイベント登録
     document.querySelectorAll("#edit-mode .combo-item").forEach(comboItem => {
 
         setupEditComboCardEvents(comboItem);
@@ -2051,6 +2186,8 @@ function registerEvents() {
         animation: 150,
 
         draggable: ".main-group",
+
+        handle: ".main-group-sort-handle",
 
         onEnd: function () {
 

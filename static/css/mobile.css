@@ -1,0 +1,199 @@
+/* =========================================
+   スマホ用UI
+========================================= */
+
+
+/* -----------------------------------------
+   コンボカード
+----------------------------------------- */
+
+.combo-item {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.combo-view,
+.combo-edit {
+
+    padding-right: 44px;
+
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+
+/* -----------------------------------------
+   コンボヘッダー
+----------------------------------------- */
+
+.combo-header {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+}
+
+
+/* コンボ内容 */
+
+.combo-main {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex: 1;
+    min-width: 0;
+}
+
+
+/* コンボテキスト */
+
+.combo-text {
+    min-width: 0;
+    margin-right: 0;
+}
+
+
+/* -----------------------------------------
+   並び替えハンドル
+----------------------------------------- */
+
+.combo-sort-handle {
+    flex: 0 0 auto;
+}
+
+
+/* -----------------------------------------
+   通常表示：操作ボタン
+----------------------------------------- */
+
+.combo-view .combo-actions {
+
+    position: static;
+
+    display: flex;
+    width: 100%;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.combo-view .combo-actions .combo-edit-button,
+.combo-view .combo-actions .combo-delete-button {
+    flex: 1;
+}
+
+
+
+.combo-view .combo-actions .combo-sort-handle {
+    flex: 0 0 auto;
+}
+
+
+/* -----------------------------------------
+   通常表示：メモ
+----------------------------------------- */
+
+.combo-view .combo-memo {
+    margin-top: 8px;
+}
+
+
+/* -----------------------------------------
+   編集表示
+----------------------------------------- */
+
+.combo-edit .combo-header {
+    flex-direction: column;
+}
+
+
+/* コンボ内容 */
+
+.combo-edit .combo-main {
+    width: 100%;
+}
+
+
+/* 技を追加/Undo */
+.combo-edit .combo-move-actions {
+    display: flex;
+    width: 100%;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.combo-edit .add-move-button,
+.combo-edit .combo-undo-button {
+    flex: 1;
+}
+
+
+/* 操作ボタン */
+
+.combo-edit .combo-actions {
+
+    position: static;
+
+    display: flex;
+    width: 100%;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+
+/* ✓ × */
+
+.combo-edit .combo-complete-button,
+.combo-edit .combo-cancel-button {
+    flex: 1;
+}
+
+
+/* ☰ */
+
+.combo-edit .combo-sort-handle {
+    flex: 0 0 auto;
+}
+
+
+/* -----------------------------------------
+   編集時メモ
+----------------------------------------- */
+
+.combo-edit .combo-memo {
+    width: 100%;
+    margin-top: 8px;
+}
+
+.combo-edit .combo-memo textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    min-height: 1.8em;
+}
+
+
+/* -----------------------------------------
+   技一覧パネル
+----------------------------------------- */
+
+.move-selector-list {
+    height: 240px;
+}
+
+
+/* -----------------------------------------
+   技単位の改行
+----------------------------------------- */
+
+.combo-move {
+    white-space: nowrap;
+}
+
+
+/* -----------------------------------------
+   ダブルタップ操作
+----------------------------------------- */
+
+button {
+    touch-action: manipulation;
+}

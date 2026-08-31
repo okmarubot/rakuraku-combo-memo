@@ -9,37 +9,42 @@
                     "title": "中見出し①",
                     "combos": [
                         {
-                            "id": "combo-002",
+                            "id": "combo-006",
                             "moves": [
-                                "2lp",
-                                "2lp",
-                                "2lp"
+                                "5lp",
+                                "5lp",
+                                "5lp",
+                                "214hp",
+                                "sa3",
+                                "5lp"
                             ],
-                            "memo": "いいい"
+                            "memo": ""
+                        },
+                        {
+                            "id": "combo-007",
+                            "moves": [
+                                "5mp",
+                                "2mp",
+                                "cdr",
+                                "2hp",
+                                "214hk"
+                            ],
+                            "memo": ""
                         },
                         {
                             "id": "combo-004",
                             "moves": [
                                 "jlp",
-                                "sa1",
-                                "dr"
+                                "sa1"
                             ],
                             "memo": ""
                         }
                     ]
                 },
                 {
-                    "id": "subgroup-002",
-                    "title": "中見出し②",
-                    "combos": [
-                        {
-                            "id": "combo-003",
-                            "moves": [
-                                "5hp"
-                            ],
-                            "memo": ""
-                        }
-                    ]
+                    "id": "subgroup-007",
+                    "title": "新しい中見出し",
+                    "combos": []
                 }
             ]
         },
@@ -50,6 +55,16 @@
                 {
                     "id": "subgroup-003",
                     "title": "新しい中見出し３",
+                    "combos": []
+                },
+                {
+                    "id": "subgroup-005",
+                    "title": "新しい中見出し",
+                    "combos": []
+                },
+                {
+                    "id": "subgroup-006",
+                    "title": "新しい中見出し",
                     "combos": []
                 }
             ]

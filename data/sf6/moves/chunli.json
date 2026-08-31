@@ -2,34 +2,40 @@
     {
         "id": "throw_j",
         "category": "jump",
+        "str": "other",
         "command": "空中投げ",
         "name": "空中投げ"
     },
     {
         "id": "njhk",
         "category": "jump",
+        "str": "high",
         "command": "垂直J強K",
         "name": "垂直J強K"
     },
     {
         "id": "j2mk",
         "category": "jump",
+        "str": "mid",
         "command": "J↓中K",
         "name": "J↓中K"
     },
     {
         "id": "j2mk_target",
         "category": "jump",
+        "str": "mid",
         "command": "J↓中Kタゲコン",
         "name": "J↓中Kタゲコン",
         "variants": [
             {
                 "id": "j2mk_j2mk",
+                "str": "mid",
                 "command": "J↓中K>↓中K",
                 "name": "J↓中K>↓中K"
             },
             {
                 "id": "j2mk_2mk_2mk",
+                "str": "mid",
                 "command": "J↓中K>↓中K>↓中K",
                 "name": "J↓中K>↓中K>↓中K"
             }
@@ -38,11 +44,13 @@
     {
         "id": "jhp_target",
         "category": "jump",
+        "str": "high",
         "command": "J強Pタゲコン",
         "name": "J強Pタゲコン",
         "variants": [
             {
                 "id": "jhp_hp",
+                "str": "high",
                 "command": "J強P>強P",
                 "name": "J強P>強P"
             }
@@ -51,77 +59,91 @@
     {
         "id": "6mp",
         "category": "unique",
+        "str": "mid",
         "command": "→中P",
         "name": "→中P"
     },
     {
         "id": "4mp",
         "category": "unique",
+        "str": "mid",
         "command": "←中P",
         "name": "←中P"
     },
     {
         "id": "4hp",
         "category": "unique",
+        "str": "high",
         "command": "←強P",
         "name": "←強P"
     },
     {
         "id": "3hp",
         "category": "unique",
+        "str": "high",
         "command": "↘強P",
         "name": "↘強P"
     },
     {
         "id": "6hk",
         "category": "unique",
+        "str": "high",
         "command": "→強K",
         "name": "→強K"
     },
     {
         "id": "3hk",
         "category": "unique",
+        "str": "high",
         "command": "↘強K",
         "name": "↘強K"
     },
     {
         "id": "214p_variants",
         "category": "unique",
+        "str": "other",
         "command": "↓↙←P",
         "name": "行雲流水",
         "variants": [
             {
                 "id": "214p",
+                "str": "other",
                 "command": "↓↙←P",
                 "name": "行雲流水"
             },
             {
                 "id": "214p_lp",
+                "str": "low",
                 "command": "↓↙←P>弱P",
                 "name": "行雲流水>弱P"
             },
             {
                 "id": "214p_mp",
+                "str": "mid",
                 "command": "↓↙←P>中P",
                 "name": "行雲流水>中P"
             },
             {
                 "id": "214p_hp",
+                "str": "high",
                 "command": "↓↙←P>強P",
                 "name": "行雲流水>強P"
             },
             {
                 "id": "214p_lk",
+                "str": "low",
                 "command": "↓↙←P>弱K",
                 "name": "行雲流水>弱K"
             },
             {
                 "id": "214p_mk",
+                "str": "mid",
                 "command": "↓↙←P>中K",
                 "name": "行雲流水>中K"
             },
             {
                 "id": "214p_hk",
+                "str": "high",
                 "command": "↓↙←P>強K",
                 "name": "行雲流水>強K"
             }
@@ -130,58 +152,68 @@
     {
         "id": "4h6lp",
         "category": "special",
+        "str": "low",
         "command": "⇐→弱P",
         "name": "【弱】気功拳"
     },
     {
         "id": "4h6mp",
         "category": "special",
+        "str": "mid",
         "command": "⇐→中P",
         "name": "【中】気功拳"
     },
     {
         "id": "4h6hp",
         "category": "special",
+        "str": "high",
         "command": "⇐→強P",
         "name": "【強】気功拳"
     },
     {
         "id": "4h6pp",
         "category": "special",
+        "str": "other",
         "command": "⇐→PP",
         "name": "【OD】気功拳"
     },
     {
         "id": "236lk",
         "category": "special",
+        "str": "low",
         "command": "↓↘→弱K",
         "name": "【弱】百裂脚"
     },
     {
         "id": "236mk",
         "category": "special",
+        "str": "mid",
         "command": "↓↘→中K",
         "name": "【中】百裂脚"
     },
     {
         "id": "236hk",
         "category": "special",
+        "str": "high",
         "command": "↓↘→強K",
         "name": "【強】百裂脚"
     },
     {
         "id": "236kk_variants",
         "category": "special",
+        "str": "other",
         "command": "↓↘→KK",
         "name": "【OD】百裂脚",
         "variants": [
             {
                 "id": "236kk",
+                "str": "other",
                 "command": "↓↘→KK",
                 "name": "【OD】百裂脚"
             },
             {
                 "id": "236kk_kk",
+                "str": "other",
                 "command": "↓↘→KK>KK",
                 "name": "【OD】百裂脚>KK"
             }
@@ -190,126 +222,154 @@
     {
         "id": "j236lk",
         "category": "special",
+        "str": "low",
         "command": "J↓↘→弱K",
         "name": "【弱】空中百裂脚"
     },
     {
         "id": "j236mk",
         "category": "special",
+        "str": "mid",
         "command": "J↓↘→中K",
         "name": "【中】空中百裂脚"
     },
     {
         "id": "j236hk",
         "category": "special",
+        "str": "high",
         "command": "J↓↘→強K",
         "name": "【強】空中百裂脚"
     },
     {
         "id": "j236kk",
         "category": "special",
+        "str": "other",
         "command": "J↓↘→KK",
         "name": "【OD】空中百裂脚"
     },
     {
         "id": "2h8lk",
         "category": "special",
+        "str": "low",
         "command": "⇓↑弱K",
         "name": "【弱】スピニングバードキック"
     },
     {
         "id": "2h8mk",
         "category": "special",
+        "str": "mid",
         "command": "⇓↑中K",
         "name": "【中】スピニングバードキック"
     },
     {
         "id": "2h8hk",
         "category": "special",
+        "str": "high",
         "command": "⇓↑強K",
         "name": "【強】スピニングバードキック"
     },
     {
         "id": "2h8kk",
         "category": "special",
+        "str": "other",
         "command": "⇓↑KK",
         "name": "【OD】スピニングバードキック"
     },
     {
         "id": "214lk",
         "category": "special",
+        "str": "low",
         "command": "↓↙←弱K",
         "name": "【弱】覇山蹴"
     },
     {
         "id": "214mk",
         "category": "special",
+        "str": "mid",
         "command": "↓↙←中K",
         "name": "【中】覇山蹴"
     },
     {
         "id": "214hk",
         "category": "special",
+        "str": "high",
         "command": "↓↙←強K",
         "name": "【強】覇山蹴"
     },
     {
         "id": "214kk",
         "category": "special",
+        "str": "other",
         "command": "↓↙←KK",
         "name": "【OD】覇山蹴"
     },
     {
         "id": "22lk",
         "category": "special",
+        "str": "low",
         "command": "↓↓弱K",
         "name": "【弱】天昇脚"
     },
     {
         "id": "22mk",
         "category": "special",
+        "str": "mid",
         "command": "↓↓中K",
         "name": "【中】天昇脚"
     },
     {
         "id": "22hk",
         "category": "special",
+        "str": "high",
         "command": "↓↓強K",
         "name": "【強】天昇脚"
     },
     {
         "id": "22kk",
         "category": "special",
+        "str": "other",
         "command": "↓↓KK",
         "name": "【OD】天昇脚"
     },
     {
         "id": "sa1",
         "category": "sa",
+        "str": "low",
         "command": "↓↘→↓↘→P",
-        "name": "SA1"
-    },
-    {
-        "id": "j_sa1",
-        "category": "sa",
-        "command": "J↓↘→↓↘→P",
-        "name": "空中SA1"
+        "name": "SA1",
+        "variants": [
+            {
+                "id": "sa1",
+                "str": "low",
+                "command": "↓↘→↓↘→P",
+                "name": "SA1"
+            },
+            {
+                "id": "j_sa1",
+                "str": "low",
+                "command": "J↓↘→↓↘→P",
+                "name": "空中SA1"
+            }
+        ]
     },
     {
         "id": "sa2",
         "category": "sa",
+        "str": "mid",
         "command": "↓↘→↓↘→K",
         "name": "SA2"
     },
     {
         "id": "sa3",
         "category": "sa",
+        "str": "high",
         "command": "↓↙←↓↙←K",
         "name": "SA3"
     },
     {
         "id": "ca",
         "category": "sa",
+        "str": "other",
         "command": "【CA】↓↙←↓↙←K",
         "name": "CA"
     }

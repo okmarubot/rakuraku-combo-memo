@@ -335,7 +335,7 @@
     {
         "id": "ca",
         "category": "sa",
-        "str": "high",
+        "str": "other",
         "command": "【CA】↓↘→↓↘→K",
         "name": "CA"
     }

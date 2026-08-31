@@ -2,52 +2,61 @@
     {
         "id": "njhk",
         "category": "jump",
+        "str": "high",
         "command": "垂直J強K",
         "name": "垂直J強K"
     },
     {
         "id": "6mp",
         "category": "unique",
+        "str": "mid",
         "command": "→中P",
         "name": "→中P"
     },
     {
         "id": "6hk",
         "category": "unique",
+        "str": "high",
         "command": "→強K",
         "name": "→強K"
     },
     {
         "id": "hj_8",
         "category": "unique",
+        "str": "other",
         "command": "↓↑",
         "name": "↓↑"
     },
     {
         "id": "hj_9",
         "category": "unique",
+        "str": "other",
         "command": "↓↗",
         "name": "↓↗"
     },
     {
         "id": "hjc",
         "category": "unique",
+        "str": "other",
         "command": "HJC",
         "name": "HJC"
     },
     {
         "id": "214lp_variants",
         "category": "special",
+        "str": "low",
         "command": "↓↙←弱P",
         "name": "【弱】サンダースラップ",
         "variants": [
             {
                 "id": "214lp",
+                "str": "low",
                 "command": "↓↙←弱P",
                 "name": "【弱】サンダースラップ"
             },
             {
                 "id": "214lp_6pp",
+                "str": "low",
                 "command": "↓↙←弱P>PP",
                 "name": "【弱】サンダースラップ>PP"
             }
@@ -56,16 +65,19 @@
     {
         "id": "214mp_variants",
         "category": "special",
+        "str": "mid",
         "command": "↓↙←中P",
         "name": "【中】サンダースラップ",
         "variants": [
             {
                 "id": "214mp",
+                "str": "mid",
                 "command": "↓↙←中P",
                 "name": "【中】サンダースラップ"
             },
             {
                 "id": "214mp_6pp",
+                "str": "mid",
                 "command": "↓↙←中P>PP",
                 "name": "【中】サンダースラップ>PP"
             }
@@ -74,16 +86,19 @@
     {
         "id": "214hp_variants",
         "category": "special",
+        "str": "high",
         "command": "↓↙←強P",
         "name": "【強】サンダースラップ",
         "variants": [
             {
                 "id": "214hp",
+                "str": "high",
                 "command": "↓↙←強P",
                 "name": "【強】サンダースラップ"
             },
             {
                 "id": "214hp_6pp",
+                "str": "high",
                 "command": "↓↙←強P>PP",
                 "name": "【強】サンダースラップ>PP"
             }
@@ -92,33 +107,39 @@
     {
         "id": "214pp",
         "category": "special",
+        "str": "other",
         "command": "↓↙←PP",
         "name": "【OD】サンダースラップ"
     },
     {
         "id": "214pk",
         "category": "special",
+        "str": "other",
         "command": "↓↙←PK",
         "name": "サンダーキャンセル"
     },
     {
         "id": "236lk_variants",
         "category": "special",
+        "str": "low",
         "command": "↓↘→弱K",
         "name": "【弱】バーニングキック",
         "variants": [
             {
                 "id": "236lk",
+                "str": "low",
                 "command": "↓↘→弱K",
                 "name": "【弱】バーニングキック"
             },
             {
                 "id": "236lk_pp",
+                "str": "low",
                 "command": "↓↘→弱K>PP",
                 "name": "【弱】バーニングキック>PP"
             },
             {
                 "id": "236lk_kk",
+                "str": "low",
                 "command": "↓↘→弱K>KK",
                 "name": "【弱】バーニングキック>KK"
             }
@@ -127,21 +148,25 @@
     {
         "id": "236mk_variants",
         "category": "special",
+        "str": "mid",
         "command": "↓↘→中K",
         "name": "【中】バーニングキック",
         "variants": [
             {
                 "id": "236mk",
+                "str": "mid",
                 "command": "↓↘→中K",
                 "name": "【中】バーニングキック"
             },
             {
                 "id": "236mk_pp",
+                "str": "mid",
                 "command": "↓↘→中K>PP",
                 "name": "【中】バーニングキック>PP"
             },
             {
                 "id": "236mk_kk",
+                "str": "mid",
                 "command": "↓↘→中K>KK",
                 "name": "【中】バーニングキック>KK"
             }
@@ -150,21 +175,25 @@
     {
         "id": "236hk_variants",
         "category": "special",
+        "str": "high",
         "command": "↓↘→強K",
         "name": "【強】バーニングキック",
         "variants": [
             {
                 "id": "236hk",
+                "str": "high",
                 "command": "↓↘→強K",
                 "name": "【強】バーニングキック"
             },
             {
                 "id": "236hk_pp",
+                "str": "high",
                 "command": "↓↘→強K>PP",
                 "name": "【強】バーニングキック>PP"
             },
             {
                 "id": "236hk_kk",
+                "str": "high",
                 "command": "↓↘→強K>KK",
                 "name": "【強】バーニングキック>KK"
             }
@@ -173,86 +202,101 @@
     {
         "id": "236kk",
         "category": "special",
+        "str": "other",
         "command": "↓↘→KK",
         "name": "【OD】バーニングキック"
     },
     {
         "id": "j236lk",
         "category": "special",
+        "str": "low",
         "command": "J↓↘→弱K",
         "name": "【弱】空中バーニングキック"
     },
     {
         "id": "j236mk",
         "category": "special",
+        "str": "mid",
         "command": "J↓↘→中K",
         "name": "【中】空中バーニングキック"
     },
     {
         "id": "j236hk",
         "category": "special",
+        "str": "high",
         "command": "J↓↘→強K",
         "name": "【強】空中バーニングキック"
     },
     {
         "id": "j236kk",
         "category": "special",
+        "str": "other",
         "command": "J↓↘→KK",
         "name": "【OD】空中バーニングキック"
     },
     {
         "id": "623lp",
         "category": "special",
+        "str": "low",
         "command": "→↓↘弱P",
         "name": "【弱】セイスモハンマー"
     },
     {
         "id": "623mp",
         "category": "special",
+        "str": "mid",
         "command": "→↓↘中P",
         "name": "【中】セイスモハンマー"
     },
     {
         "id": "623hp",
         "category": "special",
+        "str": "high",
         "command": "→↓↘強P",
         "name": "【強】セイスモハンマー"
     },
     {
         "id": "623pp",
         "category": "special",
+        "str": "other",
         "command": "→↓↘PP",
         "name": "【OD】セイスモハンマー"
     },
     {
         "id": "623p_k",
         "category": "special",
+        "str": "other",
         "command": "→↓↘P>K",
         "name": "セイスモキャンセル"
     },
     {
         "id": "214k_variants",
         "category": "special",
+        "str": "other",
         "command": "↓↙←K",
         "name": "セービングフォース",
         "variants": [
             {
                 "id": "214k_lv1",
+                "str": "other",
                 "command": "↓↙←K",
                 "name": "セービングフォース(Lv1)"
             },
             {
                 "id": "214k_lv2",
+                "str": "other",
                 "command": "↓↙←K(ホールド)",
                 "name": "セービングフォース(Lv2)"
             },
             {
                 "id": "214k_lv3",
+                "str": "other",
                 "command": "↓↙←K(最大ホールド)",
                 "name": "セービングフォース(Lv3)"
             },
             {
                 "id": "214k_66",
+                "str": "other",
                 "command": "↓↙←K>前ステ",
                 "name": "セービングフォース>前ステ"
             }
@@ -261,26 +305,31 @@
     {
         "id": "214kk_variants",
         "category": "special",
+        "str": "other",
         "command": "↓↙←KK",
         "name": "【OD】セービングフォース",
         "variants": [
             {
                 "id": "214kk_lv1",
+                "str": "other",
                 "command": "↓↙←KK",
                 "name": "【OD】セービングフォース(Lv1)"
             },
             {
                 "id": "214kk_lv2",
+                "str": "other",
                 "command": "↓↙←KK(ホールド)",
                 "name": "【OD】セービングフォース(Lv2)"
             },
             {
                 "id": "214kk_lv3",
+                "str": "other",
                 "command": "↓↙←KK(最大ホールド)",
                 "name": "【OD】セービングフォース(Lv3)"
             },
             {
                 "id": "214kk_6",
+                "str": "other",
                 "command": "↓↙←KK>前ステ",
                 "name": "【OD】セービングフォース>前ステ"
             }
@@ -289,24 +338,28 @@
     {
         "id": "sa1",
         "category": "sa",
+        "str": "low",
         "command": "↓↘→↓↘→K",
         "name": "SA1"
     },
     {
         "id": "sa2",
         "category": "sa",
+        "str": "mid",
         "command": "↓↙←↓↙←P",
         "name": "SA2"
     },
     {
         "id": "sa3",
         "category": "sa",
+        "str": "high",
         "command": "↓↙←↓↙←K",
         "name": "SA3"
     },
     {
         "id": "ca",
         "category": "sa",
+        "str": "other",
         "command": "【CA】↓↙←↓↙←K",
         "name": "CA"
     }

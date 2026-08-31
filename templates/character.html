@@ -212,6 +212,7 @@
 
                     <button class="group-edit-button">✏</button>
                     <button class="group-delete-button">🗑</button>
+                    <button class="main-group-sort-handle" type="button">☰</button>
 
                 </div>
 
@@ -227,6 +228,7 @@
 
                     <button class="group-complete-button">✓</button>
                     <button class="group-cancel-button">×</button>
+                    <button class="main-group-sort-handle" type="button">☰</button>
 
                 </div>
 
@@ -253,6 +255,7 @@
 
                             <button class="sub-group-edit-button">✏</button>
                             <button class="sub-group-delete-button">🗑</button>
+                            <button class="sub-group-sort-handle" type="button">☰</button>
 
                         </div>
 
@@ -267,6 +270,7 @@
 
                             <button class="sub-group-complete-button">✓</button>
                             <button class="sub-group-cancel-button">×</button>
+                            <button class="sub-group-sort-handle" type="button">☰</button>
 
                         </div>
 
@@ -304,13 +308,6 @@
                                         {{ combo.command }}
                                     </span>
 
-                                    <div class="combo-actions">
-
-                                        <button class="combo-edit-button">✏</button>
-                                        <button class="combo-delete-button">🗑</button>
-
-                                    </div>
-
                                 </div>
 
                                 <!-- メモ -->
@@ -320,6 +317,15 @@
                                     <span class="memo-label">メモ:</span>
 
                                     <span class="memo-text">{{ combo.memo }}</span>
+
+                                </div>
+
+                                <!-- コンボ編集ボタン -->
+
+                                <div class="combo-actions">
+
+                                    <button class="combo-edit-button">✏</button>
+                                    <button class="combo-delete-button">🗑</button>
 
                                 </div>
 
@@ -335,28 +341,18 @@
 
                                 <div class="combo-header">
 
-                                    <div class="combo-main">
+                                    <span
+                                        class="combo-text"
+                                        data-command="{{ combo.command }}"
+                                        data-name="{{ combo.name }}"
+                                    >
+                                        {{ combo.command }}
+                                    </span>
 
-                                        <span
-                                            class="combo-text"
-                                            data-command="{{ combo.command }}"
-                                            data-name="{{ combo.name }}"
-                                        >
-                                            {{ combo.command }}
-                                        </span>
+                                    <div class="combo-move-actions">
 
                                         <button class="add-move-button">＋ 技を追加</button>
-
-                                    </div>
-
-                                    <div class="combo-actions">
-
-                                        <!-- Undo -->
                                         <button class="combo-undo-button">↩</button>
-                                        <!-- 編集完了 -->
-                                        <button class="combo-complete-button">✓</button>
-                                        <!-- 編集キャンセル -->
-                                        <button class="combo-cancel-button">×</button>
 
                                     </div>
 
@@ -375,7 +371,19 @@
 
                                 </div>
 
+                                <!-- コンボ編集ボタン -->
+
+                                <div class="combo-actions">
+
+                                    <button class="combo-complete-button">✓</button>
+                                    <button class="combo-cancel-button">×</button>
+
+                                </div>
+
                             </div>
+
+                            <button class="combo-sort-handle" type="button">☰</button>
+
 
                         </div>
 
@@ -424,7 +432,7 @@
             <span>技一覧</span>
 
             <button id="close-move-selector-button">
-                ×
+                ▾ 閉じる
             </button>
 
         </div>
@@ -502,6 +510,7 @@
 
                 <button class="group-edit-button">✏</button>
                 <button class="group-delete-button">🗑</button>
+                <button class="main-group-sort-handle" type="button">☰</button>
 
             </div>
 
@@ -516,6 +525,7 @@
 
                 <button class="group-complete-button">✓</button>
                 <button class="group-cancel-button">×</button>
+                <button class="main-group-sort-handle" type="button">☰</button>
 
             </div>
 
@@ -575,6 +585,7 @@
 
                 <button class="sub-group-edit-button">✏</button>
                 <button class="sub-group-delete-button">🗑</button>
+                <button class="sub-group-sort-handle" type="button">☰</button>
 
             </div>
 
@@ -589,6 +600,7 @@
 
                 <button class="sub-group-complete-button">✓</button>
                 <button class="sub-group-cancel-button">×</button>
+                <button class="sub-group-sort-handle" type="button">☰</button>
 
             </div>
 
@@ -665,12 +677,6 @@
                     data-name=""
                 ></span>
 
-                <div class="combo-actions">
-
-                    <button class="combo-edit-button">✏</button>
-                    <button class="combo-delete-button">🗑</button>
-
-                </div>
 
             </div>
 
@@ -679,6 +685,13 @@
                 <span class="memo-label">メモ:</span>
 
                 <span class="memo-text"></span>
+
+            </div>
+
+            <div class="combo-actions">
+
+                <button class="combo-edit-button">✏</button>
+                <button class="combo-delete-button">🗑</button>
 
             </div>
 
@@ -692,25 +705,16 @@
 
             <div class="combo-header">
 
-                <div class="combo-main">
+                <span
+                    class="combo-text"
+                    data-command=""
+                    data-name=""
+                ></span>
 
-                    <span
-                        class="combo-text"
-                        data-command=""
-                        data-name=""
-                    ></span>
+                <div class="combo-move-actions">
 
-                    <button class="add-move-button">
-                        ＋ 技を追加
-                    </button>
-
-                </div>
-
-                <div class="combo-actions">
-
+                    <button class="add-move-button">＋ 技を追加</button>
                     <button class="combo-undo-button">↩</button>
-                    <button class="combo-complete-button">✓</button>
-                    <button class="combo-cancel-button">×</button>
 
                 </div>
 
@@ -727,7 +731,16 @@
 
             </div>
 
+            <div class="combo-actions">
+
+                <button class="combo-complete-button">✓</button>
+                <button class="combo-cancel-button">×</button>
+
+            </div>
+
         </div>
+
+        <button class="combo-sort-handle" type="button">☰</button>
 
     </div>
 

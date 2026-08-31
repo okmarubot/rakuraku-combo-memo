@@ -2,12 +2,14 @@
     {
         "id": "njhp",
         "category": "jump",
+        "str": "high",
         "command": "垂直J強P",
         "name": "垂直ジャンプ強P"
     },
     {
         "id": "throw_j",
         "category": "jump",
+        "str": "other",
         "command": "空中投げ",
         "name": "空中投げ"
     },
@@ -15,51 +17,60 @@
     {
         "id": "6mp",
         "category": "unique",
+        "str": "mid",
         "command": "→中P",
         "name": "→中P"
     },
     {
         "id": "6mk",
         "category": "unique",
+        "str": "mid",
         "command": "→中K",
         "name": "→中K"
     },
     {
         "id": "4mk",
         "category": "unique",
+        "str": "mid",
         "command": "←中K",
         "name": "←中K"
     },
     {
         "id": "6hp",
         "category": "unique",
+        "str": "high",
         "command": "→強P",
         "name": "→強P"
     },
     {
         "id": "3hp",
         "category": "unique",
+        "str": "high",
         "command": "↘強P",
         "name": "↘強P"
     },
     {
         "id": "2pp_variants",
         "category": "unique",
+        "str": "other",
         "command": "↓PP",
         "name": "フィアーダウン",
         "variants": [
             {
                 "id": "2pp",
+                "str": "other",
                 "command": "↓PP",
                 "name": "フィアーダウン"
             },
             {
                 "id": "2pp_p",
+                "str": "other",
                 "command": "↓PP>P",
                 "name": "フィアーダウン>P"
             },
             {
                 "id": "2pp_k",
+                "str": "other",
                 "command": "↓PP>K",
                 "name": "フィアーダウン>K"
             }
@@ -68,196 +79,244 @@
     {
         "id": "6kkk",
         "category": "unique",
+        "str": "other",
         "command": "→KKK",
         "name": "サプライズフォワード"
     },
     {
         "id": "4kkk",
         "category": "unique",
+        "str": "other",
         "command": "←KKK",
         "name": "サプライズバック"
     },
     {
         "id": "214p",
         "category": "special",
+        "str": "other",
         "command": "↓↙←P",
         "name": "エレクトリックサンダー"
     },
     {
         "id": "214pp",
         "category": "special",
+        "str": "other",
         "command": "↓↙←PP",
         "name": "【OD】エレクトリックサンダー"
     },
     {
         "id": "4h6lp",
         "category": "special",
+        "str": "low",
         "command": "⇐→弱P",
         "name": "【弱】ローリングアタック"
     },
     {
         "id": "4h6mp",
         "category": "special",
+        "str": "mid",
         "command": "⇐→中P",
         "name": "【中】ローリングアタック"
     },
     {
         "id": "4h6hp",
         "category": "special",
+        "str": "high",
         "command": "⇐→強P",
         "name": "【強】ローリングアタック"
     },
     {
         "id": "4h6pp",
         "category": "special",
+        "str": "other",
         "command": "⇐→PP",
         "name": "【OD】ローリングアタック"
     },
     {
         "id": "2h8lk",
         "category": "special",
+        "str": "low",
         "command": "⇓↑弱K",
         "name": "【弱】バーチカルローリング"
     },
     {
         "id": "2h8mk",
         "category": "special",
+        "str": "mid",
         "command": "⇓↑中K",
         "name": "【中】バーチカルローリング"
     },
     {
         "id": "2h8hk",
         "category": "special",
+        "str": "high",
         "command": "⇓↑強K",
         "name": "【強】バーチカルローリング"
     },
     {
         "id": "2h8kk",
         "category": "special",
+        "str": "other",
         "command": "⇓↑KK",
         "name": "【OD】バーチカルローリング"
     },
     {
         "id": "426lk",
         "category": "special",
+        "str": "low",
         "command": "→↘↓↙←弱K",
         "name": "【弱】バックステップローリング"
     },
     {
         "id": "426mk",
         "category": "special",
+        "str": "mid",
         "command": "→↘↓↙←中K",
         "name": "【中】バックステップローリング"
     },
     {
         "id": "426hk",
         "category": "special",
+        "str": "high",
         "command": "→↘↓↙←強K",
         "name": "【強】バックステップローリング"
     },
     {
         "id": "426kk",
         "category": "special",
+        "str": "other",
         "command": "→↘↓↙←KK",
         "name": "【OD】バックステップローリング"
     },
     {
         "id": "j4h6lp",
         "category": "special",
+        "str": "low",
         "command": "J⇐→弱P",
         "name": "【弱】エリアルローリング"
     },
     {
         "id": "j4h6mp",
         "category": "special",
+        "str": "mid",
         "command": "J⇐→中P",
         "name": "【中】エリアルローリング"
     },
     {
         "id": "j4h6hp",
         "category": "special",
+        "str": "high",
         "command": "J⇐→強P",
         "name": "【強】エリアルローリング"
     },
     {
         "id": "j4h6pp",
         "category": "special",
+        "str": "other",
         "command": "J⇐→PP",
         "name": "【OD】エリアルローリング"
     },
     {
         "id": "236lk",
         "category": "special",
+        "str": "low",
         "command": "↓↘→弱K",
         "name": "【弱】ワイルドハント"
     },
     {
         "id": "236mk",
         "category": "special",
+        "str": "mid",
         "command": "↓↘→中K",
         "name": "【中】ワイルドハント"
     },
     {
         "id": "236hk",
         "category": "special",
+        "str": "high",
         "command": "↓↘→強K",
         "name": "【強】ワイルドハント"
     },
     {
         "id": "236kk",
         "category": "special",
+        "str": "other",
         "command": "↓↘→KK",
         "name": "【OD】ワイルドハント"
     },
     {
-        "id": "22p",
+        "id": "22lp",
         "category": "special",
-        "command": "↓↓P",
-        "name": "ブランカちゃん爆弾"
+        "str": "low",
+        "command": "↓↓弱P",
+        "name": "【弱】ブランカちゃん爆弾"
+    },
+    {
+        "id": "22mp",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↓中P",
+        "name": "【中】ブランカちゃん爆弾"
+    },
+    {
+        "id": "22hp",
+        "category": "special",
+        "str": "high",
+        "command": "↓↓強P",
+        "name": "【強】ブランカちゃん爆弾"
     },
     {
         "id": "rolling_cannon_variants",
         "category": "special",
+        "str": "other",
         "command": "ローリングキャノン",
         "name": "ローリングキャノン",
         "variants": [
             {
                 "id": "8p",
+                "str": "other",
                 "command": "↑P",
                 "name": "↑P"
             },
             {
                 "id": "9p",
+                "str": "other",
                 "command": "↗P",
                 "name": "↗P"
             },
             {
                 "id": "6p",
+                "str": "other",
                 "command": "→P",
                 "name": "→P"
             },
             {
                 "id": "3p",
+                "str": "other",
                 "command": "↘P",
                 "name": "↘P"
             },
             {
                 "id": "2p",
+                "str": "other",
                 "command": "↓P",
                 "name": "↓P"
             },
             {
                 "id": "1p",
+                "str": "other",
                 "command": "↙P",
                 "name": "↙P"
             },
             {
                 "id": "4p",
+                "str": "other",
                 "command": "←P",
                 "name": "←P"
             },
             {
                 "id": "7p",
+                "str": "other",
                 "command": "↖P",
                 "name": "↖P"
             }
@@ -266,24 +325,28 @@
     {
         "id": "sa1",
         "category": "sa",
+        "str": "low",
         "command": "↓↘→↓↘→P",
         "name": "SA1"
     },
     {
         "id": "sa2",
         "category": "sa",
+        "str": "mid",
         "command": "↓↙←↓↙←P",
         "name": "SA2"
     },
     {
         "id": "sa3",
         "category": "sa",
+        "str": "high",
         "command": "↓↘→↓↘→K",
         "name": "SA3"
     },
     {
         "id": "ca",
         "category": "sa",
+        "str": "other",
         "command": "【CA】↓↘→↓↘→K",
         "name": "CA"
     }

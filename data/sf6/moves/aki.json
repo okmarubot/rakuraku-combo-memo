@@ -2,29 +2,34 @@
     {
         "id": "3mp",
         "category": "unique",
+        "str": "mid",
         "command": "↘中P",
         "name": "↘中P"
     },
     {
         "id": "6hp",
         "category": "unique",
+        "str": "high",
         "command": "→強P",
         "name": "→強P"
     },
     {
         "id": "6hk",
         "category": "unique",
+        "str": "high",
         "command": "→強K",
         "name": "→強K"
     },
     {
         "id": "5lp_target",
         "category": "unique",
+        "str": "low",
         "command": "弱Pタゲコン",
         "name": "弱Pタゲコン",
         "variants": [
             {
                 "id": "5lp_5lp",
+                "str": "low",
                 "command": "弱P>弱P",
                 "name": "弱P>弱P"
             }
@@ -33,11 +38,13 @@
     {
         "id": "5hp_target",
         "category": "unique",
+        "str": "high",
         "command": "強Pタゲコン",
         "name": "強Pタゲコン",
         "variants": [
             {
                 "id": "5hp_5hp",
+                "str": "high",
                 "command": "強P>強P",
                 "name": "強P>強P"
             }
@@ -46,22 +53,26 @@
     {
         "id": "j2hp",
         "category": "jump",
+        "str": "high",
         "command": "前J↓強P",
         "name": "前J↓強P"
     },
     {
         "id": "214lp_variants",
         "category": "special",
+        "str": "low",
         "command": "↓↙←弱P",
         "name": "紫煙砲",
         "variants": [
             {
                 "id": "214lp",
+                "str": "low",
                 "command": "↓↙←弱P",
                 "name": "紫煙砲"
             },
             {
                 "id": "214lp_hp",
+                "str": "low",
                 "command": "↓↙←弱P>→P",
                 "name": "紫煙砲>→P"
             }
@@ -70,16 +81,19 @@
     {
         "id": "214pp_variants",
         "category": "special",
+        "str": "other",
         "command": "↓↙←PP",
         "name": "【OD】紫煙砲",
         "variants": [
             {
                 "id": "214pp",
+                "str": "other",
                 "command": "↓↙←PP",
                 "name": "【OD】紫煙砲"
             },
             {
                 "id": "214pp_hp",
+                "str": "other",
                 "command": "↓↙←PP>→P",
                 "name": "【OD】紫煙砲>→P"
             }
@@ -88,110 +102,129 @@
     {
         "id": "214mp",
         "category": "special",
+        "str": "mid",
         "command": "↓↙←中P",
         "name": "紫泡泉"
     },
     {
         "id": "214hp",
         "category": "special",
+        "str": "high",
         "command": "↓↙←強P",
         "name": "紫泡撒"
     },
     {
         "id": "236lp",
         "category": "special",
+        "str": "low",
         "command": "↓↘→弱P",
         "name": "【弱】蛇頭鞭"
     },
     {
         "id": "236mp",
         "category": "special",
+        "str": "mid",
         "command": "↓↘→中P",
         "name": "【中】蛇頭鞭"
     },
     {
         "id": "236hp",
         "category": "special",
+        "str": "high",
         "command": "↓↘→強P",
         "name": "【強】蛇頭鞭"
     },
     {
         "id": "236pp",
         "category": "special",
+        "str": "other",
         "command": "↓↘→PP",
         "name": "【OD】蛇頭鞭"
     },
     {
         "id": "214lk",
         "category": "special",
+        "str": "low",
         "command": "↓↙←弱K",
         "name": "【弱】凶襲突"
     },
     {
         "id": "214mk",
         "category": "special",
+        "str": "mid",
         "command": "↓↙←中K",
         "name": "【中】凶襲突"
     },
     {
         "id": "214hk",
         "category": "special",
+        "str": "high",
         "command": "↓↙←強K",
         "name": "【強】凶襲突"
     },
     {
         "id": "214kk",
         "category": "special",
+        "str": "other",
         "command": "↓↙←KK",
         "name": "【OD】凶襲突"
     },
     {
         "id": "236lk",
         "category": "special",
+        "str": "low",
         "command": "↓↘→弱K",
         "name": "【弱】蛇軽功"
     },
     {
         "id": "236mk",
         "category": "special",
+        "str": "mid",
         "command": "↓↘→中K",
         "name": "【中】蛇軽功"
     },
     {
         "id": "236hk",
         "category": "special",
+        "str": "high",
         "command": "↓↘→強K",
         "name": "【強】蛇軽功"
     },
     {
         "id": "236kk",
         "category": "special",
+        "str": "other",
         "command": "↓↘→KK",
         "name": "【OD】蛇軽功"
     },
     {
         "id": "2pp_variants",
         "category": "special",
+        "str": "other",
         "command": "↓PP",
         "name": "悪鬼蛇行",
         "variants": [
             {
                 "id": "2pp",
+                "str": "other",
                 "command": "↓PP",
                 "name": "悪鬼蛇行"
             },
             {
                 "id": "2pp_p",
+                "str": "other",
                 "command": "↓PP>P",
                 "name": "悪鬼蛇行>P"
             },
             {
                 "id": "2pp_k",
+                "str": "other",
                 "command": "↓PP>K",
                 "name": "悪鬼蛇行>K"
             },
             {
                 "id": "2pp_throw",
+                "str": "other",
                 "command": "↓PP>弱P弱K",
                 "name": "悪鬼蛇行>投げ"
             }
@@ -200,36 +233,49 @@
     {
         "id": "sa1",
         "category": "sa",
+        "str": "low",
         "command": "↓↘→↓↘→K",
         "name": "SA1"
     },
     {
-        "id": "sa2_lp",
+        "id": "sa2_variants",
         "category": "sa",
-        "command": "↓↙←↓↙←弱P",
-        "name": "【弱】SA2"
-    },
-    {
-        "id": "sa2_mp",
-        "category": "sa",
-        "command": "↓↙←↓↙←中P",
-        "name": "【中】SA2"
-    },
-    {
-        "id": "sa2_hp",
-        "category": "sa",
-        "command": "↓↙←↓↙←強P",
-        "name": "【強】SA2"
+        "str": "mid",
+        "command": "↓↙←↓↙←P",
+        "name": "SA2",
+        "variants": [
+            {
+                "id": "sa2_lp",
+                "str": "low",
+                "command": "↓↙←↓↙←弱P",
+                "name": "【弱】SA2"
+            },
+
+            {
+                "id": "sa2_mp",
+                "str": "mid",
+                "command": "↓↙←↓↙←中P",
+                "name": "【中】SA2"
+            },
+            {
+                "id": "sa2_hp",
+                "str": "high",
+                "command": "↓↙←↓↙←強P",
+                "name": "【強】SA2"
+            }
+        ]
     },
     {
         "id": "sa3",
         "category": "sa",
+        "str": "high",
         "command": "↓↘→↓↘→P",
         "name": "SA3"
     },
     {
         "id": "ca",
         "category": "sa",
+        "str": "other",
         "command": "【CA】↓↘→↓↘→P",
         "name": "CA"
     }
