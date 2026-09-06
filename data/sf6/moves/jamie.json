@@ -1,0 +1,512 @@
+[
+    {
+        "id": "2kk",
+        "category": "unique",
+        "str": "other",
+        "command": "↓KK",
+        "name": "↓KK"
+    },
+    {
+        "id": "2hk_target",
+        "category": "unique",
+        "str": "high",
+        "command": "↓強Kタゲコン",
+        "name": "↓強Kタゲコン",
+        "variants": [
+            {
+                "id": "2hk_5hk",
+                "str": "high",
+                "command": "↓強K>強K",
+                "name": "↓強K>強K"
+            },
+            {
+                "id": "2hk_5hk_p",
+                "str": "high",
+                "command": "↓強K>強K>P",
+                "name": "↓強K>強K>P"
+            }
+        ]
+    },
+    {
+        "id": "6mk",
+        "category": "unique",
+        "str": "mid",
+        "command": "→中K",
+        "name": "→中K"
+    },
+    {
+        "id": "4hp",
+        "category": "unique",
+        "str": "high",
+        "command": "←強P",
+        "name": "←強P"
+    },
+    {
+        "id": "6hk",
+        "category": "unique",
+        "str": "high",
+        "command": "→強K",
+        "name": "→強K"
+    },
+    {
+        "id": "5lp_target",
+        "category": "unique",
+        "str": "low",
+        "command": "弱Pタゲコン",
+        "name": "弱Pタゲコン",
+        "variants": [
+            {
+                "id": "5lp_5lk",
+                "str": "low",
+                "command": "弱P>弱K",
+                "name": "弱P>弱K"
+            },
+            {
+                "id": "5lp_5lk_5mp",
+                "str": "low",
+                "command": "弱P>弱K>中P",
+                "name": "弱P>弱K>中P"
+            }
+        ]
+    },
+    {
+        "id": "6mk_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "→中Kタゲコン",
+        "name": "→中Kタゲコン",
+        "variants": [
+            {
+                "id": "6mk_5mk",
+                "str": "mid",
+                "command": "→中K>中K",
+                "name": "→中K>中K"
+            },
+            {
+                "id": "6mk_5mk_p",
+                "str": "mid",
+                "command": "→中K>中K>P",
+                "name": "→中K>中K>P"
+            }
+        ]
+    },
+    {
+        "id": "4hp_target",
+        "category": "unique",
+        "str": "high",
+        "command": "←強Pタゲコン",
+        "name": "←強Pタゲコン",
+        "variants": [
+            {
+                "id": "4hp_5hp",
+                "str": "high",
+                "command": "←強P>強P",
+                "name": "←強P>強P"
+            },
+            {
+                "id": "4hp_5hp_5hk",
+                "str": "high",
+                "command": "←強P>強P>強K",
+                "name": "←強P>強P>強K"
+            }
+        ]
+    },
+    {
+        "id": "6hk_target",
+        "category": "unique",
+        "str": "high",
+        "command": "→強Kタゲコン",
+        "name": "→強Kタゲコン",
+        "variants": [
+            {
+                "id": "6hk_4hk",
+                "str": "high",
+                "command": "→強K>←強K",
+                "name": "→強K>←強K"
+            },
+            {
+                "id": "6hk_4hk_p",
+                "str": "high",
+                "command": "→強K>←強K>P",
+                "name": "→強K>←強K>P"
+            }
+        ]
+    },
+    {
+        "id": "22p",
+        "category": "special",
+        "str": "other",
+        "command": "↓↓P",
+        "name": "魔身"
+    },
+    {
+        "id": "236lp_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱P",
+        "name": "【弱】流酔拳",
+        "variants": [
+            {
+                "id": "236lp",
+                "str": "low",
+                "command": "↓↘→弱P",
+                "name": "【弱】流酔拳"
+            },
+            {
+                "id": "236lp_6p",
+                "str": "low",
+                "command": "↓↘→弱P>→P",
+                "name": "【弱】流酔拳>→P"
+            },
+            {
+                "id": "236lp_6p_6p",
+                "str": "low",
+                "command": "↓↘→弱P>→P>→P",
+                "name": "【弱】流酔拳>→P>→P"
+            },
+            {
+                "id": "236lp_6k",
+                "str": "low",
+                "command": "↓↘→弱P>→K",
+                "name": "【弱】流酔拳>→K"
+            },
+            {
+                "id": "236lp_6k_6k",
+                "str": "low",
+                "command": "↓↘→弱P>→K>→K",
+                "name": "【弱】流酔拳>→K>→K"
+            }
+        ]
+    },
+    {
+        "id": "236mp_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中P",
+        "name": "【中】流酔拳",
+        "variants": [
+            {
+                "id": "236mp",
+                "str": "mid",
+                "command": "↓↘→中P",
+                "name": "【中】流酔拳"
+            },
+            {
+                "id": "236mp_6p",
+                "str": "mid",
+                "command": "↓↘→中P>→P",
+                "name": "【中】流酔拳>→P"
+            },
+            {
+                "id": "236mp_6p_6p",
+                "str": "mid",
+                "command": "↓↘→中P>→P>→P",
+                "name": "【中】流酔拳>→P>→P"
+            },
+            {
+                "id": "236mp_6k",
+                "str": "mid",
+                "command": "↓↘→中P>→K",
+                "name": "【中】流酔拳>→K"
+            },
+            {
+                "id": "236mp_6k_6k",
+                "str": "mid",
+                "command": "↓↘→中P>→K>→K",
+                "name": "【中】流酔拳>→K>→K"
+            }
+        ]
+    },
+    {
+        "id": "236hp_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強P",
+        "name": "【強】流酔拳",
+        "variants": [
+            {
+                "id": "236hp",
+                "str": "high",
+                "command": "↓↘→強P",
+                "name": "【強】流酔拳"
+            },
+            {
+                "id": "236hp_6p",
+                "str": "high",
+                "command": "↓↘→強P>→P",
+                "name": "【強】流酔拳>→P"
+            },
+            {
+                "id": "236hp_6p_6p",
+                "str": "high",
+                "command": "↓↘→強P>→P>→P",
+                "name": "【強】流酔拳>→P>→P"
+            },
+            {
+                "id": "236hp_6k",
+                "str": "high",
+                "command": "↓↘→強P>→K",
+                "name": "【強】流酔拳>→K"
+            },
+            {
+                "id": "236hp_6k_6k",
+                "str": "high",
+                "command": "↓↘→強P>→K>→K",
+                "name": "【強】流酔拳>→K>→K"
+            }
+        ]
+    },
+    {
+        "id": "236pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→PP",
+        "name": "【OD】流酔拳",
+        "variants": [
+            {
+                "id": "236pp",
+                "str": "other",
+                "command": "↓↘→PP",
+                "name": "【OD】流酔拳"
+            },
+            {
+                "id": "236pp_6p",
+                "str": "other",
+                "command": "↓↘→PP>→P",
+                "name": "【OD】流酔拳>→P"
+            },
+            {
+                "id": "236pp_6p_6p",
+                "str": "other",
+                "command": "↓↘→PP>→P>→P",
+                "name": "【OD】流酔拳>→P>→P"
+            },
+            {
+                "id": "236pp_6k",
+                "str": "other",
+                "command": "↓↘→PP>→K",
+                "name": "【OD】流酔拳>→K"
+            },
+            {
+                "id": "236pp_6k_6k",
+                "str": "other",
+                "command": "↓↘→PP>→K>→K",
+                "name": "【OD】流酔拳>→K>→K"
+            }
+        ]
+    },
+    {
+        "id": "214lp_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↓↙←弱P",
+        "name": "【弱】酔疾歩",
+        "variants": [
+            {
+                "id": "214lp",
+                "str": "low",
+                "command": "↓↙←弱P",
+                "name": "【弱】酔疾歩"
+            },
+            {
+                "id": "214lp_6p",
+                "str": "low",
+                "command": "↓↙←弱P>→P",
+                "name": "【弱】酔疾歩>→P"
+            }
+        ]
+    },
+    {
+        "id": "214mp_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↙←中P",
+        "name": "【中】酔疾歩",
+        "variants": [
+            {
+                "id": "214mp",
+                "str": "mid",
+                "command": "↓↙←中P",
+                "name": "【中】酔疾歩"
+            },
+            {
+                "id": "214mp_6p",
+                "str": "mid",
+                "command": "↓↙←中P>→P",
+                "name": "【中】酔疾歩>→P"
+            }
+        ]
+    },
+    {
+        "id": "214hp_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↙←強P",
+        "name": "【強】酔疾歩",
+        "variants": [
+            {
+                "id": "214hp",
+                "str": "high",
+                "command": "↓↙←強P",
+                "name": "【強】酔疾歩"
+            },
+            {
+                "id": "214hp_6p",
+                "str": "high",
+                "command": "↓↙←強P>→P",
+                "name": "【強】酔疾歩>→P"
+            }
+        ]
+    },
+    {
+        "id": "214pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←PP",
+        "name": "【OD】酔疾歩",
+        "variants": [
+            {
+                "id": "214pp",
+                "str": "other",
+                "command": "↓↙←PP",
+                "name": "【OD】酔疾歩"
+            },
+            {
+                "id": "214pp_6p",
+                "str": "other",
+                "command": "↓↙←PP>→P",
+                "name": "【OD】酔疾歩>→P"
+            }
+        ]
+    },
+    {
+        "id": "623lk",
+        "category": "special",
+        "str": "low",
+        "command": "→↓↘弱K",
+        "name": "【弱】張弓腿"
+    },
+    {
+        "id": "623mk",
+        "category": "special",
+        "str": "mid",
+        "command": "→↓↘中K",
+        "name": "【中】張弓腿"
+    },
+    {
+        "id": "623hk",
+        "category": "special",
+        "str": "high",
+        "command": "→↓↘強K",
+        "name": "【強】張弓腿"
+    },
+    {
+        "id": "623kk",
+        "category": "special",
+        "str": "other",
+        "command": "→↓↘KK",
+        "name": "【OD】張弓腿"
+    },
+
+    {
+        "id": "j214lk",
+        "category": "special",
+        "str": "low",
+        "command": "前J↓↙←弱K",
+        "name": "【弱】無影蹴"
+    },
+    {
+        "id": "j214mk",
+        "category": "special",
+        "str": "mid",
+        "command": "前J↓↙←中K",
+        "name": "【中】無影蹴"
+    },
+    {
+        "id": "j214hk",
+        "category": "special",
+        "str": "high",
+        "command": "前J↓↙←強K",
+        "name": "【強】無影蹴"
+    },
+    {
+        "id": "j214kk",
+        "category": "special",
+        "str": "other",
+        "command": "前J↓↙←KK",
+        "name": "【OD】無影蹴"
+    },
+
+    {
+        "id": "236lk",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱K",
+        "name": "【弱】爆廻"
+    },
+    {
+        "id": "236mk",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中K",
+        "name": "【中】爆廻"
+    },
+    {
+        "id": "236hk",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強K",
+        "name": "【強】爆廻"
+    },
+    {
+        "id": "236kk",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→KK",
+        "name": "【OD】爆廻"
+    },
+
+    {
+        "id": "624k",
+        "category": "special",
+        "str": "other",
+        "command": "→↘↓↙←K",
+        "name": "点辰"
+    },
+    {
+        "id": "624kk",
+        "category": "special",
+        "str": "other",
+        "command": "→↘↓↙←KK",
+        "name": "【OD】点辰"
+    },
+
+    {
+        "id": "sa1",
+        "category": "sa",
+        "str": "low",
+        "command": "↓↘→↓↘→K",
+        "name": "SA1"
+    },
+    {
+        "id": "sa2",
+        "category": "sa",
+        "str": "mid",
+        "command": "↓↙←↓↙←P",
+        "name": "SA2"
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "↓↘→↓↘→P",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "other",
+        "command": "↓↘→↓↘→P",
+        "name": "CA"
+    }
+]

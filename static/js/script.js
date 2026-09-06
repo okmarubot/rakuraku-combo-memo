@@ -65,7 +65,7 @@ const deleteConfirmCancel = document.querySelector("#delete-confirm-cancel");
 const deleteConfirmOk = document.querySelector("#delete-confirm-ok");
 
 /* =========================
-   表示モード
+   初期状態
 ========================= */
 
 // 表記モードの初期表示
@@ -99,6 +99,9 @@ let editingSubGroup = null;
 
 // 中見出し編集開始時の状態
 let originalSubGroupTitle = "";
+
+// 技一覧パネルのキーボード操作
+moveSelectorPanel.inert = true;
 
 /* =========================
    関数
@@ -192,23 +195,80 @@ function showDeleteConfirm(message, deleteAction) {
 
     deleteConfirm.style.display = "flex";
 
-    deleteConfirmCancel.onclick = function () {
+    // 削除確認UI内のフォーカス可能な要素
+    const focusableElements = [
+        deleteConfirmCancel,
+        deleteConfirmOk
+    ];
+
+    function closeDeleteConfirm() {
 
         deleteConfirm.style.display = "none";
 
         deleteConfirmOk.onclick = null;
+
+        document.removeEventListener(
+            "keydown",
+            handleDeleteConfirmKeydown
+        );
+
+    }
+
+    function handleDeleteConfirmKeydown(event) {
+
+        // Esc → キャンセル
+        if (event.key === "Escape") {
+
+            event.preventDefault();
+
+            deleteConfirmCancel.click();
+
+            return;
+
+        }
+
+        // Tab → 確認UI内だけを移動
+        if (event.key === "Tab") {
+
+            event.preventDefault();
+
+            const currentIndex =
+                focusableElements.indexOf(document.activeElement);
+
+            const nextIndex =
+                event.shiftKey
+                    ? (currentIndex - 1 + focusableElements.length)
+                        % focusableElements.length
+                    : (currentIndex + 1)
+                        % focusableElements.length;
+
+            focusableElements[nextIndex].focus();
+
+        }
+
+    }
+
+    deleteConfirmCancel.onclick = function () {
+
+        closeDeleteConfirm();
 
     };
 
     deleteConfirmOk.onclick = async function () {
 
-        deleteConfirm.style.display = "none";
-
-        deleteConfirmOk.onclick = null;
+        closeDeleteConfirm();
 
         await deleteAction();
 
     };
+
+    document.addEventListener(
+        "keydown",
+        handleDeleteConfirmKeydown
+    );
+
+    // 最初は「削除する」にフォーカス
+    deleteConfirmOk.focus();
 
 }
 
@@ -819,9 +879,19 @@ function openMoveSelectorPanel(targetComboItem) {
     // 技一覧のスクロール位置を先頭に戻す
     moveSelectorList.scrollTop = 0;
 
+    // 技一覧パネルをキーボード操作可能にする
+    moveSelectorPanel.inert = false;
+
     document.body.classList.add("move-selector-open");
 
     updateMoveTabIndicator();
+
+    // 技一覧の最初の操作対象にフォーカス
+    const firstMoveTab = document.querySelector(".move-selector-tabs button");
+
+    if (firstMoveTab) {
+        firstMoveTab.focus();
+    }
 
     if (targetComboItem) {
 
@@ -847,6 +917,19 @@ function openMoveSelectorPanel(targetComboItem) {
 function closeMoveSelectorPanel() {
 
     document.body.classList.remove("move-selector-open");
+
+    // 技一覧パネルをキーボード操作対象外にする
+    moveSelectorPanel.inert = true;
+
+    if (editingComboItem) {
+
+        const addMoveButton = editingComboItem.querySelector(".add-move-button");
+
+        if (addMoveButton) {
+            addMoveButton.focus();
+        }
+
+    }
 
 }
 
@@ -1201,6 +1284,8 @@ function createEditMainGroup(group) {
     setupAddSubGroupButton(mainGroup);
 
     setupSubGroupSortable(mainGroup);
+
+    setupSubGroupKeyboardSort(mainGroup);
 
     return mainGroup;
 
@@ -1577,6 +1662,8 @@ function createEditSubGroup(subGroup) {
 
     setupComboSortable(subGroupElement);
 
+    setupComboKeyboardSort(subGroupElement);
+
     return subGroupElement;
 
 }
@@ -1790,6 +1877,25 @@ function syncViewSubGroupOrder(mainGroup) {
 
 }
 
+/* ---------- 見出し共通編集 ---------- */
+
+// 見出しinput幅自動調節
+function adjustHeadingInputWidth(input) {
+
+    input.style.width = "auto";
+
+    const minWidth = 120;
+    const maxWidth = input.parentElement.clientWidth - 76;
+
+    const width = Math.min(
+        Math.max(input.scrollWidth, minWidth),
+        maxWidth
+    );
+
+    input.style.width = width + "px";
+
+}
+
 /* ---------- イベント登録 ---------- */
 
 // 操作モード切替UIのイベント設定
@@ -1917,6 +2023,20 @@ function setupEditMainGroupEvents(mainGroup) {
 
         });
 
+    // input幅自動調節
+    const input = mainGroup.querySelector(".main-group-title-input");
+
+    if (input) {
+
+        adjustHeadingInputWidth(input);
+
+        input.addEventListener("input", function () {
+
+            adjustHeadingInputWidth(this);
+
+        });
+
+    }
 }
 
 // 中見出し編集イベント設定
@@ -1957,6 +2077,20 @@ function setupEditSubGroupEvents(subGroup) {
 
         });
 
+    // input幅自動調節
+    const input = subGroup.querySelector(".sub-group-title-input");
+
+    if (input) {
+
+        adjustHeadingInputWidth(input);
+
+        input.addEventListener("input", function () {
+
+            adjustHeadingInputWidth(this);
+
+        });
+
+    }
 }
 
 // 中見出し追加ボタンのイベント設定
@@ -1980,6 +2114,101 @@ function setupAddComboButton(subGroup) {
         .addEventListener("click", async function () {
 
             await createNewCombo(subGroup);
+
+        });
+
+}
+
+// 大見出し並び替えイベント設定
+function setupMainGroupSortable() {
+
+    const mainGroupContainer = document.querySelector("#edit-mode .combo-container");
+
+    new Sortable(mainGroupContainer, {
+
+        animation: 150,
+
+        draggable: ".main-group",
+
+        handle: ".main-group-sort-handle",
+
+        onEnd: function () {
+
+            saveMainGroupOrder();
+
+            syncViewMainGroupOrder();
+
+        }
+
+    });
+
+}
+
+function setupMainGroupKeyboardSort() {
+
+    const mainGroupContainer =
+        document.querySelector("#edit-mode .combo-container");
+
+    mainGroupContainer
+        .querySelectorAll(".main-group-sort-handle")
+        .forEach(handle => {
+
+            handle.addEventListener("keydown", function (event) {
+
+                if (event.key !== "ArrowUp" &&
+                    event.key !== "ArrowDown") {
+
+                    return;
+
+                }
+
+                event.preventDefault();
+
+                const mainGroup = handle.closest(".main-group");
+
+                if (!mainGroup) {
+                    return;
+                }
+
+                if (event.key === "ArrowUp") {
+
+                    const previousGroup =
+                        mainGroup.previousElementSibling;
+
+                    if (previousGroup) {
+
+                        mainGroupContainer.insertBefore(
+                            mainGroup,
+                            previousGroup
+                        );
+
+                    }
+
+                }
+
+                if (event.key === "ArrowDown") {
+
+                    const nextGroup =
+                        mainGroup.nextElementSibling;
+
+                    if (nextGroup) {
+
+                        mainGroupContainer.insertBefore(
+                            nextGroup,
+                            mainGroup
+                        );
+
+                    }
+
+                }
+
+                saveMainGroupOrder();
+
+                syncViewMainGroupOrder();
+
+                handle.focus();
+
+            });
 
         });
 
@@ -2010,6 +2239,66 @@ function setupSubGroupSortable(mainGroup) {
 
 }
 
+function setupSubGroupKeyboardSort(mainGroup) {
+
+    const mainGroupContent = mainGroup.querySelector(".main-group-content");
+
+    mainGroupContent
+        .querySelectorAll(".sub-group-sort-handle")
+        .forEach(handle => {
+
+            handle.addEventListener("keydown", function (event) {
+
+                if (event.key !== "ArrowUp" && event.key !== "ArrowDown") {
+
+                    return;
+
+                }
+
+                event.preventDefault();
+
+                const subGroup = handle.closest(".sub-group");
+
+                if (!subGroup) {
+                    return;
+                }
+
+                if (event.key === "ArrowUp") {
+
+                    const previousGroup = subGroup.previousElementSibling;
+
+                    if (previousGroup) {
+
+                        mainGroupContent.insertBefore(subGroup, previousGroup);
+
+                    }
+
+                }
+
+                if (event.key === "ArrowDown") {
+
+                    const nextGroup = subGroup.nextElementSibling;
+
+                    if (nextGroup) {
+
+                        mainGroupContent.insertBefore(nextGroup, subGroup);
+
+                    }
+
+                }
+
+                saveSubGroupOrder(mainGroup);
+
+                syncViewSubGroupOrder(mainGroup);
+
+                handle.focus();
+
+            });
+
+        });
+
+}
+
 // コンボ並び替えイベント設定
 function setupComboSortable(subGroup) {
 
@@ -2030,6 +2319,64 @@ function setupComboSortable(subGroup) {
             syncViewComboOrder(comboList);
 
         }
+
+    });
+
+}
+
+function setupComboKeyboardSort(subGroup) {
+
+    const comboList = subGroup.querySelector(".combo-list");
+
+    comboList.querySelectorAll(".combo-sort-handle").forEach(handle => {
+
+        handle.addEventListener("keydown", function (event) {
+
+            if (event.key !== "ArrowUp" && event.key !== "ArrowDown") {
+
+                return;
+
+            }
+
+            event.preventDefault();
+
+            const comboItem = handle.closest(".combo-item");
+
+            if (!comboItem) {
+                return;
+            }
+
+            if (event.key === "ArrowUp") {
+
+                const previousItem = comboItem.previousElementSibling;
+
+                if (previousItem) {
+
+                    comboList.insertBefore(comboItem, previousItem);
+
+                }
+
+            }
+
+            if (event.key === "ArrowDown") {
+
+                const nextItem = comboItem.nextElementSibling;
+
+                if (nextItem) {
+
+                    comboList.insertBefore(nextItem, comboItem);
+
+                }
+
+            }
+
+            saveComboOrder(comboList);
+
+            syncViewComboOrder(comboList);
+
+            handle.focus();
+
+        });
 
     });
 
@@ -2133,6 +2480,7 @@ function registerEvents() {
     document.querySelectorAll("#edit-mode .sub-group").forEach(subGroup => {
 
         setupComboSortable(subGroup);
+        setupComboKeyboardSort(subGroup);
 
     });
 
@@ -2179,25 +2527,8 @@ function registerEvents() {
     });
 
     // 大見出し並び替え
-    const mainGroupContainer = document.querySelector("#edit-mode .combo-container");
-
-    new Sortable(mainGroupContainer, {
-
-        animation: 150,
-
-        draggable: ".main-group",
-
-        handle: ".main-group-sort-handle",
-
-        onEnd: function () {
-
-            saveMainGroupOrder();
-
-            syncViewMainGroupOrder();
-
-        }
-
-    });
+    setupMainGroupSortable();
+    setupMainGroupKeyboardSort();
 
     /* 中見出し編集 */
 
@@ -2212,10 +2543,45 @@ function registerEvents() {
     document.querySelectorAll("#edit-mode .main-group").forEach(mainGroup => {
 
         setupSubGroupSortable(mainGroup);
+        setupSubGroupKeyboardSort(mainGroup);
 
     });
 
 }
+
+// キーボード操作
+// 編集中のEscキー操作
+document.addEventListener("keydown", function (event) {
+
+    if (event.key !== "Escape") {
+        return;
+    }
+
+    // 技一覧パネル表示中
+    if (document.body.classList.contains("move-selector-open")) {
+        closeMoveSelectorPanel();
+        return;
+    }
+
+    // コンボ編集中
+    if (editingComboItem) {
+        cancelComboEdit();
+        return;
+    }
+
+    // 大見出し編集中
+    if (editingMainGroup) {
+        cancelGroupEdit();
+        return;
+    }
+
+    // 中見出し編集中
+    if (editingSubGroup) {
+        cancelSubGroupEdit();
+        return;
+    }
+
+});
 
 /* =========================
    イベント登録

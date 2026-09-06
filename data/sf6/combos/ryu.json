@@ -9,13 +9,12 @@
                     "title": "中見出し①",
                     "combos": [
                         {
-                            "id": "combo-006",
+                            "id": "combo-004",
                             "moves": [
+                                "jlp",
+                                "sa1",
                                 "5lp",
                                 "5lp",
-                                "5lp",
-                                "214hp",
-                                "sa3",
                                 "5lp"
                             ],
                             "memo": ""
@@ -32,17 +31,21 @@
                             "memo": ""
                         },
                         {
-                            "id": "combo-004",
+                            "id": "combo-006",
                             "moves": [
-                                "jlp",
-                                "sa1"
+                                "5lp",
+                                "5lp",
+                                "5lp",
+                                "214hp",
+                                "sa3",
+                                "5lp"
                             ],
-                            "memo": ""
+                            "memo": "ああああ\nああああああああああああ"
                         }
                     ]
                 },
                 {
-                    "id": "subgroup-007",
+                    "id": "subgroup-008",
                     "title": "新しい中見出し",
                     "combos": []
                 }
@@ -55,16 +58,6 @@
                 {
                     "id": "subgroup-003",
                     "title": "新しい中見出し３",
-                    "combos": []
-                },
-                {
-                    "id": "subgroup-005",
-                    "title": "新しい中見出し",
-                    "combos": []
-                },
-                {
-                    "id": "subgroup-006",
-                    "title": "新しい中見出し",
                     "combos": []
                 }
             ]

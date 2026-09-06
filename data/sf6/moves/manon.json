@@ -1,0 +1,304 @@
+[
+    {
+        "id": "4hp",
+        "category": "unique",
+        "str": "high",
+        "command": "←強P",
+        "name": "←強P"
+    },
+    {
+        "id": "3hk",
+        "category": "unique",
+        "str": "high",
+        "command": "↘強K",
+        "name": "↘強K"
+    },
+    {
+        "id": "5mp_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "中Pタゲコン",
+        "name": "中Pタゲコン",
+        "variants": [
+            {
+                "id": "5mp_5mk",
+                "str": "mid",
+                "command": "中P>中K",
+                "name": "中P>中K"
+            }
+        ]
+    },
+    {
+        "id": "4mk",
+        "category": "unique",
+        "str": "mid",
+        "command": "←中K",
+        "name": "←中K"
+    },
+    {
+        "id": "4mk_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "←中Kタゲコン",
+        "name": "←中Kタゲコン",
+        "variants": [
+            {
+                "id": "4mk_5mk",
+                "str": "mid",
+                "command": "←中K>中K",
+                "name": "←中K>中K"
+            }
+        ]
+    },
+    {
+        "id": "5hp_target",
+        "category": "unique",
+        "str": "high",
+        "command": "強Pタゲコン",
+        "name": "強Pタゲコン",
+        "variants": [
+            {
+                "id": "5hp_5hp",
+                "str": "high",
+                "command": "強P>強P",
+                "name": "強P>強P"
+            }
+        ]
+    },
+    {
+        "id": "2hp_target",
+        "category": "unique",
+        "str": "high",
+        "command": "↓強Pタゲコン",
+        "name": "↓強Pタゲコン",
+        "variants": [
+            {
+                "id": "2hp_5hp",
+                "str": "high",
+                "command": "↓強P>強P",
+                "name": "↓強P>強P"
+            }
+        ]
+    },
+
+    {
+        "id": "624lp",
+        "category": "special",
+        "str": "low",
+        "command": "→↘↓↙←弱P",
+        "name": "【弱】マネージュ・ドレ"
+    },
+    {
+        "id": "624mp",
+        "category": "special",
+        "str": "mid",
+        "command": "→↘↓↙←中P",
+        "name": "【中】マネージュ・ドレ"
+    },
+    {
+        "id": "624hp",
+        "category": "special",
+        "str": "high",
+        "command": "→↘↓↙←強P",
+        "name": "【強】マネージュ・ドレ"
+    },
+    {
+        "id": "624pp",
+        "category": "special",
+        "str": "other",
+        "command": "→↘↓↙←PP",
+        "name": "【OD】マネージュ・ドレ"
+    },
+    {
+        "id": "236lk",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱K",
+        "name": "【弱】ロン・ポワン"
+    },
+    {
+        "id": "236mk",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中K",
+        "name": "【中】ロン・ポワン"
+    },
+    {
+        "id": "236hk",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強K",
+        "name": "【強】ロン・ポワン"
+    },
+    {
+        "id": "236kk",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→KK",
+        "name": "【OD】ロン・ポワン"
+    },
+    {
+        "id": "214lk",
+        "category": "special",
+        "str": "low",
+        "command": "↓↙←弱K",
+        "name": "【弱】デガジェ"
+    },
+    {
+        "id": "214mk",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↙←中K",
+        "name": "【中】デガジェ"
+    },
+    {
+        "id": "214hk",
+        "category": "special",
+        "str": "high",
+        "command": "↓↙←強K",
+        "name": "【強】デガジェ"
+    },
+    {
+        "id": "214kk",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←KK",
+        "name": "【OD】デガジェ"
+    },
+    {
+        "id": "236lp_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱P",
+        "name": "【弱】ランヴェルセ",
+        "variants": [
+            {
+                "id": "236lp",
+                "str": "low",
+                "command": "↓↘→弱P",
+                "name": "【弱】ランヴェルセ"
+            },
+            {
+                "id": "236lp_k",
+                "str": "low",
+                "command": "↓↘→弱P>K",
+                "name": "【弱】ランヴェルセ>K"
+            },
+            {
+                "id": "236lp_h",
+                "str": "low",
+                "command": "↓↘→弱P(ホールド)",
+                "name": "【弱】ランヴェルセ(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "236mp_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中P",
+        "name": "【中】ランヴェルセ",
+        "variants": [
+            {
+                "id": "236mp",
+                "str": "mid",
+                "command": "↓↘→中P",
+                "name": "【中】ランヴェルセ"
+            },
+            {
+                "id": "236mp_k",
+                "str": "mid",
+                "command": "↓↘→中P>K",
+                "name": "【中】ランヴェルセ>K"
+            },
+            {
+                "id": "236mp_h",
+                "str": "mid",
+                "command": "↓↘→中P(ホールド)",
+                "name": "【中】ランヴェルセ(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "236hp_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強P",
+        "name": "【強】ランヴェルセ",
+        "variants": [
+            {
+                "id": "236hp",
+                "str": "high",
+                "command": "↓↘→強P",
+                "name": "【強】ランヴェルセ"
+            },
+            {
+                "id": "236hp_k",
+                "str": "high",
+                "command": "↓↘→強P>K",
+                "name": "【強】ランヴェルセ>K"
+            },
+            {
+                "id": "236hp_h",
+                "str": "high",
+                "command": "↓↘→強P(ホールド)",
+                "name": "【強】ランヴェルセ(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "236pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→PP",
+        "name": "【OD】ランヴェルセ",
+        "variants": [
+            {
+                "id": "236pp",
+                "str": "other",
+                "command": "↓↘→PP",
+                "name": "【OD】ランヴェルセ"
+            },
+            {
+                "id": "236pp_k",
+                "str": "other",
+                "command": "↓↘→PP>K",
+                "name": "【OD】ランヴェルセ>K"
+            },
+            {
+                "id": "236pp_h",
+                "str": "other",
+                "command": "↓↘→PP(ホールド)",
+                "name": "【OD】ランヴェルセ(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "sa1",
+        "category": "sa",
+        "str": "low",
+        "command": "↓↘→↓↘→K",
+        "name": "SA1"
+    },
+    {
+        "id": "sa2",
+        "category": "sa",
+        "str": "mid",
+        "command": "↓↙←↓↙←K",
+        "name": "SA2"
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "↓↘→↓↘→P",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "other",
+        "command": "↓↘→↓↘→P",
+        "name": "CA"
+    }
+]

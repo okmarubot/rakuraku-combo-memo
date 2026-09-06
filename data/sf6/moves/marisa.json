@@ -1,0 +1,576 @@
+[
+    {
+        "id": "5hp_h",
+        "category": "normal",
+        "str": "high",
+        "command": "強P(ホールド)",
+        "name": "強P(ホールド)"
+    },
+    {
+        "id": "5hk_h",
+        "category": "normal",
+        "str": "high",
+        "command": "強K(ホールド)",
+        "name": "強K(ホールド)"
+    },
+    {
+        "id": "2hp_h",
+        "category": "normal",
+        "str": "high",
+        "command": "↓強P(ホールド)",
+        "name": "↓強P(ホールド)"
+    },
+    {
+        "id": "2hk_h",
+        "category": "normal",
+        "str": "high",
+        "command": "↓強K(ホールド)",
+        "name": "↓強K(ホールド)"
+    },
+    {
+        "id": "jhp_h",
+        "category": "normal",
+        "str": "high",
+        "command": "J強P(ホールド)",
+        "name": "J強P(ホールド)"
+    },
+    {
+        "id": "jhk_h",
+        "category": "normal",
+        "str": "high",
+        "command": "J強K(ホールド)",
+        "name": "J強K(ホールド)"
+    },
+    {
+        "id": "4hp",
+        "category": "unique",
+        "str": "high",
+        "command": "←強P",
+        "name": "←強P"
+    },
+    {
+        "id": "4hp_h",
+        "category": "unique",
+        "str": "high",
+        "command": "←強P(ホールド)",
+        "name": "←強P(ホールド)"
+    },
+    {
+        "id": "6mp",
+        "category": "unique",
+        "str": "mid",
+        "command": "→中P",
+        "name": "→中P"
+    },
+    {
+        "id": "3hp_variants",
+        "category": "unique",
+        "str": "high",
+        "command": "↘強P",
+        "name": "↘強P",
+        "variants": [
+            {
+                "id": "3hp",
+                "str": "high",
+                "command": "↘強P",
+                "name": "↘強P"
+            },
+            {
+                "id": "3hp_h",
+                "str": "high",
+                "command": "↘強P(ホールド)",
+                "name": "↘強P(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "6hk_variants",
+        "category": "unique",
+        "str": "high",
+        "command": "→強K",
+        "name": "→強K",
+        "variants": [
+            {
+                "id": "6hk",
+                "str": "high",
+                "command": "→強K",
+                "name": "→強K"
+            },
+            {
+                "id": "6hk_h",
+                "str": "high",
+                "command": "→強K(ホールド)",
+                "name": "→強K(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "5lp_target",
+        "category": "unique",
+        "str": "low",
+        "command": "弱Pタゲコン",
+        "name": "弱Pタゲコン",
+        "variants": [
+            {
+                "id": "5lp_5lp",
+                "str": "low",
+                "command": "弱P>弱P",
+                "name": "弱P>弱P"
+            }
+        ]
+    },
+    {
+        "id": "5mp_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "中Pタゲコン",
+        "name": "中Pタゲコン",
+        "variants": [
+            {
+                "id": "5mp_5mp",
+                "str": "mid",
+                "command": "中P>中P",
+                "name": "中P>中P"
+            }
+        ]
+    },
+    {
+        "id": "5hp_target",
+        "category": "unique",
+        "str": "high",
+        "command": "強Pタゲコン",
+        "name": "強Pタゲコン",
+        "variants": [
+            {
+                "id": "5hp_5hp",
+                "str": "high",
+                "command": "強P>強P",
+                "name": "強P>強P"
+            }
+        ]
+    },
+    {
+        "id": "6mp_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "→中Pタゲコン",
+        "name": "→中Pタゲコン",
+        "variants": [
+            {
+                "id": "6mp_5hp",
+                "str": "mid",
+                "command": "→中P>強P",
+                "name": "→中P>強P"
+            },
+            {
+                "id": "6mp_5hk",
+                "str": "mid",
+                "command": "→中P>強K",
+                "name": "→中P>強K"
+            }
+        ]
+    },
+    {
+        "id": "3hp_target",
+        "category": "unique",
+        "str": "high",
+        "command": "↘強Pタゲコン",
+        "name": "↘強Pタゲコン",
+        "variants": [
+            {
+                "id": "3hp_3hp",
+                "str": "high",
+                "command": "↘強P>↘強P",
+                "name": "↘強P>↘強P"
+            }
+        ]
+    },
+    {
+        "id": "6hk_target",
+        "category": "unique",
+        "str": "high",
+        "command": "→強Kタゲコン",
+        "name": "→強Kタゲコン",
+        "variants": [
+            {
+                "id": "6hk_6hk",
+                "str": "high",
+                "command": "→強K>→強K",
+                "name": "→強K>→強K"
+            }
+        ]
+    },
+    {
+        "id": "j2mp_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "前J中Pタゲコン",
+        "name": "前J中Pタゲコン",
+        "variants": [
+            {
+                "id": "j2mp_j2mp",
+                "str": "mid",
+                "command": "前J中P>中P",
+                "name": "前J中P>中P"
+            }
+        ]
+    },
+    {
+        "id": "nj2hp_variants",
+        "category": "jump",
+        "str": "high",
+        "command": "垂直J↓強P",
+        "name": "垂直J↓強P",
+        "variants": [
+            {
+                "id": "nj2hp",
+                "str": "high",
+                "command": "垂直J↓強P",
+                "name": "垂直J↓強P"
+            },
+            {
+                "id": "nj2hp_h",
+                "str": "high",
+                "command": "垂直J↓強P(ホールド)",
+                "name": "垂直J↓強P(ホールド)"
+            }
+        ]
+    },
+
+    {
+        "id": "236lp_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱P",
+        "name": "【弱】グラディウス",
+        "variants": [
+            {
+                "id": "236lp",
+                "str": "low",
+                "command": "↓↘→弱P",
+                "name": "【弱】グラディウス"
+            },
+            {
+                "id": "236lp_h",
+                "str": "low",
+                "command": "↓↘→弱P(ホールド)",
+                "name": "【弱】グラディウス(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "236mp_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中P",
+        "name": "【中】グラディウス",
+        "variants": [
+            {
+                "id": "236mp",
+                "str": "mid",
+                "command": "↓↘→中P",
+                "name": "【中】グラディウス"
+            },
+            {
+                "id": "236mp_h",
+                "str": "mid",
+                "command": "↓↘→中P(ホールド)",
+                "name": "【中】グラディウス(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "236hp_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強P",
+        "name": "【強】グラディウス",
+        "variants": [
+            {
+                "id": "236hp",
+                "str": "high",
+                "command": "↓↘→強P",
+                "name": "【強】グラディウス"
+            },
+            {
+                "id": "236hp_h",
+                "str": "high",
+                "command": "↓↘→強P(ホールド)",
+                "name": "【強】グラディウス(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "236pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→PP",
+        "name": "【OD】グラディウス",
+        "variants": [
+            {
+                "id": "236pp",
+                "str": "other",
+                "command": "↓↘→PP",
+                "name": "【OD】グラディウス"
+            },
+            {
+                "id": "236pp_h",
+                "str": "other",
+                "command": "↓↘→PP(ホールド)",
+                "name": "【OD】グラディウス(ホールド)"
+            }
+        ]
+    },
+
+    {
+        "id": "214lp_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↓↙←弱P",
+        "name": "【弱】ディマカイルス",
+        "variants": [
+            {
+                "id": "214lp",
+                "str": "low",
+                "command": "↓↙←弱P",
+                "name": "【弱】ディマカイルス"
+            },
+            {
+                "id": "214lp_p",
+                "str": "low",
+                "command": "↓↙←弱P>→P",
+                "name": "【弱】ディマカイルス>→P"
+            }
+        ]
+    },
+    {
+        "id": "214mp_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↙←中P",
+        "name": "【中】ディマカイルス",
+        "variants": [
+            {
+                "id": "214mp",
+                "str": "mid",
+                "command": "↓↙←中P",
+                "name": "【中】ディマカイルス"
+            },
+            {
+                "id": "214mp_p",
+                "str": "mid",
+                "command": "↓↙←中P>→P",
+                "name": "【中】ディマカイルス>→P"
+            }
+        ]
+    },
+    {
+        "id": "214hp_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↙←強P",
+        "name": "【強】ディマカイルス",
+        "variants": [
+            {
+                "id": "214hp",
+                "str": "high",
+                "command": "↓↙←強P",
+                "name": "【強】ディマカイルス"
+            },
+            {
+                "id": "214hp_p",
+                "str": "high",
+                "command": "↓↙←強P>→P",
+                "name": "【強】ディマカイルス>→P"
+            }
+        ]
+    },
+    {
+        "id": "214pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←PP",
+        "name": "【OD】ディマカイルス",
+        "variants": [
+            {
+                "id": "214pp",
+                "str": "other",
+                "command": "↓↙←PP",
+                "name": "【OD】ディマカイルス"
+            },
+            {
+                "id": "214pp_p",
+                "str": "other",
+                "command": "↓↙←PP>→P",
+                "name": "【OD】ディマカイルス>→P"
+            }
+        ]
+    },
+
+    {
+        "id": "623lp",
+        "category": "special",
+        "str": "low",
+        "command": "→↓↘弱P",
+        "name": "【弱】ファランクス"
+    },
+    {
+        "id": "623mp",
+        "category": "special",
+        "str": "mid",
+        "command": "→↓↘中P",
+        "name": "【中】ファランクス"
+    },
+    {
+        "id": "623hp",
+        "category": "special",
+        "str": "high",
+        "command": "→↓↘強P",
+        "name": "【強】ファランクス"
+    },
+    {
+        "id": "623pp",
+        "category": "special",
+        "str": "other",
+        "command": "→↓↘PP",
+        "name": "【OD】ファランクス"
+    },
+
+    {
+        "id": "236lk",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱K",
+        "name": "【弱】クアドリガ"
+    },
+    {
+        "id": "236mk",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中K",
+        "name": "【中】クアドリガ"
+    },
+    {
+        "id": "236hk",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強K",
+        "name": "【強】クアドリガ"
+    },
+    {
+        "id": "236kk",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→KK",
+        "name": "【OD】クアドリガ"
+    },
+
+    {
+        "id": "214k_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←K",
+        "name": "スクトゥム",
+        "variants": [
+            {
+                "id": "214k",
+                "str": "other",
+                "command": "↓↙←K",
+                "name": "スクトゥム"
+            },
+            {
+                "id": "214k_p",
+                "str": "↓↙←K>P",
+                "name": "スクトゥム>PP"
+            },
+            {
+                "id": "214k_k",
+                "str": "↓↙←K>K",
+                "name": "スクトゥム>K"
+            },
+            {
+                "id": "214k_ab",
+                "str": "↓↙←K>弱P弱K",
+                "name": "スクトゥム>弱P弱K"
+            },
+            {
+                "id": "214k_hold",
+                "str": "↓↙←K(ホールド)",
+                "name": "スクトゥム(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "214kk_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←KK",
+        "name": "【OD】スクトゥム",
+        "variants": [
+            {
+                "id": "214kk",
+                "str": "other",
+                "command": "↓↙←KK",
+                "name": "【OD】スクトゥム"
+            },
+            {
+                "id": "214kk_p",
+                "str": "↓↙←KK>P",
+                "name": "【OD】スクトゥム>PP"
+            },
+            {
+                "id": "214kk_k",
+                "str": "↓↙←KK>K",
+                "name": "【OD】スクトゥム>K"
+            },
+            {
+                "id": "214kk_ab",
+                "str": "↓↙←KK>弱P弱K",
+                "name": "【OD】スクトゥム>弱P弱K"
+            }
+        ]
+    },
+
+    {
+        "id": "sa1_variants",
+        "category": "sa",
+        "str": "low",
+        "command": "↓↘→↓↘→P",
+        "name": "SA1",
+        "variants": [
+            {
+                "id": "sa1",
+                "str": "low",
+                "command": "↓↘→↓↘→P",
+                "name": "SA1"
+            },
+            {
+                "id": "sa1_h",
+                "str": "low",
+                "command": "↓↘→↓↘→P(ホールド)",
+                "name": "【強化】SA1"
+            }
+        ]
+    },
+    {
+        "id": "sa2",
+        "category": "sa",
+        "str": "mid",
+        "command": "↓↙←↓↙←P",
+        "name": "SA2"
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "↓↘→↓↘→K",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "other",
+        "command": "↓↘→↓↘→K",
+        "name": "CA"
+    }
+]

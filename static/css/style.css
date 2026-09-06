@@ -4,7 +4,7 @@
 
 body {
 
-    font-family: sans-serif;
+    font-family: "Noto Sans JP", sans-serif;
     margin: 0;
 
 }
@@ -40,8 +40,6 @@ button {
 .move-variant-parent,
 .move-variant-button,
 .combo-text {
-
-    font-family: "Noto Sans JP", sans-serif;
 
     font-size: 15px;
     letter-spacing: 0.5px;
@@ -114,9 +112,71 @@ button {
 　見出し
 ========================= */
 
-.main-group {
+/* 見出し共通部分 */
+.main-group.editing .main-group-edit,
+.sub-group.editing .sub-group-edit {
 
-    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    width: 100%;
+
+    white-space: nowrap;
+
+}
+
+.main-group-title-text,
+.sub-group-title-text {
+
+    margin-right: 8px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    min-width: 0;
+    overflow-wrap: anywhere;
+
+}
+
+.main-group-title-input,
+.sub-group-title-input {
+
+    min-width: 120px;
+    max-width: none;
+
+    height: 36px;
+
+    padding: 6px 10px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    box-sizing: border-box;
+
+    flex: 1;
+
+}
+
+.main-group-sort-handle,
+.sub-group-sort-handle {
+
+    width: 36px;
+    height: 36px;
+
+    padding: 0;
+    margin: 2;
+
+    border: none;
+    background: none;
+
+    color: #4d4d4d;
+
+    flex-shrink: 0;
+
+    box-sizing: border-box;
 
 }
 
@@ -129,6 +189,12 @@ button {
 }
 
 /* 大見出しタイトル*/
+.main-group {
+
+    margin-bottom: 16px;
+
+}
+
 .main-group-title {
 
     display: flex;
@@ -150,15 +216,6 @@ button {
     align-items: center;
 
     width: 100%;
-
-}
-
-.main-group-title-text {
-
-    margin-right: 8px;
-
-    font-size: 18px;
-    font-weight: 600;
 
 }
 
@@ -207,6 +264,8 @@ button {
 
     cursor: pointer;
     list-style: none;
+
+    line-height: 23px;
     
 }
 
@@ -214,9 +273,12 @@ button {
 
     content: "";
     display: inline-block;
+
     width: 4px;
-    height: 22px;
+    height: 23px;
+
     margin-right: 5px;
+
     border-radius: 1px;
     background: #999;
 
@@ -229,15 +291,6 @@ button {
     align-items: center;
 
     width: 100%;
-
-}
-
-.sub-group-title-text {
-
-    margin-right: 8px;
-
-    font-size: 18px;
-    font-weight: 600;
 
 }
 
@@ -319,6 +372,7 @@ button {
     background: none;
 
     color: #4d4d4d;
+
 }
 
 .combo-item.editing {
@@ -439,12 +493,33 @@ button {
 .combo-memo textarea {
 
     width: 100%;
-    max-width: 500px;
     min-height: 1em;
+
+    padding: 7px 10px;
+    padding-top: 2px;
+
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
+
+    background-color: #fafafa;
+
     resize: none;
 
     font-family: inherit;
     font-size: 0.8em;
+    line-height: 1.5;
+
+    box-sizing: border-box;
+
+    outline: none;
+
+}
+
+.combo-memo textarea:focus {
+
+    border-color: #8aa4b8;
+
+    background-color: #fff;
 
 }
 
@@ -667,8 +742,6 @@ display: block;
 
     text-align: left;
 
-    cursor: pointer;
-
 }
 
 /* 技の強度 */
@@ -757,6 +830,14 @@ body.move-selector-open {
 　ボタン
 ========================= */
 
+button {
+
+    cursor: pointer;
+
+    color: #333;
+
+}
+
 /* ----------　モード　---------- */
 
 .mode-button,
@@ -777,8 +858,6 @@ body.move-selector-open {
     border-radius: 8px;
 
     background-color: #f5f5f5;
-
-    cursor: pointer;
 
     box-sizing: border-box;
 
@@ -814,6 +893,8 @@ body.move-selector-open {
     border: none;
     border-bottom: 2px solid #999;
 
+    border-radius: 0;
+
     background-color: transparent;
 
     cursor: pointer;
@@ -840,7 +921,6 @@ body.move-selector-open {
 .combo-edit-button,
 .combo-delete-button,
 .combo-complete-button,
-.combo-undo-button,
 .combo-cancel-button,
 
 .group-edit-button,
@@ -864,16 +944,20 @@ body.move-selector-open {
     border-radius: 8px;
     background: none;
 
-    cursor: pointer;
-
     box-sizing: border-box;
+
+}
+
+.main-group-view button,
+.sub-group-view button {
+
+    flex: 0 0 36px;
 
 }
 
 .combo-edit-button:hover,
 .combo-delete-button:hover,
 .combo-complete-button:hover,
-.combo-undo-button:hover,
 .combo-cancel-button:hover,
 
 .group-edit-button:hover,
@@ -897,6 +981,8 @@ body.move-selector-open {
 .add-heading-button,
 .add-subheading-button {
 
+    height: 36px;
+
     padding: 8px 16px;
 
     border: 1px solid #bbb;
@@ -906,8 +992,6 @@ body.move-selector-open {
 
     font-size: 14px;
     font-weight: 500;
-
-    cursor: pointer;
 
 }
 
@@ -938,8 +1022,9 @@ body.move-selector-open {
 
 /* コンボ・技追加 */
 
-.add-combo-button,
-.add-move-button {
+.add-combo-button {
+
+    height: 36px;
 
     padding: 6px 12px;
 
@@ -949,8 +1034,6 @@ body.move-selector-open {
     background-color: #f5f5f5;
 
     font-size: 14px;
-
-    cursor: pointer;
 
 }
 
@@ -969,29 +1052,36 @@ body.move-selector-open {
 
 }
 
-/* 技を追加 */
+/* 技を追加 / Undo */
 
-.add-move-button {
+.add-move-button,
+.combo-undo-button {
+
+    width: 100px;
+    height: 36px;
 
     margin-left: 0;
     margin-right: auto;
 
-    padding: 6px 14px;
+    padding: 0;
 
-    border: 1px dashed #aaa;
+    border: 1px solid #ccc;
     border-radius: 8px;
+
+    background-color: #f5f5f5;
 
     font-size: 14px;
     font-weight: 500;
 
-    cursor: pointer;
-
     white-space: nowrap;
     flex-shrink: 0;
 
+    box-sizing: border-box;
+
 }
 
-.add-move-button:hover {
+.add-move-button:hover,
+.combo-undo-button:hover {
 
     background-color: #e7e7e7;
 
@@ -1060,7 +1150,5 @@ body.move-selector-open {
     border-radius: 6px;
 
     background-color: #fff;
-
-    cursor: pointer;
 
 }

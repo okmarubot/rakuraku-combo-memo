@@ -2,6 +2,18 @@
    スマホ用UI
 ========================================= */
 
+/* -----------------------------------------
+   ボタン
+----------------------------------------- */
+
+.combo-edit-button,
+.group-edit-button,
+.sub-group-edit-button {
+
+    font-size: 20px;
+
+}
+
 
 /* -----------------------------------------
    コンボカード
@@ -15,7 +27,7 @@
 .combo-view,
 .combo-edit {
 
-    padding-right: 44px;
+    padding-right: 30px;
 
     width: 100%;
     box-sizing: border-box;
@@ -57,8 +69,15 @@
    並び替えハンドル
 ----------------------------------------- */
 
+.main-group-sort-handle,
+.sub-group-sort-handle,
+.combo-sort-handle {
+    font-size: 20px;
+}
+
 .combo-sort-handle {
     flex: 0 0 auto;
+    padding-right: 0;
 }
 
 
