@@ -7,13 +7,7 @@
                 {
                     "id": "subgroup-001",
                     "title": "新しい中見出し",
-                    "combos": [
-                        {
-                            "id": "combo-001",
-                            "moves": [],
-                            "memo": ""
-                        }
-                    ]
+                    "combos": []
                 }
             ]
         }

@@ -2,32 +2,14 @@
     "groups": [
         {
             "id": "group-001",
-            "title": "大見出し①",
+            "title": "新しい大見出し",
             "subgroups": [
                 {
                     "id": "subgroup-001",
-                    "title": "中見出し①",
-                    "combos": [
-                        {
-                            "id": "combo-003",
-                            "moves": [
-                                "2m",
-                                "cdr",
-                                "2h",
-                                "214h",
-                                "assist_l",
-                                "assist_2l_3"
-                            ],
-                            "memo": ""
-                        }
-                    ]
+                    "title": "新しい中見出し",
+                    "combos": []
                 }
             ]
-        },
-        {
-            "id": "group-002",
-            "title": "新しい大見出し",
-            "subgroups": []
         }
     ]
 }
