@@ -64,6 +64,59 @@ const deleteConfirmMessage = document.querySelector("#delete-confirm-message");
 const deleteConfirmCancel = document.querySelector("#delete-confirm-cancel");
 const deleteConfirmOk = document.querySelector("#delete-confirm-ok");
 
+/* データ管理UI */
+
+const dataManagementButton = document.querySelector("#data-management-button");
+
+const dataManagementModal = document.querySelector("#data-management-modal");
+
+const dataExportButton = document.querySelector("#data-export-button");
+const dataImportButton = document.querySelector("#data-import-button");
+const dataManagementCloseButton = document.querySelector("#data-management-close-button");
+
+const dataExportModal = document.querySelector("#data-export-modal");
+const dataExportCancelButton = document.querySelector("#data-export-cancel-button");
+const dataExportExecuteButton = document.querySelector("#data-export-execute-button");
+
+const dataExportResultModal = document.querySelector("#data-export-result-modal");
+const dataExportText = document.querySelector("#data-export-text");
+const dataExportCopyButton = document.querySelector("#data-export-copy-button");
+const dataExportResultCloseButton = document.querySelector("#data-export-result-close-button");
+
+const dataImportModal = document.querySelector("#data-import-modal");
+const dataImportCancelButton = document.querySelector("#data-import-cancel-button");
+const dataImportNextButton = document.querySelector("#data-import-next-button");
+
+const dataImportFileModal = document.querySelector("#data-import-file-modal");
+const dataImportFileInput = document.querySelector("#data-import-file-input");
+const dataImportFileCancelButton = document.querySelector("#data-import-file-cancel-button");
+const dataImportFileExecuteButton = document.querySelector("#data-import-file-execute-button");
+
+const dataImportTextModal = document.querySelector("#data-import-text-modal");
+const dataImportText = document.querySelector("#data-import-text");
+const dataImportTextCancelButton = document.querySelector("#data-import-text-cancel-button");
+const dataImportTextExecuteButton = document.querySelector("#data-import-text-execute-button");
+
+const dataImportCheckModal = document.querySelector("#data-import-check-modal");
+const dataImportCheckResult = document.querySelector("#data-import-check-result");
+const dataImportCheckCancelButton = document.querySelector("#data-import-check-cancel-button");
+const dataImportCheckNextButton = document.querySelector("#data-import-check-next-button");
+
+const dataImportConfirmModal = document.querySelector("#data-import-confirm-modal");
+const dataImportConfirmCancelButton = document.querySelector("#data-import-confirm-cancel-button");
+const dataImportConfirmExecuteButton = document.querySelector("#data-import-confirm-execute-button");
+
+const dataClearButton = document.querySelector("#data-clear-button");
+
+const dataClearModal = document.querySelector("#data-clear-modal");
+const dataClearModeFieldset = document.querySelector("#data-clear-mode-fieldset");
+const dataClearCancelButton = document.querySelector("#data-clear-cancel-button");
+const dataClearNextButton = document.querySelector("#data-clear-next-button");
+
+const dataClearConfirmModal = document.querySelector("#data-clear-confirm-modal");
+const dataClearConfirmCancelButton = document.querySelector("#data-clear-confirm-cancel-button");
+const dataClearConfirmExecuteButton = document.querySelector("#data-clear-confirm-execute-button");
+
 /* =========================
    初期状態
 ========================= */
@@ -102,6 +155,14 @@ let originalSubGroupTitle = "";
 
 // 技一覧パネルのキーボード操作
 moveSelectorPanel.inert = true;
+
+// インポートデータ一時変数
+let pendingImportData = null;
+let pendingImportTarget = null;
+
+// 削除データ一時変数
+let pendingClearTarget = null;
+let pendingClearMode = null;
 
 /* =========================
    関数
@@ -179,6 +240,968 @@ function saveComboData() {
 
     }
 
+}
+
+/* ---------- データ管理 ---------- */
+
+/* データ管理UI */
+
+// データ管理UIを開く
+function openDataManagementModal() {
+
+    dataManagementModal.classList.add("is-open");
+    dataExportButton.focus();
+
+}
+
+// データ管理UIを閉じる
+function closeDataManagementModal() {
+
+    dataManagementModal.classList.remove("is-open");
+
+}
+
+/* フォーカストラップ */
+
+// フォーカストラップ
+function setupModalFocusTrap(modal, closeAction) {
+
+    function handleKeydown(event) {
+
+        if (!modal.classList.contains("is-open")) {
+            return;
+        }
+
+        // Esc → モーダルを閉じる
+        if (event.key === "Escape") {
+
+            event.preventDefault();
+
+            closeAction();
+
+            return;
+
+        }
+
+        // Tab → モーダル内だけを移動
+        if (event.key !== "Tab") {
+            return;
+        }
+
+        const focusableElements = Array.from(
+            modal.querySelectorAll(
+                'button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
+            )
+        ).filter(function (element) {
+
+            return element.offsetParent !== null;
+
+        });
+
+        if (focusableElements.length === 0) {
+            return;
+        }
+
+        event.preventDefault();
+
+        const currentIndex =
+            focusableElements.indexOf(document.activeElement);
+
+        const nextIndex =
+            event.shiftKey
+                ? (currentIndex - 1 + focusableElements.length)
+                    % focusableElements.length
+                : (currentIndex + 1)
+                    % focusableElements.length;
+
+        focusableElements[nextIndex].focus();
+
+    }
+
+    document.addEventListener(
+        "keydown",
+        handleKeydown
+    );
+
+}
+
+/* エクスポート */
+
+// エクスポートUIを開く
+function openDataExportModal() {
+
+    dataManagementModal.classList.remove("is-open");
+    dataExportModal.classList.add("is-open");
+    dataExportExecuteButton.focus();
+
+}
+
+// エクスポートUIを閉じる
+function closeDataExportModal() {
+
+    dataExportModal.classList.remove("is-open");
+
+}
+
+// エクスポート結果UIを開く
+function openDataExportResultModal(text) {
+
+    dataExportText.value = text;
+    dataExportModal.classList.remove("is-open");
+    dataExportResultModal.classList.add("is-open");
+    dataExportResultCloseButton.focus();
+
+}
+
+// エクスポート結果UIを閉じる
+function closeDataExportResultModal() {
+
+    dataExportResultModal.classList.remove("is-open");
+
+}
+
+// localStorageからエクスポート対象のデータを取得
+function getExportData(target) {
+
+    const exportData = {
+        version: 1,
+        game: "sf6",
+        characters: {}
+    };
+
+    const prefix = "comboData_";
+
+    if (target === "character") {
+
+        const characterData = {};
+
+        ["classic", "modern"].forEach(mode => {
+
+            const key = `comboData_${characterId}_${mode}`;
+
+            const savedData = localStorage.getItem(key);
+
+            if (!savedData) {
+                return;
+            }
+
+            try {
+
+                characterData[mode] = JSON.parse(savedData);
+
+            } catch (error) {
+
+                console.error("エクスポートデータの読み込みに失敗しました:", error);
+
+            }
+
+        });
+
+        exportData.characters[characterId] = characterData;
+
+        return exportData;
+
+    }
+
+    // すべてのキャラクター
+    Object.keys(localStorage)
+        .filter(key => key.startsWith(prefix))
+        .forEach(key => {
+
+            const keyParts = key.substring(prefix.length).split("_");
+
+            const mode = keyParts.pop();
+
+            const exportCharacterId = keyParts.join("_");
+
+            const savedData = localStorage.getItem(key);
+
+            if (!savedData) {
+                return;
+            }
+
+            try {
+
+                const parsedData = JSON.parse(savedData);
+
+                if (!exportData.characters[exportCharacterId]) {
+
+                    exportData.characters[exportCharacterId] = {};
+
+                }
+
+                exportData.characters[exportCharacterId][mode] = parsedData;
+
+            } catch (error) {
+
+                console.error("エクスポートデータの読み込みに失敗しました:", error);
+
+            }
+
+        });
+
+    return exportData;
+
+}
+
+// エクスポートデータを文字列に変換
+function createExportText(target) {
+
+    const exportData = getExportData(target);
+
+    return JSON.stringify(exportData, null, 2);
+
+}
+
+// ファイルとしてエクスポート
+async function exportDataAsFile(text) {
+
+    // 保存場所・ファイル名をユーザーに選択してもらう
+    if ("showSaveFilePicker" in window) {
+
+        const fileHandle =
+            await window.showSaveFilePicker({
+
+                suggestedName:"らくらくコンボメモ.json",
+
+                types: [
+                    {
+                        description: "JSONファイル",
+                        accept: {"application/json": [".json"]}
+                    }
+                ]
+
+            });
+
+        const writable = await fileHandle.createWritable();
+
+        await writable.write(text);
+
+        await writable.close();
+
+        return;
+
+    }
+
+    // 非対応ブラウザ用
+    const blob = new Blob([text], {type: "application/json"});
+
+    const url = URL.createObjectURL(blob);
+
+    const link = document.createElement("a");
+
+    link.href = url;
+    link.download = "らくらくコンボメモ.json";
+
+    document.body.appendChild(link);
+
+    link.click();
+
+    link.remove();
+
+    URL.revokeObjectURL(url);
+
+}
+
+// エクスポートを実行
+async function executeDataExport() {
+
+    const target = document.querySelector('input[name="export-target"]:checked').value;
+
+    const format = document.querySelector('input[name="export-format"]:checked').value;
+
+    const text = createExportText(target);
+
+    if (format === "file") {
+
+        try {
+
+            await exportDataAsFile(text);
+
+        } catch (error) {
+
+            // ユーザーが保存ダイアログをキャンセルした場合
+            if (error.name === "AbortError") {
+                return;
+            }
+
+            console.error("エクスポートに失敗しました:", error);
+
+            alert("エクスポートに失敗しました。");
+
+            return;
+
+        }
+
+        dataExportModal.classList.remove("is-open");
+
+        dataExportResultModal.classList.add("is-open");
+
+        dataExportText.value = "";
+
+        dataExportText.style.display = "none";
+
+        dataExportCopyButton.style.display = "none";
+
+        dataExportResultCloseButton.focus();
+
+        return;
+
+    }
+
+    // コピー用文字列
+    dataExportText.style.display = "block";
+
+    dataExportCopyButton.style.display = "block";
+
+    openDataExportResultModal(text);
+
+}
+
+// エクスポート文字列をコピー
+async function copyExportText() {
+
+    try {
+
+        await navigator.clipboard.writeText(dataExportText.value);
+
+        dataExportCopyButton.textContent = "コピーしました";
+
+        setTimeout(function () {
+
+            dataExportCopyButton.textContent = "コピー";
+
+        }, 1500);
+
+    } catch (error) {
+
+        console.error("コピーに失敗しました:", error);
+
+        dataExportText.focus();
+
+        dataExportText.select();
+
+    }
+
+}
+
+/* インポート */
+// データインポートUIを開く
+function openDataImportModal() {
+
+    dataManagementModal.classList.remove("is-open");
+    dataImportModal.classList.add("is-open");
+    dataImportNextButton.focus();
+
+}
+
+// データインポートUIを閉じる
+function closeDataImportModal() {
+
+    dataImportModal.classList.remove("is-open");
+
+}
+
+// データインポート：ファイル入力UIを開く
+function openDataImportFileModal() {
+
+    dataImportModal.classList.remove("is-open");
+    dataImportFileModal.classList.add("is-open");
+    dataImportFileInput.focus();
+
+}
+
+// データインポート：ファイル入力UIを閉じる
+function closeDataImportFileModal() {
+
+    dataImportFileModal.classList.remove("is-open");
+
+}
+
+// データインポート：テキスト入力UIを開く
+function openDataImportTextModal() {
+
+    dataImportModal.classList.remove("is-open");
+    dataImportTextModal.classList.add("is-open");
+    dataImportText.focus();
+
+}
+
+// データインポート：テキスト入力UIを閉じる
+function closeDataImportTextModal() {
+
+    dataImportTextModal.classList.remove("is-open");
+
+}
+
+// データインポート対象を取得
+function getImportTarget() {
+
+    return document.querySelector(
+        'input[name="import-target"]:checked'
+    ).value;
+
+}
+
+// データインポート対象を設定
+function prepareImportData(text) {
+
+    if (!text.trim()) {
+
+        alert("データが入力されていません。");
+        return false;
+
+    }
+
+    try {
+
+        pendingImportData = JSON.parse(text);
+        pendingImportTarget = getImportTarget();
+        return true;
+
+    } catch (error) {
+
+        console.error("インポートデータの読み込みに失敗しました:", error);
+        alert("正しいJSONデータを入力してください。");
+        return false;
+
+    }
+
+}
+
+// データインポートを実行（ファイル入力）
+async function executeDataImportFile() {
+
+    const file = dataImportFileInput.files[0];
+
+    if (!file) {
+
+        alert("ファイルを選択してください。");
+        return;
+
+    }
+
+    try {
+
+        const text = await file.text();
+
+        if (!prepareImportData(text)) {
+            return;
+        }
+
+        closeDataImportFileModal();
+        openDataImportCheckModal();
+
+    } catch (error) {
+
+        console.error("ファイルの読み込みに失敗しました:", error);
+        alert("ファイルの読み込みに失敗しました。");
+
+    }
+
+}
+
+// データインポートを実行（テキスト入力）
+function executeDataImportText() {
+
+    const text = dataImportText.value;
+
+    if (!prepareImportData(text)) {
+        return;
+    }
+
+    closeDataImportFileModal();
+    openDataImportCheckModal();
+
+}
+
+// データインポートを実行（確認後）
+function proceedDataImport() {
+
+    const format = document.querySelector('input[name="import-format"]:checked').value;
+
+    if (format === "file") {
+        openDataImportFileModal();
+        return;
+    }
+
+    openDataImportTextModal();
+
+}
+
+// インポートデータチェック
+function isObject(value) {
+    return value !== null &&
+        typeof value === "object" &&
+        !Array.isArray(value);
+}
+
+function checkImportData() {
+    const errors = [];
+
+    if (!isObject(pendingImportData)) {
+        errors.push("インポートデータが正しい形式ではありません。");
+        return errors;
+    }
+
+    if (pendingImportData.version !== 1) {
+        errors.push("対応していないデータバージョンです。");
+    }
+
+    if (pendingImportData.game !== "sf6") {
+        errors.push("Street Fighter 6 のデータではありません。");
+    }
+
+    if (!isObject(pendingImportData.characters)) {
+        errors.push("characters のデータが正しい形式ではありません。");
+        return errors;
+    }
+
+    const characterIds = Object.keys(
+        pendingImportData.characters
+    );
+
+    if (characterIds.length === 0) {
+        errors.push("キャラクターデータがありません。");
+        return errors;
+    }
+
+    if (pendingImportTarget === "character") {
+        if (!pendingImportData.characters[characterId]) {
+            errors.push(
+                `このキャラクター（${characterId}）のデータがありません。`
+            );
+
+            return errors;
+        }
+
+        checkCharacterImportData(
+            characterId,
+            pendingImportData.characters[characterId],
+            errors
+        );
+
+        return errors;
+    }
+
+    characterIds.forEach(function (importCharacterId) {
+        checkCharacterImportData(
+            importCharacterId,
+            pendingImportData.characters[importCharacterId],
+            errors
+        );
+    });
+
+    return errors;
+}
+
+// キャラクターデータチェック
+function checkCharacterImportData(
+    importCharacterId,
+    characterData,
+    errors
+) {
+    if (!isObject(characterData)) {
+        errors.push(
+            `${importCharacterId}: キャラクターデータの形式が正しくありません。`
+        );
+        return;
+    }
+
+    ["classic", "modern"].forEach(function (mode) {
+        if (!(mode in characterData)) {
+            return;
+        }
+
+        checkModeImportData(
+            importCharacterId,
+            mode,
+            characterData[mode],
+            errors
+        );
+    });
+}
+
+// モードチェック
+function checkModeImportData(
+    importCharacterId,
+    mode,
+    modeData,
+    errors
+) {
+    if (!isObject(modeData)) {
+        errors.push(
+            `${importCharacterId} ${mode}: データの形式が正しくありません。`
+        );
+        return;
+    }
+
+    if (!Array.isArray(modeData.groups)) {
+        errors.push(
+            `${importCharacterId} ${mode}: groups が正しい形式ではありません。`
+        );
+        return;
+    }
+
+    modeData.groups.forEach(function (group, groupIndex) {
+        checkGroupImportData(
+            importCharacterId,
+            mode,
+            group,
+            groupIndex,
+            errors
+        );
+    });
+}
+
+// 大見出しデータチェック
+function checkGroupImportData(
+    importCharacterId,
+    mode,
+    group,
+    groupIndex,
+    errors
+) {
+    const location =
+        `${importCharacterId} ${mode} 大見出し${groupIndex + 1}`;
+
+    if (!isObject(group)) {
+        errors.push(
+            `${location}: データの形式が正しくありません。`
+        );
+        return;
+    }
+
+    if (typeof group.id !== "string" || group.id.trim() === "") {
+        errors.push(
+            `${location}: id がありません。`
+        );
+    }
+
+    if (typeof group.title !== "string") {
+        errors.push(
+            `${location}: title が正しくありません。`
+        );
+    }
+
+    if (!Array.isArray(group.subgroups)) {
+        errors.push(
+            `${location}: subgroups が正しい形式ではありません。`
+        );
+        return;
+    }
+
+    group.subgroups.forEach(function (subgroup, subgroupIndex) {
+        checkSubGroupImportData(
+            importCharacterId,
+            mode,
+            subgroup,
+            groupIndex,
+            subgroupIndex,
+            errors
+        );
+    });
+}
+
+// 中見出しデータチェック
+function checkSubGroupImportData(
+    importCharacterId,
+    mode,
+    subgroup,
+    groupIndex,
+    subgroupIndex,
+    errors
+) {
+    const location =
+        `${importCharacterId} ${mode} 大見出し${groupIndex + 1} `
+        + `中見出し${subgroupIndex + 1}`;
+
+    if (!isObject(subgroup)) {
+        errors.push(
+            `${location}: データの形式が正しくありません。`
+        );
+        return;
+    }
+
+    if (
+        typeof subgroup.id !== "string" ||
+        subgroup.id.trim() === ""
+    ) {
+        errors.push(
+            `${location}: id がありません。`
+        );
+    }
+
+    if (typeof subgroup.title !== "string") {
+        errors.push(
+            `${location}: title が正しくありません。`
+        );
+    }
+
+    if (!Array.isArray(subgroup.combos)) {
+        errors.push(
+            `${location}: combos が正しい形式ではありません。`
+        );
+        return;
+    }
+
+    subgroup.combos.forEach(function (combo, comboIndex) {
+        checkComboImportData(
+            importCharacterId,
+            mode,
+            combo,
+            groupIndex,
+            subgroupIndex,
+            comboIndex,
+            errors
+        );
+    });
+}
+
+// コンボデータチェック
+function checkComboImportData(
+    importCharacterId,
+    mode,
+    combo,
+    groupIndex,
+    subgroupIndex,
+    comboIndex,
+    errors
+) {
+    const location =
+        `${importCharacterId} ${mode} `
+        + `大見出し${groupIndex + 1} `
+        + `中見出し${subgroupIndex + 1} `
+        + `コンボ${comboIndex + 1}`;
+
+    if (!isObject(combo)) {
+        errors.push(
+            `${location}: データの形式が正しくありません。`
+        );
+        return;
+    }
+
+    if (
+        typeof combo.id !== "string" ||
+        combo.id.trim() === ""
+    ) {
+        errors.push(
+            `${location}: id がありません。`
+        );
+    }
+
+    if (!Array.isArray(combo.moves)) {
+        errors.push(
+            `${location}: moves が正しい形式ではありません。`
+        );
+    } else {
+        combo.moves.forEach(function (moveId) {
+            if (typeof moveId !== "string") {
+                errors.push(
+                    `${location}: 技IDが文字列ではありません。`
+                );
+                return;
+            }
+
+            if (!findMoveById(moveId)) {
+                errors.push(
+                    `${location}: 存在しない技ID「${moveId}」が含まれています。`
+                );
+            }
+        });
+    }
+
+    if (typeof combo.memo !== "string") {
+        errors.push(
+            `${location}: memo が正しくありません。`
+        );
+    }
+}
+
+// インポートデータ確認UIを開く
+function openDataImportCheckModal() {
+    const errors = checkImportData();
+
+    if (errors.length === 0) {
+        dataImportCheckResult.innerHTML =
+            '<p class="data-import-check-success">'
+            + 'このデータはインポートできます。'
+            + '</p>';
+
+        dataImportCheckNextButton.disabled = false;
+    } else {
+        dataImportCheckResult.innerHTML =
+            '<p>インポートできない問題があります。</p>'
+            + '<ul class="data-import-check-error">'
+            + errors.map(function (error) {
+                return `<li>${error}</li>`;
+            }).join("")
+            + '</ul>';
+
+        dataImportCheckNextButton.disabled = true;
+    }
+
+    dataImportCheckModal.classList.add("is-open");
+    dataImportCheckNextButton.focus();
+}
+
+// データインポートを実行
+function executeDataImport() {
+    if (!pendingImportData) {
+        return;
+    }
+
+    const characters = pendingImportData.characters;
+
+    if (pendingImportTarget === "character") {
+        const importedCharacterData =
+            characters[characterId];
+
+        ["classic", "modern"].forEach(function (mode) {
+            if (!(mode in importedCharacterData)) {
+                return;
+            }
+
+            const key =
+                `comboData_${characterId}_${mode}`;
+
+            localStorage.setItem(
+                key,
+                JSON.stringify(importedCharacterData[mode])
+            );
+        });
+    } else {
+        Object.keys(characters).forEach(function (importCharacterId) {
+            const characterData =
+                characters[importCharacterId];
+
+            ["classic", "modern"].forEach(function (mode) {
+                if (!(mode in characterData)) {
+                    return;
+                }
+
+                const key =
+                    `comboData_${importCharacterId}_${mode}`;
+
+                localStorage.setItem(
+                    key,
+                    JSON.stringify(characterData[mode])
+                );
+            });
+        });
+    }
+
+    pendingImportData = null;
+    pendingImportTarget = null;
+
+    dataImportConfirmModal.classList.remove("is-open");
+
+    alert("インポートしました。");
+
+    location.reload();
+}
+
+/* データ消去 */
+// データ消去対象を取得
+function getClearTarget() {
+    return document.querySelector(
+        'input[name="clear-target"]:checked'
+    ).value;
+}
+
+function getClearMode() {
+    return document.querySelector(
+        'input[name="clear-mode"]:checked'
+    ).value;
+}
+
+// データ消去UIを開く
+function openDataClearModal() {
+    dataManagementModal.classList.remove("is-open");
+
+    dataClearModal.classList.add("is-open");
+
+    dataClearModeFieldset.style.display = "block";
+
+    dataClearNextButton.focus();
+}
+
+// データ消去UIを閉じる
+function closeDataClearModal() {
+    dataClearModal.classList.remove("is-open");
+}
+
+// データ消去のモード選択
+function updateDataClearModeVisibility() {
+    const target = getClearTarget();
+
+    if (target === "character") {
+        dataClearModeFieldset.style.display = "block";
+    } else {
+        dataClearModeFieldset.style.display = "none";
+    }
+}
+
+// データ消去確認UIを開く
+function openDataClearConfirmModal() {
+    pendingClearTarget = getClearTarget();
+
+    if (pendingClearTarget === "character") {
+        pendingClearMode = getClearMode();
+    } else {
+        pendingClearMode = "all";
+    }
+
+    dataClearModal.classList.remove("is-open");
+    dataClearConfirmModal.classList.add("is-open");
+
+    dataClearConfirmExecuteButton.focus();
+}
+
+// データ消去確認UIを閉じる
+function closeDataClearConfirmModal() {
+    dataClearConfirmModal.classList.remove("is-open");
+}
+
+// データ消去を実行
+function executeDataClear() {
+    if (!pendingClearTarget) {
+        return;
+    }
+
+    if (pendingClearTarget === "character") {
+        if (
+            pendingClearMode === "classic" ||
+            pendingClearMode === "modern"
+        ) {
+            const key =
+                `comboData_${characterId}_${pendingClearMode}`;
+
+            localStorage.removeItem(key);
+        } else if (pendingClearMode === "both") {
+            ["classic", "modern"].forEach(function (mode) {
+                const key =
+                    `comboData_${characterId}_${mode}`;
+
+                localStorage.removeItem(key);
+            });
+        }
+    } else {
+        Object.keys(localStorage)
+            .filter(function (key) {
+                return key.startsWith("comboData_");
+            })
+            .forEach(function (key) {
+                localStorage.removeItem(key);
+            });
+    }
+
+    pendingClearTarget = null;
+    pendingClearMode = null;
+
+    dataClearConfirmModal.classList.remove("is-open");
+
+    location.reload();
 }
 
 /* ---------- DOM操作 ---------- */
@@ -2499,6 +3522,168 @@ function setupComboKeyboardSort(subGroup) {
 
 // イベント登録
 function registerEvents() {
+
+    /* データ管理 */
+
+    dataManagementButton.addEventListener(
+        "click",
+        openDataManagementModal
+    );
+
+    dataExportButton.addEventListener(
+        "click",
+        openDataExportModal
+    );
+
+    dataManagementCloseButton.addEventListener(
+        "click",
+        closeDataManagementModal
+    );
+
+    dataExportCancelButton.addEventListener(
+        "click",
+        closeDataExportModal
+    );
+
+    dataExportExecuteButton.addEventListener(
+        "click",
+        executeDataExport
+    );
+
+    dataExportCopyButton.addEventListener(
+        "click",
+        copyExportText
+    );
+
+    dataExportResultCloseButton.addEventListener(
+        "click",
+        closeDataExportResultModal
+    );
+
+    dataImportButton.addEventListener(
+        "click",
+        openDataImportModal
+    );
+
+    dataImportCancelButton.addEventListener(
+        "click",
+        closeDataImportModal
+    );
+
+    dataImportNextButton.addEventListener(
+        "click",
+        proceedDataImport
+    );
+
+    dataImportFileCancelButton.addEventListener(
+        "click",
+        closeDataImportFileModal
+    );
+
+    dataImportFileExecuteButton.addEventListener(
+        "click",
+        executeDataImportFile
+    );
+
+    dataImportTextCancelButton.addEventListener(
+        "click",
+        closeDataImportTextModal
+    );
+
+    dataImportTextExecuteButton.addEventListener(
+        "click",
+        executeDataImportText
+    );
+
+    dataImportCheckCancelButton.addEventListener(
+        "click",
+        function () {
+            dataImportCheckModal.classList.remove("is-open");
+        }
+    );
+
+    dataImportCheckNextButton.addEventListener(
+        "click",
+        function () {
+            dataImportCheckModal.classList.remove("is-open");
+            dataImportConfirmModal.classList.add("is-open");
+            dataImportConfirmExecuteButton.focus();
+        }
+    );
+
+    dataImportConfirmCancelButton.addEventListener(
+        "click",
+        function () {
+            dataImportConfirmModal.classList.remove("is-open");
+        }
+    );
+
+    dataImportConfirmExecuteButton.addEventListener(
+        "click",
+        executeDataImport
+    );
+
+    dataClearButton.addEventListener(
+        "click",
+        openDataClearModal
+    );
+
+    document.querySelectorAll('input[name="clear-target"]').forEach(function (radio) {
+        radio.addEventListener(
+            "change",
+            updateDataClearModeVisibility
+        );
+    });
+
+    dataClearCancelButton.addEventListener(
+        "click",
+        closeDataClearModal
+    );
+
+    dataClearNextButton.addEventListener(
+        "click",
+        openDataClearConfirmModal
+    );
+
+    dataClearConfirmCancelButton.addEventListener(
+        "click",
+        closeDataClearConfirmModal
+    );
+
+    dataClearConfirmExecuteButton.addEventListener(
+        "click",
+        executeDataClear
+    );
+
+    setupModalFocusTrap(dataManagementModal, closeDataManagementModal);
+
+    setupModalFocusTrap(dataExportModal, closeDataExportModal);
+
+    setupModalFocusTrap(dataExportResultModal, closeDataExportResultModal);
+
+    setupModalFocusTrap(dataImportModal, closeDataImportModal);
+
+    setupModalFocusTrap(dataImportFileModal, closeDataImportFileModal);
+
+    setupModalFocusTrap(dataImportTextModal, closeDataImportTextModal);
+
+    setupModalFocusTrap(
+        dataImportCheckModal,
+        function () {
+            dataImportCheckModal.classList.remove("is-open");
+        }
+    );
+
+    setupModalFocusTrap(
+        dataImportConfirmModal,
+        function () {
+            dataImportConfirmModal.classList.remove("is-open");
+        }
+    );
+
+    setupModalFocusTrap(dataClearModal, closeDataClearModal);
+
+    setupModalFocusTrap(dataClearConfirmModal, closeDataClearConfirmModal);
 
     /* 閲覧/編集モード切替 */
 

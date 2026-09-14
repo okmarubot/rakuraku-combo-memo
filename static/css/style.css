@@ -84,6 +84,29 @@ button {
 　キャラクター画面
 ========================= */
 
+/* キャラクター名・データ管理 */
+.character-title-row {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+}
+
+.character-title-row h1 {
+
+    margin: 0;
+
+}
+
+#data-management-button {
+
+    flex-shrink: 0;
+
+}
+
 .toolbar {
 
     display: flex;
@@ -106,7 +129,168 @@ button {
 
 }
 
+/* =========================
+　データ管理UI
+========================= */
 
+.data-management-modal {
+
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    z-index: 1000;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.35);
+
+}
+
+.data-management-modal.is-open {
+
+    display: flex;
+
+}
+
+.data-management-content {
+
+    width: min(90%, 360px);
+
+    max-height: 90vh;
+
+    padding: 24px;
+
+    border-radius: 12px;
+
+    background-color: #fff;
+
+    box-sizing: border-box;
+
+    overflow-y: auto;
+
+}
+
+.data-management-content h2 {
+
+    margin-top: 0;
+    margin-bottom: 20px;
+
+}
+
+.data-management-content fieldset {
+
+    margin: 0 0 20px;
+    padding: 12px 14px;
+
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
+
+}
+
+.data-management-content legend {
+
+    padding: 0 6px;
+
+    font-weight: 600;
+
+}
+
+.data-management-content fieldset label {
+
+    display: block;
+
+    margin: 10px 0;
+
+}
+
+.data-management-content > button {
+
+    width: 100%;
+
+    margin: 4px 0;
+
+}
+
+.data-management-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+}
+
+.data-management-buttons button {
+
+    padding: 8px 18px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    background-color: #fff;
+
+    cursor: pointer;
+
+}
+
+#data-export-text {
+
+    width: 100%;
+    min-height: 180px;
+
+    margin-bottom: 10px;
+
+    padding: 10px;
+
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
+
+    background-color: #fafafa;
+
+    box-sizing: border-box;
+
+    resize: vertical;
+
+    font-family: monospace;
+
+}
+
+#data-import-file-input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#data-import-text {
+    width: 100%;
+    min-height: 180px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
+    background-color: #fafafa;
+    box-sizing: border-box;
+    resize: vertical;
+    font-family: monospace;
+}
+
+#data-import-check-result {
+    margin-bottom: 20px;
+}
+
+.data-import-check-success {
+    margin: 0;
+}
+
+.data-import-check-error {
+    margin: 0;
+    padding-left: 20px;
+}
 
 /* =========================
 　見出し

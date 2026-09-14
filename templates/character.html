@@ -2,7 +2,13 @@
 
 {% block content %}
 
-<h1>{{ character.name }}</h1>
+<div class="character-title-row">
+
+    <h1>{{ character.name }}</h1>
+
+    <button id="data-management-button" type="button">データ管理</button>
+
+</div>
 
 <!-- ==========================
     閲覧モード
@@ -745,6 +751,484 @@
     </div>
 
 </template>
+
+<!-- =========================
+    データ管理UI
+========================= -->
+
+<div
+    id="data-management-modal"
+    class="data-management-modal"
+>
+
+    <div class="data-management-content">
+
+        <h2>データ管理</h2>
+
+        <button
+            id="data-export-button"
+            type="button"
+        >
+            エクスポート
+        </button>
+
+        <button
+            id="data-import-button"
+            type="button"
+        >
+            インポート
+        </button>
+
+        <button
+            id="data-clear-button"
+            type="button"
+        >
+            データ消去
+        </button>
+
+        <div class="data-management-buttons">
+
+            <button
+                id="data-management-close-button"
+                type="button"
+            >
+                閉じる
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =========================
+    エクスポートUI
+========================= -->
+
+<!-- エクスポートUI -->
+<div
+    id="data-export-modal"
+    class="data-management-modal"
+>
+
+    <div class="data-management-content">
+
+        <h2>データをエクスポート</h2>
+
+        <fieldset>
+
+            <legend>対象</legend>
+
+            <label>
+                <input
+                    type="radio"
+                    name="export-target"
+                    value="character"
+                    checked
+                >
+                このキャラクター
+            </label>
+
+            <label>
+                <input
+                    type="radio"
+                    name="export-target"
+                    value="all"
+                >
+                すべてのキャラクター
+            </label>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>形式</legend>
+
+            <label>
+                <input
+                    type="radio"
+                    name="export-format"
+                    value="file"
+                    checked
+                >
+                ファイルで出力
+            </label>
+
+            <label>
+                <input
+                    type="radio"
+                    name="export-format"
+                    value="text"
+                >
+                テキストで出力
+            </label>
+
+        </fieldset>
+
+        <div class="data-management-buttons">
+
+            <button
+                id="data-export-cancel-button"
+                type="button"
+            >
+                キャンセル
+            </button>
+
+            <button
+                id="data-export-execute-button"
+                type="button"
+            >
+                実行
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- エクスポート完了UI -->
+
+<div
+    id="data-export-result-modal"
+    class="data-management-modal"
+>
+
+    <div class="data-management-content">
+
+        <h2>エクスポートしました</h2>
+
+        <textarea
+            id="data-export-text"
+            readonly
+        ></textarea>
+
+        <button
+            id="data-export-copy-button"
+            type="button"
+        >
+            コピー
+        </button>
+
+        <div class="data-management-buttons">
+
+            <button
+                id="data-export-result-close-button"
+                type="button"
+            >
+                閉じる
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =========================
+    インポートUI
+========================= -->
+
+<!-- インポートUI -->
+<div
+    id="data-import-modal"
+    class="data-management-modal"
+>
+    <div class="data-management-content">
+        <h2>データをインポート</h2>
+
+        <fieldset>
+            <legend>対象</legend>
+
+            <label>
+                <input
+                    type="radio"
+                    name="import-target"
+                    value="character"
+                    checked
+                >
+                このキャラクター
+            </label>
+
+            <label>
+                <input
+                    type="radio"
+                    name="import-target"
+                    value="all"
+                >
+                すべてのキャラクター
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>形式</legend>
+
+            <label>
+                <input
+                    type="radio"
+                    name="import-format"
+                    value="file"
+                    checked
+                >
+                ファイルで入力
+            </label>
+
+            <label>
+                <input
+                    type="radio"
+                    name="import-format"
+                    value="text"
+                >
+                テキストで入力
+            </label>
+        </fieldset>
+
+        <div class="data-management-buttons">
+            <button
+                id="data-import-cancel-button"
+                type="button"
+            >
+                キャンセル
+            </button>
+
+            <button
+                id="data-import-next-button"
+                type="button"
+            >
+                すすむ
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- ファイルインポートUI -->
+<div
+    id="data-import-file-modal"
+    class="data-management-modal"
+>
+    <div class="data-management-content">
+        <h2>ファイルを選択</h2>
+
+        <input
+            id="data-import-file-input"
+            type="file"
+            accept=".json,application/json"
+        >
+
+        <div class="data-management-buttons">
+            <button
+                id="data-import-file-cancel-button"
+                type="button"
+            >
+                キャンセル
+            </button>
+
+            <button
+                id="data-import-file-execute-button"
+                type="button"
+            >
+                実行
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- テキストインポートUI -->
+
+<div
+    id="data-import-text-modal"
+    class="data-management-modal"
+>
+    <div class="data-management-content">
+        <h2>データを入力</h2>
+
+        <textarea
+            id="data-import-text"
+            placeholder="ここに貼り付け"
+        ></textarea>
+
+        <div class="data-management-buttons">
+            <button
+                id="data-import-text-cancel-button"
+                type="button"
+            >
+                キャンセル
+            </button>
+
+            <button
+                id="data-import-text-execute-button"
+                type="button"
+            >
+                実行
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- インポートデータ確認UI -->
+<div
+    id="data-import-check-modal"
+    class="data-management-modal"
+>
+    <div class="data-management-content">
+        <h2>データ確認</h2>
+
+        <div id="data-import-check-result"></div>
+
+        <div class="data-management-buttons">
+            <button
+                id="data-import-check-cancel-button"
+                type="button"
+            >
+                キャンセル
+            </button>
+
+            <button
+                id="data-import-check-next-button"
+                type="button"
+            >
+                次へ
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- データインポート：最終確認 -->
+<div
+    id="data-import-confirm-modal"
+    class="data-management-modal"
+>
+    <div class="data-management-content">
+        <h2>このデータをインポートしますか？</h2>
+
+        <p>
+            現在のデータは上書きされます。
+        </p>
+
+        <div class="data-management-buttons">
+            <button
+                id="data-import-confirm-cancel-button"
+                type="button"
+            >
+                キャンセル
+            </button>
+
+            <button
+                id="data-import-confirm-execute-button"
+                type="button"
+            >
+                インポート
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- =========================
+    データ消去UI
+========================= -->
+
+<!-- データ消去UI -->
+<div id="data-clear-modal" class="data-management-modal">
+    <div class="data-management-content">
+        <h2>データを消去</h2>
+
+        <fieldset>
+            <legend>対象</legend>
+
+            <label>
+                <input
+                    type="radio"
+                    name="clear-target"
+                    value="character"
+                    checked
+                >
+                このキャラクター
+            </label>
+
+            <label>
+                <input
+                    type="radio"
+                    name="clear-target"
+                    value="all"
+                >
+                すべてのキャラクター
+            </label>
+        </fieldset>
+
+        <fieldset id="data-clear-mode-fieldset">
+            <legend>モード</legend>
+
+            <label>
+                <input
+                    type="radio"
+                    name="clear-mode"
+                    value="classic"
+                    checked
+                >
+                クラシック
+            </label>
+
+            <label>
+                <input
+                    type="radio"
+                    name="clear-mode"
+                    value="modern"
+                >
+                モダン
+            </label>
+
+            <label>
+                <input
+                    type="radio"
+                    name="clear-mode"
+                    value="both"
+                >
+                両方
+            </label>
+        </fieldset>
+
+        <div class="data-management-buttons">
+            <button
+                id="data-clear-cancel-button"
+                type="button"
+            >
+                キャンセル
+            </button>
+
+            <button
+                id="data-clear-next-button"
+                type="button"
+            >
+                すすむ
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- データ消去確認UI -->
+<div id="data-clear-confirm-modal" class="data-management-modal">
+    <div class="data-management-content">
+        <h2>本当に消去しますか？</h2>
+
+        <p>対象の保存データは削除されます。</p>
+
+        <div class="data-management-buttons">
+            <button
+                id="data-clear-confirm-cancel-button"
+                type="button"
+            >
+                キャンセル
+            </button>
+
+            <button
+                id="data-clear-confirm-execute-button"
+                type="button"
+            >
+                消去する
+            </button>
+        </div>
+    </div>
+</div>
 
 <!-- 技データ -->
 

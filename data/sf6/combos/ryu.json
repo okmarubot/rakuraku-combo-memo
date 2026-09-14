@@ -2,85 +2,12 @@
     "groups": [
         {
             "id": "group-001",
-            "title": "大見出し①",
+            "title": "新しい大見出し",
             "subgroups": [
                 {
                     "id": "subgroup-001",
-                    "title": "中見出し①",
-                    "combos": [
-                        {
-                            "id": "combo-004",
-                            "moves": [
-                                "jlp",
-                                "sa1",
-                                "5lp",
-                                "5lp",
-                                "5lp"
-                            ],
-                            "memo": ""
-                        },
-                        {
-                            "id": "combo-007",
-                            "moves": [
-                                "5mp",
-                                "2mp",
-                                "cdr",
-                                "2hp",
-                                "214hk"
-                            ],
-                            "memo": ""
-                        },
-                        {
-                            "id": "combo-006",
-                            "moves": [
-                                "5lp",
-                                "5lp",
-                                "5lp",
-                                "214hp",
-                                "sa3",
-                                "5lp"
-                            ],
-                            "memo": "ああああ\nああああああああああああ"
-                        }
-                    ]
-                },
-                {
-                    "id": "subgroup-008",
                     "title": "新しい中見出し",
                     "combos": []
-                }
-            ]
-        },
-        {
-            "id": "group-003",
-            "title": "新しい大見出し①",
-            "subgroups": [
-                {
-                    "id": "subgroup-003",
-                    "title": "新しい中見出し３",
-                    "combos": []
-                }
-            ]
-        },
-        {
-            "id": "group-004",
-            "title": "新しい大見出し②",
-            "subgroups": [
-                {
-                    "id": "subgroup-004",
-                    "title": "新しい中見出し４",
-                    "combos": [
-                        {
-                            "id": "combo-005",
-                            "moves": [
-                                "5mp",
-                                "cdr",
-                                "5hp",
-                                "214hp"
-                            ],
-                            "memo": "これは？"
-                        }
-                    ]
                 }
             ]
         }
