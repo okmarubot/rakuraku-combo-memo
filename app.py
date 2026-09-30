@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, abort, render_template, request
 import json
 from pathlib import Path
 
@@ -93,6 +93,13 @@ def character(character_id):
 
     if mode not in ("classic", "modern"):
         mode = "classic"
+
+    character_path = DATA_DIR / "characters" / f"{character_id}.json"
+
+    if not character_path.exists():
+        abort(404)
+
+    character = load_character(character_id)
 
     character = load_character(character_id)
 

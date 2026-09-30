@@ -59,6 +59,12 @@
                 "str": "low",
                 "command": "↓↙←弱P>PP",
                 "name": "【弱】サンダースラップ>PP"
+            },
+            {
+                "id": "214lp_cancel",
+                "str": "low",
+                "command": "↓↙←弱PK",
+                "name": "【弱】サンキャン"
             }
         ]
     },
@@ -80,7 +86,14 @@
                 "str": "mid",
                 "command": "↓↙←中P>PP",
                 "name": "【中】サンダースラップ>PP"
+            },
+            {
+                "id": "214mp_cancel",
+                "str": "mid",
+                "command": "↓↙←中PK",
+                "name": "【中】サンキャン"
             }
+
         ]
     },
     {
@@ -101,6 +114,12 @@
                 "str": "high",
                 "command": "↓↙←強P>PP",
                 "name": "【強】サンダースラップ>PP"
+            },
+            {
+                "id": "214hp_cancel",
+                "str": "high",
+                "command": "↓↙←強PK",
+                "name": "【強】サンキャン"
             }
         ]
     },
@@ -210,28 +229,28 @@
         "id": "j236lk",
         "category": "special",
         "str": "low",
-        "command": "J↓↘→弱K",
+        "command": "空中↓↘→弱K",
         "name": "【弱】空中バーニングキック"
     },
     {
         "id": "j236mk",
         "category": "special",
         "str": "mid",
-        "command": "J↓↘→中K",
+        "command": "空中↓↘→中K",
         "name": "【中】空中バーニングキック"
     },
     {
         "id": "j236hk",
         "category": "special",
         "str": "high",
-        "command": "J↓↘→強K",
+        "command": "空中↓↘→強K",
         "name": "【強】空中バーニングキック"
     },
     {
         "id": "j236kk",
         "category": "special",
         "str": "other",
-        "command": "J↓↘→KK",
+        "command": "空中↓↘→KK",
         "name": "【OD】空中バーニングキック"
     },
     {

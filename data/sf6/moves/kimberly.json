@@ -145,14 +145,14 @@
         "id": "j214k",
         "category": "special",
         "str": "other",
-        "command": "前J↓↙←K",
+        "command": "空中↓↙←K",
         "name": "空中武神旋風脚"
     },
     {
         "id": "j214kk",
         "category": "special",
         "str": "other",
-        "command": "前J↓↙←KK",
+        "command": "空中↓↙←KK",
         "name": "【OD】空中武神旋風脚"
     },
     {
@@ -370,17 +370,24 @@
         "name": "【強】乱れ細工手裏剣"
     },
     {
+        "id": "kmb_at01",
+        "category": "special",
+        "str": "other",
+        "command": "自動起爆",
+        "name": "自動起爆"
+    },
+    {
         "id": "j236p",
         "category": "special",
         "str": "other",
-        "command": "J↓↘→P",
+        "command": "空中↓↘→P",
         "name": "荒鵺捻り"
     },
     {
         "id": "j236pp",
         "category": "special",
         "str": "other",
-        "command": "J↓↘→PP",
+        "command": "空中↓↘→PP",
         "name": "【OD】荒鵺捻り"
     },
 
@@ -421,7 +428,7 @@
             {
                 "id": "j_sa2",
                 "str": "mid",
-                "command": "前J↓↙←↓↙←P",
+                "command": "空中↓↙←↓↙←P",
                 "name": "空中SA2"
             }
         ]
@@ -437,7 +444,7 @@
         "id": "ca",
         "category": "sa",
         "str": "other",
-        "command": "↓↘→↓↘→P",
+        "command": "【CA】↓↘→↓↘→P",
         "name": "CA"
     }
 ]

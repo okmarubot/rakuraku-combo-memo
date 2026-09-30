@@ -1,0 +1,683 @@
+[
+    {
+        "id": "assist_l_variants",
+        "category": "normal",
+        "str": "low",
+        "command": "AUTO弱",
+        "name": "AUTO弱",
+        "variants": [
+            {
+                "id": "assist_l",
+                "str": "low",
+                "command": "AUTO弱",
+                "name": "AUTO弱"
+            },
+            {
+                "id": "assist_l_2",
+                "str": "low",
+                "command": "AUTO弱>弱",
+                "name": "AUTO弱>弱"
+            },
+            {
+                "id": "assist_l_3",
+                "str": "low",
+                "command": "AUTO弱>弱>弱",
+                "name": "AUTO弱>弱>弱"
+            },
+            {
+                "id": "assist_2l",
+                "str": "low",
+                "command": "AUTO↓弱",
+                "name": "AUTO↓弱"
+            },
+            {
+                "id": "assist_2l_2",
+                "str": "low",
+                "command": "AUTO↓弱>弱",
+                "name": "AUTO↓弱>弱"
+            },
+            {
+                "id": "assist_2l_3",
+                "str": "low",
+                "command": "AUTO↓弱>弱>弱",
+                "name": "AUTO↓弱>弱>弱"
+            }
+        ]
+    },
+    {
+        "id": "assist_m_variants",
+        "category": "normal",
+        "str": "mid",
+        "command": "AUTO中",
+        "name": "AUTO中",
+        "variants": [
+            {
+                "id": "assist_m",
+                "str": "mid",
+                "command": "AUTO中",
+                "name": "AUTO中"
+            },
+            {
+                "id": "assist_m_2",
+                "str": "mid",
+                "command": "AUTO中>中",
+                "name": "AUTO中>中"
+            },
+            {
+                "id": "assist_m_3",
+                "str": "mid",
+                "command": "AUTO中>中>中",
+                "name": "AUTO中>中>中"
+            }
+        ]
+    },
+    {
+        "id": "assist_h_variants",
+        "category": "normal",
+        "str": "high",
+        "command": "AUTO強",
+        "name": "AUTO強",
+        "variants": [
+            {
+                "id": "assist_h",
+                "str": "high",
+                "command": "AUTO強",
+                "name": "AUTO強"
+            },
+            {
+                "id": "assist_h_2",
+                "str": "high",
+                "command": "AUTO強>強",
+                "name": "AUTO強>強"
+            },
+            {
+                "id": "assist_h_3",
+                "str": "high",
+                "command": "AUTO強>強>強",
+                "name": "AUTO強>強>強"
+            },
+            {
+                "id": "assist_h_4",
+                "str": "high",
+                "command": "AUTO強>強>強>強",
+                "name": "AUTO強>強>強>強"
+            },
+            {
+                "id": "assist_h_5",
+                "str": "high",
+                "command": "AUTO強>強>強>強>強",
+                "name": "AUTO強>強>強>強>強"
+            }
+        ]
+    },
+    {
+        "id": "throw_j",
+        "category": "jump",
+        "str": "other",
+        "command": "空中投げ",
+        "name": "空中投げ"
+    },
+    {
+        "id": "6mp",
+        "category": "unique",
+        "str": "mid",
+        "command": "→中",
+        "name": "→中"
+    },
+    {
+        "id": "3h",
+        "category": "unique",
+        "str": "high",
+        "command": "↘強",
+        "name": "↘強"
+    },
+    {
+        "id": "5lk_target",
+        "category": "unique",
+        "str": "low",
+        "command": "弱タゲコン",
+        "name": "弱タゲコン",
+        "variants": [
+            {
+                "id": "5lk_lk",
+                "str": "low",
+                "command": "弱>弱",
+                "name": "弱>弱"
+            },
+            {
+                "id": "5lk_lk_lk",
+                "str": "low",
+                "command": "弱>弱>弱",
+                "name": "弱>弱>弱"
+            }
+        ]
+    },
+    {
+        "id": "4hk",
+        "category": "unique",
+        "str": "high",
+        "command": "←強",
+        "name": "←強"
+    },
+    {
+        "id": "4hk_target",
+        "category": "unique",
+        "str": "high",
+        "command": "←強タゲコン",
+        "name": "←強タゲコン",
+        "variants": [
+            {
+                "id": "4hk_hk",
+                "str": "high",
+                "command": "←強>強",
+                "name": "←強>強"
+            }
+        ]
+    },
+    {
+        "id": "236lp_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱",
+        "name": "【弱】花蝶扇",
+        "variants": [
+            {
+                "id": "236lp",
+                "str": "low",
+                "command": "↓↘→弱",
+                "name": "【弱】花蝶扇"
+            },
+            {
+                "id": "236lp_h",
+                "str": "low",
+                "command": "↓↘→弱(ホールド)",
+                "name": "【弱】花蝶扇(ホールド)"
+            },
+            {
+                "id": "236lp_flame",
+                "str": "low",
+                "command": "【焔】↓↘→弱",
+                "name": "【弱/焔】花蝶扇"
+            },
+            {
+                "id": "236lp_flame_h",
+                "str": "low",
+                "command": "【焔】↓↘→弱(ホールド)",
+                "name": "【弱/焔】花蝶扇(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "236mp_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中",
+        "name": "【中】花蝶扇",
+        "variants": [
+            {
+                "id": "236mp",
+                "str": "mid",
+                "command": "↓↘→中",
+                "name": "【中】花蝶扇"
+            },
+            {
+                "id": "236mp_h",
+                "str": "mid",
+                "command": "↓↘→中(ホールド)",
+                "name": "【中】花蝶扇(ホールド)"
+            },
+            {
+                "id": "236mp_flame",
+                "str": "mid",
+                "command": "【焔】↓↘→中",
+                "name": "【中/焔】花蝶扇"
+            },
+            {
+                "id": "236mp_flame_h",
+                "str": "mid",
+                "command": "【焔】↓↘→中(ホールド)",
+                "name": "【中/焔】花蝶扇(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "236hp_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強(SP)",
+        "name": "【強】花蝶扇",
+        "variants": [
+            {
+                "id": "236hp",
+                "str": "high",
+                "command": "↓↘→強(SP)",
+                "name": "【強】花蝶扇"
+            },
+            {
+                "id": "236hp_h",
+                "str": "high",
+                "command": "↓↘→強(SP)(ホールド)",
+                "name": "【強】花蝶扇(ホールド)"
+            },
+            {
+                "id": "236hp_flame",
+                "str": "high",
+                "command": "【焔】↓↘→強(SP)",
+                "name": "【強/焔】花蝶扇"
+            },
+            {
+                "id": "236hp_flame_h",
+                "str": "high",
+                "command": "【焔】↓↘→強(SP)(ホールド)",
+                "name": "【強/焔】花蝶扇(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "236pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→〇〇(AUTO SP)",
+        "name": "【OD】花蝶扇",
+        "variants": [
+            {
+                "id": "236pp",
+                "str": "other",
+                "command": "↓↘→〇〇(AUTO SP)",
+                "name": "【OD】花蝶扇"
+            },
+            {
+                "id": "236pp_h",
+                "str": "other",
+                "command": "↓↘→〇〇(AUTO SP)(ホールド)",
+                "name": "【OD】花蝶扇(ホールド)"
+            },
+            {
+                "id": "236pp_h_6p",
+                "str": "other",
+                "command": "↓↘→〇〇(AUTO SP)(ホールド)>→〇",
+                "name": "【OD】花蝶扇(ホールド)>→〇"
+            },
+            {
+                "id": "236pp_flame",
+                "str": "other",
+                "command": "【焔】↓↘→〇〇(AUTO SP)",
+                "name": "【OD/焔】花蝶扇"
+            },
+            {
+                "id": "236pp_flame_h",
+                "str": "other",
+                "command": "【焔】↓↘→〇〇(AUTO SP)(ホールド)",
+                "name": "【OD/焔】花蝶扇(ホールド)"
+            },
+            {
+                "id": "236pp_flame_h_6p",
+                "str": "other",
+                "command": "【焔】↓↘→〇〇(AUTO SP)(ホールド)>→〇",
+                "name": "【OD/焔】花蝶扇(ホールド)>→〇"
+            }
+        ]
+    },
+    {
+        "id": "623lk_variants",
+        "category": "special",
+        "str": "low",
+        "command": "→↓↘弱(→SP)",
+        "name": "【弱】飛翔龍炎陣",
+        "variants": [
+            {
+                "id": "623lk",
+                "str": "low",
+                "command": "→↓↘弱(→SP)",
+                "name": "【弱】飛翔龍炎陣"
+            },
+            {
+                "id": "623lk_flame",
+                "str": "low",
+                "command": "【焔】→↓↘弱(→SP)",
+                "name": "【弱/焔】飛翔龍炎陣"
+            }
+        ]
+    },
+    {
+        "id": "623mk_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "→↓↘中",
+        "name": "【中】飛翔龍炎陣",
+        "variants": [
+            {
+                "id": "623mk",
+                "str": "mid",
+                "command": "→↓↘中",
+                "name": "【中】飛翔龍炎陣"
+            },
+            {
+                "id": "623mk_flame",
+                "str": "mid",
+                "command": "【焔】→↓↘中",
+                "name": "【中/焔】飛翔龍炎陣"
+            }
+        ]
+    },
+    {
+        "id": "623hk_variants",
+        "category": "special",
+        "str": "high",
+        "command": "→↓↘強",
+        "name": "【強】飛翔龍炎陣",
+        "variants": [
+            {
+                "id": "623hk",
+                "str": "high",
+                "command": "→↓↘強",
+                "name": "【強】飛翔龍炎陣"
+            },
+            {
+                "id": "623hk_flame",
+                "str": "high",
+                "command": "【焔】→↓↘強",
+                "name": "【強/焔】飛翔龍炎陣"
+            }
+        ]
+    },
+    {
+        "id": "623kk_variants",
+        "category": "special",
+        "str": "other",
+        "command": "→↓↘〇〇(AUTO →SP)",
+        "name": "【OD】飛翔龍炎陣",
+        "variants": [
+            {
+                "id": "623kk",
+                "str": "other",
+                "command": "→↓↘〇〇(AUTO →SP)",
+                "name": "【OD】飛翔龍炎陣"
+            },
+            {
+                "id": "623kk_flame",
+                "str": "other",
+                "command": "【焔】→↓↘〇〇(AUTO →SP)",
+                "name": "【OD/焔】飛翔龍炎陣"
+            }
+        ]
+    },
+    {
+        "id": "214lp_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↓↙←弱(←SP)",
+        "name": "【弱】龍炎舞",
+        "variants": [
+            {
+                "id": "214lp",
+                "str": "low",
+                "command": "↓↙←弱(←SP)",
+                "name": "【弱】龍炎舞"
+            },
+            {
+                "id": "214lp_flame",
+                "str": "low",
+                "command": "【焔】↓↙←弱(←SP)",
+                "name": "【弱/焔】龍炎舞"
+            }
+        ]
+    },
+    {
+        "id": "214mp_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↙←中",
+        "name": "【中】龍炎舞",
+        "variants": [
+            {
+                "id": "214mp",
+                "str": "mid",
+                "command": "↓↙←中",
+                "name": "【中】龍炎舞"
+            },
+            {
+                "id": "214mp_flame",
+                "str": "mid",
+                "command": "【焔】↓↙←中",
+                "name": "【中/焔】龍炎舞"
+            }
+        ]
+    },
+    {
+        "id": "214hp_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↙←強",
+        "name": "【強】龍炎舞",
+        "variants": [
+            {
+                "id": "214hp",
+                "str": "high",
+                "command": "↓↙←強",
+                "name": "【強】龍炎舞"
+            },
+            {
+                "id": "214hp_flame",
+                "str": "high",
+                "command": "【焔】↓↙←強",
+                "name": "【強/焔】龍炎舞"
+            }
+        ]
+    },
+    {
+        "id": "214pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←〇〇(AUTO ←SP)",
+        "name": "【OD】龍炎舞",
+        "variants": [
+            {
+                "id": "214pp",
+                "str": "other",
+                "command": "↓↙←〇〇(AUTO ←SP)",
+                "name": "【OD】龍炎舞"
+            },
+            {
+                "id": "214pp_flame",
+                "str": "other",
+                "command": "【焔】↓↙←〇〇(AUTO ←SP)",
+                "name": "【OD/焔】龍炎舞"
+            }
+        ]
+    },
+    {
+        "id": "236lk_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↙SP",
+        "name": "【弱】必殺忍蜂",
+        "variants": [
+            {
+                "id": "236lk",
+                "str": "low",
+                "command": "↙SP",
+                "name": "【弱】必殺忍蜂"
+            },
+            {
+                "id": "236lk_flame",
+                "str": "low",
+                "command": "【焔】↙SP",
+                "name": "【弱/焔】必殺忍蜂"
+            }
+        ]
+    },
+    {
+        "id": "236mk_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓SP",
+        "name": "【中】必殺忍蜂",
+        "variants": [
+            {
+                "id": "236mk",
+                "str": "mid",
+                "command": "↓SP",
+                "name": "【中】必殺忍蜂"
+            },
+            {
+                "id": "236mk_flame",
+                "str": "mid",
+                "command": "【焔】↓SP",
+                "name": "【中/焔】必殺忍蜂"
+            }
+        ]
+    },
+    {
+        "id": "236hk_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↘SP",
+        "name": "【強】必殺忍蜂",
+        "variants": [
+            {
+                "id": "236hk",
+                "str": "high",
+                "command": "↘SP",
+                "name": "【強】必殺忍蜂"
+            },
+            {
+                "id": "236hk_flame",
+                "str": "high",
+                "command": "【焔】↘SP",
+                "name": "【強/焔】必殺忍蜂"
+            }
+        ]
+    },
+    {
+        "id": "236kk_variants",
+        "category": "special",
+        "str": "other",
+        "command": "AUTO ↓SP",
+        "name": "【OD】必殺忍蜂",
+        "variants": [
+            {
+                "id": "236kk",
+                "str": "other",
+                "command": "AUTO ↓SP",
+                "name": "【OD】必殺忍蜂"
+            },
+            {
+                "id": "236kk_flame",
+                "str": "other",
+                "command": "【焔】AUTO ↓SP",
+                "name": "【OD/焔】必殺忍蜂"
+            }
+        ]
+    },
+    {
+        "id": "214p_air_variants",
+        "category": "special",
+        "str": "other",
+        "command": "空中↓↙←〇(SP)",
+        "name": "ムササビの舞",
+        "variants": [
+            {
+                "id": "214p_air",
+                "str": "other",
+                "command": "空中↓↙←〇(SP)",
+                "name": "ムササビの舞"
+            },
+            {
+                "id": "214p_air_flame",
+                "str": "other",
+                "command": "【焔】空中↓↙←〇(SP)",
+                "name": "【焔】ムササビの舞"
+            }
+        ]
+    },
+    {
+        "id": "214pp_air_variants",
+        "category": "special",
+        "str": "other",
+        "command": "空中↓↙←〇〇(AUTO SP)",
+        "name": "【OD】ムササビの舞",
+        "variants": [
+            {
+                "id": "214pp_air",
+                "str": "other",
+                "command": "空中↓↙←〇〇(AUTO SP)",
+                "name": "【OD】ムササビの舞"
+            },
+            {
+                "id": "214pp_air_flame",
+                "str": "other",
+                "command": "【焔】空中↓↙←〇〇(AUTO SP)",
+                "name": "【OD/焔】ムササビの舞"
+            }
+        ]
+    },
+    {
+        "id": "sa1_variants",
+        "category": "sa",
+        "str": "low",
+        "command": "↓↘→↓↘→弱(SP強)",
+        "name": "SA1",
+        "variants": [
+            {
+                "id": "sa1",
+                "str": "low",
+                "command": "↓↘→↓↘→弱(SP強)",
+                "name": "SA1"
+            },
+            {
+                "id": "sa1_flame",
+                "str": "low",
+                "command": "【焔】↓↘→↓↘→弱(SP強)",
+                "name": "【焔】SA1"
+            }
+        ]
+    },
+    {
+        "id": "sa2_variants",
+        "category": "sa",
+        "str": "mid",
+        "command": "↓↘→↓↘→中(←SP強)",
+        "name": "SA2",
+        "variants": [
+            {
+                "id": "sa2",
+                "str": "mid",
+                "command": "↓↘→↓↘→中(←SP強)",
+                "name": "SA2"
+            },
+            {
+                "id": "sa2_flame",
+                "str": "mid",
+                "command": "【焔】↓↘→↓↘→中(←SP強)",
+                "name": "【焔】SA2"
+            },
+            {
+                "id": "sa2_air",
+                "str": "other",
+                "command": "空中↓↘→↓↘→中(←SP強)",
+                "name": "空中SA2"
+            },
+            {
+                "id": "sa2_air_flame",
+                "str": "other",
+                "command": "【焔】空中↓↘→↓↘→中(←SP強)",
+                "name": "【焔】空中SA2"
+            }
+        ]
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "↓↙←↓↙←強(↓SP強)",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "other",
+        "command": "【CA】↓↙←↓↙←強(↓SP強)",
+        "name": "CA"
+    }
+]

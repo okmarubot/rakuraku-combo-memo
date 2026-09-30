@@ -129,6 +129,18 @@
                 "str": "high",
                 "command": "→強K>←強K>P",
                 "name": "→強K>←強K>P"
+            },
+            {
+                "id": "6hk_4hk_p_delay",
+                "str": "high",
+                "command": "→強K>←強K>P(ディレイ)",
+                "name": "→強K>←強K>P(ディレイ)"
+            },
+            {
+                "id": "6hk_4hk_p_maxdelay",
+                "str": "high",
+                "command": "→強K>←強K>P(大幅ディレイ)",
+                "name": "→強K>←強K>P(大幅ディレイ)"
             }
         ]
     },
@@ -412,28 +424,28 @@
         "id": "j214lk",
         "category": "special",
         "str": "low",
-        "command": "前J↓↙←弱K",
+        "command": "空中↓↙←弱K",
         "name": "【弱】無影蹴"
     },
     {
         "id": "j214mk",
         "category": "special",
         "str": "mid",
-        "command": "前J↓↙←中K",
+        "command": "空中↓↙←中K",
         "name": "【中】無影蹴"
     },
     {
         "id": "j214hk",
         "category": "special",
         "str": "high",
-        "command": "前J↓↙←強K",
+        "command": "空中↓↙←強K",
         "name": "【強】無影蹴"
     },
     {
         "id": "j214kk",
         "category": "special",
         "str": "other",
-        "command": "前J↓↙←KK",
+        "command": "空中↓↙←KK",
         "name": "【OD】無影蹴"
     },
 
@@ -506,7 +518,7 @@
         "id": "ca",
         "category": "sa",
         "str": "other",
-        "command": "↓↘→↓↘→P",
+        "command": "【CA】↓↘→↓↘→P",
         "name": "CA"
     }
 ]

@@ -1,0 +1,555 @@
+[
+    {
+        "id": "assist_l_variants",
+        "category": "normal",
+        "str": "low",
+        "command": "AUTO弱",
+        "name": "AUTO弱",
+        "variants": [
+            {
+                "id": "assist_l",
+                "str": "low",
+                "command": "AUTO弱",
+                "name": "AUTO弱"
+            },
+            {
+                "id": "assist_l_2",
+                "str": "low",
+                "command": "AUTO弱>弱",
+                "name": "AUTO弱>弱"
+            },
+            {
+                "id": "assist_l_3",
+                "str": "low",
+                "command": "AUTO弱>弱>弱",
+                "name": "AUTO弱>弱>弱"
+            },
+            {
+                "id": "assist_2l",
+                "str": "low",
+                "command": "AUTO↓弱",
+                "name": "AUTO↓弱"
+            },
+            {
+                "id": "assist_2l_2",
+                "str": "low",
+                "command": "AUTO↓弱>弱",
+                "name": "AUTO↓弱>弱"
+            },
+            {
+                "id": "assist_2l_3",
+                "str": "low",
+                "command": "AUTO↓弱>弱>弱",
+                "name": "AUTO↓弱>弱>弱"
+            }
+        ]
+    },
+    {
+        "id": "assist_m_variants",
+        "category": "normal",
+        "str": "mid",
+        "command": "AUTO中",
+        "name": "AUTO中",
+        "variants": [
+            {
+                "id": "assist_m",
+                "str": "mid",
+                "command": "AUTO中",
+                "name": "AUTO中"
+            },
+            {
+                "id": "assist_m_2",
+                "str": "mid",
+                "command": "AUTO中>中",
+                "name": "AUTO中>中"
+            },
+            {
+                "id": "assist_m_3",
+                "str": "mid",
+                "command": "AUTO中>中>中",
+                "name": "AUTO中>中>中"
+            }
+        ]
+    },
+    {
+        "id": "assist_h_variants",
+        "category": "normal",
+        "str": "high",
+        "command": "AUTO強",
+        "name": "AUTO強",
+        "variants": [
+            {
+                "id": "assist_h",
+                "str": "high",
+                "command": "AUTO強",
+                "name": "AUTO強"
+            },
+            {
+                "id": "assist_h_2",
+                "str": "high",
+                "command": "AUTO強>強",
+                "name": "AUTO強>強"
+            },
+            {
+                "id": "assist_h_3",
+                "str": "high",
+                "command": "AUTO強>強>強",
+                "name": "AUTO強>強>強"
+            }
+        ]
+    },
+    {
+        "id": "4hp",
+        "category": "unique",
+        "str": "high",
+        "command": "←強",
+        "name": "←強"
+    },
+    {
+        "id": "3h",
+        "category": "unique",
+        "str": "high",
+        "command": "↘強",
+        "name": "↘強"
+    },
+    {
+        "id": "j2hp",
+        "category": "jump",
+        "str": "high",
+        "command": "J↓強",
+        "name": "J↓強"
+    },
+    {
+        "id": "jmp_target",
+        "category": "jump",
+        "str": "mid",
+        "command": "J中タゲコン",
+        "name": "J中タゲコン",
+        "variants": [
+            {
+                "id": "jmp_mp",
+                "str": "mid",
+                "command": "J中>中",
+                "name": "J中>中"
+            }
+        ]
+    },
+    {
+        "id": "6hp",
+        "category": "unique",
+        "str": "high",
+        "command": "→強",
+        "name": "→強"
+    },
+    {
+        "id": "6hp_target",
+        "category": "unique",
+        "str": "high",
+        "command": "→強タゲコン",
+        "name": "→強タゲコン",
+        "variants": [
+            {
+                "id": "6hp_hp",
+                "str": "high",
+                "command": "→強>強",
+                "name": "→強>強"
+            },
+            {
+                "id": "6hp_hp_hp",
+                "str": "high",
+                "command": "→強>強>強",
+                "name": "→強>強>強"
+            }
+        ]
+    },
+    {
+        "id": "214lp_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↓↙←弱",
+        "name": "【弱】コンドルウインド",
+        "variants": [
+            {
+                "id": "214lp",
+                "str": "low",
+                "command": "↓↙←弱",
+                "name": "【弱】コンドルウインド"
+            },
+            {
+                "id": "214lp_h",
+                "str": "low",
+                "command": "↓↙←弱(ホールド)",
+                "name": "【弱】コンドルウインド(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "214mp_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↙←中(←SP)",
+        "name": "【中】コンドルウインド",
+        "variants": [
+            {
+                "id": "214mp",
+                "str": "mid",
+                "command": "↓↙←中(←SP)",
+                "name": "【中】コンドルウインド"
+            },
+            {
+                "id": "214mp_h",
+                "str": "mid",
+                "command": "↓↙←中(←SP)(ホールド)",
+                "name": "【中】コンドルウインド(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "214hp_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↙←強",
+        "name": "【強】コンドルウインド",
+        "variants": [
+            {
+                "id": "214hp",
+                "str": "high",
+                "command": "↓↙←強",
+                "name": "【強】コンドルウインド"
+            },
+            {
+                "id": "214hp_h",
+                "str": "high",
+                "command": "↓↙←強(ホールド)",
+                "name": "【強】コンドルウインド(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "214pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←〇〇(AUTO ←SP)",
+        "name": "【OD】コンドルウインド",
+        "variants": [
+            {
+                "id": "214pp",
+                "str": "other",
+                "command": "↓↙←〇〇(AUTO ←SP)",
+                "name": "【OD】コンドルウインド"
+            },
+            {
+                "id": "214pp_h",
+                "str": "other",
+                "command": "↓↙←〇〇(AUTO ←SP)(ホールド)",
+                "name": "【OD】コンドルウインド(ホールド)"
+            }
+        ]
+    },
+
+    {
+        "id": "236lk_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱",
+        "name": "【弱】コンドルスパイア",
+        "variants": [
+            {
+                "id": "236lk",
+                "str": "low",
+                "command": "↓↘→弱",
+                "name": "【弱】コンドルスパイア"
+            },
+            {
+                "id": "236lk_wind",
+                "str": "low",
+                "command": "【風纏い】↓↘→弱",
+                "name": "【弱/風纏い】コンドルスパイア"
+            }
+        ]
+    },
+    {
+        "id": "236mk_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中(↓SP)",
+        "name": "【中】コンドルスパイア",
+        "variants": [
+            {
+                "id": "236mk",
+                "str": "mid",
+                "command": "↓↘→中(↓SP)",
+                "name": "【中】コンドルスパイア"
+            },
+            {
+                "id": "236mk_wind",
+                "str": "mid",
+                "command": "【風纏い】↓↘→中(↓SP)",
+                "name": "【中/風纏い】コンドルスパイア"
+            }
+        ]
+    },
+    {
+        "id": "236hk_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強",
+        "name": "【強】コンドルスパイア",
+        "variants": [
+            {
+                "id": "236hk",
+                "str": "high",
+                "command": "↓↘→強",
+                "name": "【強】コンドルスパイア"
+            },
+            {
+                "id": "236hk_wind",
+                "str": "high",
+                "command": "【風纏い】↓↘→強",
+                "name": "【強/風纏い】コンドルスパイア"
+            }
+        ]
+    },
+    {
+        "id": "236lkmk_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→〇〇",
+        "name": "【OD】コンドルスパイア",
+        "variants": [
+            {
+                "id": "236lkmk",
+                "str": "other",
+                "command": "↓↘→弱中(AUTO ↓SP)",
+                "name": "【OD弱】コンドルスパイア"
+            },
+            {
+                "id": "236lkmk_wind",
+                "str": "other",
+                "command": "【風纏い】↓↘→弱中(AUTO ↓SP)",
+                "name": "【OD弱/風纏い】コンドルスパイア"
+            },
+            {
+                "id": "236mkhk",
+                "str": "other",
+                "command": "↓↘→中強(AUTO ↘SP)",
+                "name": "【OD強】コンドルスパイア"
+            },
+            {
+                "id": "236mkhk_wind",
+                "str": "other",
+                "command": "【風纏い】↓↘→中強(AUTO ↘SP)",
+                "name": "【OD強/風纏い】コンドルスパイア"
+            }
+        ]
+    },
+    {
+        "id": "623lp_variants",
+        "category": "special",
+        "str": "low",
+        "command": "→↓↘弱",
+        "name": "【弱】トマホークバスター",
+        "variants": [
+            {
+                "id": "623lp",
+                "str": "low",
+                "command": "→↓↘弱",
+                "name": "【弱】トマホークバスター"
+            },
+            {
+                "id": "623lp_wind",
+                "str": "low",
+                "command": "【風纏い】→↓↘弱",
+                "name": "【弱/風纏い】トマホークバスター"
+            }
+        ]
+    },
+    {
+        "id": "623mp_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "→↓↘中(→SP)",
+        "name": "【中】トマホークバスター",
+        "variants": [
+            {
+                "id": "623mp",
+                "str": "mid",
+                "command": "→↓↘中(→SP)",
+                "name": "【中】トマホークバスター"
+            },
+            {
+                "id": "623mp_wind",
+                "str": "mid",
+                "command": "【風纏い】→↓↘中(→SP)",
+                "name": "【中/風纏い】トマホークバスター"
+            }
+        ]
+    },
+    {
+        "id": "623hp_variants",
+        "category": "special",
+        "str": "high",
+        "command": "→↓↘強",
+        "name": "【強】トマホークバスター",
+        "variants": [
+            {
+                "id": "623hp",
+                "str": "high",
+                "command": "→↓↘強",
+                "name": "【強】トマホークバスター"
+            },
+            {
+                "id": "623hp_wind",
+                "str": "high",
+                "command": "【風纏い】→↓↘強",
+                "name": "【強/風纏い】トマホークバスター"
+            }
+        ]
+    },
+    {
+        "id": "623pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "→↓↘〇〇(AUTO →SP)",
+        "name": "【OD】トマホークバスター",
+        "variants": [
+            {
+                "id": "623pp",
+                "str": "other",
+                "command": "→↓↘〇〇(AUTO →SP)",
+                "name": "【OD】トマホークバスター"
+            },
+            {
+                "id": "623pp_wind",
+                "str": "other",
+                "command": "【風纏い】→↓↘〇〇(AUTO →SP)",
+                "name": "【OD/風纏い】トマホークバスター"
+            }
+        ]
+    },
+
+    {
+        "id": "jpp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "空中〇〇(SP)",
+        "name": "コンドルダイブ",
+        "variants": [
+            {
+                "id": "jpp",
+                "str": "other",
+                "command": "空中〇〇(SP)",
+                "name": "コンドルダイブ"
+            },
+            {
+                "id": "jpp_wind",
+                "str": "other",
+                "command": "【風纏い】空中〇〇(SP)",
+                "name": "【風纏い】コンドルダイブ"
+            }
+        ]
+    },
+    {
+        "id": "jppp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "空中〇〇〇(AUTO SP)",
+        "name": "【OD】コンドルダイブ",
+        "variants": [
+            {
+                "id": "jppp",
+                "str": "other",
+                "command": "空中〇〇〇(AUTO SP)",
+                "name": "【OD】コンドルダイブ"
+            },
+            {
+                "id": "jppp_wind",
+                "str": "other",
+                "command": "【風纏い】空中〇〇〇(AUTO SP)",
+                "name": "【OD/風纏い】コンドルダイブ"
+            }
+        ]
+    },
+    {
+        "id": "360lp",
+        "category": "special",
+        "str": "low",
+        "command": "↻弱",
+        "name": "【弱】メキシカンタイフーン"
+    },
+    {
+        "id": "360mp",
+        "category": "special",
+        "str": "mid",
+        "command": "↻中",
+        "name": "【中】メキシカンタイフーン"
+    },
+    {
+        "id": "360hp",
+        "category": "special",
+        "str": "high",
+        "command": "↻強(SP)",
+        "name": "【強】メキシカンタイフーン"
+    },
+    {
+        "id": "360pp",
+        "category": "special",
+        "str": "other",
+        "command": "↻〇〇(AUTO SP)",
+        "name": "【OD】メキシカンタイフーン"
+    },
+    {
+        "id": "sa1",
+        "category": "sa",
+        "str": "low",
+        "command": "↓↘→↓↘→弱(SP強)",
+        "name": "SA1"
+    },
+    {
+        "id": "sa2_variants",
+        "category": "sa",
+        "str": "mid",
+        "command": "↓↘→↓↘→中(←SP強)",
+        "name": "SA2",
+        "variants": [
+            {
+                "id": "sa2",
+                "str": "mid",
+                "command": "↓↘→↓↘→中(←SP強)",
+                "name": "SA2"
+            },
+            {
+                "id": "sa2_wind",
+                "str": "mid",
+                "command": "【風纏い】↓↘→↓↘→中(←SP強)",
+                "name": "【風纏い】SA2"
+            },
+            {
+                "id": "j_sa2",
+                "str": "mid",
+                "command": "空中↓↘→↓↘→中(SP強)",
+                "name": "空中SA2"
+            },
+            {
+                "id": "j_sa2_wind",
+                "str": "mid",
+                "command": "【風纏い】空中↓↘→↓↘→中(SP強)",
+                "name": "【風纏い】空中SA2"
+            }
+        ]
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "↓↙←↓↙←強(↓SP強)",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "other",
+        "command": "【CA】↓↙←↓↙←強(↓SP強)",
+        "name": "CA"
+    }
+]

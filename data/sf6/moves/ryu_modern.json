@@ -177,32 +177,46 @@
         "name": "【中】波動拳"
     },
     {
-        "id": "236h",
+        "id": "236h_variants",
         "category": "special",
         "str": "high",
         "command": "↓↘→強(SP)",
-        "name": "【強】波動拳"
+        "name": "【強】波動拳",
+        "variants": [
+            {
+                "id": "236h",
+                "str": "high",
+                "command": "↓↘→強(SP)",
+                "name": "【強】波動拳"
+            },
+            {
+                "id": "236h_denjin",
+                "str": "high",
+                "command": "【電刃】↓↘→強(SP)",
+                "name": "【電刃】波動拳"
+            }
+        ]
     },
     {
-        "id": "236h_denjin",
-        "category": "special",
-        "str": "high",
-        "command": "【電刃】↓↘→強(SP)",
-        "name": "【電刃】波動拳"
-    },
-    {
-        "id": "236pp",
+        "id": "236pp_variants",
         "category": "special",
         "str": "other",
         "command": "↓↘→〇〇(AUTO SP)",
-        "name": "【OD】波動拳"
-    },
-    {
-        "id": "236pp_denjin",
-        "category": "special",
-        "str": "other",
-        "command": "【電刃】↓↘→〇〇(AUTO SP)",
-        "name": "【電刃OD】波動拳"
+        "name": "【OD】波動拳",
+        "variants": [
+            {
+                "id": "236pp",
+                "str": "other",
+                "command": "↓↘→〇〇(AUTO SP)",
+                "name": "【OD】波動拳"
+            },
+            {
+                "id": "236pp_denjin",
+                "str": "other",
+                "command": "【電刃】↓↘→〇〇(AUTO SP)",
+                "name": "【OD/電刃】波動拳"
+            }
+        ]
     },
     {
         "id": "623l",
@@ -250,14 +264,14 @@
         "id": "j214k",
         "category": "special",
         "str": "other",
-        "command": "前J↓↙←〇(SP)",
+        "command": "空中↓↙←〇(SP)",
         "name": "空中竜巻旋風脚"
     },
     {
         "id": "j214kk",
         "category": "special",
         "str": "other",
-        "command": "前J↓↙←〇〇(AUTO SP)",
+        "command": "空中↓↙←〇〇(AUTO SP)",
         "name": "【OD】空中竜巻旋風脚"
     },
     {
@@ -303,32 +317,46 @@
         "name": "【中】波掌撃"
     },
     {
-        "id": "214h",
+        "id": "214h_variants",
         "category": "special",
         "str": "high",
         "command": "↓↙←強",
-        "name": "【強】波掌撃"
+        "name": "【強】波掌撃",
+        "variants": [
+            {
+                "id": "214h",
+                "str": "high",
+                "command": "↓↙←強",
+                "name": "【強】波掌撃"
+            },
+            {
+                "id": "214h_denjin",
+                "str": "other",
+                "command": "【電刃】↓↙←強",
+                "name": "【電刃】波掌撃"
+            }
+        ]
     },
     {
-        "id": "214h_denjin",
-        "category": "special",
-        "str": "other",
-        "command": "【電刃】↓↙←強",
-        "name": "【電刃】波掌撃"
-    },
-    {
-        "id": "214pp",
+        "id": "214pp_variants",
         "category": "special",
         "str": "other",
         "command": "↓↙←〇〇",
-        "name": "【OD】波掌撃"
-    },
-    {
-        "id": "214pp_denjin",
-        "category": "special",
-        "str": "other",
-        "command": "【電刃】↓↙←〇〇",
-        "name": "【電刃OD】波掌撃"
+        "name": "【OD】波掌撃",
+        "variants": [
+            {
+                "id": "214pp",
+                "str": "other",
+                "command": "↓↙←〇〇",
+                "name": "【OD】波掌撃"
+            },
+            {
+                "id": "214pp_denjin",
+                "str": "other",
+                "command": "【電刃】↓↙←〇〇",
+                "name": "【OD/電刃】波掌撃"
+            }
+        ]
     },
     {
         "id": "22p",

@@ -1,0 +1,612 @@
+[
+    {
+        "id": "assist_l_variants",
+        "category": "normal",
+        "str": "low",
+        "command": "AUTO弱",
+        "name": "AUTO弱",
+        "variants": [
+            {
+                "id": "assist_l",
+                "str": "low",
+                "command": "AUTO弱",
+                "name": "AUTO弱"
+            },
+            {
+                "id": "assist_l_2",
+                "str": "low",
+                "command": "AUTO弱>弱",
+                "name": "AUTO弱>弱"
+            },
+            {
+                "id": "assist_l_3",
+                "str": "low",
+                "command": "AUTO弱>弱>弱",
+                "name": "AUTO弱>弱>弱"
+            },
+            {
+                "id": "assist_l_4",
+                "str": "low",
+                "command": "AUTO弱>弱>弱>弱",
+                "name": "AUTO弱>弱>弱>弱"
+            },
+            {
+                "id": "assist_2l",
+                "str": "low",
+                "command": "AUTO↓弱",
+                "name": "AUTO↓弱"
+            },
+            {
+                "id": "assist_2l_2",
+                "str": "low",
+                "command": "AUTO↓弱>弱",
+                "name": "AUTO↓弱>弱"
+            },
+            {
+                "id": "assist_2l_3",
+                "str": "low",
+                "command": "AUTO↓弱>弱>弱",
+                "name": "AUTO↓弱>弱>弱"
+            },
+            {
+                "id": "assist_2l_4",
+                "str": "low",
+                "command": "AUTO↓弱>弱>弱>弱",
+                "name": "AUTO↓弱>弱>弱>弱"
+            },
+            {
+                "id": "assist_2l_5",
+                "str": "low",
+                "command": "AUTO↓弱>弱>弱>弱>弱",
+                "name": "AUTO↓弱>弱>弱>弱>弱"
+            }
+        ]
+    },
+    {
+        "id": "assist_m_variants",
+        "category": "normal",
+        "str": "mid",
+        "command": "AUTO中",
+        "name": "AUTO中",
+        "variants": [
+            {
+                "id": "assist_m",
+                "str": "mid",
+                "command": "AUTO中",
+                "name": "AUTO中"
+            },
+            {
+                "id": "assist_m_2",
+                "str": "mid",
+                "command": "AUTO中>中",
+                "name": "AUTO中>中"
+            },
+            {
+                "id": "assist_m_3",
+                "str": "mid",
+                "command": "AUTO中>中>中",
+                "name": "AUTO中>中>中"
+            },
+            {
+                "id": "assist_m_4",
+                "str": "mid",
+                "command": "AUTO中>中>中>中",
+                "name": "AUTO中>中>中>中"
+            },
+            {
+                "id": "assist_m_5",
+                "str": "mid",
+                "command": "AUTO中>中>中>中>中",
+                "name": "AUTO中>中>中>中>中"
+            },
+            {
+                "id": "assist_m_6",
+                "str": "mid",
+                "command": "AUTO中>中>中>中>中>中",
+                "name": "AUTO中>中>中>中>中>中"
+            },
+            {
+                "id": "assist_m_7",
+                "str": "mid",
+                "command": "AUTO中>中>中>中>中>中>中",
+                "name": "AUTO中>中>中>中>中>中>中"
+            }
+        ]
+    },
+    {
+        "id": "assist_h_variants",
+        "category": "normal",
+        "str": "high",
+        "command": "AUTO強",
+        "name": "AUTO強",
+        "variants": [
+            {
+                "id": "assist_h",
+                "str": "high",
+                "command": "AUTO強",
+                "name": "AUTO強"
+            },
+            {
+                "id": "assist_h_2",
+                "str": "high",
+                "command": "AUTO強>強",
+                "name": "AUTO強>強"
+            },
+            {
+                "id": "assist_h_3",
+                "str": "high",
+                "command": "AUTO強>強>強",
+                "name": "AUTO強>強>強"
+            },
+            {
+                "id": "assist_h_4",
+                "str": "high",
+                "command": "AUTO強>強>強>強",
+                "name": "AUTO強>強>強>強"
+            }
+        ]
+    },
+    {
+        "id": "6mp",
+        "category": "unique",
+        "str": "mid",
+        "command": "→中",
+        "name": "→中"
+    },
+    {
+        "id": "4hk",
+        "category": "unique",
+        "str": "high",
+        "command": "←強",
+        "name": "←強"
+    },
+    {
+        "id": "3h",
+        "category": "unique",
+        "str": "high",
+        "command": "↘強",
+        "name": "↘強"
+    },
+    {
+        "id": "5lp_target",
+        "category": "unique",
+        "str": "low",
+        "command": "弱タゲコン",
+        "name": "弱タゲコン",
+        "variants": [
+            {
+                "id": "2lp_5l_l",
+                "str": "low",
+                "command": "↓弱>弱>弱",
+                "name": "↓弱>弱>弱"
+            },
+            {
+                "id": "2lk_5l_l",
+                "str": "low",
+                "command": "AUTO弱>弱>弱",
+                "name": "AUTO弱>弱>弱"
+            }
+        ]
+    },
+    {
+        "id": "5mp_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "中タゲコン",
+        "name": "中タゲコン",
+        "variants": [
+            {
+                "id": "5mp_mp",
+                "str": "mid",
+                "command": "中>中",
+                "name": "中>中"
+            }
+        ]
+    },
+    {
+        "id": "2mk_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "↓中タゲコン",
+        "name": "↓中タゲコン",
+        "variants": [
+            {
+                "id": "2mk_hk",
+                "str": "mid",
+                "command": "↓中>中",
+                "name": "↓中>中"
+            }
+        ]
+    },
+    {
+        "id": "236lp_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱",
+        "name": "【弱】ダロイ・ン・トゥビグ",
+        "variants": [
+            {
+                "id": "236lp",
+                "str": "low",
+                "command": "↓↘→弱",
+                "name": "【弱】ダロイ・ン・トゥビグ"
+            },
+            {
+                "id": "236lp_6p",
+                "str": "low",
+                "command": "↓↘→弱>→〇",
+                "name": "【弱】ダロイ・ン・トゥビグ>→〇"
+            },
+            {
+                "id": "236lp_6p_enhanced",
+                "str": "low",
+                "command": "【強化】↓↘→弱>→〇",
+                "name": "【弱/強化】ダロイ・ン・トゥビグ>→〇"
+            }
+        ]
+    },
+    {
+        "id": "236mp_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中(SP)",
+        "name": "【中】ダロイ・ン・トゥビグ",
+        "variants": [
+            {
+                "id": "236mp",
+                "str": "mid",
+                "command": "↓↘→中(SP)",
+                "name": "【中】ダロイ・ン・トゥビグ"
+            },
+            {
+                "id": "236mp_6p",
+                "str": "mid",
+                "command": "↓↘→中(SP)>→〇",
+                "name": "【中】ダロイ・ン・トゥビグ>→〇"
+            },
+            {
+                "id": "236mp_6p_enhanced",
+                "str": "mid",
+                "command": "【強化】↓↘→中(SP)>→〇",
+                "name": "【中/強化】ダロイ・ン・トゥビグ>→〇"
+            }
+        ]
+    },
+    {
+        "id": "236hp_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強",
+        "name": "【強】ダロイ・ン・トゥビグ",
+        "variants": [
+            {
+                "id": "236hp",
+                "str": "high",
+                "command": "↓↘→強",
+                "name": "【強】ダロイ・ン・トゥビグ"
+            },
+            {
+                "id": "236hp_6p",
+                "str": "high",
+                "command": "↓↘→強>→〇",
+                "name": "【強】ダロイ・ン・トゥビグ>→〇"
+            },
+            {
+                "id": "236hp_6p_enhanced",
+                "str": "high",
+                "command": "【強化】↓↘→強>→〇",
+                "name": "【強/強化】ダロイ・ン・トゥビグ>→〇"
+            }
+        ]
+    },
+    {
+        "id": "236pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→〇〇(AUTO SP)",
+        "name": "【OD】ダロイ・ン・トゥビグ",
+        "variants": [
+            {
+                "id": "236pp",
+                "str": "other",
+                "command": "↓↘→〇〇(AUTO SP)",
+                "name": "【OD】ダロイ・ン・トゥビグ"
+            },
+            {
+                "id": "236pp_6p",
+                "str": "other",
+                "command": "↓↘→〇〇(AUTO SP)>→〇",
+                "name": "【OD】ダロイ・ン・トゥビグ>→〇"
+            },
+            {
+                "id": "236pp_6p_enhanced",
+                "str": "other",
+                "command": "【強化】↓↘→〇〇(AUTO SP)>→〇",
+                "name": "【OD/強化】ダロイ・ン・トゥビグ>→〇"
+            }
+        ]
+    },
+    {
+        "id": "214lp",
+        "category": "special",
+        "str": "low",
+        "command": "↓↙←弱",
+        "name": "【弱】タリム・ン・ハンギン"
+    },
+    {
+        "id": "214mp",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↙←中(←SP)",
+        "name": "【中】タリム・ン・ハンギン"
+    },
+    {
+        "id": "214hp",
+        "category": "special",
+        "str": "high",
+        "command": "↓↙←強",
+        "name": "【強】タリム・ン・ハンギン"
+    },
+    {
+        "id": "214pp",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←〇〇(AUTO ←SP)",
+        "name": "【OD】タリム・ン・ハンギン"
+    },
+    {
+        "id": "236lk_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↙SP",
+        "name": "【弱】ムカ・ン・ランギット",
+        "variants": [
+            {
+                "id": "236lk",
+                "str": "low",
+                "command": "↙SP",
+                "name": "【弱】ムカ・ン・ランギット"
+            },
+            {
+                "id": "236lk_p",
+                "str": "low",
+                "command": "↙SP>↓〇",
+                "name": "【弱】ムカ・ン・ランギット>↓〇"
+            },
+            {
+                "id": "236lk_pp",
+                "str": "low",
+                "command": "↙SP>↓〇〇(AUTO ↓SP)",
+                "name": "【弱】ムカ・ン・ランギット>↓〇〇(AUTO ↓SP)"
+            },
+            {
+                "id": "236lk_k",
+                "str": "low",
+                "command": "↙SP>〇",
+                "name": "【弱】ムカ・ン・ランギット>〇"
+            },
+            {
+                "id": "236lk_kk",
+                "str": "low",
+                "command": "↙SP>〇〇(AUTO SP)",
+                "name": "【弱】ムカ・ン・ランギット>〇〇(AUTO SP)"
+            }
+        ]
+    },
+    {
+        "id": "236mk_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓SP",
+        "name": "【中】ムカ・ン・ランギット",
+        "variants": [
+            {
+                "id": "236mk",
+                "str": "mid",
+                "command": "↓SP",
+                "name": "【中】ムカ・ン・ランギット"
+            },
+            {
+                "id": "236mk_p",
+                "str": "mid",
+                "command": "↓SP>↓〇",
+                "name": "【中】ムカ・ン・ランギット>↓〇"
+            },
+            {
+                "id": "236mk_pp",
+                "str": "mid",
+                "command": "↓SP>↓〇〇(AUTO ↓SP)",
+                "name": "【中】ムカ・ン・ランギット>↓〇〇(AUTO ↓SP)"
+            },
+            {
+                "id": "236mk_k",
+                "str": "mid",
+                "command": "↓SP>〇",
+                "name": "【中】ムカ・ン・ランギット>〇"
+            },
+            {
+                "id": "236mk_kk",
+                "str": "mid",
+                "command": "↓SP>〇〇(AUTO SP)",
+                "name": "【中】ムカ・ン・ランギット>〇〇(AUTO SP)"
+            }
+        ]
+    },
+    {
+        "id": "236hk_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↘SP",
+        "name": "【強】ムカ・ン・ランギット",
+        "variants": [
+            {
+                "id": "236hk",
+                "str": "high",
+                "command": "↘SP",
+                "name": "【強】ムカ・ン・ランギット"
+            },
+            {
+                "id": "236hk_p",
+                "str": "high",
+                "command": "↘SP>↓〇",
+                "name": "【強】ムカ・ン・ランギット>↓〇"
+            },
+            {
+                "id": "236hk_pp",
+                "str": "high",
+                "command": "↘SP>↓〇〇(AUTO ↓SP)",
+                "name": "【強】ムカ・ン・ランギット>↓〇〇(AUTO ↓SP)"
+            },
+            {
+                "id": "236hk_k",
+                "str": "high",
+                "command": "↘SP>〇",
+                "name": "【強】ムカ・ン・ランギット>〇"
+            },
+            {
+                "id": "236hk_kk",
+                "str": "high",
+                "command": "↘SP>〇〇(AUTO SP)",
+                "name": "【強】ムカ・ン・ランギット>〇〇(AUTO SP)"
+            }
+        ]
+    },
+    {
+        "id": "236kk_variants",
+        "category": "special",
+        "str": "other",
+        "command": "AUTO ↓SP",
+        "name": "【OD】ムカ・ン・ランギット",
+        "variants": [
+            {
+                "id": "236kk",
+                "str": "other",
+                "command": "AUTO ↓SP",
+                "name": "【OD】ムカ・ン・ランギット"
+            },
+            {
+                "id": "236kk_p",
+                "str": "other",
+                "command": "AUTO ↓SP>↓〇",
+                "name": "【OD】ムカ・ン・ランギット>↓〇"
+            },
+            {
+                "id": "236kk_k",
+                "str": "other",
+                "command": "AUTO ↓SP>〇",
+                "name": "【OD】ムカ・ン・ランギット>〇"
+            }
+        ]
+    },
+    {
+        "id": "623lk",
+        "category": "special",
+        "str": "low",
+        "command": "→↓↘弱(→SP)",
+        "name": "【弱】リパ・ン・アギラ"
+    },
+    {
+        "id": "623mk",
+        "category": "special",
+        "str": "mid",
+        "command": "→↓↘中",
+        "name": "【中】リパ・ン・アギラ"
+    },
+    {
+        "id": "623hk",
+        "category": "special",
+        "str": "high",
+        "command": "→↓↘強",
+        "name": "【強】リパ・ン・アギラ"
+    },
+    {
+        "id": "623kk",
+        "category": "special",
+        "str": "other",
+        "command": "→↓↘〇〇(AUTO →SP)",
+        "name": "【OD】リパ・ン・アギラ"
+    },
+    {
+        "id": "22lp",
+        "category": "special",
+        "str": "low",
+        "command": "↓↓弱",
+        "name": "【弱】パンギル・サ・リクラン"
+    },
+    {
+        "id": "22mp",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↓中",
+        "name": "【中】パンギル・サ・リクラン"
+    },
+    {
+        "id": "22hp",
+        "category": "special",
+        "str": "high",
+        "command": "↓↓強",
+        "name": "【強】パンギル・サ・リクラン"
+    },
+    {
+        "id": "22pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↓〇〇",
+        "name": "【OD】パンギル・サ・リクラン",
+        "variants": [
+            {
+                "id": "22lpmp",
+                "str": "other",
+                "command": "↓↓弱中",
+                "name": "【OD弱】パンギル・サ・リクラン"
+            },
+            {
+                "id": "22lphp",
+                "str": "other",
+                "command": "↓↓弱強",
+                "name": "【OD中】パンギル・サ・リクラン"
+            },
+            {
+                "id": "22mphp",
+                "str": "other",
+                "command": "↓↓中強",
+                "name": "【OD強】パンギル・サ・リクラン"
+            }
+        ]
+    },
+    {
+        "id": "4kk",
+        "category": "special",
+        "str": "other",
+        "command": "←中強",
+        "name": "リニャ・ン・リワナグ"
+    },
+    {
+        "id": "sa1",
+        "category": "sa",
+        "str": "low",
+        "command": "↓↘→↓↘→弱(SP強)",
+        "name": "SA1"
+    },
+    {
+        "id": "sa2",
+        "category": "sa",
+        "str": "mid",
+        "command": "↓↙←↓↙←中(←SP強)",
+        "name": "SA2"
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "↓↘→↓↘→強(↓SP強)",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "other",
+        "command": "【CA】↓↘→↓↘→強(↓SP強)",
+        "name": "CA"
+    }
+]

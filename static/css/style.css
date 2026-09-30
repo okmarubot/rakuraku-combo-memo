@@ -9,46 +9,99 @@ body {
 
 }
 
-header {
-
-    background-color: #34495e;
-    color: white;
-    padding: 16px;
-
-}
-
 main {
 
     padding: 20px;
 
 }
 
-button {
+/* =========================
+　ヘッダー
+========================= */
 
-    cursor: pointer;
-    padding: 6px 12px;
-    margin: 2px;
+/* ヘッダー */
+header {
+    background: #39758a;
+    color: #eaf6f8;
+    padding: 10px 20px;
+    border-bottom: 1px solid #2f6375;
+    box-shadow: 0 2px 8px rgba(39, 76, 88, 0.12);
+}
+
+/* サイトタイトル */
+header h1,
+header .site-title {
+    margin: 0;
+    color: #eaf6f8;
+    font-family:
+        "M PLUS Rounded 1c",
+        "Noto Sans JP",
+        sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1.4;
+}
+
+header h1 a,
+header .site-title a {
+    color: #eaf6f8;
+    text-decoration: none;
+}
+
+header h1 a:hover,
+header .site-title a:hover {
+    color: #ffffff;
+}
+
+/* タイトルリンク */
+.title-link {
+
+    display: inline-block;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 4px;
 
 }
 
-/* =========================
-　フォント
-========================= */
+.title-link:hover {
 
-/* 技の表記 */
-.move-selector-button,
-.move-variant-parent,
-.move-variant-button,
-.combo-text {
-
-    font-size: 15px;
-    letter-spacing: 0.5px;
+    background-color: #346b80;
 
 }
 
 /* =========================
 　ホーム画面
 ========================= */
+
+.home-title {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 32px;
+
+    gap: 12px;
+
+    border-bottom: 1px solid #2f6375;
+
+    padding-bottom: 12px;
+
+}
+
+.home-title h2 {
+
+    font-family:
+        "M PLUS Rounded 1c",
+        "Noto Sans JP",
+        sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: #263442;
+
+}
 
 .character-list {
 
@@ -65,8 +118,7 @@ button {
 
 .character-link {
 
-    display: block;
-    width: 30%;
+    display: inline-block;
     color: black;
     text-decoration: none;
     padding: 6px 10px;
@@ -91,19 +143,24 @@ button {
     align-items: center;
     justify-content: space-between;
 
+    margin-bottom: 32px;
+
     gap: 12px;
+
+    border-bottom: 1px solid #2f6375;
 
 }
 
 .character-title-row h1 {
 
-    margin: 0;
-
-}
-
-#data-management-button {
-
-    flex-shrink: 0;
+    font-family:
+        "M PLUS Rounded 1c",
+        "Noto Sans JP",
+        sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: #263442;
 
 }
 
@@ -206,39 +263,6 @@ button {
 
 }
 
-.data-management-content > button {
-
-    width: 100%;
-
-    margin: 4px 0;
-
-}
-
-.data-management-buttons {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 12px;
-
-    margin-top: 20px;
-
-}
-
-.data-management-buttons button {
-
-    padding: 8px 18px;
-
-    border: 1px solid #ccc;
-    border-radius: 6px;
-
-    background-color: #fff;
-
-    cursor: pointer;
-
-}
-
 #data-export-text {
 
     width: 100%;
@@ -293,20 +317,62 @@ button {
 }
 
 /* =========================
-　見出し
+　操作モード切替
 ========================= */
 
-/* 見出し共通部分 */
-.main-group.editing .main-group-edit,
-.sub-group.editing .sub-group-edit {
+.mode-selector {
 
-    display: flex;
-    align-items: center;
-    gap: 4px;
+    margin-left: auto;
 
-    width: 100%;
+}
 
-    white-space: nowrap;
+.mode-selector-select {
+
+    height: 36px;
+    min-width: 120px;
+
+    padding: 0 32px 0 12px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #444;
+
+    border: none;
+    border-bottom: 2px solid #999;
+
+    border-radius: 0;
+
+    background-color: transparent;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+}
+
+.mode-selector-select:hover {
+
+    border-bottom-color: #555;
+
+}
+
+.mode-selector-select:focus {
+
+    outline: none;
+    border-bottom-color: #333;
+
+}
+
+/* =========================
+　見出し共通
+========================= */
+
+/* detailsの▾を消す*/
+.main-group-title::-webkit-details-marker,
+.sub-group-title::-webkit-details-marker {
+
+    display: none;
 
 }
 
@@ -351,7 +417,7 @@ button {
     height: 36px;
 
     padding: 0;
-    margin: 2;
+    margin: 0;
 
     border: none;
     background: none;
@@ -364,15 +430,39 @@ button {
 
 }
 
-/* detailsの▾を消す*/
-.main-group-title::-webkit-details-marker,
-.sub-group-title::-webkit-details-marker {
+.main-group-view,
+.main-group-edit,
+.sub-group-view,
+.sub-group-edit {
 
-    display: none;
+    display: flex;
+    align-items: center;
+
+    width: 100%;
 
 }
 
-/* 大見出しタイトル*/
+.main-group.editing .main-group-edit,
+.sub-group.editing .sub-group-edit {
+
+    align-items: center;
+    gap: 4px;
+
+    width: 100%;
+
+    white-space: nowrap;
+
+}
+
+/* 大見出しと中見出しの間隔調整 */
+.main-group-content > .sub-group:first-child .sub-group-title {
+    margin-top: 8px;
+}
+
+/* =========================
+　大見出し
+========================= */
+
 .main-group {
 
     margin-bottom: 16px;
@@ -390,16 +480,6 @@ button {
 
     cursor: pointer;
     list-style: none;
-
-}
-
-.main-group-view,
-.main-group-edit {
-
-    display: flex;
-    align-items: center;
-
-    width: 100%;
 
 }
 
@@ -424,7 +504,29 @@ button {
     
 }
 
-/* 中見出しタイトル */
+/* 大見出し編集切替 */
+.main-group-edit {
+
+    display: none;
+
+}
+
+.main-group.editing .main-group-view {
+
+    display: none;
+
+}
+
+.main-group.editing .main-group-edit {
+
+    display: flex;
+
+}
+
+/* =========================
+　中見出し
+========================= */
+
 .sub-group {
 
     margin-top: 10px;
@@ -468,49 +570,13 @@ button {
 
 }
 
-.sub-group-view,
-.sub-group-edit {
-
-    display: flex;
-    align-items: center;
-
-    width: 100%;
-
-}
-
 .sub-group[open] .sub-group-title {
 
     border-bottom: none;
 
 }
 
-/* 大見出しと中見出しの間隔調整 */
-.main-group-content > .sub-group:first-child .sub-group-title {
-    margin-top: 8px;
-}
-
-/* 大見出し編集切替 */
-
-.main-group-edit {
-
-    display: none;
-
-}
-
-.main-group.editing .main-group-view {
-
-    display: none;
-
-}
-
-.main-group.editing .main-group-edit {
-
-    display: block;
-
-}
-
 /* 中見出し編集切替 */
-
 .sub-group-edit {
 
     display: none;
@@ -525,7 +591,7 @@ button {
 
 .sub-group.editing .sub-group-edit {
 
-    display: block;
+    display: flex;
 
 }
 
@@ -619,6 +685,9 @@ button {
     flex: 1;
     margin-right: 12px;
 
+    font-size: 15px;
+    letter-spacing: 0.5px;
+
 }
 
 .combo-move {
@@ -631,7 +700,7 @@ button {
 
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 3px;
 
     position: absolute;
     top: 0;
@@ -753,81 +822,34 @@ body.move-selector-open #move-selector-panel {
 
 }
 
-#close-move-selector-button {
-
-    padding: 6px 16px;
-
-    border: 1px solid #ccc;
-    border-radius: 8px;
-
-    background-color: white;
-
-    color: #555;
-
-    font-size: 14px;
-    font-weight: 500;
-
-    cursor: pointer;
-
-}
-
-#close-move-selector-button:hover {
-
-    background-color: #f5f5f5;
-
-}
-
 /* ---------- タブ ---------- */
 
 .move-selector-tabs {
 
-display: flex;
-position: relative;
+    display: flex;
+    position: relative;
 
-gap: 0;
+    gap: 0;
 
-margin-bottom: 12px;
+    margin-bottom: 12px;
 
-border-bottom: 1px solid #e5e5e7;
-
-}
-
-.move-selector-tabs button {
-
-position: relative;
-
-border: none;
-border-radius: 0;
-
-background: none;
-
-padding: 8px 16px;
-margin: 0;
-
-font-size: 14px;
-color: #666;
-
-}
-
-.move-selector-tabs button:hover {
-
-background: none;
+    border-bottom: 1px solid #e5e5e7;
 
 }
 
 .move-tab-indicator {
 
-position: absolute;
-bottom: -1px;
-left: 0;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
 
-height: 2px;
+    height: 2px;
 
-background-color: #333;
+    background-color: #333;
 
-transition:
-    left 0.25s ease,
-    width 0.25s ease;
+    transition:
+        left 0.25s ease,
+        width 0.25s ease;
 
 }
 
@@ -835,63 +857,18 @@ transition:
 
 .move-selector-list {
 
-height: 300px;
-overflow-y: auto;
-
-display: grid;
-grid-template-columns: repeat(3, minmax(0, 1fr));
-gap: 8px;
-
-}
-
-.move-selector-button {
-
-    width: 95%;
-    margin-left: 5px;
-
-    padding: 8px 4px;
-
-    border: none;
-    border-bottom: 1px solid #999;
-
-    background: none;
-
-    text-align: left;
-
-    cursor: pointer;
+    height: 300px;
+    overflow-y: auto;
 
 }
 
 .move-variant-group {
 
-display: block;
+    display: block;
 
 }
 
-.move-variant-parent {
-
-    width: 95%;
-    margin-left: 5px;
-
-    padding: 8px 4px;
-
-    border: none;
-    border-bottom: 3px double #999;
-
-    background: none;
-
-    text-align: left;
-
-    cursor: pointer;
-
-}
-
-.move-variant-group.open .move-variant-parent {
-
-    border-bottom: none;
-
-}
-
+/* variant open時の左縦線 */
 .move-variant-list {
 
     display: none;
@@ -910,51 +887,16 @@ display: block;
 
 }
 
-.move-variant-button {
+/* 技一覧パネル表示中のページ下部余白 */
+body.move-selector-open {
 
-    display: block;
-
-    width: 95%;
-    margin: 2px 0;
-
-    padding: 6px 4px;
-
-    border: none;
-    border-bottom: 1px solid #999;
-
-    background: none;
-
-    text-align: left;
+    padding-bottom: 320px;
 
 }
 
-/* 技の強度 */
-
-.str-low {
-
-    border-bottom-color: #5bc0eb;
-
-}
-
-.str-mid {
-
-    border-bottom-color: #e6c84f;
-
-}
-
-.str-high {
-
-    border-bottom-color: #e57373;
-
-}
-
-.str-other {
-
-    border-bottom-color: #999;
-
-}
-
-/* ---------- カテゴリ ---------- */
+/* =========================
+　技一覧カテゴリ
+========================= */
 
 .move-selector-list.category-normal,
 .move-selector-list.category-jump {
@@ -1002,11 +944,47 @@ text-align: left;
 
 }
 
-/* 技一覧パネル表示中のページ下部余白 */
+/* =========================
+　削除確認UI
+========================= */
 
-body.move-selector-open {
+.delete-confirm {
 
-    padding-bottom: 320px;
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    z-index: 1000;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.35);
+
+}
+
+.delete-confirm-content {
+
+    width: min(90%, 360px);
+
+    padding: 24px;
+
+    border-radius: 12px;
+
+    background-color: #fff;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+}
+
+#delete-confirm-message {
+
+    margin: 0 0 24px;
+
+    line-height: 1.6;
 
 }
 
@@ -1017,12 +995,209 @@ body.move-selector-open {
 button {
 
     cursor: pointer;
-
+    padding: 6px 12px;
+    margin: 2px;
     color: #333;
 
 }
 
-/* ----------　モード　---------- */
+/* ---------- 削除確認UIボタン ---------- */
+
+.delete-confirm-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+}
+
+.delete-confirm-buttons button {
+
+    padding: 8px 18px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    background-color: #fff;
+
+}
+
+#delete-confirm-ok {
+
+    color: #315f80;
+    background: #eef8ff;
+    border: 1px solid #7faecc;
+
+}
+
+#delete-confirm-ok:hover {
+    color: #244c68;
+    background: #dcefff;
+    border-color: #5f91b2;
+}
+
+
+/* ---------- データ管理ボタン ---------- */
+
+#data-management-button {
+    flex-shrink: 0;
+
+    padding: 8px 15px;
+
+    color: #34495e;
+    background-color: #f8f9fa;
+
+    border: 1px solid #8d99a6;
+    border-radius: 0;
+
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+
+    box-shadow: none;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+#data-management-button:hover {
+    background-color: #e9edf1;
+    border-color: #526273;
+}
+
+#data-management-button:active {
+    background-color: #dfe5ea;
+}
+
+#data-management-button:focus-visible {
+    outline: 2px solid #7d8b99;
+    outline-offset: 3px;
+}
+
+.data-management-content > button {
+    display: block;
+    width: fit-content;
+    margin: 12px auto;
+    padding: 4px 2px;
+
+    color: #34495e;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+
+    cursor: pointer;
+    transition:
+        color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.data-management-content > button:hover {
+    color: #1d6fa5;
+    opacity: 0.8;
+}
+
+.data-management-content > button:active {
+    opacity: 0.6;
+}
+
+.data-management-content > button:focus-visible {
+    outline: 2px solid #7d9eb5;
+    outline-offset: 4px;
+}
+
+.data-management-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+}
+
+.data-management-buttons button {
+
+    padding: 8px 18px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    background-color: #fff;
+
+    cursor: pointer;
+
+}
+
+.data-management-buttons button:hover {
+    background-color: #edf1f4;
+    border-color: #7d8b99;
+}
+
+.data-management-buttons button:active {
+    background-color: #e1e7ec;
+}
+
+/* データ消去だけ注意色 */
+#data-clear-confirm-execute-button {
+    color: #b33f3f;
+    background: #ffe6e6;
+    border: 1px solid #ffb3b3;
+}
+
+#data-clear-confirm-execute-button:hover {
+    color: #993636;
+    background: #ffcccc;
+    border-color: #ff9999;
+
+}
+
+#data-export-execute-button,
+#data-import-next-button,
+#data-import-file-execute-button,
+#data-import-text-execute-button,
+#data-import-check-next-button,
+#data-import-confirm-execute-button,
+#data-clear-next-button {
+    color: #315f80;
+    background: #eef8ff;
+    border: 1px solid #7faecc;
+}
+
+#data-export-execute-button:hover,
+#data-import-next-button:hover,
+#data-import-file-execute-button:hover,
+#data-import-text-execute-button:hover,
+#data-import-check-next-button:hover,
+#data-import-confirm-execute-button:hover,
+#data-clear-next-button:hover {
+    color: #244c68;
+    background: #dcefff;
+    border-color: #5f91b2;
+}
+
+#data-export-execute-button:active,
+#data-import-next-button:active,
+#data-import-file-execute-button:active,
+#data-import-text-execute-button:active,
+#data-import-check-next-button:active,
+#data-import-confirm-execute-button:active,
+#data-clear-next-button:active,
+#data-clear-confirm-execute-button:active {
+    background: #cce5f5;
+}
+
+/* ----------　閲覧/編集モード切替　---------- */
 
 .mode-button,
 .display-button {
@@ -1054,53 +1229,7 @@ button {
 
 }
 
-/* ---------- 操作モード切替 ---------- */
-
-.mode-selector {
-
-    margin-left: auto;
-
-}
-
-.mode-selector-select {
-
-    height: 36px;
-    min-width: 120px;
-
-    padding: 0 32px 0 12px;
-
-    font-size: 14px;
-    font-weight: 500;
-
-    color: #444;
-
-    border: none;
-    border-bottom: 2px solid #999;
-
-    border-radius: 0;
-
-    background-color: transparent;
-
-    cursor: pointer;
-
-    box-sizing: border-box;
-
-}
-
-.mode-selector-select:hover {
-
-    border-bottom-color: #555;
-
-}
-
-.mode-selector-select:focus {
-
-    outline: none;
-    border-bottom-color: #333;
-
-}
-
-/* ---------- 編集・削除系ボタン ---------- */
+/* ---------- 編集/削除/キャンセルボタン ---------- */
 
 .combo-edit-button,
 .combo-delete-button,
@@ -1158,7 +1287,7 @@ button {
 
 }
 
-/* ---------- 追加 ---------- */
+/* ---------- 追加/Undoボタン ---------- */
 
 /* 見出し追加 */
 
@@ -1169,10 +1298,12 @@ button {
 
     padding: 8px 16px;
 
-    border: 1px solid #bbb;
+    color: #315f80;
+
+    border: 1px solid #7faecc;
     border-radius: 8px;
 
-    background-color: #f5f5f5;
+    background-color: #eef8ff;
 
     font-size: 14px;
     font-weight: 500;
@@ -1182,7 +1313,9 @@ button {
 .add-heading-button:hover,
 .add-subheading-button:hover {
 
-    background-color: #e7e7e7;
+    color: #244c68;
+    background: #dcefff;
+    border-color: #5f91b2;
 
 }
 
@@ -1204,7 +1337,7 @@ button {
 
 }
 
-/* コンボ・技追加 */
+/* コンボ追加 */
 
 .add-combo-button {
 
@@ -1212,27 +1345,27 @@ button {
 
     padding: 6px 12px;
 
-    border: 1px solid #ccc;
+    color: #315f80;
+
+    border: 1px solid #7faecc;
     border-radius: 7px;
 
-    background-color: #f5f5f5;
+    background-color: #eef8ff;
 
     font-size: 14px;
+    font-weight: 500;
+
+    margin-left: 20px;
+    margin-bottom: 8px;
+
 
 }
 
 .add-combo-button:hover {
 
-    background-color: #e7e7e7;
-
-}
-
-/* コンボ追加 */
-
-.add-combo-button {
-
-    margin-left: 20px;
-    margin-bottom: 8px;
+    color: #244c68;
+    background: #dcefff;
+    border-color: #5f91b2;
 
 }
 
@@ -1271,68 +1404,167 @@ button {
 
 }
 
-/* =========================
-　削除確認UI
-========================= */
-
-.delete-confirm {
-
-    display: none;
-
-    position: fixed;
-    inset: 0;
-
-    z-index: 1000;
-
-    align-items: center;
-    justify-content: center;
-
-    background-color: rgba(0, 0, 0, 0.35);
+.add-move-button {
+    color: #315f80;
+    background: #eef8ff;
+    border: 1px solid #7faecc;
 
 }
 
-.delete-confirm-content {
-
-    width: min(90%, 360px);
-
-    padding: 24px;
-
-    border-radius: 12px;
-
-    background-color: #fff;
-
-    box-sizing: border-box;
-
-    text-align: center;
-
+.add-move-button:hover {
+    color: #244c68;
+    background: #dcefff;
+    border-color: #5f91b2;
 }
 
-#delete-confirm-message {
+/* ---------- 技一覧パネルボタン ---------- */
 
-    margin: 0 0 24px;
+/* パネルヘッダー */
 
-    line-height: 1.6;
+#close-move-selector-button {
 
-}
-
-.delete-confirm-buttons {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 12px;
-
-}
-
-.delete-confirm-buttons button {
-
-    padding: 8px 18px;
+    padding: 6px 16px;
 
     border: 1px solid #ccc;
+    border-radius: 8px;
 
-    border-radius: 6px;
+    background-color: white;
 
-    background-color: #fff;
+    color: #555;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+}
+
+#close-move-selector-button:hover {
+
+    background-color: #f5f5f5;
+
+}
+
+/* タブ */
+
+.move-selector-tabs button {
+
+    position: relative;
+
+    border: none;
+    border-radius: 0;
+
+    background: none;
+
+    padding: 8px 16px;
+    margin: 0;
+
+    font-size: 14px;
+    color: #666;
+
+}
+
+.move-selector-tabs button:hover {
+
+    background: none;
+
+}
+
+/* 技一覧 */
+
+.move-selector-button {
+
+    width: 95%;
+    margin-left: 5px;
+
+    padding: 8px 4px;
+
+    border: none;
+    border-bottom: 1px solid #999;
+
+    background: none;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    font-size: 15px;
+    letter-spacing: 0.5px;
+
+
+}
+
+.move-variant-parent {
+
+    width: 95%;
+    margin-left: 5px;
+
+    padding: 8px 4px;
+
+    border: none;
+    border-bottom: 3px double #999;
+
+    background: none;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    font-size: 15px;
+    letter-spacing: 0.5px;
+
+
+}
+
+.move-variant-group.open .move-variant-parent {
+
+    border-bottom: none;
+
+}
+
+.move-variant-button {
+
+    display: block;
+
+    width: 95%;
+    margin: 2px 0;
+
+    padding: 6px 4px;
+
+    border: none;
+    border-bottom: 1px solid #999;
+
+    background: none;
+
+    text-align: left;
+
+    font-size: 15px;
+    letter-spacing: 0.5px;
+
+}
+
+/* 技の強度 */
+
+.str-low {
+
+    border-bottom-color: #5bc0eb;
+
+}
+
+.str-mid {
+
+    border-bottom-color: #e6c84f;
+
+}
+
+.str-high {
+
+    border-bottom-color: #e57373;
+
+}
+
+.str-other {
+
+    border-bottom-color: #999;
 
 }

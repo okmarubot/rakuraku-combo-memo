@@ -1,0 +1,536 @@
+[
+    {
+        "id": "assist_l_variants",
+        "category": "normal",
+        "str": "low",
+        "command": "AUTO弱",
+        "name": "AUTO弱",
+        "variants": [
+            {
+                "id": "assist_l",
+                "str": "low",
+                "command": "AUTO弱",
+                "name": "AUTO弱"
+            },
+            {
+                "id": "assist_l_2",
+                "str": "low",
+                "command": "AUTO弱>弱",
+                "name": "AUTO弱>弱"
+            },
+            {
+                "id": "assist_l_3",
+                "str": "low",
+                "command": "AUTO弱>弱>弱",
+                "name": "AUTO弱>弱>弱"
+            },
+            {
+                "id":"assist_2l",
+                "str": "low",
+                "command": "AUTO↓弱",
+                "name": "AUTO↓弱"
+            },
+            {
+                "id":"assist_2l_2",
+                "str": "low",
+                "command": "AUTO↓弱>弱",
+                "name": "AUTO↓弱>弱"
+            },
+            {
+                "id":"assist_2l_3",
+                "str": "low",
+                "command": "AUTO↓弱>弱>弱",
+                "name": "AUTO↓弱>弱>弱"
+            }
+        ]
+    },
+    {
+        "id": "assist_m_variants",
+        "category": "normal",
+        "str": "mid",
+        "command": "AUTO中",
+        "name": "AUTO中",
+        "variants": [
+            {
+                "id": "assist_m",
+                "str": "mid",
+                "command": "AUTO中",
+                "name": "AUTO中"
+            },
+            {
+                "id": "assist_m_2",
+                "str": "mid",
+                "command": "AUTO中>中",
+                "name": "AUTO中>中"
+            },
+            {
+                "id": "assist_m_3",
+                "str": "mid",
+                "command": "AUTO中>中>中",
+                "name": "AUTO中>中>中"
+            }
+        ]
+    },
+    {
+        "id": "assist_h_variants",
+        "category": "normal",
+        "str": "high",
+        "command": "AUTO強",
+        "name": "AUTO強",
+        "variants": [
+            {
+                "id": "assist_h",
+                "str": "high",
+                "command": "AUTO強",
+                "name": "AUTO強"
+            },
+            {
+                "id": "assist_h_2",
+                "str": "high",
+                "command": "AUTO強>強",
+                "name": "AUTO強>強"
+            },
+            {
+                "id": "assist_h_3",
+                "str": "high",
+                "command": "AUTO強>強>強",
+                "name": "AUTO強>強>強"
+            },
+            {
+                "id": "assist_h_4",
+                "str": "high",
+                "command": "AUTO強>強>強>強",
+                "name": "AUTO強>強>強>強"
+            }
+        ]
+    },
+    {
+        "id": "throw_j",
+        "category": "jump",
+        "str": "other",
+        "command": "空中投げ",
+        "name": "空中投げ"
+    },
+    {
+        "id": "4m",
+        "category": "unique",
+        "str": "mid",
+        "command": "←中",
+        "name": "←中"
+    },
+    {
+        "id": "6h",
+        "category": "unique",
+        "str": "high",
+        "command": "→強",
+        "name": "→強"
+    },
+    {
+        "id": "4h",
+        "category": "unique",
+        "str": "high",
+        "command": "←強",
+        "name": "←強"
+    },
+    {
+        "id": "4m_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "←中タゲコン",
+        "name": "←中タゲコン",
+        "variants": [
+            {
+                "id": "4m_m",
+                "str": "mid",
+                "command": "←中>中",
+                "name": "←中>中"
+            }
+        ]
+    },
+    {
+        "id": "3h",
+        "category": "unique",
+        "str": "high",
+        "command": "↘強",
+        "name": "↘強"
+    },
+    {
+        "id": "236l",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱",
+        "name": "【弱】スパイラルアロー"
+    },
+    {
+        "id": "236m",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中(SP)",
+        "name": "【中】スパイラルアロー"
+    },
+    {
+        "id": "236h_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強",
+        "name": "【強】スパイラルアロー",
+        "variants": [
+            {
+                "id": "236h",
+                "str": "high",
+                "command": "↓↘→強",
+                "name": "【強】スパイラルアロー"
+            },
+            {
+                "id": "236h_h",
+                "str": "high",
+                "command": "↓↘→強(ホールド)",
+                "name": "【強】スパイラルアロー(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "236kk",
+        "category": "special",
+        "str": "other",
+        "command": "AUTO ↓SP",
+        "name": "【OD】スパイラルアロー"
+    },
+    {
+        "id": "623l",
+        "category": "special",
+        "str": "low",
+        "command": "→↓↘弱",
+        "name": "【弱】キャノンスパイク"
+    },
+    {
+        "id": "623m",
+        "category": "special",
+        "str": "mid",
+        "command": "→↓↘中(→SP)",
+        "name": "【中】キャノンスパイク"
+    },
+    {
+        "id": "623h_variants",
+        "category": "special",
+        "str": "high",
+        "command": "→↓↘強",
+        "name": "【強】キャノンスパイク",
+        "variants": [
+            {
+                "id": "623h",
+                "str": "high",
+                "command": "→↓↘強",
+                "name": "【強】キャノンスパイク"
+            },
+            {
+                "id": "623h_h",
+                "str": "high",
+                "command": "→↓↘強(ホールド)",
+                "name": "【強】キャノンスパイク(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "623kk",
+        "category": "special",
+        "str": "other",
+        "command": "→↓↘〇〇(AUTO →SP)",
+        "name": "【OD】キャノンスパイク"
+    },
+    {
+        "id": "214l",
+        "category": "special",
+        "str": "low",
+        "command": "↓↙←弱",
+        "name": "【弱】アクセルスピンナックル"
+    },
+    {
+        "id": "214m",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↙←中",
+        "name": "【中】アクセルスピンナックル"
+    },
+    {
+        "id": "214h",
+        "category": "special",
+        "str": "high",
+        "command": "↓↙←強(←SP)",
+        "name": "【強】アクセルスピンナックル"
+    },
+    {
+        "id": "214pp",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←〇〇(AUTO ←SP)",
+        "name": "【OD】アクセルスピンナックル"
+    },
+    {
+        "id": "j214l",
+        "category": "special",
+        "str": "low",
+        "command": "空中↓↙←弱",
+        "name": "【弱】キャノンストライク"
+    },
+    {
+        "id": "j214m",
+        "category": "special",
+        "str": "mid",
+        "command": "空中↓↙←中(SP)",
+        "name": "【中】キャノンストライク"
+    },
+    {
+        "id": "j214h",
+        "category": "special",
+        "str": "high",
+        "command": "空中↓↙←強",
+        "name": "【強】キャノンストライク"
+    },
+    {
+        "id": "j214kk",
+        "category": "special",
+        "str": "other",
+        "command": "空中↓↙←〇〇(AUTO SP)",
+        "name": "【OD】キャノンストライク"
+    },
+    {
+        "id": "236lp_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↙SP",
+        "name": "【弱】フーリガン",
+        "variants": [
+            {
+                "id": "236lp",
+                "str": "low",
+                "command": "↙SP",
+                "name": "【弱】フーリガン"
+            },
+            {
+                "id": "236lp_strike",
+                "str": "low",
+                "command": "↙SP>〇",
+                "name": "【弱】フーリガン>〇"
+            },
+            {
+                "id": "236lp_2k",
+                "str": "low",
+                "command": "↙SP>↓〇",
+                "name": "【弱】フーリガン>↓〇"
+            },
+            {
+                "id": "236lp_throw",
+                "str": "low",
+                "command": "↙SP>→〇",
+                "name": "【弱】フーリガン>→〇"
+            },
+            {
+                "id": "236lp_p",
+                "str": "low",
+                "command": "↙SP>←〇",
+                "name": "【弱】フーリガン>←〇"
+            }
+        ]
+    },
+    {
+        "id": "236mp_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓SP",
+        "name": "【中】フーリガン",
+        "variants": [
+            {
+                "id": "236mp",
+                "str": "mid",
+                "command": "↓SP",
+                "name": "【中】フーリガン"
+            },
+            {
+                "id": "236mp_strike",
+                "str": "mid",
+                "command": "↓SP>〇",
+                "name": "【中】フーリガン>〇"
+            },
+            {
+                "id": "236mp_2k",
+                "str": "mid",
+                "command": "↓SP>↓〇",
+                "name": "【中】フーリガン>↓〇"
+            },
+            {
+                "id": "236mp_throw",
+                "str": "mid",
+                "command": "↓SP>→〇",
+                "name": "【中】フーリガン>→〇"
+            },
+            {
+                "id": "236mp_p",
+                "str": "mid",
+                "command": "↓SP>←〇",
+                "name": "【中】フーリガン>←〇"
+            }
+        ]
+    },
+    {
+        "id": "236hp_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↘SP",
+        "name": "【強】フーリガン",
+        "variants": [
+            {
+                "id": "236hp",
+                "str": "high",
+                "command": "↘SP",
+                "name": "【強】フーリガン"
+            },
+            {
+                "id": "236hp_strike",
+                "str": "high",
+                "command": "↘SP>〇",
+                "name": "【強】フーリガン>〇"
+            },
+            {
+                "id": "236hp_2k",
+                "str": "high",
+                "command": "↘SP>↓〇",
+                "name": "【強】フーリガン>↓〇"
+            },
+            {
+                "id": "236hp_throw",
+                "str": "high",
+                "command": "↘SP>→〇",
+                "name": "【強】フーリガン>→〇"
+            },
+            {
+                "id": "236hp_p",
+                "str": "high",
+                "command": "↘SP>←〇",
+                "name": "【強】フーリガン>←〇"
+            }
+        ]
+    },
+    {
+        "id": "236hp_h_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↘SP(ホールド)",
+        "name": "【強】フーリガン(ホールド)",
+        "variants": [
+            {
+                "id": "236hp_h",
+                "str": "high",
+                "command": "↘SP(ホールド)",
+                "name": "【強】フーリガン(ホールド)"
+            },
+            {
+                "id": "236hp_h_strike",
+                "str": "high",
+                "command": "↘SP(ホールド)>〇",
+                "name": "【強】フーリガン(ホールド)>〇"
+            },
+            {
+                "id": "236hp_h_2k",
+                "str": "high",
+                "command": "↘SP(ホールド)>↓〇",
+                "name": "【強】フーリガン(ホールド)>↓〇"
+            },
+            {
+                "id": "236hp_h_throw",
+                "str": "high",
+                "command": "↘SP(ホールド)>→〇",
+                "name": "【強】フーリガン(ホールド)>→〇"
+            },
+            {
+                "id": "236hp_h_p",
+                "str": "high",
+                "command": "↘SP(ホールド)>←〇",
+                "name": "【強】フーリガン(ホールド)>←〇"
+            }
+        ]
+    },
+    {
+        "id": "236pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "AUTO ↓SP",
+        "name": "【OD】フーリガン",
+        "variants": [
+            {
+                "id": "236pp",
+                "str": "other",
+                "command": "AUTO ↓SP",
+                "name": "【OD】フーリガン"
+            },
+            {
+                "id": "236pp_strike",
+                "str": "other",
+                "command": "AUTO ↓SP>〇",
+                "name": "【OD】フーリガン>〇"
+            },
+            {
+                "id": "236pp_2k",
+                "str": "other",
+                "command": "AUTO ↓SP>↓〇",
+                "name": "【OD】フーリガン>↓〇"
+            },
+            {
+                "id": "236pp_throw",
+                "str": "other",
+                "command": "AUTO ↓SP>→〇",
+                "name": "【OD】フーリガン>→〇"
+            },
+            {
+                "id": "236pp_p",
+                "str": "other",
+                "command": "AUTO ↓SP>←〇",
+                "name": "【OD】フーリガン>←〇"
+            }
+        ]
+    },
+    {
+        "id": "sa1",
+        "category": "sa",
+        "str": "low",
+        "command": "↓↘→↓↘→弱(SP強)",
+        "name": "SA1"
+    },
+    {
+        "id": "sa2_variants",
+        "category": "sa",
+        "str": "mid",
+        "command": "↓↙←↓↙←中(←SP強)",
+        "name": "SA2",
+        "variants": [
+            {
+                "id": "sa2",
+                "category": "sa",
+                "str": "mid",
+                "command": "↓↙←↓↙←中(←SP強)",
+                "name": "SA2"
+            },
+            {
+                "id": "j_sa2",
+                "category": "sa",
+                "str": "mid",
+                "command": "空中↓↙←↓↙←中(SP強)",
+                "name": "空中SA2"
+            }
+        ]
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "↓↘→↓↘→強(↓SP強)",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "high",
+        "command": "【CA】↓↘→↓↘→強(↓SP強)",
+        "name": "CA"
+    }
+]

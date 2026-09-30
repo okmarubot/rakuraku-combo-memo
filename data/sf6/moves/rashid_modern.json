@@ -1,0 +1,692 @@
+[
+    {
+        "id": "assist_l_variants",
+        "category": "normal",
+        "str": "low",
+        "command": "AUTO弱",
+        "name": "AUTO弱",
+        "variants": [
+            {
+                "id": "assist_l",
+                "str": "low",
+                "command": "AUTO弱",
+                "name": "AUTO弱"
+            },
+            {
+                "id": "assist_l_2",
+                "str": "low",
+                "command": "AUTO弱>弱",
+                "name": "AUTO弱>弱"
+            },
+            {
+                "id": "assist_l_3",
+                "str": "low",
+                "command": "AUTO弱>弱>弱",
+                "name": "AUTO弱>弱>弱"
+            },
+            {
+                "id": "assist_2l",
+                "str": "low",
+                "command": "AUTO↓弱",
+                "name": "AUTO↓弱"
+            },
+            {
+                "id": "assist_2l_2",
+                "str": "low",
+                "command": "AUTO↓弱>弱",
+                "name": "AUTO↓弱>弱"
+            },
+            {
+                "id": "assist_2l_3",
+                "str": "low",
+                "command": "AUTO↓弱>弱>弱",
+                "name": "AUTO↓弱>弱>弱"
+            }
+        ]
+    },
+    {
+        "id": "assist_m_variants",
+        "category": "normal",
+        "str": "mid",
+        "command": "AUTO中",
+        "name": "AUTO中",
+        "variants": [
+            {
+                "id": "assist_m",
+                "str": "mid",
+                "command": "AUTO中",
+                "name": "AUTO中"
+            },
+            {
+                "id": "assist_m_2",
+                "str": "mid",
+                "command": "AUTO中>中",
+                "name": "AUTO中>中"
+            },
+            {
+                "id": "assist_m_3",
+                "str": "mid",
+                "command": "AUTO中>中>中",
+                "name": "AUTO中>中>中"
+            },
+            {
+                "id": "assist_m_4",
+                "str": "mid",
+                "command": "AUTO中>中>中>中",
+                "name": "AUTO中>中>中>中"
+            },
+            {
+                "id": "assist_m_5",
+                "str": "mid",
+                "command": "AUTO中>中>中>中>中",
+                "name": "AUTO中>中>中>中>中"
+            },
+            {
+                "id": "assist_m_6",
+                "str": "mid",
+                "command": "AUTO中>中>中>中>中>中",
+                "name": "AUTO中>中>中>中>中>中"
+            }
+        ]
+    },
+    {
+        "id": "assist_h_variants",
+        "category": "normal",
+        "str": "high",
+        "command": "AUTO強",
+        "name": "AUTO強",
+        "variants": [
+            {
+                "id": "assist_h",
+                "str": "high",
+                "command": "AUTO強",
+                "name": "AUTO強"
+            },
+            {
+                "id": "assist_h_2",
+                "str": "high",
+                "command": "AUTO強>強",
+                "name": "AUTO強>強"
+            },
+            {
+                "id": "assist_h_3",
+                "str": "high",
+                "command": "AUTO強>強>強",
+                "name": "AUTO強>強>強"
+            }
+        ]
+    },
+    {
+        "id": "throw_j",
+        "category": "jump",
+        "str": "other",
+        "command": "空中投げ",
+        "name": "空中投げ"
+    },
+    {
+        "id": "triangle_jump",
+        "category": "common",
+        "str": "other",
+        "command": "三角跳び",
+        "name": "三角跳び"
+    },
+    {
+        "id": "run_variants",
+        "category": "unique",
+        "str": "other",
+        "command": "→⇒",
+        "name": "ラン",
+        "variants": [
+            {
+                "id": "run",
+                "str": "other",
+                "command": "→⇒",
+                "name": "ラン"
+            },
+            {
+                "id": "run_6p",
+                "str": "other",
+                "command": "→⇒>→弱",
+                "name": "ラン>→弱"
+            },
+            {
+                "id": "run_6k",
+                "str": "other",
+                "command": "→⇒>→中",
+                "name": "ラン>→中"
+            },
+            {
+                "id": "run_6k_wind",
+                "str": "other",
+                "command": "【気流】→⇒>→中",
+                "name": "【気流】ラン>→中"
+            }
+        ]
+    },
+    {
+        "id": "6mp",
+        "category": "unique",
+        "str": "mid",
+        "command": "→中",
+        "name": "→中"
+    },
+    {
+        "id": "6hp",
+        "category": "unique",
+        "str": "high",
+        "command": "→強",
+        "name": "→強"
+    },
+    {
+        "id": "3h",
+        "category": "unique",
+        "str": "high",
+        "command": "↘強",
+        "name": "↘強"
+    },
+    {
+        "id": "j2hp",
+        "category": "jump",
+        "str": "high",
+        "command": "前J↓強",
+        "name": "前J↓強"
+    },
+    {
+        "id": "nj8hk",
+        "category": "jump",
+        "str": "high",
+        "command": "垂直J↑強",
+        "name": "垂直J↑強"
+    },
+    {
+        "id": "6kk_variants",
+        "category": "unique",
+        "str": "other",
+        "command": "→中強",
+        "name": "サイド・フリップ",
+        "variants": [
+            {
+                "id": "6kk",
+                "str": "other",
+                "command": "→中強",
+                "name": "サイド・フリップ"
+            },
+            {
+                "id": "6kk_4kk",
+                "str": "other",
+                "command": "→中強>←中強",
+                "name": "サイド・フリップ>←中強"
+            },
+            {
+                "id": "6kk_kk",
+                "str": "other",
+                "command": "→中強>中強",
+                "name": "サイド・フリップ>中強"
+            },
+            {
+                "id": "6kk_6kk",
+                "str": "other",
+                "command": "→中強>→中強",
+                "name": "サイド・フリップ>→中強"
+            }
+        ]
+    },
+    {
+        "id": "236lp_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱",
+        "name": "【弱】スピニング・ミキサー",
+        "variants": [
+            {
+                "id": "236lp",
+                "str": "low",
+                "command": "↓↘→弱",
+                "name": "【弱】スピニング・ミキサー"
+            },
+            {
+                "id": "236lp_wind",
+                "str": "low",
+                "command": "【気流】↓↘→弱",
+                "name": "【弱/気流】スピニング・ミキサー"
+            }
+        ]
+    },
+    {
+        "id": "236mp_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中",
+        "name": "【中】スピニング・ミキサー",
+        "variants": [
+            {
+                "id": "236mp",
+                "str": "mid",
+                "command": "↓↘→中",
+                "name": "【中】スピニング・ミキサー"
+            },
+            {
+                "id": "236mp_wind",
+                "str": "mid",
+                "command": "【気流】↓↘→中",
+                "name": "【中/気流】スピニング・ミキサー"
+            }
+        ]
+    },
+    {
+        "id": "236hp_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強(→SP)",
+        "name": "【強】スピニング・ミキサー",
+        "variants": [
+            {
+                "id": "236hp",
+                "str": "high",
+                "command": "↓↘→強(→SP)",
+                "name": "【強】スピニング・ミキサー"
+            },
+            {
+                "id": "236hp_wind",
+                "str": "high",
+                "command": "【気流】↓↘→強(→SP)",
+                "name": "【強/気流】スピニング・ミキサー"
+            }
+        ]
+    },
+    {
+        "id": "236pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→〇〇(AUTO →SP)",
+        "name": "【OD】スピニング・ミキサー",
+        "variants": [
+            {
+                "id": "236pp",
+                "str": "other",
+                "command": "↓↘→〇〇(AUTO →SP)",
+                "name": "【OD】スピニング・ミキサー"
+            },
+            {
+                "id": "236pp_wind",
+                "str": "other",
+                "command": "【気流】↓↘→〇〇(AUTO →SP)",
+                "name": "【OD/気流】スピニング・ミキサー"
+            }
+        ]
+    },
+    {
+        "id": "214lk_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↙SP",
+        "name": "【弱】イーグル・スパイク",
+        "variants": [
+            {
+                "id": "214lk",
+                "str": "low",
+                "command": "↙SP",
+                "name": "【弱】イーグル・スパイク"
+            },
+            {
+                "id": "214lk_wind",
+                "str": "low",
+                "command": "【気流】↙SP",
+                "name": "【弱/気流】イーグル・スパイク"
+            }
+        ]
+    },
+    {
+        "id": "214mk_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓SP",
+        "name": "【中】イーグル・スパイク",
+        "variants": [
+            {
+                "id": "214mk",
+                "str": "mid",
+                "command": "↓SP",
+                "name": "【中】イーグル・スパイク"
+            },
+            {
+                "id": "214mk_wind",
+                "str": "mid",
+                "command": "【気流】↓SP",
+                "name": "【中/気流】イーグル・スパイク"
+            }
+        ]
+    },
+    {
+        "id": "214hk_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↘SP",
+        "name": "【強】イーグル・スパイク",
+        "variants": [
+            {
+                "id": "214hk",
+                "str": "high",
+                "command": "↘SP",
+                "name": "【強】イーグル・スパイク"
+            },
+            {
+                "id": "214hk_wind",
+                "str": "high",
+                "command": "【気流】↘SP",
+                "name": "【強/気流】イーグル・スパイク"
+            }
+        ]
+    },
+    {
+        "id": "214kk_variants",
+        "category": "special",
+        "str": "other",
+        "command": "AUTO ↓SP",
+        "name": "【OD】イーグル・スパイク",
+        "variants": [
+            {
+                "id": "214kk",
+                "str": "other",
+                "command": "AUTO ↓SP",
+                "name": "【OD】イーグル・スパイク"
+            },
+            {
+                "id": "214kk_wind",
+                "str": "other",
+                "command": "【気流】AUTO ↓SP",
+                "name": "【OD/気流】イーグル・スパイク"
+            }
+        ]
+    },
+    {
+        "id": "236lk_variants",
+        "category": "special",
+        "str": "low",
+        "command": "SP+←",
+        "name": "【弱】ワールウインド・ショット",
+        "variants": [
+            {
+                "id": "236lk",
+                "str": "low",
+                "command": "SP+←",
+                "name": "【弱】ワールウインド・ショット"
+            },
+            {
+                "id": "236lk_hold",
+                "str": "low",
+                "command": "SP+←(ホールド)",
+                "name": "【弱】ワールウインド・ショット(ホールド)"
+            },
+            {
+                "id": "236lk_hold_max",
+                "str": "low",
+                "command": "SP+←(最大ホールド)",
+                "name": "【弱】ワールウインド・ショット(最大ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "236mk_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "SP",
+        "name": "【中】ワールウインド・ショット",
+        "variants": [
+            {
+                "id": "236mk",
+                "str": "mid",
+                "command": "SP",
+                "name": "【中】ワールウインド・ショット"
+            },
+            {
+                "id": "236mk_hold",
+                "str": "mid",
+                "command": "SP(ホールド)",
+                "name": "【中】ワールウインド・ショット(ホールド)"
+            },
+            {
+                "id": "236mk_hold_max",
+                "str": "mid",
+                "command": "SP(最大ホールド)",
+                "name": "【中】ワールウインド・ショット(最大ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "236hk_variants",
+        "category": "special",
+        "str": "high",
+        "command": "SP+→",
+        "name": "【強】ワールウインド・ショット",
+        "variants": [
+            {
+                "id": "236hk",
+                "str": "high",
+                "command": "SP+→",
+                "name": "【強】ワールウインド・ショット"
+            },
+            {
+                "id": "236hk_hold",
+                "str": "high",
+                "command": "SP+→(ホールド)",
+                "name": "【強】ワールウインド・ショット(ホールド)"
+            },
+            {
+                "id": "236hk_hold_max",
+                "str": "high",
+                "command": "SP+→(最大ホールド)",
+                "name": "【強】ワールウインド・ショット(最大ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "236kk_variants",
+        "category": "special",
+        "str": "other",
+        "command": "AUTO SP",
+        "name": "【OD】ワールウインド・ショット",
+        "variants": [
+            {
+                "id": "236kk",
+                "str": "other",
+                "command": "AUTO SP",
+                "name": "【OD】ワールウインド・ショット"
+            },
+            {
+                "id": "236kk_hold",
+                "str": "other",
+                "command": "AUTO SP(ホールド)",
+                "name": "【OD】ワールウインド・ショット(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "214lp_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↓↙←弱(←SP)",
+        "name": "【弱】アラビアン・サイクロン",
+        "variants": [
+            {
+                "id": "214lp",
+                "str": "low",
+                "command": "↓↙←弱(←SP)",
+                "name": "【弱】アラビアン・サイクロン"
+            },
+            {
+                "id": "214lp_4k",
+                "str": "low",
+                "command": "↓↙←弱(←SP)>←〇",
+                "name": "【弱】アラビアン・サイクロン>←〇"
+            },
+            {
+                "id": "214lp_6k",
+                "str": "low",
+                "command": "↓↙←弱(←SP)>→〇",
+                "name": "【弱】アラビアン・サイクロン>→〇"
+            },
+            {
+                "id": "214lp_6k_k",
+                "str": "low",
+                "command": "↓↙←弱(←SP)>→〇>〇",
+                "name": "【弱】アラビアン・サイクロン>→〇>〇"
+            }
+        ]
+    },
+    {
+        "id": "214mp_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↙←中",
+        "name": "【中】アラビアン・サイクロン",
+        "variants": [
+            {
+                "id": "214mp",
+                "str": "mid",
+                "command": "↓↙←中",
+                "name": "【中】アラビアン・サイクロン"
+            },
+            {
+                "id": "214mp_4k",
+                "str": "mid",
+                "command": "↓↙←中>←〇",
+                "name": "【中】アラビアン・サイクロン>←〇"
+            },
+            {
+                "id": "214mp_6k",
+                "str": "mid",
+                "command": "↓↙←中>→〇",
+                "name": "【中】アラビアン・サイクロン>→〇"
+            },
+            {
+                "id": "214mp_6k_k",
+                "str": "mid",
+                "command": "↓↙←中>→〇>〇",
+                "name": "【中】アラビアン・サイクロン>→〇>〇"
+            }
+        ]
+    },
+    {
+        "id": "214hp_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↙←強",
+        "name": "【強】アラビアン・サイクロン",
+        "variants": [
+            {
+                "id": "214hp",
+                "str": "high",
+                "command": "↓↙←強",
+                "name": "【強】アラビアン・サイクロン"
+            },
+            {
+                "id": "214hp_4k",
+                "str": "high",
+                "command": "↓↙←強>←〇",
+                "name": "【強】アラビアン・サイクロン>←〇"
+            },
+            {
+                "id": "214hp_6k",
+                "str": "high",
+                "command": "↓↙←強>→〇",
+                "name": "【強】アラビアン・サイクロン>→〇"
+            },
+            {
+                "id": "214hp_6k_k",
+                "str": "high",
+                "command": "↓↙←強>→〇>〇",
+                "name": "【強】アラビアン・サイクロン>→〇>〇"
+            }
+        ]
+    },
+    {
+        "id": "214pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←〇〇(AUTO ←SP)",
+        "name": "【OD】アラビアン・サイクロン",
+        "variants": [
+            {
+                "id": "214pp",
+                "str": "other",
+                "command": "↓↙←〇〇(AUTO ←SP)",
+                "name": "【OD】アラビアン・サイクロン"
+            },
+            {
+                "id": "214pp_4k",
+                "str": "other",
+                "command": "↓↙←〇〇(AUTO ←SP)>←〇",
+                "name": "【OD】アラビアン・サイクロン>←〇"
+            },
+            {
+                "id": "214pp_6k",
+                "str": "other",
+                "command": "↓↙←〇〇(AUTO ←SP)>→〇",
+                "name": "【OD】アラビアン・サイクロン>→〇"
+            },
+            {
+                "id": "214pp_6k_k",
+                "str": "other",
+                "command": "↓↙←〇〇(AUTO ←SP)>→〇>〇",
+                "name": "【OD】アラビアン・サイクロン>→〇>〇"
+            }
+        ]
+    },
+    {
+        "id": "air_214lk",
+        "category": "special",
+        "str": "low",
+        "command": "空中↓↙←弱(SP)",
+        "name": "【弱】アラビアン・スカイハイ"
+    },
+    {
+        "id": "air_214mk",
+        "category": "special",
+        "str": "mid",
+        "command": "空中↓↙←中",
+        "name": "【中】アラビアン・スカイハイ"
+    },
+    {
+        "id": "air_214hk",
+        "category": "special",
+        "str": "high",
+        "command": "空中↓↙←強",
+        "name": "【強】アラビアン・スカイハイ"
+    },
+    {
+        "id": "air_214kk",
+        "category": "special",
+        "str": "other",
+        "command": "空中↓↙←〇〇(AUTO SP)",
+        "name": "【OD】アラビアン・スカイハイ"
+    },
+    {
+        "id": "sa1",
+        "category": "sa",
+        "str": "low",
+        "command": "↓↘→↓↘→弱(SP強)",
+        "name": "SA1"
+    },
+    {
+        "id": "sa2",
+        "category": "sa",
+        "str": "mid",
+        "command": "↓↙←↓↙←中(←SP強)",
+        "name": "SA2"
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "↓↘→↓↘→強(↓SP強)",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "other",
+        "command": "【CA】↓↘→↓↘→強(↓SP強)",
+        "name": "CA"
+    }
+]

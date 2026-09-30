@@ -218,8 +218,15 @@
         "id": "214hp_shadow",
         "category": "special",
         "str": "high",
-        "command": "↓↙←強P",
+        "command": "↓↙←強P(起爆)",
         "name": "起爆"
+    },
+    {
+        "id": "jp_at01",
+        "category": "special",
+        "str": "other",
+        "command": "自動起爆",
+        "name": "自動発射"
     },
     {
         "id": "22k",
@@ -255,6 +262,13 @@
         "str": "high",
         "command": "↓↘→強K",
         "name": "【強】トルバラン"
+    },
+    {
+        "id": "236k_h",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→K(ホールド)",
+        "name": "トルバラン(フェイント)"
     },
     {
         "id": "236kk",

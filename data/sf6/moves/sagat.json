@@ -1,0 +1,372 @@
+[
+    {
+        "id": "6mp",
+        "category": "unique",
+        "str": "mid",
+        "command": "→中P",
+        "name": "→中P"
+    },
+    {
+        "id": "4hp",
+        "category": "unique",
+        "str": "high",
+        "command": "←強P",
+        "name": "←強P"
+    },
+    {
+        "id": "6lk",
+        "category": "unique",
+        "str": "low",
+        "command": "→弱K",
+        "name": "→弱K"
+    },
+    {
+        "id": "6hk",
+        "category": "unique",
+        "str": "high",
+        "command": "→強K",
+        "name": "→強K"
+    },
+    {
+        "id": "5mk_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "中Kタゲコン",
+        "name": "中Kタゲコン",
+        "variants": [
+            {
+                "id": "5mk_hk",
+                "str": "mid",
+                "command": "中K>強K",
+                "name": "中K>強K"
+            }
+        ]
+    },
+    {
+        "id": "5hp_target",
+        "category": "unique",
+        "str": "high",
+        "command": "強Pタゲコン",
+        "name": "強Pタゲコン",
+        "variants": [
+            {
+                "id": "5hp_hk",
+                "str": "high",
+                "command": "強P>強K",
+                "name": "強P>強K"
+            }
+        ]
+    },
+    {
+        "id": "2mp_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "↓中Pタゲコン",
+        "name": "↓中Pタゲコン",
+        "variants": [
+            {
+                "id": "2mp_hp",
+                "str": "mid",
+                "command": "↓中P>強P",
+                "name": "↓中P>強P"
+            },
+            {
+                "id": "2mp_hk",
+                "str": "mid",
+                "command": "↓中P>強K",
+                "name": "↓中P>強K"
+            }
+        ]
+    },
+    {
+        "id": "236lp",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱P",
+        "name": "【弱】グランドタイガーショット"
+    },
+    {
+        "id": "236mp",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中P",
+        "name": "【中】タイガーショット"
+    },
+    {
+        "id": "236hp",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強P",
+        "name": "【強】タイガーショット"
+    },
+    {
+        "id": "236lpmp",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→弱P中P",
+        "name": "【OD】グランドタイガーショット"
+    },
+    {
+        "id": "236mphp",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→中P強P",
+        "name": "【OD】タイガーショット"
+    },
+    {
+        "id": "623lp",
+        "category": "special",
+        "str": "low",
+        "command": "→↓↘弱P",
+        "name": "【弱】タイガーアッパーカット"
+    },
+    {
+        "id": "623mp",
+        "category": "special",
+        "str": "mid",
+        "command": "→↓↘中P",
+        "name": "【中】タイガーアッパーカット"
+    },
+    {
+        "id": "623hp_variants",
+        "category": "special",
+        "str": "high",
+        "command": "→↓↘強P",
+        "name": "【強】タイガーアッパーカット",
+        "variants": [
+            {
+                "id": "623hp",
+                "str": "high",
+                "command": "→↓↘強P",
+                "name": "【強】タイガーアッパーカット"
+            },
+            {
+                "id": "623hp_hold",
+                "str": "high",
+                "command": "→↓↘強P(ホールド)",
+                "name": "【強】タイガーアッパーカット(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "623pp",
+        "category": "special",
+        "str": "other",
+        "command": "→↓↘PP",
+        "name": "【OD】タイガーアッパーカット"
+    },
+    {
+        "id": "236lk",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱K",
+        "name": "【弱】タイガーニークラッシュ"
+    },
+    {
+        "id": "236mk",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中K",
+        "name": "【中】タイガーニークラッシュ"
+    },
+    {
+        "id": "236hk",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強K",
+        "name": "【強】タイガーニークラッシュ"
+    },
+    {
+        "id": "236kk",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→KK",
+        "name": "【OD】タイガーニークラッシュ"
+    },
+    {
+        "id": "214lk_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↓↙←弱K",
+        "name": "【弱】タイガーネクサス",
+        "variants": [
+            {
+                "id": "214lk",
+                "str": "low",
+                "command": "↓↙←弱K",
+                "name": "【弱】タイガーネクサス"
+            },
+            {
+                "id": "214lk_6lk",
+                "str": "low",
+                "command": "↓↙←弱K>→弱K",
+                "name": "【弱】タイガーネクサス>→弱K"
+            },
+            {
+                "id": "214lk_6mk",
+                "str": "low",
+                "command": "↓↙←弱K>→中K",
+                "name": "【弱】タイガーネクサス>→中K"
+            },
+            {
+                "id": "214lk_6hk",
+                "str": "low",
+                "command": "↓↙←弱K>→強K",
+                "name": "【弱】タイガーネクサス>→強K"
+            }
+        ]
+    },
+    {
+        "id": "214mk_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↙←中K",
+        "name": "【中】タイガーネクサス",
+        "variants": [
+            {
+                "id": "214mk",
+                "str": "mid",
+                "command": "↓↙←中K",
+                "name": "【中】タイガーネクサス"
+            },
+            {
+                "id": "214mk_6lk",
+                "str": "mid",
+                "command": "↓↙←中K>→弱K",
+                "name": "【中】タイガーネクサス>→弱K"
+            },
+            {
+                "id": "214mk_6mk",
+                "str": "mid",
+                "command": "↓↙←中K>→中K",
+                "name": "【中】タイガーネクサス>→中K"
+            },
+            {
+                "id": "214mk_6hk",
+                "str": "mid",
+                "command": "↓↙←中K>→強K",
+                "name": "【中】タイガーネクサス>→強K"
+            }
+        ]
+    },
+    {
+        "id": "214hk_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↙←強K",
+        "name": "【強】タイガーネクサス",
+        "variants": [
+            {
+                "id": "214hk",
+                "str": "high",
+                "command": "↓↙←強K",
+                "name": "【強】タイガーネクサス"
+            },
+            {
+                "id": "214hk_6lk",
+                "str": "high",
+                "command": "↓↙←強K>→弱K",
+                "name": "【強】タイガーネクサス>→弱K"
+            },
+            {
+                "id": "214hk_6mk",
+                "str": "high",
+                "command": "↓↙←強K>→中K",
+                "name": "【強】タイガーネクサス>→中K"
+            },
+            {
+                "id": "214hk_6hk",
+                "str": "high",
+                "command": "↓↙←強K>→強K",
+                "name": "【強】タイガーネクサス>→強K"
+            }
+        ]
+    },
+    {
+        "id": "214kk_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←KK",
+        "name": "【OD】タイガーネクサス",
+        "variants": [
+            {
+                "id": "214kk",
+                "str": "other",
+                "command": "↓↙←KK",
+                "name": "【OD】タイガーネクサス"
+            },
+            {
+                "id": "214kk_6lk",
+                "str": "other",
+                "command": "↓↙←KK>→弱K",
+                "name": "【OD】タイガーネクサス>→弱K"
+            },
+            {
+                "id": "214kk_6mk",
+                "str": "other",
+                "command": "↓↙←KK>→中K",
+                "name": "【OD】タイガーネクサス>→中K"
+            },
+            {
+                "id": "214kk_6hk",
+                "str": "other",
+                "command": "↓↙←KK>→強K",
+                "name": "【OD】タイガーネクサス>→強K"
+            }
+        ]
+    },
+    {
+        "id": "sa1",
+        "category": "sa",
+        "str": "low",
+        "command": "↓↘→↓↘→P",
+        "name": "SA1"
+    },
+    {
+        "id": "sa2_variants",
+        "category": "sa",
+        "str": "mid",
+        "command": "↓↙←↓↙←K",
+        "name": "SA2",
+        "variants": [
+            {
+                "id": "sa2",
+                "str": "mid",
+                "command": "↓↙←↓↙←K",
+                "name": "SA2"
+            },
+            {
+                "id": "sa2_6",
+                "str": "mid",
+                "command": "↓↙←↓↙←K>→",
+                "name": "SA2>→"
+            },
+            {
+                "id": "sa2_4",
+                "str": "mid",
+                "command": "↓↙←↓↙←K>←",
+                "name": "SA2>←"
+            },
+            {
+                "id": "sa2_2",
+                "str": "mid",
+                "command": "↓↙←↓↙←K>↓",
+                "name": "SA2>↓"
+            }
+        ]
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "↓↘→↓↘→K",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "other",
+        "command": "【CA】↓↘→↓↘→K",
+        "name": "CA"
+    }
+]

@@ -1,0 +1,515 @@
+[
+    {
+        "id": "assist_l_variants",
+        "category": "normal",
+        "str": "low",
+        "command": "AUTO弱",
+        "name": "AUTO弱",
+        "variants": [
+            {
+                "id": "assist_l",
+                "str": "low",
+                "command": "AUTO弱",
+                "name": "AUTO弱"
+            },
+            {
+                "id": "assist_l_2",
+                "str": "low",
+                "command": "AUTO弱>弱",
+                "name": "AUTO弱>弱"
+            },
+            {
+                "id": "assist_l_3",
+                "str": "low",
+                "command": "AUTO弱>弱>弱",
+                "name": "AUTO弱>弱>弱"
+            },
+            {
+                "id": "assist_l_4",
+                "str": "low",
+                "command": "AUTO弱>弱>弱>弱",
+                "name": "AUTO弱>弱>弱>弱"
+            },
+            {
+                "id": "assist_2l",
+                "str": "low",
+                "command": "AUTO↓弱",
+                "name": "AUTO↓弱"
+            },
+            {
+                "id": "assist_2l_2",
+                "str": "low",
+                "command": "AUTO↓弱>弱",
+                "name": "AUTO↓弱>弱"
+            },
+            {
+                "id": "assist_2l_3",
+                "str": "low",
+                "command": "AUTO↓弱>弱>弱",
+                "name": "AUTO↓弱>弱>弱"
+            },
+            {
+                "id": "assist_2l_4",
+                "str": "low",
+                "command": "AUTO↓弱>弱>弱>弱",
+                "name": "AUTO↓弱>弱>弱>弱"
+            }
+        ]
+    },
+    {
+        "id": "assist_m_variants",
+        "category": "normal",
+        "str": "mid",
+        "command": "AUTO中",
+        "name": "AUTO中",
+        "variants": [
+            {
+                "id": "assist_m",
+                "str": "mid",
+                "command": "AUTO中",
+                "name": "AUTO中"
+            },
+            {
+                "id": "assist_m_2",
+                "str": "mid",
+                "command": "AUTO中>中",
+                "name": "AUTO中>中"
+            },
+            {
+                "id": "assist_m_3",
+                "str": "mid",
+                "command": "AUTO中>中>中",
+                "name": "AUTO中>中>中"
+            }
+        ]
+    },
+    {
+        "id": "assist_h_variants",
+        "category": "normal",
+        "str": "high",
+        "command": "AUTO強",
+        "name": "AUTO強",
+        "variants": [
+            {
+                "id": "assist_h",
+                "str": "high",
+                "command": "AUTO強",
+                "name": "AUTO強"
+            },
+            {
+                "id": "assist_h_2",
+                "str": "high",
+                "command": "AUTO強>強",
+                "name": "AUTO強>強"
+            },
+            {
+                "id": "assist_h_3",
+                "str": "high",
+                "command": "AUTO強>強>強",
+                "name": "AUTO強>強>強"
+            }
+        ]
+    },
+    {
+        "id": "6mp",
+        "category": "unique",
+        "str": "mid",
+        "command": "→中",
+        "name": "→中"
+    },
+    {
+        "id": "4hp",
+        "category": "unique",
+        "str": "high",
+        "command": "←強",
+        "name": "←強"
+    },
+    {
+        "id": "3h",
+        "category": "unique",
+        "str": "high",
+        "command": "↘強",
+        "name": "↘強"
+    },
+    {
+        "id": "6hp",
+        "category": "unique",
+        "str": "high",
+        "command": "→強",
+        "name": "→強"
+    },
+    {
+        "id": "6hp_target",
+        "category": "unique",
+        "str": "high",
+        "command": "→強タゲコン",
+        "name": "→強タゲコン",
+        "variants": [
+            {
+                "id": "6hp_5hp",
+                "str": "high",
+                "command": "→強>強",
+                "name": "→強>強"
+            }
+        ]
+    },
+    {
+        "id": "5lp_target",
+        "category": "unique",
+        "str": "low",
+        "command": "弱タゲコン",
+        "name": "弱タゲコン",
+        "variants": [
+            {
+                "id": "5lp_5mp",
+                "str": "low",
+                "command": "弱>弱",
+                "name": "弱>弱"
+            },
+            {
+                "id": "5lp_5mp_5hp",
+                "str": "low",
+                "command": "弱>弱>弱",
+                "name": "弱>弱>弱"
+            }
+        ]
+    },
+    {
+        "id": "5mp_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "中タゲコン",
+        "name": "中タゲコン",
+        "variants": [
+            {
+                "id": "5mp_5mp",
+                "str": "mid",
+                "command": "中>中",
+                "name": "中>中"
+            },
+            {
+                "id": "5mp_5mp_5mp",
+                "str": "mid",
+                "command": "中>中>中",
+                "name": "中>中>中"
+            },
+            {
+                "id": "5mp_5mp_5mp_5mp",
+                "str": "mid",
+                "command": "中>中>中>中",
+                "name": "中>中>中>中"
+            }
+        ]
+    },
+    {
+        "id": "2mk_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "↓中タゲコン",
+        "name": "↓中タゲコン",
+        "variants": [
+            {
+                "id": "2mk_2hp",
+                "str": "mid",
+                "command": "↓中>↓中",
+                "name": "↓中>↓中"
+            }
+        ]
+    },
+    {
+        "id": "236lp",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱",
+        "name": "【弱】サンドブラスト"
+    },
+    {
+        "id": "236mp",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中(SP)",
+        "name": "【中】サンドブラスト"
+    },
+    {
+        "id": "236hp",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強",
+        "name": "【強】サンドブラスト"
+    },
+    {
+        "id": "236pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→〇〇(AUTO SP)",
+        "name": "【OD】サンドブラスト",
+        "variants": [
+            {
+                "id": "236pp",
+                "str": "other",
+                "command": "↓↘→〇〇(AUTO SP)",
+                "name": "【OD】サンドブラスト"
+            },
+            {
+                "id": "236pp_fatal",
+                "str": "other",
+                "command": "↓↘→〇〇(AUTO SP)>〇〇(SP)",
+                "name": "【OD】サンドブラスト>〇〇(SP)"
+            }
+        ]
+    },
+    {
+        "id": "214lp_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↓↙←弱",
+        "name": "【弱】フラッシュナックル",
+        "variants": [
+            {
+                "id": "214lp",
+                "str": "low",
+                "command": "↓↙←弱",
+                "name": "【弱】フラッシュナックル"
+            },
+            {
+                "id": "214lp_hold",
+                "str": "low",
+                "command": "↓↙←弱（ホールド）",
+                "name": "【弱】フラッシュナックル（ホールド）"
+            },
+            {
+                "id": "214lp_perfect",
+                "str": "low",
+                "command": "↓↙←弱（ジャスト）",
+                "name": "【弱】フラッシュナックル（ジャスト）"
+            }
+        ]
+    },
+    {
+        "id": "214mp_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↙←中(←SP)",
+        "name": "【中】フラッシュナックル",
+        "variants": [
+            {
+                "id": "214mp",
+                "str": "mid",
+                "command": "↓↙←中(←SP)",
+                "name": "【中】フラッシュナックル"
+            },
+            {
+                "id": "214mp_hold",
+                "str": "mid",
+                "command": "↓↙←中(←SP)（ホールド）",
+                "name": "【中】フラッシュナックル（ホールド）"
+            },
+            {
+                "id": "214mp_perfect",
+                "str": "mid",
+                "command": "↓↙←中(←SP)（ジャスト）",
+                "name": "【中】フラッシュナックル（ジャスト）"
+            }
+        ]
+    },
+    {
+        "id": "214hp_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↙←強",
+        "name": "【強】フラッシュナックル",
+        "variants": [
+            {
+                "id": "214hp",
+                "str": "high",
+                "command": "↓↙←強",
+                "name": "【強】フラッシュナックル"
+            },
+            {
+                "id": "214hp_hold",
+                "str": "high",
+                "command": "↓↙←強（ホールド）",
+                "name": "【強】フラッシュナックル（ホールド）"
+            },
+            {
+                "id": "214hp_perfect",
+                "str": "high",
+                "command": "↓↙←強（ジャスト）",
+                "name": "【強】フラッシュナックル（ジャスト）"
+            }
+        ]
+    },
+    {
+        "id": "214pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←〇〇(AUTO ←SP)",
+        "name": "【OD】フラッシュナックル",
+        "variants": [
+            {
+                "id": "214pp",
+                "str": "other",
+                "command": "↓↙←〇〇(AUTO ←SP)",
+                "name": "【OD】フラッシュナックル"
+            },
+            {
+                "id": "214pp_pp",
+                "str": "other",
+                "command": "↓↙←〇〇(AUTO ←SP)>〇〇(SP)",
+                "name": "【OD】フラッシュナックル>〇〇(SP)"
+            }
+        ]
+    },
+    {
+        "id": "j214p_variants",
+        "category": "special",
+        "str": "other",
+        "command": "空中↓↙←〇",
+        "name": "エアフラッシュナックル",
+        "variants": [
+            {
+                "id": "j214p",
+                "str": "other",
+                "command": "空中↓↙←〇",
+                "name": "エアフラッシュナックル"
+            },
+            {
+                "id": "j214p_hold",
+                "str": "other",
+                "command": "空中↓↙←〇（ホールド）",
+                "name": "エアフラッシュナックル（ホールド）"
+            }
+        ]
+    },
+    {
+        "id": "j214pp",
+        "category": "special",
+        "str": "other",
+        "command": "空中↓↙←〇〇(AUTO SP)",
+        "name": "【OD】エアフラッシュナックル"
+    },
+    {
+        "id": "236k_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓SP",
+        "name": "アベンジャー",
+        "variants": [
+            {
+                "id": "236k",
+                "str": "other",
+                "command": "↓SP",
+                "name": "アベンジャー"
+            },
+            {
+                "id": "236k_p",
+                "str": "other",
+                "command": "↓SP>〇",
+                "name": "アベンジャー>〇"
+            },
+            {
+                "id": "236k_k",
+                "str": "other",
+                "command": "↓SP>↓〇",
+                "name": "アベンジャー>↓〇"
+            }
+        ]
+    },
+    {
+        "id": "236kk_variants",
+        "category": "special",
+        "str": "other",
+        "command": "AUTO ↓SP",
+        "name": "【OD】アベンジャー",
+        "variants": [
+            {
+                "id": "236kk",
+                "str": "other",
+                "command": "AUTO ↓SP",
+                "name": "【OD】アベンジャー"
+            },
+            {
+                "id": "236kk_p",
+                "str": "other",
+                "command": "AUTO ↓SP>〇",
+                "name": "【OD】アベンジャー>〇"
+            },
+            {
+                "id": "236kk_k",
+                "str": "other",
+                "command": "AUTO ↓SP>↓〇",
+                "name": "【OD】アベンジャー>↓〇"
+            }
+        ]
+    },
+    {
+        "id": "623lp",
+        "category": "special",
+        "str": "low",
+        "command": "→↓↘弱",
+        "name": "【弱】ライジングアッパー"
+    },
+    {
+        "id": "623mp",
+        "category": "special",
+        "str": "mid",
+        "command": "→↓↘中(→SP)",
+        "name": "【中】ライジングアッパー"
+    },
+    {
+        "id": "623hp",
+        "category": "special",
+        "str": "high",
+        "command": "→↓↘強",
+        "name": "【強】ライジングアッパー"
+    },
+    {
+        "id": "623pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "→↓↘〇〇(AUTO →SP)",
+        "name": "【OD】ライジングアッパー",
+        "variants": [
+            {
+                "id": "623pp",
+                "str": "other",
+                "command": "→↓↘〇〇(AUTO →SP)",
+                "name": "【OD】ライジングアッパー"
+            },
+            {
+                "id": "623pp_pp",
+                "str": "other",
+                "command": "→↓↘〇〇(AUTO →SP)>〇〇(SP)",
+                "name": "【OD】ライジングアッパー>〇〇(SP)"
+            }
+        ]
+    },
+    {
+        "id": "sa1",
+        "category": "sa",
+        "str": "low",
+        "command": "↓↘→↓↘→弱(SP強)",
+        "name": "SA1"
+    },
+    {
+        "id": "sa2",
+        "category": "sa",
+        "str": "mid",
+        "command": "↓↙←↓↙←中(←SP強)",
+        "name": "SA2"
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "↓↘→↓↘→強(↓SP強)",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "other",
+        "command": "【CA】↓↘→↓↘→強(↓SP強)",
+        "name": "CA"
+    }
+]

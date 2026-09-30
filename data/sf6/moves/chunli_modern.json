@@ -1,0 +1,505 @@
+[
+    {
+        "id": "assist_l_variants",
+        "category": "normal",
+        "str": "low",
+        "command": "AUTO弱",
+        "name": "AUTO弱",
+        "variants": [
+            {
+                "id": "assist_l",
+                "str": "low",
+                "command": "AUTO弱",
+                "name": "AUTO弱"
+            },
+            {
+                "id": "assist_l_2",
+                "str": "low",
+                "command": "AUTO弱>弱",
+                "name": "AUTO弱>弱"
+            },
+            {
+                "id": "assist_2l",
+                "str": "low",
+                "command": "AUTO↓弱",
+                "name": "AUTO↓弱"
+            },
+            {
+                "id": "assist_2l_2",
+                "str": "low",
+                "command": "AUTO↓弱>弱",
+                "name": "AUTO↓弱>弱"
+            },
+            {
+                "id": "assist_2l_3",
+                "str": "low",
+                "command": "AUTO↓弱>弱>弱",
+                "name": "AUTO↓弱>弱>弱"
+            }
+        ]
+    },
+    {
+        "id": "assist_m_variants",
+        "category": "normal",
+        "str": "mid",
+        "command": "AUTO中",
+        "name": "AUTO中",
+        "variants": [
+            {
+                "id": "assist_m",
+                "str": "mid",
+                "command": "AUTO中",
+                "name": "AUTO中"
+            },
+            {
+                "id": "assist_m_2",
+                "str": "mid",
+                "command": "AUTO中>中",
+                "name": "AUTO中>中"
+            },
+            {
+                "id": "assist_m_3",
+                "str": "mid",
+                "command": "AUTO中>中>中",
+                "name": "AUTO中>中>中"
+            },
+            {
+                "id": "assist_m_4",
+                "str": "mid",
+                "command": "AUTO中>中>中>中",
+                "name": "AUTO中>中>中>中"
+            },
+            {
+                "id": "assist_m_5",
+                "str": "mid",
+                "command": "AUTO中>中>中>中>中",
+                "name": "AUTO中>中>中>中>中"
+            },
+            {
+                "id": "assist_m_6",
+                "str": "mid",
+                "command": "AUTO中>中>中>中>中>中",
+                "name": "AUTO中>中>中>中>中>中"
+            }
+        ]
+    },
+    {
+        "id": "assist_h_variants",
+        "category": "normal",
+        "str": "high",
+        "command": "AUTO強",
+        "name": "AUTO強",
+        "variants": [
+            {
+                "id": "assist_h",
+                "str": "high",
+                "command": "AUTO強",
+                "name": "AUTO強"
+            },
+            {
+                "id": "assist_h_2",
+                "str": "high",
+                "command": "AUTO強>強",
+                "name": "AUTO強>強"
+            },
+            {
+                "id": "assist_h_3",
+                "str": "high",
+                "command": "AUTO強>強>強",
+                "name": "AUTO強>強>強"
+            },
+            {
+                "id": "assist_h_4",
+                "str": "high",
+                "command": "AUTO強>強>強>強",
+                "name": "AUTO強>強>強>強"
+            },
+            {
+                "id": "assist_h_5",
+                "str": "high",
+                "command": "AUTO強>強>強>強>強",
+                "name": "AUTO強>強>強>強>強"
+            },
+            {
+                "id": "assist_h_6",
+                "str": "high",
+                "command": "AUTO強>強>強>強>強>強",
+                "name": "AUTO強>強>強>強>強>強"
+            }
+        ]
+    },
+    {
+        "id": "throw_j",
+        "category": "jump",
+        "str": "other",
+        "command": "空中投げ",
+        "name": "空中投げ"
+    },
+    {
+        "id": "triangle_jump",
+        "category": "common",
+        "str": "other",
+        "command": "三角跳び",
+        "name": "三角跳び"
+    },
+    {
+        "id": "njhk",
+        "category": "jump",
+        "str": "high",
+        "command": "垂直J強",
+        "name": "垂直J強"
+    },
+    {
+        "id": "6m",
+        "category": "unique",
+        "str": "mid",
+        "command": "→中",
+        "name": "→中"
+    },
+    {
+        "id": "4m",
+        "category": "unique",
+        "str": "mid",
+        "command": "←中",
+        "name": "←中"
+    },
+    {
+        "id": "4h",
+        "category": "unique",
+        "str": "high",
+        "command": "←強",
+        "name": "←強"
+    },
+    {
+        "id": "6h",
+        "category": "unique",
+        "str": "high",
+        "command": "→強",
+        "name": "→強"
+    },
+    {
+        "id": "3h",
+        "category": "unique",
+        "str": "high",
+        "command": "↘強",
+        "name": "↘強"
+    },
+    {
+        "id": "j2m",
+        "category": "jump",
+        "str": "mid",
+        "command": "J↓中",
+        "name": "J↓中"
+    },
+    {
+        "id": "j2m_target",
+        "category": "jump",
+        "str": "mid",
+        "command": "J↓中タゲコン",
+        "name": "J↓中タゲコン",
+        "variants": [
+            {
+                "id": "j2m_2m",
+                "str": "mid",
+                "command": "J↓中>↓中",
+                "name": "J↓中>↓中"
+            },
+            {
+                "id": "j2m_2m_2m",
+                "str": "mid",
+                "command": "J↓中>↓中>↓中",
+                "name": "J↓中>↓中>↓中"
+            }
+        ]
+    },
+    {
+        "id": "jah_target",
+        "category": "jump",
+        "str": "high",
+        "command": "J AUTO強タゲコン",
+        "name": "J AUTO強タゲコン",
+        "variants": [
+            {
+                "id": "jah_h",
+                "str": "high",
+                "command": "J AUTO強>強",
+                "name": "J AUTO強>強"
+            }
+        ]
+    },
+    {
+        "id": "214p_variants",
+        "category": "unique",
+        "str": "other",
+        "command": "↓↙←〇",
+        "name": "行雲流水",
+        "variants": [
+            {
+                "id": "214p",
+                "str": "other",
+                "command": "↓↙←〇",
+                "name": "行雲流水"
+            },
+            {
+                "id": "214p_l",
+                "str": "high",
+                "command": "↓↙←〇>弱",
+                "name": "行雲流水>弱"
+            },
+            {
+                "id": "214p_m",
+                "str": "low",
+                "command": "↓↙←〇>中",
+                "name": "行雲流水>中"
+            },
+            {
+                "id": "214p_h",
+                "str": "mid",
+                "command": "↓↙←〇>強",
+                "name": "行雲流水>強"
+            },
+            {
+                "id": "214p_2l",
+                "str": "low",
+                "command": "↓↙←〇>↓弱",
+                "name": "行雲流水>↓弱"
+            },
+            {
+                "id": "214p_2m",
+                "str": "low",
+                "command": "↓↙←〇>↓中",
+                "name": "行雲流水>↓中"
+            },
+            {
+                "id": "214p_2h",
+                "str": "high",
+                "command": "↓↙←〇>↓強",
+                "name": "行雲流水>↓強"
+            }
+        ]
+    },
+    {
+        "id": "4h6lp",
+        "category": "special",
+        "str": "low",
+        "command": "⇐→弱",
+        "name": "【弱】気功拳"
+    },
+    {
+        "id": "4h6mp",
+        "category": "special",
+        "str": "mid",
+        "command": "⇐→中",
+        "name": "【中】気功拳"
+    },
+    {
+        "id": "4h6hp",
+        "category": "special",
+        "str": "high",
+        "command": "⇐→強(⇐SP)",
+        "name": "【強】気功拳"
+    },
+    {
+        "id": "4h6pp",
+        "category": "special",
+        "str": "other",
+        "command": "⇐→〇〇(AUTO ⇐SP)",
+        "name": "【OD】気功拳"
+    },
+    {
+        "id": "236l",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱(SP)",
+        "name": "【弱】百裂脚"
+    },
+    {
+        "id": "236m",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中",
+        "name": "【中】百裂脚"
+    },
+    {
+        "id": "236h",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強",
+        "name": "【強】百裂脚"
+    },
+    {
+        "id": "236kk_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→〇〇(AUTO SP)",
+        "name": "【OD】百裂脚",
+        "variants": [
+            {
+                "id": "236kk",
+                "str": "other",
+                "command": "↓↘→〇〇(AUTO SP)",
+                "name": "【OD】百裂脚"
+            },
+            {
+                "id": "236kk_kk",
+                "str": "other",
+                "command": "↓↘→〇〇(AUTO SP)>〇〇(SP)",
+                "name": "【OD】百裂脚>〇〇(SP)"
+            }
+        ]
+    },
+    {
+        "id": "j236lk",
+        "category": "special",
+        "str": "low",
+        "command": "空中↓↘→弱(SP)",
+        "name": "【弱】空中百裂脚"
+    },
+    {
+        "id": "j236mk",
+        "category": "special",
+        "str": "mid",
+        "command": "空中↓↘→中",
+        "name": "【中】空中百裂脚"
+    },
+    {
+        "id": "j236hk",
+        "category": "special",
+        "str": "high",
+        "command": "空中↓↘→強",
+        "name": "【強】空中百裂脚"
+    },
+    {
+        "id": "j236kk",
+        "category": "special",
+        "str": "other",
+        "command": "空中↓↘→〇〇(AUTO SP)",
+        "name": "【OD】空中百裂脚"
+    },
+    {
+        "id": "2h8lk",
+        "category": "special",
+        "str": "low",
+        "command": "⇓↑弱",
+        "name": "【弱】スピニングバードキック"
+    },
+    {
+        "id": "2h8mk",
+        "category": "special",
+        "str": "mid",
+        "command": "⇓↑中",
+        "name": "【中】スピニングバードキック"
+    },
+    {
+        "id": "2h8hk",
+        "category": "special",
+        "str": "high",
+        "command": "⇓↑強",
+        "name": "【強】スピニングバードキック"
+    },
+    {
+        "id": "2h8kk",
+        "category": "special",
+        "str": "other",
+        "command": "⇓↑〇〇",
+        "name": "【OD】スピニングバードキック"
+    },
+    {
+        "id": "214lk",
+        "category": "special",
+        "str": "low",
+        "command": "↙SP",
+        "name": "【弱】覇山蹴"
+    },
+    {
+        "id": "214mk",
+        "category": "special",
+        "str": "mid",
+        "command": "↓SP",
+        "name": "【中】覇山蹴"
+    },
+    {
+        "id": "214hk",
+        "category": "special",
+        "str": "high",
+        "command": "↘SP",
+        "name": "【強】覇山蹴"
+    },
+    {
+        "id": "214kk",
+        "category": "special",
+        "str": "other",
+        "command": "AUTO ↓SP",
+        "name": "【OD】覇山蹴"
+    },
+    {
+        "id": "22lk",
+        "category": "special",
+        "str": "low",
+        "command": "↓↓弱",
+        "name": "【弱】天昇脚"
+    },
+    {
+        "id": "22mk",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↓中",
+        "name": "【中】天昇脚"
+    },
+    {
+        "id": "22hk",
+        "category": "special",
+        "str": "high",
+        "command": "↓↓強(→SP)",
+        "name": "【強】天昇脚"
+    },
+    {
+        "id": "22kk",
+        "category": "special",
+        "str": "other",
+        "command": "↓↓〇〇(AUTO →SP)",
+        "name": "【OD】天昇脚"
+    },
+    {
+        "id": "sa1_variants",
+        "category": "sa",
+        "str": "low",
+        "command": "↓↘→↓↘→弱(SP強)",
+        "name": "SA1",
+        "variants": [
+            {
+                "id": "sa1",
+                "str": "low",
+                "command": "↓↘→↓↘→弱(SP強)",
+                "name": "SA1"
+            },
+            {
+                "id": "j_sa1",
+                "str": "low",
+                "command": "空中↓↘→↓↘→弱(SP強)",
+                "name": "空中SA1"
+            }
+        ]
+    },
+    {
+        "id": "sa2",
+        "category": "sa",
+        "str": "mid",
+        "command": "↓↘→↓↘→中(←SP強)",
+        "name": "SA2"
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "↓↙←↓↙←強(↓SP強)",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "other",
+        "command": "【CA】↓↙←↓↙←強(↓SP強)",
+        "name": "CA"
+    }
+]

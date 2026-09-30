@@ -1,0 +1,628 @@
+[
+    {
+        "id": "assist_l_variants",
+        "category": "normal",
+        "str": "low",
+        "command": "AUTO弱",
+        "name": "AUTO弱",
+        "variants": [
+            {
+                "id": "assist_l",
+                "str": "low",
+                "command": "AUTO弱",
+                "name": "AUTO弱"
+            },
+            {
+                "id": "assist_l_2",
+                "str": "low",
+                "command": "AUTO弱>弱",
+                "name": "AUTO弱>弱"
+            },
+            {
+                "id": "assist_l_3",
+                "str": "low",
+                "command": "AUTO弱>弱>弱",
+                "name": "AUTO弱>弱>弱"
+            },
+            {
+                "id": "assist_l_4",
+                "str": "low",
+                "command": "AUTO弱>弱>弱>弱",
+                "name": "AUTO弱>弱>弱>弱"
+            },
+            {
+                "id": "assist_2l",
+                "str": "low",
+                "command": "AUTO↓弱",
+                "name": "AUTO↓弱"
+            },
+            {
+                "id": "assist_2l_2",
+                "str": "low",
+                "command": "AUTO↓弱>弱",
+                "name": "AUTO↓弱>弱"
+            },
+            {
+                "id": "assist_2l_3",
+                "str": "low",
+                "command": "AUTO↓弱>弱>弱",
+                "name": "AUTO↓弱>弱>弱"
+            }
+        ]
+    },
+    {
+        "id": "assist_m_variants",
+        "category": "normal",
+        "str": "mid",
+        "command": "AUTO中",
+        "name": "AUTO中",
+        "variants": [
+            {
+                "id": "assist_m",
+                "str": "mid",
+                "command": "AUTO中",
+                "name": "AUTO中"
+            },
+            {
+                "id": "assist_m_2",
+                "str": "mid",
+                "command": "AUTO中>中",
+                "name": "AUTO中>中"
+            },
+            {
+                "id": "assist_m_3",
+                "str": "mid",
+                "command": "AUTO中>中>中",
+                "name": "AUTO中>中>中"
+            },
+            {
+                "id": "assist_m_4",
+                "str": "mid",
+                "command": "AUTO中>中>中>中",
+                "name": "AUTO中>中>中>中"
+            }
+        ]
+    },
+    {
+        "id": "assist_h_variants",
+        "category": "normal",
+        "str": "high",
+        "command": "AUTO強",
+        "name": "AUTO強",
+        "variants": [
+            {
+                "id": "assist_h",
+                "str": "high",
+                "command": "AUTO強",
+                "name": "AUTO強"
+            },
+            {
+                "id": "assist_h_2",
+                "str": "high",
+                "command": "AUTO強>強",
+                "name": "AUTO強>強"
+            },
+            {
+                "id": "assist_h_3",
+                "str": "high",
+                "command": "AUTO強>強>強",
+                "name": "AUTO強>強>強"
+            },
+            {
+                "id": "assist_h_4",
+                "str": "high",
+                "command": "AUTO強>強>強>強",
+                "name": "AUTO強>強>強>強"
+            }
+        ]
+    },
+    {
+        "id": "4hp",
+        "category": "unique",
+        "str": "high",
+        "command": "←強",
+        "name": "←強"
+    },
+    {
+        "id": "6hp",
+        "category": "unique",
+        "str": "high",
+        "command": "→強",
+        "name": "→強"
+    },
+    {
+        "id": "4lk",
+        "category": "unique",
+        "str": "low",
+        "command": "←弱",
+        "name": "←弱"
+    },
+    {
+        "id": "4mk",
+        "category": "unique",
+        "str": "mid",
+        "command": "←中",
+        "name": "←中"
+    },
+    {
+        "id": "6mk",
+        "category": "unique",
+        "str": "mid",
+        "command": "→中",
+        "name": "→中"
+    },
+    {
+        "id": "2mk_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "↓中タゲコン",
+        "name": "↓中タゲコン",
+        "variants": [
+            {
+                "id": "2mk_6mp",
+                "str": "mid",
+                "command": "↓中>→中",
+                "name": "↓中>→中"
+            }
+        ]
+    },
+    {
+        "id": "3h",
+        "category": "unique",
+        "str": "high",
+        "command": "↘強",
+        "name": "↘強"
+    },
+    {
+        "id": "2hk_target",
+        "category": "unique",
+        "str": "high",
+        "command": "↘強タゲコン",
+        "name": "↘強タゲコン",
+        "variants": [
+            {
+                "id": "2hk_3hk",
+                "str": "high",
+                "command": "↘強>↘強",
+                "name": "↘強>↘強"
+            }
+        ]
+    },
+    {
+        "id": "4h6lp_variants",
+        "category": "special",
+        "str": "low",
+        "command": "⇐→弱(⇐SP)",
+        "name": "【弱】ソニックブーム",
+        "variants": [
+            {
+                "id": "4h6lp",
+                "str": "low",
+                "command": "⇐→弱(⇐SP)",
+                "name": "【弱】ソニックブーム"
+            },
+            {
+                "id": "4h6lp_just",
+                "str": "low",
+                "command": "【ジャスト】⇐→弱(⇐→SP)",
+                "name": "【弱/ジャスト】ソニックブーム"
+            }
+        ]
+    },
+    {
+        "id": "4h6mp_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "⇐→中",
+        "name": "【中】ソニックブーム",
+        "variants": [
+            {
+                "id": "4h6mp",
+                "str": "mid",
+                "command": "⇐→中",
+                "name": "【中】ソニックブーム"
+            },
+            {
+                "id": "4h6mp_just",
+                "str": "mid",
+                "command": "【ジャスト】⇐→中",
+                "name": "【中/ジャスト】ソニックブーム"
+            }
+        ]
+    },
+    {
+        "id": "4h6hp_variants",
+        "category": "special",
+        "str": "high",
+        "command": "⇐→強",
+        "name": "【強】ソニックブーム",
+        "variants": [
+            {
+                "id": "4h6hp",
+                "str": "high",
+                "command": "⇐→強",
+                "name": "【強】ソニックブーム"
+            },
+            {
+                "id": "4h6hp_just",
+                "str": "high",
+                "command": "【ジャスト】⇐→強",
+                "name": "【強/ジャスト】ソニックブーム"
+            }
+        ]
+    },
+    {
+        "id": "4h6pp",
+        "category": "special",
+        "str": "other",
+        "command": "⇐→〇〇(AUTO ⇐SP)",
+        "name": "【OD】ソニックブーム"
+    },
+    {
+        "id": "2h8lk_variants",
+        "category": "special",
+        "str": "low",
+        "command": "⇓↑弱",
+        "name": "【弱】サマーソルトキック",
+        "variants": [
+            {
+                "id": "2h8lk",
+                "str": "low",
+                "command": "⇓↑弱",
+                "name": "【弱】サマーソルトキック"
+            },
+            {
+                "id": "2h8lk_just",
+                "str": "low",
+                "command": "【ジャスト】⇓↑弱",
+                "name": "【弱/ジャスト】サマーソルトキック"
+            }
+        ]
+    },
+    {
+        "id": "2h8mk_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "⇓↑中(⇓SP)",
+        "name": "【中】サマーソルトキック",
+        "variants": [
+            {
+                "id": "2h8mk",
+                "str": "mid",
+                "command": "⇓↑中(⇓SP)",
+                "name": "【中】サマーソルトキック"
+            },
+            {
+                "id": "2h8mk_just",
+                "str": "mid",
+                "command": "【ジャスト】⇓↑中(⇓↑SP)",
+                "name": "【中/ジャスト】サマーソルトキック"
+            }
+        ]
+    },
+    {
+        "id": "2h8hk_variants",
+        "category": "special",
+        "str": "high",
+        "command": "⇓↑強",
+        "name": "【強】サマーソルトキック",
+        "variants": [
+            {
+                "id": "2h8hk",
+                "str": "high",
+                "command": "⇓↑強",
+                "name": "【強】サマーソルトキック"
+            },
+            {
+                "id": "2h8hk_just",
+                "str": "high",
+                "command": "【ジャスト】⇓↑強",
+                "name": "【強/ジャスト】サマーソルトキック"
+            }
+        ]
+    },
+    {
+        "id": "2h8kk",
+        "category": "special",
+        "str": "other",
+        "command": "⇓↑〇〇(AUTO ⇓SP)",
+        "name": "【OD】サマーソルトキック"
+    },
+    {
+        "id": "214lp_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↓↙←弱(SP)",
+        "name": "【弱】ソニックブレイド",
+        "variants": [
+            {
+                "id": "214lp",
+                "str": "low",
+                "command": "↓↙←弱(SP)",
+                "name": "【弱】ソニックブレイド"
+            },
+            {
+                "id": "214lp_6lp",
+                "str": "low",
+                "command": "↓↙←弱(SP)>→弱(SP)",
+                "name": "【弱】ソニックブレイド>→弱"
+            },
+            {
+                "id": "214lp_6lp_just",
+                "str": "low",
+                "command": "【ジャスト】↓↙←弱(SP)>→弱(→SP)",
+                "name": "【弱/ジャスト】ソニックブレイド>→弱"
+            },
+            {
+                "id": "214lp_6mp",
+                "str": "low",
+                "command": "↓↙←弱(SP)>→中",
+                "name": "【弱】ソニックブレイド>→中"
+            },
+            {
+                "id": "214lp_6mp_just",
+                "str": "low",
+                "command": "【ジャスト】↓↙←弱(SP)>→中",
+                "name": "【弱/ジャスト】ソニックブレイド>→中"
+            },
+            {
+                "id": "214lp_6hp",
+                "str": "low",
+                "command": "↓↙←弱(SP)>→強",
+                "name": "【弱】ソニックブレイド>→強"
+            },
+            {
+                "id": "214lp_6hp_just",
+                "str": "low",
+                "command": "【ジャスト】↓↙←弱(SP)>→強",
+                "name": "【弱/ジャスト】ソニックブレイド>→強"
+            },
+            {
+                "id": "214lp_6pp",
+                "str": "low",
+                "command": "↓↙←弱(SP)>→〇〇",
+                "name": "【弱】ソニックブレイド>→〇〇"
+            }
+        ]
+    },
+    {
+        "id": "214mp_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↙←中",
+        "name": "【中】ソニックブレイド",
+        "variants": [
+            {
+                "id": "214mp",
+                "str": "mid",
+                "command": "↓↙←中",
+                "name": "【中】ソニックブレイド"
+            },
+            {
+                "id": "214mp_6lp",
+                "str": "mid",
+                "command": "↓↙←中>→弱(SP)",
+                "name": "【中】ソニックブレイド>→弱"
+            },
+            {
+                "id": "214mp_6lp_just",
+                "str": "mid",
+                "command": "【ジャスト】↓↙←中>→弱(SP)",
+                "name": "【中/ジャスト】ソニックブレイド>→弱"
+            },
+            {
+                "id": "214mp_6mp",
+                "str": "mid",
+                "command": "↓↙←中>→中",
+                "name": "【中】ソニックブレイド>→中"
+            },
+            {
+                "id": "214mp_6mp_just",
+                "str": "mid",
+                "command": "【ジャスト】↓↙←中>→中",
+                "name": "【中/ジャスト】ソニックブレイド>→中"
+            },
+            {
+                "id": "214mp_6hp",
+                "str": "mid",
+                "command": "↓↙←中>→強",
+                "name": "【中】ソニックブレイド>→強"
+            },
+            {
+                "id": "214mp_6hp_just",
+                "str": "mid",
+                "command": "【ジャスト】↓↙←中>→強",
+                "name": "【中/ジャスト】ソニックブレイド>→強"
+            },
+            {
+                "id": "214mp_6pp",
+                "str": "mid",
+                "command": "↓↙←中(SP)>→〇〇",
+                "name": "【中】ソニックブレイド>→〇〇"
+            }
+        ]
+    },
+    {
+        "id": "214hp_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↙←強",
+        "name": "【強】ソニックブレイド",
+        "variants": [
+            {
+                "id": "214hp",
+                "str": "high",
+                "command": "↓↙←強",
+                "name": "【強】ソニックブレイド"
+            },
+            {
+                "id": "214hp_6lp",
+                "str": "high",
+                "command": "↓↙←強>→弱(SP)",
+                "name": "【強】ソニックブレイド>→弱"
+            },
+            {
+                "id": "214hp_6lp_just",
+                "str": "high",
+                "command": "【ジャスト】↓↙←強>→弱(SP)",
+                "name": "【強/ジャスト】ソニックブレイド>→弱"
+            },
+            {
+                "id": "214hp_6mp",
+                "str": "high",
+                "command": "↓↙←強>→中",
+                "name": "【強】ソニックブレイド>→中"
+            },
+            {
+                "id": "214hp_6mp_just",
+                "str": "high",
+                "command": "【ジャスト】↓↙←強>→中",
+                "name": "【強/ジャスト】ソニックブレイド>→中"
+            },
+            {
+                "id": "214hp_6hp",
+                "str": "high",
+                "command": "↓↙←強>→強",
+                "name": "【強】ソニックブレイド>→強"
+            },
+            {
+                "id": "214hp_6hp_just",
+                "str": "high",
+                "command": "【ジャスト】↓↙←強>→強",
+                "name": "【強/ジャスト】ソニックブレイド>→強"
+            },
+            {
+                "id": "214hp_6pp",
+                "str": "high",
+                "command": "↓↙←強(SP)>→〇〇",
+                "name": "【強】ソニックブレイド>→〇〇"
+            }
+        ]
+    },
+    {
+        "id": "214pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←〇〇(AUTO SP)",
+        "name": "【OD】ソニックブレイド",
+        "variants": [
+            {
+                "id": "214lpmp",
+                "str": "other",
+                "command": "↓↙←弱中",
+                "name": "【OD弱】ソニックブレイド"
+            },
+            {
+                "id": "214lpmp_6p",
+                "str": "other",
+                "command": "↓↙←弱中>→〇",
+                "name": "【OD弱】ソニックブレイド>→〇"
+            },
+            {
+                "id": "214lpmp_6pp",
+                "str": "other",
+                "command": "↓↙←弱中>→〇〇",
+                "name": "【OD弱】ソニックブレイド>→〇〇"
+            },
+            {
+                "id": "214lphp",
+                "str": "other",
+                "command": "↓↙←弱強",
+                "name": "【OD中】ソニックブレイド"
+            },
+            {
+                "id": "214lphp_6p",
+                "str": "other",
+                "command": "↓↙←弱強>→〇",
+                "name": "【OD中】ソニックブレイド>→〇"
+            },
+            {
+                "id": "214lphp_6pp",
+                "str": "other",
+                "command": "↓↙←弱強>→〇〇",
+                "name": "【OD中】ソニックブレイド>→〇〇"
+            },
+            {
+                "id": "214mphp",
+                "str": "other",
+                "command": "↓↙←中強",
+                "name": "【OD強】ソニックブレイド"
+            },
+            {
+                "id": "214mphp_6p",
+                "str": "other",
+                "command": "↓↙←中強>→〇",
+                "name": "【OD強】ソニックブレイド>→〇"
+            },
+            {
+                "id": "214mphp_6pp",
+                "str": "other",
+                "command": "↓↙←中強>→〇〇",
+                "name": "【OD強】ソニックブレイド>→〇〇"
+            }
+        ]
+    },
+    {
+        "id": "sa2_pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "中強",
+        "name": "ソニックブレイク",
+        "variants": [
+            {
+                "id": "sa2_pp",
+                "str": "other",
+                "command": "中強",
+                "name": "ソニックブレイク"
+            },
+            {
+                "id": "sa2_p",
+                "str": "other",
+                "command": "〇",
+                "name": "ソニックブレイク"
+            }
+        ]
+    },
+    {
+        "id": "sa1_variants",
+        "category": "sa",
+        "str": "low",
+        "command": "⇐→←→弱",
+        "name": "SA1",
+        "variants": [
+            {
+                "id": "sa1_lp",
+                "str": "low",
+                "command": "⇐→←→弱",
+                "name": "SA1(横)"
+            },
+            {
+                "id": "sa1_hp",
+                "str": "high",
+                "command": "⇐SP強",
+                "name": "SA1(上)"
+            }
+        ]
+    },
+    {
+        "id": "sa2",
+        "category": "sa",
+        "str": "mid",
+        "command": "↓↙←↓↙←中(SP強)",
+        "name": "SA2"
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "⇐→←→強(⇓SP強)",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "other",
+        "command": "【CA】⇐→←→強(⇓SP強)",
+        "name": "CA"
+    }
+]

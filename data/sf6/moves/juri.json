@@ -41,7 +41,6 @@
         "command": "←強K",
         "name": "←強K"
     },
-
     {
         "id": "5mp_target",
         "category": "unique",
@@ -92,19 +91,18 @@
         "name": "【OD】風破刃"
     },
     {
-        "id": "236_lk",
+        "id": "236_lk_variants",
         "category": "special",
         "str": "low",
         "command": "↓↘→弱K",
-        "name": "歳破衝"
-    },
-    {
-        "id": "236_lk_stock_variants",
-        "category": "special",
-        "str": "low",
-        "command": "【強化】↓↘→弱K",
-        "name": "【強化】歳破衝",
+        "name": "歳破衝",
         "variants": [
+            {
+                "id": "236_lk",
+                "str": "low",
+                "command": "↓↘→弱K",
+                "name": "歳破衝"
+            },
             {
                 "id": "236_lk_stock",
                 "str": "low",
@@ -177,19 +175,18 @@
         ]
     },
     {
-        "id": "236_mk",
+        "id": "236_mk_variants",
         "category": "special",
         "str": "mid",
         "command": "↓↘→中K",
-        "name": "暗剣殺"
-    },
-    {
-        "id": "236_mk_stock_variants",
-        "category": "special",
-        "str": "mid",
-        "command": "【強化】↓↘→中K",
-        "name": "【強化】暗剣殺",
+        "name": "暗剣殺",
         "variants": [
+            {
+                "id": "236_mk",
+                "str": "mid",
+                "command": "↓↘→中K",
+                "name": "暗剣殺"
+            },
             {
                 "id": "236_mk_stock",
                 "str": "mid",
@@ -262,19 +259,18 @@
         ]
     },
     {
-        "id": "236_hk",
+        "id": "236_hk_variants",
         "category": "special",
         "str": "high",
         "command": "↓↘→強K",
-        "name": "五黄殺"
-    },
-    {
-        "id": "236_hk_stock_variants",
-        "category": "special",
-        "str": "high",
-        "command": "【強化】↓↘→強K",
-        "name": "【強化】五黄殺",
+        "name": "五黄殺",
         "variants": [
+            {
+                "id": "236_hk",
+                "str": "high",
+                "command": "↓↘→強K",
+                "name": "五黄殺"
+            },
             {
                 "id": "236_hk_stock",
                 "str": "high",
@@ -350,47 +346,47 @@
         "id": "623lk",
         "category": "special",
         "str": "low",
-        "command": "→↓↘弱K",
+        "command": "→↓↘弱P",
         "name": "【弱】天穿輪"
     },
     {
         "id": "623mk",
         "category": "special",
         "str": "mid",
-        "command": "→↓↘中K",
+        "command": "→↓↘中P",
         "name": "【中】天穿輪"
     },
     {
         "id": "623hk",
         "category": "special",
         "str": "high",
-        "command": "→↓↘強K",
+        "command": "→↓↘強P",
         "name": "【強】天穿輪"
     },
     {
         "id": "623kk",
         "category": "special",
         "str": "other",
-        "command": "→↓↘KK",
+        "command": "→↓↘PP",
         "name": "【OD】天穿輪"
     },
     {
         "id": "214k_jump_variants",
         "category": "special",
         "str": "other",
-        "command": "前J↓↙←K",
+        "command": "空中↓↙←K",
         "name": "疾空閃",
         "variants": [
             {
                 "id": "214k_jump",
                 "str": "other",
-                "command": "前J↓↙←K",
+                "command": "空中↓↙←K",
                 "name": "疾空閃"
             },
             {
                 "id": "214k_jump_k",
                 "str": "other",
-                "command": "前J↓↙←K>K",
+                "command": "空中↓↙←K>K",
                 "name": "疾空閃>K"
             }
         ]
@@ -399,19 +395,19 @@
         "id": "214kk_jump_variants",
         "category": "special",
         "str": "other",
-        "command": "前J↓↙←KK",
+        "command": "空中↓↙←KK",
         "name": "【OD】疾空閃",
         "variants": [
             {
                 "id": "214kk_jump",
                 "str": "other",
-                "command": "前J↓↙←KK",
+                "command": "空中↓↙←KK",
                 "name": "【OD】疾空閃"
             },
             {
                 "id": "214kk_jump_k",
                 "str": "other",
-                "command": "前J↓↙←KK>K",
+                "command": "空中↓↙←KK>K",
                 "name": "【OD】疾空閃>K"
             }
         ]

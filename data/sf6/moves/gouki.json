@@ -1,0 +1,600 @@
+[
+    {
+        "id": "6mp",
+        "category": "unique",
+        "str": "mid",
+        "command": "→中P",
+        "name": "→中P"
+    },
+    {
+        "id": "6mk",
+        "category": "unique",
+        "str": "mid",
+        "command": "→中K",
+        "name": "→中K"
+    },
+    {
+        "id": "4hk",
+        "category": "unique",
+        "str": "high",
+        "command": "←強K",
+        "name": "←強K"
+    },
+    {
+        "id": "5mp_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "中Pタゲコン",
+        "name": "中Pタゲコン",
+        "variants": [
+            {
+                "id": "5mp_mp",
+                "str": "mid",
+                "command": "中P>中P",
+                "name": "中P>中P"
+            }
+        ]
+    },
+    {
+        "id": "5mk_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "中Kタゲコン",
+        "name": "中Kタゲコン",
+        "variants": [
+            {
+                "id": "5mk_hk",
+                "str": "mid",
+                "command": "中K>強K",
+                "name": "中K>強K"
+            }
+        ]
+    },
+    {
+        "id": "6hp",
+        "category": "unique",
+        "str": "high",
+        "command": "→強P",
+        "name": "→強P"
+    },
+    {
+        "id": "6hp_target",
+        "category": "unique",
+        "str": "high",
+        "command": "→強Pタゲコン",
+        "name": "→強Pタゲコン",
+        "variants": [
+            {
+                "id": "6hp_6hp",
+                "str": "high",
+                "command": "→強P>→強P",
+                "name": "→強P>→強P"
+            },
+            {
+                "id": "6hp_6hp_5hk",
+                "str": "high",
+                "command": "→強P>→強P>強K",
+                "name": "→強P>→強P>強K"
+            }
+        ]
+    },
+    {
+        "id": "j2mk",
+        "category": "unique",
+        "str": "mid",
+        "command": "前J↓中K",
+        "name": "前J↓中K"
+    },
+    {
+        "id": "236lp_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱P",
+        "name": "【弱】豪波動拳",
+        "variants": [
+            {
+                "id": "236lp",
+                "str": "low",
+                "command": "↓↘→弱P",
+                "name": "【弱】豪波動拳"
+            },
+            {
+                "id": "236lp_hold",
+                "str": "low",
+                "command": "↓↘→弱P(ホールド)",
+                "name": "【弱】豪波動拳(lv2)"
+            },
+            {
+                "id": "236lp_max_hold",
+                "str": "low",
+                "command": "↓↘→弱P(最大ホールド)",
+                "name": "【弱】豪波動拳(lv3)"
+            }
+        ]
+    },
+    {
+        "id": "236mp_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中P",
+        "name": "【中】豪波動拳",
+        "variants": [
+            {
+                "id": "236mp",
+                "str": "mid",
+                "command": "↓↘→中P",
+                "name": "【中】豪波動拳"
+            },
+            {
+                "id": "236mp_hold",
+                "str": "mid",
+                "command": "↓↘→中P(ホールド)",
+                "name": "【中】豪波動拳(lv2)"
+            },
+            {
+                "id": "236mp_max_hold",
+                "str": "mid",
+                "command": "↓↘→中P(最大ホールド)",
+                "name": "【中】豪波動拳(lv3)"
+            }
+        ]
+    },
+    {
+        "id": "236hp_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強P",
+        "name": "【強】豪波動拳",
+        "variants": [
+            {
+                "id": "236hp",
+                "str": "high",
+                "command": "↓↘→強P",
+                "name": "【強】豪波動拳"
+            },
+            {
+                "id": "236hp_hold",
+                "str": "high",
+                "command": "↓↘→強P(ホールド)",
+                "name": "【強】豪波動拳(lv2)"
+            },
+            {
+                "id": "236hp_max_hold",
+                "str": "high",
+                "command": "↓↘→強P(最大ホールド)",
+                "name": "【強】豪波動拳(lv3)"
+            }
+        ]
+    },
+    {
+        "id": "236pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→PP",
+        "name": "【OD】豪波動拳",
+        "variants": [
+            {
+                "id": "236pp",
+                "str": "other",
+                "command": "↓↘→PP",
+                "name": "【OD】豪波動拳"
+            },
+            {
+                "id": "236pp_hold",
+                "str": "other",
+                "command": "↓↘→PP(ホールド)",
+                "name": "【OD】豪波動拳(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "236lp_air",
+        "category": "special",
+        "str": "low",
+        "command": "空中↓↘→弱P",
+        "name": "【弱】斬空波動拳"
+    },
+    {
+        "id": "236mp_air",
+        "category": "special",
+        "str": "mid",
+        "command": "空中↓↘→中P",
+        "name": "【中】斬空波動拳"
+    },
+    {
+        "id": "236hp_air",
+        "category": "special",
+        "str": "high",
+        "command": "空中↓↘→強P",
+        "name": "【強】斬空波動拳"
+    },
+    {
+        "id": "236pp_air",
+        "category": "special",
+        "str": "other",
+        "command": "空中↓↘→PP",
+        "name": "【OD】斬空波動拳"
+    },
+    {
+        "id": "623lp",
+        "category": "special",
+        "str": "low",
+        "command": "→↓↘弱P",
+        "name": "【弱】豪昇龍拳"
+    },
+    {
+        "id": "623mp",
+        "category": "special",
+        "str": "mid",
+        "command": "→↓↘中P",
+        "name": "【中】豪昇龍拳"
+    },
+    {
+        "id": "623hp",
+        "category": "special",
+        "str": "high",
+        "command": "→↓↘強P",
+        "name": "【強】豪昇龍拳"
+    },
+    {
+        "id": "623pp",
+        "category": "special",
+        "str": "other",
+        "command": "→↓↘PP",
+        "name": "【OD】豪昇龍拳"
+    },
+    {
+        "id": "214lk",
+        "category": "special",
+        "str": "low",
+        "command": "↓↙←弱K",
+        "name": "【弱】竜巻斬空脚"
+    },
+    {
+        "id": "214mk",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↙←中K",
+        "name": "【中】竜巻斬空脚"
+    },
+    {
+        "id": "214hk",
+        "category": "special",
+        "str": "high",
+        "command": "↓↙←強K",
+        "name": "【強】竜巻斬空脚"
+    },
+    {
+        "id": "214kk",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←KK",
+        "name": "【OD】竜巻斬空脚"
+    },
+    {
+        "id": "214k_air",
+        "category": "special",
+        "str": "other",
+        "command": "空中↓↙←K",
+        "name": "空中竜巻斬空脚"
+    },
+    {
+        "id": "214kk_air",
+        "category": "special",
+        "str": "other",
+        "command": "空中↓↙←KK",
+        "name": "【OD】空中竜巻斬空脚"
+    },
+    {
+        "id": "214lp_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↓↙←弱P",
+        "name": "【弱】金剛灼火",
+        "variants": [
+            {
+                "id": "214lp",
+                "str": "low",
+                "command": "↓↙←弱P",
+                "name": "【弱】金剛灼火"
+            },
+            {
+                "id": "214lp_6p",
+                "str": "low",
+                "command": "↓↙←弱P>→P",
+                "name": "【弱】金剛灼火>→P"
+            }
+        ]
+    },
+    {
+        "id": "214mp_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↙←中P",
+        "name": "【中】金剛灼火",
+        "variants": [
+            {
+                "id": "214mp",
+                "str": "mid",
+                "command": "↓↙←中P",
+                "name": "【中】金剛灼火"
+            },
+            {
+                "id": "214mp_6p",
+                "str": "mid",
+                "command": "↓↙←中P>→P",
+                "name": "【中】金剛灼火>→P"
+            }
+        ]
+    },
+    {
+        "id": "214hp_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↙←強P",
+        "name": "【強】金剛灼火",
+        "variants": [
+            {
+                "id": "214hp",
+                "str": "high",
+                "command": "↓↙←強P",
+                "name": "【強】金剛灼火"
+            },
+            {
+                "id": "214hp_6p",
+                "str": "high",
+                "command": "↓↙←強P>→P",
+                "name": "【強】金剛灼火>→P"
+            }
+        ]
+    },
+    {
+        "id": "214pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←PP",
+        "name": "【OD】金剛灼火",
+        "variants": [
+            {
+                "id": "214pp",
+                "str": "other",
+                "command": "↓↙←PP",
+                "name": "【OD】金剛灼火"
+            },
+            {
+                "id": "214pp_6p",
+                "str": "other",
+                "command": "↓↙←PP>→P",
+                "name": "【OD】金剛灼火>→P"
+            }
+        ]
+    },
+    {
+        "id": "236lk_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱K",
+        "name": "【弱】百鬼襲",
+        "variants": [
+            {
+                "id": "236lk",
+                "str": "low",
+                "command": "↓↘→弱K",
+                "name": "【弱】百鬼襲"
+            },
+            {
+                "id": "236lk_p",
+                "str": "low",
+                "command": "↓↘→弱K>P",
+                "name": "【弱】百鬼襲>P"
+            },
+            {
+                "id": "236lk_k",
+                "str": "low",
+                "command": "↓↘→弱K>K",
+                "name": "【弱】百鬼襲>K"
+            },
+            {
+                "id": "236lk_2",
+                "str": "low",
+                "command": "↓↘→弱K>↓",
+                "name": "【弱】百鬼襲>↓"
+            }
+        ]
+    },
+    {
+        "id": "236mk_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中K",
+        "name": "【中】百鬼襲",
+        "variants": [
+            {
+                "id": "236mk",
+                "str": "mid",
+                "command": "↓↘→中K",
+                "name": "【中】百鬼襲"
+            },
+            {
+                "id": "236mk_p",
+                "str": "mid",
+                "command": "↓↘→中K>P",
+                "name": "【中】百鬼襲>P"
+            },
+            {
+                "id": "236mk_k",
+                "str": "mid",
+                "command": "↓↘→中K>K",
+                "name": "【中】百鬼襲>K"
+            },
+            {
+                "id": "236mk_2",
+                "str": "mid",
+                "command": "↓↘→中K>↓",
+                "name": "【中】百鬼襲>↓"
+            }
+        ]
+    },
+    {
+        "id": "236hk_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強K",
+        "name": "【強】百鬼襲",
+        "variants": [
+            {
+                "id": "236hk",
+                "str": "high",
+                "command": "↓↘→強K",
+                "name": "【強】百鬼襲"
+            },
+            {
+                "id": "236hk_p",
+                "str": "high",
+                "command": "↓↘→強K>P",
+                "name": "【強】百鬼襲>P"
+            },
+            {
+                "id": "236hk_k",
+                "str": "high",
+                "command": "↓↘→強K>K",
+                "name": "【強】百鬼襲>K"
+            },
+            {
+                "id": "236hk_2",
+                "str": "high",
+                "command": "↓↘→強K>↓",
+                "name": "【強】百鬼襲>↓"
+            }
+        ]
+    },
+    {
+        "id": "236kk_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→KK",
+        "name": "【OD】百鬼襲",
+        "variants": [
+            {
+                "id": "236kk",
+                "str": "other",
+                "command": "↓↘→KK",
+                "name": "【OD】百鬼襲"
+            },
+            {
+                "id": "236kk_p",
+                "str": "other",
+                "command": "↓↘→KK>P",
+                "name": "【OD】百鬼襲>P"
+            },
+            {
+                "id": "236kk_k",
+                "str": "other",
+                "command": "↓↘→KK>K",
+                "name": "【OD】百鬼襲>K"
+            },
+            {
+                "id": "236kk_2",
+                "str": "other",
+                "command": "↓↘→KK>↓",
+                "name": "【OD】百鬼襲>↓"
+            },
+            {
+                "id": "236kk_236p",
+                "str": "other",
+                "command": "↓↘→KK>↓↘→P",
+                "name": "【OD】百鬼襲>↓↘→P"
+            },
+            {
+                "id": "236kk_214k",
+                "str": "other",
+                "command": "↓↘→KK>↓↙←K",
+                "name": "【OD】百鬼襲>↓↙←K"
+            }
+        ]
+    },
+    {
+        "id": "6kkk_variants",
+        "category": "special",
+        "str": "other",
+        "command": "→KKK",
+        "name": "阿修羅閃空",
+        "variants": [
+            {
+                "id": "6kkk",
+                "str": "other",
+                "command": "→KKK",
+                "name": "阿修羅閃空"
+            },
+            {
+                "id": "6kkk_6lp_lk",
+                "str": "other",
+                "command": "→KKK>投げ",
+                "name": "阿修羅閃空>投げ"
+            }
+        ]
+    },
+    {
+        "id": "4kkk",
+        "category": "special",
+        "str": "other",
+        "command": "←KKK",
+        "name": "阿修羅閃空(後)"
+    },
+    {
+        "id": "sa1_variants",
+        "category": "sa",
+        "str": "low",
+        "command": "↓↘→↓↘→P",
+        "name": "SA1",
+        "variants": [
+            {
+                "id": "sa1",
+                "str": "low",
+                "command": "↓↘→↓↘→P",
+                "name": "SA1"
+            },
+            {
+                "id": "sa1_air",
+                "str": "low",
+                "command": "空中↓↘→↓↘→K",
+                "name": "空中SA1"
+            }
+        ]
+    },
+    {
+        "id": "sa2",
+        "category": "sa",
+        "str": "mid",
+        "command": "↓↙←↓↙←P",
+        "name": "SA2"
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "↓↘→↓↘→K",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "other",
+        "command": "【CA】↓↘→↓↘→K",
+        "name": "CA",
+        "variants": [
+            {
+                "id": "ca",
+                "str": "other",
+                "command": "【CA】↓↘→↓↘→K",
+                "name": "CA"
+            },
+            {
+                "id": "ca_shungokusatsu",
+                "str": "other",
+                "command": "弱P>弱P>→>弱K>強P",
+                "name": "瞬獄殺"
+            }
+        ]
+    }
+]

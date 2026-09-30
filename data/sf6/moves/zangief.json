@@ -1,0 +1,301 @@
+[
+    {
+        "id": "5hp_h",
+        "category": "normal",
+        "str": "high",
+        "command": "強P(ホールド)",
+        "name": "強P(ホールド)"
+    },
+    {
+        "id": "jhk_h",
+        "category": "jump",
+        "str": "high",
+        "command": "J強K(ホールド)",
+        "name": "J強K(ホールド)"
+    },
+    {
+        "id": "3mp",
+        "category": "unique",
+        "str": "mid",
+        "command": "↘中P",
+        "name": "↘中P"
+    },
+    {
+        "id": "6mk",
+        "category": "unique",
+        "str": "mid",
+        "command": "→中K",
+        "name": "→中K"
+    },
+    {
+        "id": "6hp",
+        "category": "unique",
+        "str": "high",
+        "command": "→強P",
+        "name": "→強P"
+    },
+    {
+        "id": "6hk",
+        "category": "unique",
+        "str": "high",
+        "command": "→強K",
+        "name": "→強K"
+    },
+    {
+        "id": "3hk",
+        "category": "unique",
+        "str": "high",
+        "command": "↘強K",
+        "name": "↘強K"
+    },
+    {
+        "id": "j2hp",
+        "category": "jump",
+        "str": "high",
+        "command": "J↓強P",
+        "name": "J↓強P"
+    },
+    {
+        "id": "nj8hp",
+        "category": "jump",
+        "str": "high",
+        "command": "垂直J↑強P",
+        "name": "垂直J↑強P"
+    },
+    {
+        "id": "5mp_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "中Pタゲコン",
+        "name": "中Pタゲコン",
+        "variants": [
+            {
+                "id": "5mp_mp",
+                "str": "mid",
+                "command": "中P>中P",
+                "name": "中P>中P"
+            },
+            {
+                "id": "5mp_mp_mp",
+                "str": "mid",
+                "command": "中P>中P>中P",
+                "name": "中P>中P>中P"
+            }
+        ]
+    },
+    {
+        "id": "22mk",
+        "category": "unique",
+        "str": "mid",
+        "command": "↓↓中K",
+        "name": "↓↓中K"
+    },
+    {
+        "id": "22mk_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "↓↓中Kタゲコン",
+        "name": "↓↓中Kタゲコン",
+        "variants": [
+            {
+                "id": "22mk_mk",
+                "str": "mid",
+                "command": "↓↓中K>中K",
+                "name": "↓↓中K>中K"
+            },
+            {
+                "id": "22mk_mk_mk",
+                "str": "mid",
+                "command": "↓↓中K>中K>中K",
+                "name": "↓↓中K>中K>中K"
+            }
+        ]
+    },
+    {
+        "id": "pp",
+        "category": "special",
+        "str": "other",
+        "command": "PP",
+        "name": "ダブルラリアット"
+    },
+    {
+        "id": "ppp",
+        "category": "special",
+        "str": "other",
+        "command": "PPP",
+        "name": "【OD】ダブルラリアット"
+    },
+    {
+        "id": "360lp",
+        "category": "special",
+        "str": "low",
+        "command": "↻弱P",
+        "name": "【弱】スクリューパイルドライバー"
+    },
+    {
+        "id": "360mp",
+        "category": "special",
+        "str": "mid",
+        "command": "↻中P",
+        "name": "【中】スクリューパイルドライバー"
+    },
+    {
+        "id": "360hp",
+        "category": "special",
+        "str": "high",
+        "command": "↻強P",
+        "name": "【強】スクリューパイルドライバー"
+    },
+    {
+        "id": "360pp",
+        "category": "special",
+        "str": "other",
+        "command": "↻PP",
+        "name": "【OD】スクリューパイルドライバー"
+    },
+    {
+        "id": "j360k",
+        "category": "special",
+        "str": "other",
+        "command": "空中↻K",
+        "name": "ボルシチダイナマイト"
+    },
+    {
+        "id": "j360kk",
+        "category": "special",
+        "str": "other",
+        "command": "空中↻KK",
+        "name": "【OD】ボルシチダイナマイト"
+    },
+    {
+        "id": "624k_variants",
+        "category": "special",
+        "str": "other",
+        "command": "→↘↓↙←K",
+        "name": "ロシアンスープレックス",
+        "variants": [
+            {
+                "id": "624k",
+                "str": "other",
+                "command": "→↘↓↙←K",
+                "name": "ロシアンスープレックス"
+            },
+            {
+                "id": "624k_far",
+                "str": "other",
+                "command": "→↘↓↙←K",
+                "name": "シベリアンエクスプレス"
+            }
+        ]
+    },
+    {
+        "id": "624kk_variants",
+        "category": "special",
+        "str": "other",
+        "command": "→↘↓↙←KK",
+        "name": "【OD】ロシアンスープレックス",
+        "variants": [
+            {
+                "id": "624kk",
+                "str": "other",
+                "command": "→↘↓↙←KK",
+                "name": "【OD】ロシアンスープレックス"
+            },
+            {
+                "id": "624kk_far",
+                "str": "other",
+                "command": "→↘↓↙←KK",
+                "name": "【OD】シベリアンエクスプレス"
+            }
+        ]
+    },
+    {
+        "id": "22hk",
+        "category": "special",
+        "str": "other",
+        "command": "↓↓強K",
+        "name": "ツンドラストーム"
+    },
+    {
+        "id": "sa1",
+        "category": "sa",
+        "str": "low",
+        "command": "↓↘→↓↘→K",
+        "name": "SA1"
+    },
+    {
+        "id": "sa2_variants",
+        "category": "sa",
+        "str": "mid",
+        "command": "↓↘→↓↘→P",
+        "name": "SA2",
+        "variants": [
+            {
+                "id": "sa2",
+                "str": "mid",
+                "command": "↓↘→↓↘→P",
+                "name": "SA2"
+            },
+            {
+                "id": "sa2_hold",
+                "str": "mid",
+                "command": "↓↘→↓↘→P(ホールド)",
+                "name": "SA2(ホールド)"
+            },
+            {
+                "id": "sa2_f",
+                "str": "mid",
+                "command": "↓↘→↓↘→P>→",
+                "name": "SA2>→"
+            },
+            {
+                "id": "sa2_b",
+                "str": "mid",
+                "command": "↓↘→↓↘→P>←",
+                "name": "SA2>←"
+            }
+        ]
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "↻↻P",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "other",
+        "command": "【CA】↻↻P",
+        "name": "CA"
+    },
+    {
+        "id": "throw_n",
+        "category": "common",
+        "str": "other",
+        "command": "n投げ",
+        "name": "n投げ"
+    },
+    {
+        "id": "throw_3",
+        "category": "common",
+        "str": "other",
+        "command": "↘投げ",
+        "name": "↘投げ"
+    },
+    {
+        "id": "throw_1",
+        "category": "common",
+        "str": "other",
+        "command": "↙投げ",
+        "name": "↙投げ"
+    },
+    {
+        "id": "throw_2",
+        "category": "common",
+        "str": "other",
+        "command": "↓投げ",
+        "name": "↓投げ"
+    }
+]

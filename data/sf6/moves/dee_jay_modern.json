@@ -1,0 +1,476 @@
+[
+    {
+        "id": "assist_l_variants",
+        "category": "normal",
+        "str": "low",
+        "command": "AUTO弱",
+        "name": "AUTO弱",
+        "variants": [
+            {
+                "id": "assist_l",
+                "str": "low",
+                "command": "AUTO弱",
+                "name": "AUTO弱"
+            },
+            {
+                "id": "assist_l_2",
+                "str": "low",
+                "command": "AUTO弱>弱",
+                "name": "AUTO弱>弱"
+            },
+            {
+                "id": "assist_2l",
+                "str": "low",
+                "command": "AUTO↓弱",
+                "name": "AUTO↓弱"
+            },
+            {
+                "id": "assist_2l_2",
+                "str": "low",
+                "command": "AUTO↓弱>弱",
+                "name": "AUTO↓弱>弱"
+            },
+            {
+                "id": "assist_2l_3",
+                "str": "low",
+                "command": "AUTO↓弱>弱>弱",
+                "name": "AUTO↓弱>弱>弱"
+            }
+        ]
+    },
+    {
+        "id": "assist_m_variants",
+        "category": "normal",
+        "str": "mid",
+        "command": "AUTO中",
+        "name": "AUTO中",
+        "variants": [
+            {
+                "id": "assist_m",
+                "str": "mid",
+                "command": "AUTO中",
+                "name": "AUTO中"
+            },
+            {
+                "id": "assist_m_2",
+                "str": "mid",
+                "command": "AUTO中>中",
+                "name": "AUTO中>中"
+            },
+            {
+                "id": "assist_m_3",
+                "str": "mid",
+                "command": "AUTO中>中>中",
+                "name": "AUTO中>中>中"
+            }
+        ]
+    },
+    {
+        "id": "assist_h_variants",
+        "category": "normal",
+        "str": "high",
+        "command": "AUTO強",
+        "name": "AUTO強",
+        "variants": [
+            {
+                "id": "assist_h",
+                "str": "high",
+                "command": "AUTO強",
+                "name": "AUTO強"
+            },
+            {
+                "id": "assist_h_2",
+                "str": "high",
+                "command": "AUTO強>強",
+                "name": "AUTO強>強"
+            },
+            {
+                "id": "assist_h_3",
+                "str": "high",
+                "command": "AUTO強>強>強",
+                "name": "AUTO強>強>強"
+            },
+            {
+                "id": "assist_h_4",
+                "str": "high",
+                "command": "AUTO強>強>強>強",
+                "name": "AUTO強>強>強>強"
+            },
+            {
+                "id": "assist_h_5",
+                "str": "high",
+                "command": "AUTO強>強>強>強>強",
+                "name": "AUTO強>強>強>強>強"
+            }
+        ]
+    },
+    {
+        "id": "j2l",
+        "category": "jump",
+        "str": "low",
+        "command": "前J↓弱",
+        "name": "前J↓弱"
+    },
+    {
+        "id": "6m",
+        "category": "unique",
+        "str": "mid",
+        "command": "→中",
+        "name": "→中"
+    },
+    {
+        "id": "4h",
+        "category": "unique",
+        "str": "high",
+        "command": "←強",
+        "name": "←強"
+    },
+    {
+        "id": "3h",
+        "category": "unique",
+        "str": "high",
+        "command": "↘強",
+        "name": "↘強"
+    },
+    {
+        "id": "5lp_target",
+        "category": "unique",
+        "str": "low",
+        "command": "弱タゲコン",
+        "name": "弱タゲコン",
+        "variants": [
+            {
+                "id": "5l_m",
+                "str": "low",
+                "command": "弱>中",
+                "name": "弱>中"
+            },
+            {
+                "id": "5l_m_m",
+                "str": "low",
+                "command": "弱>中>中",
+                "name": "弱>中>中"
+            }
+        ]
+    },
+    {
+        "id": "5mp_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "中タゲコン",
+        "name": "中タゲコン",
+        "variants": [
+            {
+                "id": "5m_h",
+                "str": "mid",
+                "command": "中>強",
+                "name": "中>強"
+            },
+            {
+                "id": "5m_h_h",
+                "str": "mid",
+                "command": "中>強>強",
+                "name": "中>強>強"
+            },
+            {
+                "id": "5m_m",
+                "str": "mid",
+                "command": "中>中",
+                "name": "中>中"
+            },
+            {
+                "id": "5m_m_m",
+                "str": "mid",
+                "command": "中>中>中",
+                "name": "中>中>中"
+            },
+            {
+                "id": "5m_m_4m",
+                "str": "mid",
+                "command": "中>中>←中",
+                "name": "中>中>←中"
+            }
+        ]
+    },
+    {
+        "id": "22pp",
+        "category": "unique",
+        "str": "other",
+        "command": "↓↓PP",
+        "name": "マラカスビート"
+    },
+    {
+        "id": "4h6lp",
+        "category": "special",
+        "str": "low",
+        "command": "⇐→弱",
+        "name": "【弱】エアスラッシャー"
+    },
+    {
+        "id": "4h6mp",
+        "category": "special",
+        "str": "mid",
+        "command": "⇐→中(⇐SP)",
+        "name": "【中】エアスラッシャー"
+    },
+    {
+        "id": "4h6hp",
+        "category": "special",
+        "str": "high",
+        "command": "⇐→強",
+        "name": "【強】エアスラッシャー"
+    },
+    {
+        "id": "4h6pp",
+        "category": "special",
+        "str": "other",
+        "command": "⇐→〇〇(AUTO ⇐SP)",
+        "name": "【OD】エアスラッシャー"
+    },
+    {
+        "id": "2h8lk",
+        "category": "special",
+        "str": "low",
+        "command": "⇓↑弱",
+        "name": "【弱】ジャックナイフマキシマム"
+    },
+    {
+        "id": "2h8mk",
+        "category": "special",
+        "str": "mid",
+        "command": "⇓↑中",
+        "name": "【中】ジャックナイフマキシマム"
+    },
+    {
+        "id": "2h8hk",
+        "category": "special",
+        "str": "high",
+        "command": "⇓↑強(⇓SP)",
+        "name": "【強】ジャックナイフマキシマム"
+    },
+    {
+        "id": "2h8kk",
+        "category": "special",
+        "str": "other",
+        "command": "⇓↑〇〇(AUTO ⇓SP)",
+        "name": "【OD】ジャックナイフマキシマム"
+    },
+    {
+        "id": "236lk",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱",
+        "name": "フェイクロールステップ"
+    },
+    {
+        "id": "236mk",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中(→SP)",
+        "name": "クイックローリングソバット"
+    },
+    {
+        "id": "236hk",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強",
+        "name": "ダブルローリングソバット"
+    },
+    {
+        "id": "236kk",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→〇〇",
+        "name": "【OD】ダブルローリングソバット"
+    },
+    {
+        "id": "214lp",
+        "category": "special",
+        "str": "low",
+        "command": "↓↙←弱",
+        "name": "【弱】マシンガンアッパー"
+    },
+    {
+        "id": "214mp",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↙←中",
+        "name": "【中】マシンガンアッパー"
+    },
+    {
+        "id": "214hp",
+        "category": "special",
+        "str": "high",
+        "command": "↓↙←強",
+        "name": "【強】マシンガンアッパー"
+    },
+    {
+        "id": "214pp",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←〇〇",
+        "name": "【OD】マシンガンアッパー"
+    },
+    {
+        "id": "214k_variants",
+        "category": "special",
+        "str": "other",
+        "command": "SP",
+        "name": "ジョスクール",
+        "variants": [
+            {
+                "id": "214k",
+                "str": "other",
+                "command": "SP",
+                "name": "ジョスクール"
+            },
+            {
+                "id": "214k_lk",
+                "str": "low",
+                "command": "SP>弱",
+                "name": "ジョスクール>弱"
+            },
+            {
+                "id": "214k_mk",
+                "str": "mid",
+                "command": "SP>中",
+                "name": "ジョスクール>中"
+            },
+            {
+                "id": "214k_hk",
+                "str": "high",
+                "command": "SP>強",
+                "name": "ジョスクール>強"
+            },
+            {
+                "id": "214k_6sp",
+                "str": "other",
+                "command": "SP>→SP",
+                "name": "ジョスクール>→SP"
+            },
+            {
+                "id": "214k_6sp_sp",
+                "str": "other",
+                "command": "SP>→SP>SP",
+                "name": "ジョスクール>→SP>SP"
+            }
+        ]
+    },
+    {
+        "id": "214kk_variants",
+        "category": "special",
+        "str": "other",
+        "command": "AUTO SP",
+        "name": "【OD】ジョスクール",
+        "variants": [
+            {
+                "id": "214kk",
+                "str": "other",
+                "command": "AUTO SP",
+                "name": "【OD】ジョスクール"
+            },
+            {
+                "id": "214kk_lk",
+                "str": "low",
+                "command": "AUTO SP>弱",
+                "name": "【OD】ジョスクール>弱"
+            },
+            {
+                "id": "214kk_mk",
+                "str": "mid",
+                "command": "AUTO SP>中",
+                "name": "【OD】ジョスクール>中"
+            },
+            {
+                "id": "214kk_hk",
+                "str": "high",
+                "command": "AUTO SP>強",
+                "name": "【OD】ジョスクール>強"
+            },
+            {
+                "id": "214kk_6sp",
+                "str": "other",
+                "command": "AUTO SP>→SP",
+                "name": "【OD】ジョスクール>→SP"
+            },
+            {
+                "id": "214kk_6sp_sp",
+                "str": "other",
+                "command": "AUTO SP>→SP>SP",
+                "name": "【OD】ジョスクール>→SP>SP"
+            }
+        ]
+    },
+    {
+        "id": "sa1",
+        "category": "sa",
+        "str": "low",
+        "command": "↓↘→↓↘→弱(SP強)",
+        "name": "SA1"
+    },
+    {
+        "id": "sa2_variants",
+        "category": "sa",
+        "str": "mid",
+        "command": "↓↘→↓↘→中(←SP強)",
+        "name": "SA2",
+        "variants": [
+            {
+                "id": "sa2_lp",
+                "str": "low",
+                "command": "↓↘→↓↘→中(←SP強)>弱>中>強>弱>中>強",
+                "name": "【弱】SA2"
+            },
+            {
+                "id": "sa2_mp",
+                "str": "mid",
+                "command": "↓↘→↓↘→中(←SP強)+←>弱>中>強>弱>中>強",
+                "name": "【中】SA2"
+            },
+            {
+                "id": "sa2_mp_hp",
+                "str": "mid",
+                "command": "↓↘→↓↘→中(←SP強)+←>弱>中>強>弱>中>強>←強",
+                "name": "【中】SA2>←強"
+            },
+            {
+                "id": "sa2_mp_hk",
+                "str": "mid",
+                "command": "↓↘→↓↘→中(←SP強)+←>弱>中>強>弱>中>強>→強",
+                "name": "【中】SA2>→強"
+            },
+            {
+                "id": "sa2_hp",
+                "str": "high",
+                "command": "↓↘→↓↘→中(←SP強)+→>弱>中>強>弱>中>強",
+                "name": "【強】SA2"
+            },
+            {
+                "id": "sa2_hp_hp",
+                "str": "high",
+                "command": "↓↘→↓↘→中(←SP強)+→>弱>中>強>弱>中>強>←強",
+                "name": "【強】SA2>←強"
+            },
+            {
+                "id": "sa2_hp_hk",
+                "str": "high",
+                "command": "↓↘→↓↘→中(←SP強)+→>弱>中>強>弱>中>強>→強",
+                "name": "【強】SA2>→強"
+            }
+        ]
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "↓↙←↓↙←強(↓SP強)",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "other",
+        "command": "【CA】↓↙←↓↙←強(↓SP強)",
+        "name": "CA"
+    }
+]

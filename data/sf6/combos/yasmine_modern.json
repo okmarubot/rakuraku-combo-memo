@@ -1,0 +1,15 @@
+{
+    "groups": [
+        {
+            "id": "group-001",
+            "title": "新しい大見出し",
+            "subgroups": [
+                {
+                    "id": "subgroup-001",
+                    "title": "新しい中見出し",
+                    "combos": []
+                }
+            ]
+        }
+    ]
+}

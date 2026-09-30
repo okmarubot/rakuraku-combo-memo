@@ -1,0 +1,340 @@
+[
+    {
+        "id": "6hp",
+        "category": "unique",
+        "str": "high",
+        "command": "→強P",
+        "name": "→強P"
+    },
+    {
+        "id": "4hk",
+        "category": "unique",
+        "str": "high",
+        "command": "←強K",
+        "name": "←強K"
+    },
+    {
+        "id": "3hk",
+        "category": "unique",
+        "str": "high",
+        "command": "↘強K",
+        "name": "↘強K"
+    },
+    {
+        "id": "5mp_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "中Pタゲコン",
+        "name": "中Pタゲコン",
+        "variants": [
+            {
+                "id": "5mp_6hp",
+                "str": "mid",
+                "command": "中P>→強P",
+                "name": "中P>→強P"
+            },
+            {
+                "id": "5mp_2hk",
+                "str": "mid",
+                "command": "中P>↓強K",
+                "name": "中P>↓強K"
+            }
+        ]
+    },
+    {
+        "id": "jmp_target",
+        "category": "jump",
+        "str": "mid",
+        "command": "J中Pタゲコン",
+        "name": "J中Pタゲコン",
+        "variants": [
+            {
+                "id": "jmp_mp",
+                "str": "mid",
+                "command": "J中P>中P",
+                "name": "J中P>中P"
+            }
+        ]
+    },
+    {
+        "id": "4h6lp",
+        "category": "special",
+        "str": "low",
+        "command": "⇐→弱P",
+        "name": "【弱】サイコクラッシャーアタック"
+    },
+    {
+        "id": "4h6mp",
+        "category": "special",
+        "str": "mid",
+        "command": "⇐→中P",
+        "name": "【中】サイコクラッシャーアタック"
+    },
+    {
+        "id": "4h6hp",
+        "category": "special",
+        "str": "high",
+        "command": "⇐→強P",
+        "name": "【強】サイコクラッシャーアタック"
+    },
+    {
+        "id": "4h6pp",
+        "category": "special",
+        "str": "other",
+        "command": "⇐→PP",
+        "name": "【OD】サイコクラッシャーアタック"
+    },
+    {
+        "id": "236lk",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱K",
+        "name": "【弱】ダブルニープレス"
+    },
+    {
+        "id": "236mk",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中K",
+        "name": "【中】ダブルニープレス"
+    },
+    {
+        "id": "236hk",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強K",
+        "name": "【強】ダブルニープレス"
+    },
+    {
+        "id": "236kk",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→KK",
+        "name": "【OD】ダブルニープレス"
+    },
+    {
+        "id": "214lp",
+        "category": "special",
+        "str": "low",
+        "command": "↓↙←弱P",
+        "name": "【弱】バックフィストコンボ"
+    },
+    {
+        "id": "214mp",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↙←中P",
+        "name": "【中】バックフィストコンボ"
+    },
+    {
+        "id": "214hp",
+        "category": "special",
+        "str": "high",
+        "command": "↓↙←強P",
+        "name": "【強】バックフィストコンボ"
+    },
+    {
+        "id": "214pp",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←PP",
+        "name": "【OD】バックフィストコンボ"
+    },
+    {
+        "id": "vga_at01",
+        "category": "special",
+        "str": "other",
+        "command": "自動起爆",
+        "name": "自動起爆"
+    },
+    {
+        "id": "2h8lk_variants",
+        "category": "special",
+        "str": "low",
+        "command": "⇓↑弱K",
+        "name": "【弱】シャドウライズ",
+        "variants": [
+            {
+                "id": "2h8lk",
+                "str": "low",
+                "command": "⇓↑弱K",
+                "name": "【弱】シャドウライズ"
+            },
+            {
+                "id": "2h8lk_k",
+                "str": "low",
+                "command": "⇓↑弱K>K",
+                "name": "【弱】シャドウライズ>K"
+            },
+            {
+                "id": "2h8lk_k_p",
+                "str": "low",
+                "command": "⇓↑弱K>K>P",
+                "name": "【弱】シャドウライズ>K>P"
+            },
+            {
+                "id": "2h8lk_kk",
+                "str": "low",
+                "command": "⇓↑弱K>KK",
+                "name": "【弱】シャドウライズ>KK"
+            },
+            {
+                "id": "2h8lk_p",
+                "str": "low",
+                "command": "⇓↑弱K>P",
+                "name": "【弱】シャドウライズ>P"
+            },
+            {
+                "id": "2h8lk_pp",
+                "str": "low",
+                "command": "⇓↑弱K>PP",
+                "name": "【弱】シャドウライズ>PP"
+            }
+        ]
+    },
+    {
+        "id": "2h8mk_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "⇓↑中K",
+        "name": "【中】シャドウライズ",
+        "variants": [
+            {
+                "id": "2h8mk",
+                "str": "mid",
+                "command": "⇓↑中K",
+                "name": "【中】シャドウライズ"
+            },
+            {
+                "id": "2h8mk_k",
+                "str": "mid",
+                "command": "⇓↑中K>K",
+                "name": "【中】シャドウライズ>K"
+            },
+            {
+                "id": "2h8mk_k_p",
+                "str": "mid",
+                "command": "⇓↑中K>K>P",
+                "name": "【中】シャドウライズ>K>P"
+            },
+            {
+                "id": "2h8mk_kk",
+                "str": "mid",
+                "command": "⇓↑中K>KK",
+                "name": "【中】シャドウライズ>KK"
+            },
+            {
+                "id": "2h8mk_p",
+                "str": "mid",
+                "command": "⇓↑中K>P",
+                "name": "【中】シャドウライズ>P"
+            },
+            {
+                "id": "2h8mk_pp",
+                "str": "mid",
+                "command": "⇓↑中K>PP",
+                "name": "【中】シャドウライズ>PP"
+            }
+        ]
+    },
+    {
+        "id": "2h8hk_variants",
+        "category": "special",
+        "str": "high",
+        "command": "⇓↑強K",
+        "name": "【強】シャドウライズ",
+        "variants": [
+            {
+                "id": "2h8hk",
+                "str": "high",
+                "command": "⇓↑強K",
+                "name": "【強】シャドウライズ"
+            },
+            {
+                "id": "2h8hk_k",
+                "str": "high",
+                "command": "⇓↑強K>K",
+                "name": "【強】シャドウライズ>K"
+            },
+            {
+                "id": "2h8hk_k_p",
+                "str": "high",
+                "command": "⇓↑強K>K>P",
+                "name": "【強】シャドウライズ>K>P"
+            },
+            {
+                "id": "2h8hk_kk",
+                "str": "high",
+                "command": "⇓↑強K>KK",
+                "name": "【強】シャドウライズ>KK"
+            },
+            {
+                "id": "2h8hk_p",
+                "str": "high",
+                "command": "⇓↑強K>P",
+                "name": "【強】シャドウライズ>P"
+            },
+            {
+                "id": "2h8hk_pp",
+                "str": "high",
+                "command": "⇓↑強K>PP",
+                "name": "【強】シャドウライズ>PP"
+            }
+        ]
+    },
+    {
+        "id": "2h8kk_variants",
+        "category": "special",
+        "str": "other",
+        "command": "⇓↑KK",
+        "name": "【OD】シャドウライズ",
+        "variants": [
+            {
+                "id": "2h8kk",
+                "str": "other",
+                "command": "⇓↑KK",
+                "name": "【OD】シャドウライズ"
+            },
+            {
+                "id": "2h8kk_k",
+                "str": "other",
+                "command": "⇓↑KK>K",
+                "name": "【OD】シャドウライズ>K"
+            },
+            {
+                "id": "2h8kk_p",
+                "str": "other",
+                "command": "⇓↑KK>P",
+                "name": "【OD】シャドウライズ>P"
+            }
+        ]
+    },
+    {
+        "id": "sa1",
+        "category": "sa",
+        "str": "low",
+        "command": "↓↘→↓↘→K",
+        "name": "SA1"
+    },
+    {
+        "id": "sa2",
+        "category": "sa",
+        "str": "mid",
+        "command": "↓↙←↓↙←K",
+        "name": "SA2"
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "↓↘→↓↘→P",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "other",
+        "command": "【CA】↓↘→↓↘→P",
+        "name": "CA"
+    }
+]

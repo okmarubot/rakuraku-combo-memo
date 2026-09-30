@@ -1,0 +1,421 @@
+[
+    {
+        "id": "assist_l_variants",
+        "category": "normal",
+        "str": "low",
+        "command": "AUTO弱",
+        "name": "AUTO弱",
+        "variants": [
+            {
+                "id": "assist_l_2",
+                "str": "low",
+                "command": "AUTO弱>弱",
+                "name": "AUTO弱>弱"
+            },
+            {
+                "id": "assist_l_3",
+                "str": "low",
+                "command": "AUTO弱>弱>弱",
+                "name": "AUTO弱>弱>弱"
+            },
+            {
+                "id": "assist_2l",
+                "str": "low",
+                "command": "AUTO↓弱",
+                "name": "AUTO↓弱"
+            },
+            {
+                "id": "assist_2l_2",
+                "str": "low",
+                "command": "AUTO↓弱>弱",
+                "name": "AUTO↓弱>弱"
+            },
+            {
+                "id": "assist_2l_3",
+                "str": "low",
+                "command": "AUTO↓弱>弱>弱",
+                "name": "AUTO↓弱>弱>弱"
+            }
+        ]
+    },
+    {
+        "id": "assist_m_variants",
+        "category": "normal",
+        "str": "mid",
+        "command": "AUTO中",
+        "name": "AUTO中",
+        "variants": [
+            {
+                "id": "assist_m_1",
+                "str": "mid",
+                "command": "AUTO中",
+                "name": "AUTO中"
+            },
+            {
+                "id": "assist_m_2",
+                "str": "mid",
+                "command": "AUTO中>中",
+                "name": "AUTO中>中"
+            },
+            {
+                "id": "assist_m_3",
+                "str": "mid",
+                "command": "AUTO中>中>中",
+                "name": "AUTO中>中>中"
+            },
+            {
+                "id": "assist_m_4",
+                "str": "mid",
+                "command": "AUTO中>中>中>中",
+                "name": "AUTO中>中>中>中"
+            }
+        ]
+    },
+    {
+        "id": "assist_h_variants",
+        "category": "normal",
+        "str": "high",
+        "command": "AUTO強",
+        "name": "AUTO強",
+        "variants": [
+            {
+                "id": "assist_h_1",
+                "str": "high",
+                "command": "AUTO強",
+                "name": "AUTO強"
+            },
+            {
+                "id": "assist_h_2",
+                "str": "high",
+                "command": "AUTO強>強",
+                "name": "AUTO強>強"
+            },
+            {
+                "id": "assist_h_3",
+                "str": "high",
+                "command": "AUTO強>強>強",
+                "name": "AUTO強>強>強"
+            },
+            {
+                "id": "assist_h_4",
+                "str": "high",
+                "command": "AUTO強>強>強>強",
+                "name": "AUTO強>強>強>強"
+            },
+            {
+                "id": "assist_h_5",
+                "str": "high",
+                "command": "AUTO強>強>強>強>強",
+                "name": "AUTO強>強>強>強>強"
+            }
+        ]
+    },
+    {
+        "id": "njhp",
+        "category": "jump",
+        "str": "high",
+        "command": "垂直J強",
+        "name": "垂直J強"
+    },
+    {
+        "id": "6hk",
+        "category": "unique",
+        "str": "high",
+        "command": "→強",
+        "name": "→強"
+    },
+    {
+        "id": "3h",
+        "category": "unique",
+        "str": "high",
+        "command": "↘強",
+        "name": "↘強"
+    },
+    {
+        "id": "j2mk",
+        "category": "jump",
+        "str": "mid",
+        "command": "前J↓中",
+        "name": "前J↓中"
+    },
+    {
+        "id": "5l_target",
+        "category": "unique",
+        "str": "low",
+        "command": "弱タゲコン",
+        "name": "弱タゲコン",
+        "variants": [
+            {
+                "id": "5l_l",
+                "str": "low",
+                "command": "弱>弱",
+                "name": "弱>弱"
+            }
+        ]
+    },
+    {
+        "id": "5m_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "中タゲコン",
+        "name": "中タゲコン",
+        "variants": [
+            {
+                "id": "5m_3m",
+                "str": "mid",
+                "command": "中>↘中",
+                "name": "中>↘中"
+            }
+        ]
+    },
+    {
+        "id": "214lp_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↓↙←弱(SP)",
+        "name": "【弱】百裂張り手",
+        "variants": [
+            {
+                "id": "214lp",
+                "str": "low",
+                "command": "↓↙←弱(SP)",
+                "name": "【弱】百裂張り手"
+            },
+            {
+                "id": "214lp_stock",
+                "str": "low",
+                "command": "【強化】↓↙←弱(SP)",
+                "name": "【弱/強化】百裂張り手"
+            }
+        ]
+    },
+    {
+        "id": "214mp_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↙←中",
+        "name": "【中】百裂張り手",
+        "variants": [
+            {
+                "id": "214mp",
+                "str": "mid",
+                "command": "↓↙←中",
+                "name": "【中】百裂張り手"
+            },
+            {
+                "id": "214mp_stock",
+                "str": "mid",
+                "command": "【強化】↓↙←中",
+                "name": "【中/強化】百裂張り手"
+            }
+        ]
+    },
+    {
+        "id": "214hp_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↙←強",
+        "name": "【強】百裂張り手",
+        "variants": [
+            {
+                "id": "214hp",
+                "str": "high",
+                "command": "↓↙←強",
+                "name": "【強】百裂張り手"
+            },
+            {
+                "id": "214hp_stock",
+                "str": "high",
+                "command": "【強化】↓↙←強",
+                "name": "【強/強化】百裂張り手"
+            }
+        ]
+    },
+    {
+        "id": "214pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←〇〇(AUTO SP)",
+        "name": "【OD】百裂張り手",
+        "variants": [
+            {
+                "id": "214pp",
+                "str": "other",
+                "command": "↓↙←〇〇(AUTO SP)",
+                "name": "【OD】百裂張り手"
+            },
+            {
+                "id": "214pp_stock",
+                "str": "other",
+                "command": "【強化】↓↙←〇〇(AUTO SP)",
+                "name": "【OD/強化】百裂張り手"
+            }
+        ]
+    },
+    {
+        "id": "4h6lp",
+        "category": "special",
+        "str": "low",
+        "command": "⇐→弱",
+        "name": "【弱】スーパー頭突き"
+    },
+    {
+        "id": "4h6mp",
+        "category": "special",
+        "str": "mid",
+        "command": "⇐→中(⇐SP)",
+        "name": "【中】スーパー頭突き"
+    },
+    {
+        "id": "4h6hp",
+        "category": "special",
+        "str": "high",
+        "command": "⇐→強",
+        "name": "【強】スーパー頭突き"
+    },
+    {
+        "id": "4h6pp",
+        "category": "special",
+        "str": "other",
+        "command": "⇐→〇〇(AUTO ⇐SP)",
+        "name": "【OD】スーパー頭突き"
+    },
+    {
+        "id": "2h8lk",
+        "category": "special",
+        "str": "low",
+        "command": "⇓↑弱",
+        "name": "【弱】スーパー百貫落とし"
+    },
+    {
+        "id": "2h8mk",
+        "category": "special",
+        "str": "mid",
+        "command": "⇓↑中",
+        "name": "【中】スーパー百貫落とし"
+    },
+    {
+        "id": "2h8hk",
+        "category": "special",
+        "str": "high",
+        "command": "⇓↑強",
+        "name": "【強】スーパー百貫落とし"
+    },
+    {
+        "id": "2h8kk",
+        "category": "special",
+        "str": "other",
+        "command": "⇓↑〇〇",
+        "name": "【OD】スーパー百貫落とし"
+    },
+    {
+        "id": "624mk",
+        "category": "special",
+        "str": "mid",
+        "command": "↓SP",
+        "name": "【強】大銀杏投げ"
+    },
+    {
+        "id": "624kk",
+        "category": "special",
+        "str": "other",
+        "command": "AUTO ↓SP",
+        "name": "【OD】大銀杏投げ"
+    },
+    {
+        "id": "236k_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→〇(→SP)",
+        "name": "相撲ステップ",
+        "variants": [
+            {
+                "id": "236k_p",
+                "str": "other",
+                "command": "↓↘→〇(→SP)>〇",
+                "name": "相撲ステップ>〇"
+            },
+            {
+                "id": "236k_p_p",
+                "str": "other",
+                "command": "↓↘→〇(→SP)>〇>〇",
+                "name": "相撲ステップ>〇>〇"
+            },
+            {
+                "id": "236k_2p",
+                "str": "other",
+                "command": "↓↘→〇(→SP)>↓〇",
+                "name": "相撲ステップ>↓〇"
+            }
+        ]
+    },
+    {
+        "id": "236kk_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→〇〇(AUTO →SP)",
+        "name": "【OD】相撲ステップ",
+        "variants": [
+            {
+                "id": "236kk_p",
+                "str": "other",
+                "command": "↓↘→〇〇(AUTO →SP)>〇",
+                "name": "【OD】相撲ステップ>〇"
+            },
+            {
+                "id": "236kk_p_p",
+                "str": "other",
+                "command": "↓↘→〇〇(AUTO →SP)>〇>〇",
+                "name": "【OD】相撲ステップ>〇>〇"
+            },
+            {
+                "id": "236kk_2p",
+                "str": "other",
+                "command": "↓↘→〇〇(AUTO →SP)>↓〇",
+                "name": "【OD】相撲ステップ>↓〇"
+            }
+        ]
+    },
+    {
+        "id": "22p",
+        "category": "special",
+        "str": "other",
+        "command": "↓↓弱",
+        "name": "猫だまし"
+    },
+    {
+        "id": "22k",
+        "category": "special",
+        "str": "other",
+        "command": "↓↓中",
+        "name": "肩屋入り"
+    },
+    {
+        "id": "sa1",
+        "category": "sa",
+        "str": "low",
+        "command": "↓↘→↓↘→弱(SP強)",
+        "name": "SA1"
+    },
+    {
+        "id": "sa2",
+        "category": "sa",
+        "str": "mid",
+        "command": "⇐→←→中(⇐SP強)",
+        "name": "SA2"
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "↓↙←↓↙←強(↓SP強)",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "other",
+        "command": "【CA】↓↙←↓↙←強(↓SP強)",
+        "name": "CA"
+    }
+]

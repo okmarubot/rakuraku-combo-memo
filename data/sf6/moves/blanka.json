@@ -4,7 +4,7 @@
         "category": "jump",
         "str": "high",
         "command": "垂直J強P",
-        "name": "垂直ジャンプ強P"
+        "name": "垂直J強P"
     },
     {
         "id": "throw_j",
@@ -91,18 +91,46 @@
         "name": "サプライズバック"
     },
     {
-        "id": "214p",
+        "id": "214p_variants",
         "category": "special",
         "str": "other",
         "command": "↓↙←P",
-        "name": "エレクトリックサンダー"
+        "name": "エレクトリックサンダー",
+        "variants": [
+            {
+                "id": "214p",
+                "str": "other",
+                "command": "↓↙←P",
+                "name": "エレクトリックサンダー"
+            },
+            {
+                "id": "214p_h",
+                "str": "other",
+                "command": "↓↙←P(ホールド)",
+                "name": "エレクトリックサンダー（ホールド）"
+            }
+        ]
     },
     {
-        "id": "214pp",
+        "id": "214pp_variants",
         "category": "special",
         "str": "other",
         "command": "↓↙←PP",
-        "name": "【OD】エレクトリックサンダー"
+        "name": "【OD】エレクトリックサンダー",
+        "variants": [
+            {
+                "id": "214pp",
+                "str": "other",
+                "command": "↓↙←PP",
+                "name": "【OD】エレクトリックサンダー"
+            },
+            {
+                "id": "214pp",
+                "str": "other",
+                "command": "↓↙←PP(ホールド)",
+                "name": "【OD】エレクトリックサンダー(ホールド)"
+            }
+        ]
     },
     {
         "id": "4h6lp",
@@ -192,28 +220,28 @@
         "id": "j4h6lp",
         "category": "special",
         "str": "low",
-        "command": "J⇐→弱P",
+        "command": "空中⇐→弱P",
         "name": "【弱】エリアルローリング"
     },
     {
         "id": "j4h6mp",
         "category": "special",
         "str": "mid",
-        "command": "J⇐→中P",
+        "command": "空中⇐→中P",
         "name": "【中】エリアルローリング"
     },
     {
         "id": "j4h6hp",
         "category": "special",
         "str": "high",
-        "command": "J⇐→強P",
+        "command": "空中⇐→強P",
         "name": "【強】エリアルローリング"
     },
     {
         "id": "j4h6pp",
         "category": "special",
         "str": "other",
-        "command": "J⇐→PP",
+        "command": "空中⇐→PP",
         "name": "【OD】エリアルローリング"
     },
     {

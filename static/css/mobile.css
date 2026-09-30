@@ -3,6 +3,40 @@
 ========================================= */
 
 /* -----------------------------------------
+   ヘッダー
+----------------------------------------- */
+
+/* スマートフォン用ヘッダー */
+header {
+    padding: 8px 14px;
+}
+
+header h1 {
+    font-size: 20px;
+    letter-spacing: 0.03em;
+}
+
+.character-title-row {
+    margin-bottom: 26px;
+    gap: 10px;
+}
+
+.character-title-row h1 {
+    font-size: 26px;
+    letter-spacing: 0.02em;
+}
+
+#data-management-button {
+    padding: 8px 11px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.toolbar {
+    margin-bottom: 20px;
+}
+
+/* -----------------------------------------
    ボタン
 ----------------------------------------- */
 
@@ -210,7 +244,7 @@
 
 
 /* -----------------------------------------
-   ダブルタップ操作
+   タッチ操作
 ----------------------------------------- */
 
 button {

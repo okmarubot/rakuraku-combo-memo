@@ -1,0 +1,573 @@
+[
+    {
+        "id": "assist_l_variants",
+        "category": "normal",
+        "str": "low",
+        "command": "AUTO弱",
+        "name": "AUTO弱",
+        "variants": [
+            {
+                "id": "assist_l",
+                "str": "low",
+                "command": "AUTO弱",
+                "name": "AUTO弱"
+            },
+            {
+                "id": "assist_l_2",
+                "str": "low",
+                "command": "AUTO弱>弱",
+                "name": "AUTO弱>弱"
+            },
+            {
+                "id": "assist_2l",
+                "str": "low",
+                "command": "AUTO↓弱",
+                "name": "AUTO↓弱"
+            },
+            {
+                "id": "assist_2l_2",
+                "str": "low",
+                "command": "AUTO↓弱>弱",
+                "name": "AUTO↓弱>弱"
+            },
+            {
+                "id": "assist_2l_3",
+                "str": "low",
+                "command": "AUTO↓弱>弱>弱",
+                "name": "AUTO↓弱>弱>弱"
+            }
+        ]
+    },
+    {
+        "id": "assist_m_variants",
+        "category": "normal",
+        "str": "mid",
+        "command": "AUTO中",
+        "name": "AUTO中",
+        "variants": [
+            {
+                "id": "assist_m",
+                "str": "mid",
+                "command": "AUTO中",
+                "name": "AUTO中"
+            },
+            {
+                "id": "assist_m_2",
+                "str": "mid",
+                "command": "AUTO中>中",
+                "name": "AUTO中>中"
+            },
+            {
+                "id": "assist_m_3",
+                "str": "mid",
+                "command": "AUTO中>中>中",
+                "name": "AUTO中>中>中"
+            }
+        ]
+    },
+    {
+        "id": "assist_h_variants",
+        "category": "normal",
+        "str": "high",
+        "command": "AUTO強",
+        "name": "AUTO強",
+        "variants": [
+            {
+                "id": "assist_h",
+                "str": "high",
+                "command": "AUTO強",
+                "name": "AUTO強"
+            },
+            {
+                "id": "assist_h_2",
+                "str": "high",
+                "command": "AUTO強>強",
+                "name": "AUTO強>強"
+            },
+            {
+                "id": "assist_h_3",
+                "str": "high",
+                "command": "AUTO強>強>強",
+                "name": "AUTO強>強>強"
+            }
+        ]
+    },
+    {
+        "id": "4mp",
+        "category": "unique",
+        "str": "mid",
+        "command": "←中",
+        "name": "←中"
+    },
+    {
+        "id": "4hp",
+        "category": "unique",
+        "str": "high",
+        "command": "←強",
+        "name": "←強"
+    },
+    {
+        "id": "1hp",
+        "category": "unique",
+        "str": "high",
+        "command": "↙強",
+        "name": "↙強"
+    },
+    {
+        "id": "1lk",
+        "category": "unique",
+        "str": "low",
+        "command": "↙弱",
+        "name": "↙弱"
+    },
+    {
+        "id": "1mk",
+        "category": "unique",
+        "str": "mid",
+        "command": "↙中",
+        "name": "↙中"
+    },
+    {
+        "id": "j2lp",
+        "category": "jump",
+        "str": "low",
+        "command": "J AUTO↓弱",
+        "name": "J AUTO↓弱"
+    },
+    {
+        "id": "j2lk",
+        "category": "jump",
+        "str": "low",
+        "command": "J↓弱",
+        "name": "J↓弱"
+    },
+    {
+        "id": "j2mk",
+        "category": "jump",
+        "str": "mid",
+        "command": "J↓中",
+        "name": "J↓中"
+    },
+    {
+        "id": "j2hk",
+        "category": "jump",
+        "str": "high",
+        "command": "J↓強",
+        "name": "J↓強"
+    },
+    {
+        "id": "3h",
+        "category": "unique",
+        "str": "high",
+        "command": "↘強",
+        "name": "↘強"
+    },
+    {
+        "id": "236lp_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱(→SP)",
+        "name": "【弱】ヨガファイア",
+        "variants": [
+            {
+                "id": "236lp",
+                "str": "low",
+                "command": "↓↘→弱(→SP)",
+                "name": "【弱】ヨガファイア"
+            },
+            {
+                "id": "236lp_h",
+                "str": "low",
+                "command": "↓↘→弱(→SP)(ホールド)",
+                "name": "【弱】ヨガファイア(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "236mp_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中",
+        "name": "【中】ヨガファイア",
+        "variants": [
+            {
+                "id": "236mp",
+                "str": "mid",
+                "command": "↓↘→中",
+                "name": "【中】ヨガファイア"
+            },
+            {
+                "id": "236mp_h",
+                "str": "mid",
+                "command": "↓↘→中(ホールド)",
+                "name": "【中】ヨガファイア(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "236hp_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強",
+        "name": "【強】ヨガファイア",
+        "variants": [
+            {
+                "id": "236hp",
+                "str": "high",
+                "command": "↓↘→強",
+                "name": "【強】ヨガファイア"
+            },
+            {
+                "id": "236hp_h",
+                "str": "high",
+                "command": "↓↘→強(ホールド)",
+                "name": "【強】ヨガファイア(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "236pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→弱中",
+        "name": "【OD】ヨガファイア",
+        "variants": [
+            {
+                "id": "236lpmp",
+                "str": "other",
+                "command": "↓↘→弱中(AUTO →SP)",
+                "name": "【OD弱】ヨガファイア"
+            },
+            {
+                "id": "236lphp",
+                "str": "other",
+                "command": "↓↘→弱強",
+                "name": "【OD中】ヨガファイア"
+            },
+            {
+                "id": "236mphp",
+                "str": "other",
+                "command": "↓↘→中強",
+                "name": "【OD強】ヨガファイア"
+            }
+        ]
+    },
+    {
+        "id": "236lk",
+        "category": "special",
+        "str": "low",
+        "command": "SP+←",
+        "name": "【弱】ヨガアーチ"
+    },
+    {
+        "id": "236mk",
+        "category": "special",
+        "str": "mid",
+        "command": "SP",
+        "name": "【中】ヨガアーチ"
+    },
+    {
+        "id": "236hk",
+        "category": "special",
+        "str": "high",
+        "command": "SP+→",
+        "name": "【強】ヨガアーチ"
+    },
+    {
+        "id": "236kk_variants",
+        "category": "special",
+        "str": "other",
+        "command": "AUTO SP",
+        "name": "【OD】ヨガアーチ",
+        "variants": [
+            {
+                "id": "236lkmk",
+                "str": "other",
+                "command": "AUTO SP+←",
+                "name": "【OD弱】ヨガアーチ"
+            },
+            {
+                "id": "236lkhk",
+                "str": "other",
+                "command": "AUTO SP",
+                "name": "【OD中】ヨガアーチ"
+            },
+            {
+                "id": "236mkhk",
+                "str": "other",
+                "command": "AUTO SP+→",
+                "name": "【OD強】ヨガアーチ"
+            }
+        ]
+    },
+    {
+        "id": "624lp",
+        "category": "special",
+        "str": "low",
+        "command": "→↘↓↙←弱(←SP)",
+        "name": "【弱】ヨガフレイム"
+    },
+    {
+        "id": "624mp",
+        "category": "special",
+        "str": "mid",
+        "command": "→↘↓↙←中",
+        "name": "【中】ヨガフレイム"
+    },
+    {
+        "id": "624hp",
+        "category": "special",
+        "str": "high",
+        "command": "→↘↓↙←強",
+        "name": "【強】ヨガフレイム"
+    },
+    {
+        "id": "624pp",
+        "category": "special",
+        "str": "other",
+        "command": "→↘↓↙←〇〇(AUTO ←SP)",
+        "name": "【OD】ヨガフレイム"
+    },
+    {
+        "id": "624lk",
+        "category": "special",
+        "str": "low",
+        "command": "↙SP",
+        "name": "【弱】ヨガブラスト"
+    },
+    {
+        "id": "624mk",
+        "category": "special",
+        "str": "mid",
+        "command": "↓SP",
+        "name": "【中】ヨガブラスト"
+    },
+    {
+        "id": "624hk",
+        "category": "special",
+        "str": "high",
+        "command": "↘SP",
+        "name": "【強】ヨガブラスト"
+    },
+    {
+        "id": "624kk",
+        "category": "special",
+        "str": "other",
+        "command": "AUTO ↓SP",
+        "name": "【OD】ヨガブラスト"
+    },
+    {
+        "id": "j624lp",
+        "category": "special",
+        "str": "low",
+        "command": "空中→↘↓↙←弱",
+        "name": "【弱】ヨガコメット"
+    },
+    {
+        "id": "j624mp",
+        "category": "special",
+        "str": "mid",
+        "command": "空中→↘↓↙←中",
+        "name": "【中】ヨガコメット"
+    },
+    {
+        "id": "j624hp",
+        "category": "special",
+        "str": "high",
+        "command": "空中→↘↓↙←強(SP)",
+        "name": "【強】ヨガコメット"
+    },
+    {
+        "id": "j624pp",
+        "category": "special",
+        "str": "other",
+        "command": "空中→↘↓↙←〇〇(AUTO SP)",
+        "name": "【OD】ヨガコメット"
+    },
+    {
+        "id": "2kk_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓中強",
+        "name": "ヨガフロート",
+        "variants": [
+            {
+                "id": "2kk",
+                "str": "other",
+                "command": "↓中強",
+                "name": "ヨガフロート"
+            },
+            {
+                "id": "3kk",
+                "str": "other",
+                "command": "↘中強",
+                "name": "ヨガフロート(前方)"
+            },
+            {
+                "id": "j2k",
+                "str": "other",
+                "command": "空中↓中強",
+                "name": "空中ヨガフロート"
+            }
+        ]
+    },
+    {
+        "id": "6ppp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "→〇〇〇",
+        "name": "ヨガテレポート(前)",
+        "variants": [
+            {
+                "id": "6ppp",
+                "str": "other",
+                "command": "→〇〇〇",
+                "name": "ヨガテレポート(前/背面)"
+            },
+            {
+                "id": "j6ppp",
+                "str": "other",
+                "command": "空中→〇〇〇",
+                "name": "空中ヨガテレポート(前/背面)"
+            },
+            {
+                "id": "j6sp",
+                "str": "other",
+                "command": "空中→SP",
+                "name": "空中ヨガテレポート(前/前面)"
+            }
+        ]
+    },
+    {
+        "id": "4ppp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "←〇〇〇",
+        "name": "ヨガテレポート(後)",
+        "variants": [
+            {
+                "id": "4ppp",
+                "str": "other",
+                "command": "←〇〇〇",
+                "name": "ヨガテレポート(後)"
+            },
+            {
+                "id": "j4sp",
+                "str": "other",
+                "command": "空中←SP",
+                "name": "空中ヨガテレポート(後)"
+            }
+        ]
+    },
+    {
+        "id": "sa1_variants",
+        "category": "sa",
+        "str": "low",
+        "command": "↓↘→↓↘→弱(SP強)",
+        "name": "SA1",
+        "variants": [
+            {
+                "id": "sa1_lp",
+                "str": "low",
+                "command": "↓↘→↓↘→弱(SP強)+←",
+                "name": "【弱】SA1"
+            },
+            {
+                "id": "sa1_mp",
+                "str": "mid",
+                "command": "↓↘→↓↘→弱(SP強)",
+                "name": "【中】SA1"
+            },
+            {
+                "id": "sa1_hp",
+                "str": "high",
+                "command": "↓↘→↓↘→弱(SP強)+→",
+                "name": "【強】SA1"
+            }
+        ]
+    },
+    {
+        "id": "sa2_variants",
+        "category": "sa",
+        "str": "mid",
+        "command": "↓↙←↓↙←中(←SP強)",
+        "name": "SA2",
+        "variants": [
+            {
+                "id": "sa2_l_lv1",
+                "str": "low",
+                "command": "↓↙←↓↙←中(←SP強)+←",
+                "name": "【弱】SA2(lv1)"
+            },
+            {
+                "id": "sa2_l_lv2",
+                "str": "low",
+                "command": "↓↙←↓↙←中(←SP強)(ホールド)+←",
+                "name": "【弱】SA2(lv2)"
+            },
+            {
+                "id": "sa2_l_lv3",
+                "str": "low",
+                "command": "↓↙←↓↙←中(←SP強)(長ホールド)+←",
+                "name": "【弱】SA2(lv3)"
+            },
+            {
+                "id": "sa2_m_lv1",
+                "str": "mid",
+                "command": "↓↙←↓↙←中(←SP強)",
+                "name": "【中】SA2(lv1)"
+            },
+            {
+                "id": "sa2_m_lv2",
+                "str": "mid",
+                "command": "↓↙←↓↙←中(←SP強)(ホールド)",
+                "name": "【中】SA2(lv2)"
+            },
+            {
+                "id": "sa2_m_lv3",
+                "str": "mid",
+                "command": "↓↙←↓↙←中(←SP強)(長ホールド)",
+                "name": "【中】SA2(lv3)"
+            },
+            {
+                "id": "sa2_h_lv1",
+                "str": "high",
+                "command": "↓↙←↓↙←中(←SP強)+→",
+                "name": "【強】SA2(lv1)"
+            },
+            {
+                "id": "sa2_h_lv2",
+                "str": "high",
+                "command": "↓↙←↓↙←中(←SP強)(ホールド)+→",
+                "name": "【強】SA2(lv2)"
+            },
+            {
+                "id": "sa2_h_lv3",
+                "str": "high",
+                "command": "↓↙←↓↙←中(←SP強)(長ホールド)+→",
+                "name": "【強】SA2(lv3)"
+            }
+        ]
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "↓↘→↓↘→強(↓SP強)",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "other",
+        "command": "【CA】↓↘→↓↘→強(↓SP強)",
+        "name": "CA"
+    },
+    {
+        "id": "throw_2",
+        "category": "common",
+        "str": "other",
+        "command": "↓投げ",
+        "name": "↓投げ"
+    }
+]

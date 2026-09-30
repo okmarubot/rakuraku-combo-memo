@@ -159,28 +159,28 @@
         "id": "j214lk",
         "category": "special",
         "str": "low",
-        "command": "前J↓↙←弱K",
+        "command": "空中↓↙←弱K",
         "name": "【弱】キャノンストライク"
     },
     {
         "id": "j214mk",
         "category": "special",
         "str": "mid",
-        "command": "前J↓↙←中K",
+        "command": "空中↓↙←中K",
         "name": "【中】キャノンストライク"
     },
     {
         "id": "j214hk",
         "category": "special",
         "str": "high",
-        "command": "前J↓↙←強K",
+        "command": "空中↓↙←強K",
         "name": "【強】キャノンストライク"
     },
     {
         "id": "j214kk",
         "category": "special",
         "str": "other",
-        "command": "前J↓↙←KK",
+        "command": "空中↓↙←KK",
         "name": "【OD】キャノンストライク"
     },
     {
@@ -223,7 +223,7 @@
             {
                 "id": "236lp_throw",
                 "str": "low",
-                "command": "↓↘→弱P>弱P弱K",
+                "command": "↓↘→弱P>投げ",
                 "name": "【弱】フーリガン>投げ"
             },
             {
@@ -274,7 +274,7 @@
             {
                 "id": "236mp_throw",
                 "str": "mid",
-                "command": "↓↘→中P>弱P弱K",
+                "command": "↓↘→中P>投げ",
                 "name": "【中】フーリガン>投げ"
             },
             {
@@ -325,7 +325,7 @@
             {
                 "id": "236hp_throw",
                 "str": "high",
-                "command": "↓↘→強P>弱P弱K",
+                "command": "↓↘→強P>投げ",
                 "name": "【強】フーリガン>投げ"
             },
             {
@@ -364,7 +364,7 @@
             {
                 "id": "236hp_h_throw",
                 "str": "high",
-                "command": "↓↘→強P(ホールド)>弱P弱K",
+                "command": "↓↘→強P(ホールド)>投げ",
                 "name": "【強】フーリガン(ホールド)>投げ"
             },
             {
@@ -403,7 +403,7 @@
             {
                 "id": "236pp_throw",
                 "str": "other",
-                "command": "↓↘→PP>弱P弱K",
+                "command": "↓↘→PP>投げ",
                 "name": "【OD】フーリガン>投げ"
             },
             {
@@ -437,7 +437,7 @@
             {
                 "id": "j_sa2",
                 "str": "mid",
-                "command": "前J↓↙←↓↙←K",
+                "command": "空中↓↙←↓↙←K",
                 "name": "空中SA2"
             }
         ]

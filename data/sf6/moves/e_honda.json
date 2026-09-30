@@ -1,0 +1,327 @@
+[
+    {
+        "id": "njhp",
+        "category": "jump",
+        "str": "high",
+        "command": "垂直J強P",
+        "name": "垂直J強P"
+    },
+    {
+        "id": "6hk",
+        "category": "unique",
+        "str": "high",
+        "command": "→強K",
+        "name": "→強K"
+    },
+    {
+        "id": "3hk",
+        "category": "unique",
+        "str": "high",
+        "command": "↘強K",
+        "name": "↘強K"
+    },
+    {
+        "id": "j2mk",
+        "category": "jump",
+        "str": "mid",
+        "command": "前J↓中K",
+        "name": "前J↓中K"
+    },
+    {
+        "id": "5lp_target",
+        "category": "unique",
+        "str": "low",
+        "command": "弱Pタゲコン",
+        "name": "弱Pタゲコン",
+        "variants": [
+            {
+                "id": "5lp_5mp",
+                "str": "low",
+                "command": "弱P>中P",
+                "name": "弱P>中P"
+            }
+        ]
+    },
+    {
+        "id": "5mp_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "中Pタゲコン",
+        "name": "中Pタゲコン",
+        "variants": [
+            {
+                "id": "5mp_3hk",
+                "str": "mid",
+                "command": "中P>↘強K",
+                "name": "中P>↘強K"
+            }
+        ]
+    },
+    {
+        "id": "214lp_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↓↙←弱P",
+        "name": "【弱】百裂張り手",
+        "variants": [
+            {
+                "id": "214lp",
+                "str": "low",
+                "command": "↓↙←弱P",
+                "name": "【弱】百裂張り手"
+            },
+            {
+                "id": "214lp_stock",
+                "str": "low",
+                "command": "【強化】↓↙←弱P",
+                "name": "【弱/強化】百裂張り手"
+            }
+        ]
+    },
+    {
+        "id": "214mp_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↙←中P",
+        "name": "【中】百裂張り手",
+        "variants": [
+            {
+                "id": "214mp",
+                "str": "mid",
+                "command": "↓↙←中P",
+                "name": "【中】百裂張り手"
+            },
+            {
+                "id": "214mp_stock",
+                "str": "mid",
+                "command": "【強化】↓↙←中P",
+                "name": "【中/強化】百裂張り手"
+            }
+        ]
+
+    },
+    {
+        "id": "214hp_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↙←強P",
+        "name": "【強】百裂張り手",
+        "variants": [
+            {
+                "id": "214hp",
+                "str": "high",
+                "command": "↓↙←強P",
+                "name": "【強】百裂張り手"
+            },
+            {
+                "id": "214hp_stock",
+                "str": "high",
+                "command": "【強化】↓↙←強P",
+                "name": "【強/強化】百裂張り手"
+            }
+        ]
+
+    },
+    {
+        "id": "214pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←PP",
+        "name": "【OD】百裂張り手",
+        "variants": [
+            {
+                "id": "214pp",
+                "str": "other",
+                "command": "↓↙←PP",
+                "name": "【OD】百裂張り手"
+            },
+            {
+                "id": "214pp_stock",
+                "str": "other",
+                "command": "【強化】↓↙←PP",
+                "name": "【OD/強化】百裂張り手"
+            }
+        ]
+
+    },
+    {
+        "id": "4h6lp",
+        "category": "special",
+        "str": "low",
+        "command": "⇐→弱P",
+        "name": "【弱】スーパー頭突き"
+    },
+    {
+        "id": "4h6mp",
+        "category": "special",
+        "str": "mid",
+        "command": "⇐→中P",
+        "name": "【中】スーパー頭突き"
+    },
+    {
+        "id": "4h6hp",
+        "category": "special",
+        "str": "high",
+        "command": "⇐→強P",
+        "name": "【強】スーパー頭突き"
+    },
+    {
+        "id": "4h6pp",
+        "category": "special",
+        "str": "other",
+        "command": "⇐→PP",
+        "name": "【OD】スーパー頭突き"
+    },
+    {
+        "id": "2h8lk",
+        "category": "special",
+        "str": "low",
+        "command": "⇓↑弱K",
+        "name": "【弱】スーパー百貫落とし"
+    },
+    {
+        "id": "2h8mk",
+        "category": "special",
+        "str": "mid",
+        "command": "⇓↑中K",
+        "name": "【中】スーパー百貫落とし"
+    },
+    {
+        "id": "2h8hk",
+        "category": "special",
+        "str": "high",
+        "command": "⇓↑強K",
+        "name": "【強】スーパー百貫落とし"
+    },
+    {
+        "id": "2h8kk",
+        "category": "special",
+        "str": "other",
+        "command": "⇓↑KK",
+        "name": "【OD】スーパー百貫落とし"
+    },
+    {
+        "id": "624lk",
+        "category": "special",
+        "str": "low",
+        "command": "→↘↓↙←弱K",
+        "name": "【弱】大銀杏投げ"
+    },
+    {
+        "id": "624mk",
+        "category": "special",
+        "str": "mid",
+        "command": "→↘↓↙←中K",
+        "name": "【中】大銀杏投げ"
+    },
+    {
+        "id": "624hk",
+        "category": "special",
+        "str": "high",
+        "command": "→↘↓↙←強K",
+        "name": "【強】大銀杏投げ"
+    },
+    {
+        "id": "624kk",
+        "category": "special",
+        "str": "other",
+        "command": "→↘↓↙←KK",
+        "name": "【OD】大銀杏投げ"
+    },
+    {
+        "id": "236k_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→K",
+        "name": "相撲ステップ",
+        "variants": [
+            {
+                "id": "236k_p",
+                "str": "other",
+                "command": "↓↘→K>P",
+                "name": "相撲ステップ>P"
+            },
+            {
+                "id": "236k_p_p",
+                "str": "other",
+                "command": "↓↘→K>P>P",
+                "name": "相撲ステップ>P>P"
+            },
+            {
+                "id": "236k_2p",
+                "str": "other",
+                "command": "↓↘→K>↓P",
+                "name": "相撲ステップ>↓P"
+            }
+        ]
+    },
+    {
+        "id": "236kk_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→KK",
+        "name": "【OD】相撲ステップ",
+        "variants": [
+            {
+                "id": "236kk_p",
+                "str": "other",
+                "command": "↓↘→KK>P",
+                "name": "【OD】相撲ステップ>P"
+            },
+            {
+                "id": "236kk_p_p",
+                "str": "other",
+                "command": "↓↘→KK>P>P",
+                "name": "【OD】相撲ステップ>P>P"
+            },
+            {
+                "id": "236kk_2p",
+                "str": "other",
+                "command": "↓↘→KK>↓P",
+                "name": "【OD】相撲ステップ>↓P"
+            }
+        ]
+    },
+    {
+        "id": "22p",
+        "category": "special",
+        "str": "other",
+        "command": "↓↓P",
+        "name": "猫だまし"
+    },
+    {
+        "id": "22k",
+        "category": "special",
+        "str": "other",
+        "command": "↓↓K",
+        "name": "肩屋入り"
+    },
+    {
+        "id": "sa1",
+        "category": "sa",
+        "str": "low",
+        "command": "↓↘→↓↘→P",
+        "name": "SA1"
+    },
+    {
+        "id": "sa2",
+        "category": "sa",
+        "str": "mid",
+        "command": "⇐→←→K",
+        "name": "SA2"
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "↓↙←↓↙←P",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "other",
+        "command": "【CA】↓↙←↓↙←P",
+        "name": "CA"
+    }
+]

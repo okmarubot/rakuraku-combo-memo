@@ -1,0 +1,368 @@
+[
+    {
+        "id": "j2lk",
+        "category": "jump",
+        "str": "low",
+        "command": "前J↓弱K",
+        "name": "前J↓弱K"
+    },
+    {
+        "id": "6mk",
+        "category": "unique",
+        "str": "mid",
+        "command": "→中K",
+        "name": "→中K"
+    },
+    {
+        "id": "4hk",
+        "category": "unique",
+        "str": "high",
+        "command": "←強K",
+        "name": "←強K"
+    },
+    {
+        "id": "5lp_target",
+        "category": "unique",
+        "str": "low",
+        "command": "弱Pタゲコン",
+        "name": "弱Pタゲコン",
+        "variants": [
+            {
+                "id": "5lp_mk",
+                "str": "low",
+                "command": "弱P>中K",
+                "name": "弱P>中K"
+            },
+            {
+                "id": "5lp_mk_mk",
+                "str": "low",
+                "command": "弱P>中K>中K",
+                "name": "弱P>中K>中K"
+            }
+        ]
+    },
+    {
+        "id": "5mp_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "中Pタゲコン",
+        "name": "中Pタゲコン",
+        "variants": [
+            {
+                "id": "5mp_hp",
+                "str": "mid",
+                "command": "中P>強P",
+                "name": "中P>強P"
+            },
+            {
+                "id": "5mp_hp_hk",
+                "str": "mid",
+                "command": "中P>強P>強K",
+                "name": "中P>強P>強K"
+            },
+            {
+                "id": "5mp_mp",
+                "str": "mid",
+                "command": "中P>中P",
+                "name": "中P>中P"
+            },
+            {
+                "id": "5mp_mp_hp",
+                "str": "mid",
+                "command": "中P>中P>強P",
+                "name": "中P>中P>強P"
+            },
+            {
+                "id": "5mp_mp_4hp",
+                "str": "mid",
+                "command": "中P>中P>←強P",
+                "name": "中P>中P>←強P"
+            }
+        ]
+    },
+    {
+        "id": "jmp_target",
+        "category": "jump",
+        "str": "mid",
+        "command": "J中Pタゲコン",
+        "name": "J中Pタゲコン",
+        "variants": [
+            {
+                "id": "jmp_hp",
+                "str": "mid",
+                "command": "J中P>強P",
+                "name": "J中P>強P"
+            }
+        ]
+    },
+    {
+        "id": "22pp",
+        "category": "unique",
+        "str": "other",
+        "command": "↓↓PP",
+        "name": "マラカスビート"
+    },
+    {
+        "id": "4h6lp",
+        "category": "special",
+        "str": "low",
+        "command": "⇐→弱P",
+        "name": "【弱】エアスラッシャー"
+    },
+    {
+        "id": "4h6mp",
+        "category": "special",
+        "str": "mid",
+        "command": "⇐→中P",
+        "name": "【中】エアスラッシャー"
+    },
+    {
+        "id": "4h6hp",
+        "category": "special",
+        "str": "high",
+        "command": "⇐→強P",
+        "name": "【強】エアスラッシャー"
+    },
+    {
+        "id": "4h6pp",
+        "category": "special",
+        "str": "other",
+        "command": "⇐→PP",
+        "name": "【OD】エアスラッシャー"
+    },
+    {
+        "id": "2h8lk",
+        "category": "special",
+        "str": "low",
+        "command": "⇓↑弱K",
+        "name": "【弱】ジャックナイフマキシマム"
+    },
+    {
+        "id": "2h8mk",
+        "category": "special",
+        "str": "mid",
+        "command": "⇓↑中K",
+        "name": "【中】ジャックナイフマキシマム"
+    },
+    {
+        "id": "2h8hk",
+        "category": "special",
+        "str": "high",
+        "command": "⇓↑強K",
+        "name": "【強】ジャックナイフマキシマム"
+    },
+    {
+        "id": "2h8kk",
+        "category": "special",
+        "str": "other",
+        "command": "⇓↑KK",
+        "name": "【OD】ジャックナイフマキシマム"
+    },
+    {
+        "id": "236lk",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱K",
+        "name": "フェイクロールステップ"
+    },
+    {
+        "id": "236mk",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中K",
+        "name": "クイックローリングソバット"
+    },
+    {
+        "id": "236hk",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強K",
+        "name": "ダブルローリングソバット"
+    },
+    {
+        "id": "236kk",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→KK",
+        "name": "【OD】ダブルローリングソバット"
+    },
+
+    {
+        "id": "214lp",
+        "category": "special",
+        "str": "low",
+        "command": "↓↙←弱P",
+        "name": "【弱】マシンガンアッパー"
+    },
+    {
+        "id": "214mp",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↙←中P",
+        "name": "【中】マシンガンアッパー"
+    },
+    {
+        "id": "214hp",
+        "category": "special",
+        "str": "high",
+        "command": "↓↙←強P",
+        "name": "【強】マシンガンアッパー"
+    },
+    {
+        "id": "214pp",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←PP",
+        "name": "【OD】マシンガンアッパー"
+    },
+    {
+        "id": "214k_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←K",
+        "name": "ジョスクール",
+        "variants": [
+            {
+                "id": "214k_lk",
+                "str": "low",
+                "command": "↓↙←K>弱K",
+                "name": "ジョスクール>弱K"
+            },
+            {
+                "id": "214k_mk",
+                "str": "mid",
+                "command": "↓↙←K>中K",
+                "name": "ジョスクール>中K"
+            },
+            {
+                "id": "214k_hk",
+                "str": "high",
+                "command": "↓↙←K>強K",
+                "name": "ジョスクール>強K"
+            },
+            {
+                "id": "214k_6p",
+                "str": "other",
+                "command": "↓↙←K>→P",
+                "name": "ジョスクール>→P"
+            },
+            {
+                "id": "214k_6p_4p",
+                "str": "other",
+                "command": "↓↙←K>→P>←P",
+                "name": "ジョスクール>→P>←P"
+            }
+        ]
+    },
+    {
+        "id": "214kk_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←KK",
+        "name": "【OD】ジョスクール",
+        "variants": [
+            {
+                "id": "214kk_lk",
+                "str": "low",
+                "command": "↓↙←KK>弱K",
+                "name": "【OD】ジョスクール>弱K"
+            },
+            {
+                "id": "214kk_mk",
+                "str": "mid",
+                "command": "↓↙←KK>中K",
+                "name": "【OD】ジョスクール>中K"
+            },
+            {
+                "id": "214kk_hk",
+                "str": "high",
+                "command": "↓↙←KK>強K",
+                "name": "【OD】ジョスクール>強K"
+            },
+            {
+                "id": "214kk_6p",
+                "str": "other",
+                "command": "↓↙←KK>→P",
+                "name": "【OD】ジョスクール>→P"
+            },
+            {
+                "id": "214kk_6p_4p",
+                "str": "other",
+                "command": "↓↙←KK>→P>←P",
+                "name": "【OD】ジョスクール>→P>←P"
+            }
+        ]
+    },
+    {
+        "id": "sa1",
+        "category": "sa",
+        "str": "low",
+        "command": "↓↘→↓↘→K",
+        "name": "SA1"
+    },
+    {
+        "id": "sa2_variants",
+        "category": "sa",
+        "str": "mid",
+        "command": "↓↘→↓↘→P",
+        "name": "SA2",
+        "variants": [
+            {
+                "id": "sa2_lp",
+                "str": "low",
+                "command": "↓↘→↓↘→弱P>弱P>中P>強P>弱K>中P>強K",
+                "name": "【弱】SA2"
+            },
+            {
+                "id": "sa2_mp",
+                "str": "mid",
+                "command": "↓↘→↓↘→中P>弱P>中P>強P>弱K>中P>強K",
+                "name": "【中】SA2"
+            },
+            {
+                "id": "sa2_mp_hp",
+                "str": "mid",
+                "command": "↓↘→↓↘→中P>弱P>中P>強P>弱K>中P>強K>強P",
+                "name": "【中】SA2>強P"
+            },
+            {
+                "id": "sa2_mp_hk",
+                "str": "mid",
+                "command": "↓↘→↓↘→中P>弱P>中P>強P>弱K>中P>強K>強K",
+                "name": "【中】SA2>強K"
+            },
+            {
+                "id": "sa2_hp",
+                "str": "high",
+                "command": "↓↘→↓↘→強P>弱P>中P>強P>弱K>中P>強K",
+                "name": "【強】SA2"
+            },
+            {
+                "id": "sa2_hp_hp",
+                "str": "high",
+                "command": "↓↘→↓↘→強P>弱P>中P>強P>弱K>中P>強K>強P",
+                "name": "【強】SA2>強P"
+            },
+            {
+                "id": "sa2_hp_hk",
+                "str": "high",
+                "command": "↓↘→↓↘→強P>弱P>中P>強P>弱K>中P>強K>強K",
+                "name": "【強】SA2>強K"
+            }
+        ]
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "↓↙←↓↙←P",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "other",
+        "command": "↓↙←↓↙←P",
+        "name": "CA"
+    }
+]

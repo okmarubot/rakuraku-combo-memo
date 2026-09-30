@@ -7,6 +7,13 @@
         "name": "空中投げ"
     },
     {
+        "id": "triangle_jump",
+        "category": "common",
+        "str": "other",
+        "command": "三角跳び",
+        "name": "三角跳び"
+    },
+    {
         "id": "njhk",
         "category": "jump",
         "str": "high",
@@ -223,28 +230,28 @@
         "id": "j236lk",
         "category": "special",
         "str": "low",
-        "command": "J↓↘→弱K",
+        "command": "空中↓↘→弱K",
         "name": "【弱】空中百裂脚"
     },
     {
         "id": "j236mk",
         "category": "special",
         "str": "mid",
-        "command": "J↓↘→中K",
+        "command": "空中↓↘→中K",
         "name": "【中】空中百裂脚"
     },
     {
         "id": "j236hk",
         "category": "special",
         "str": "high",
-        "command": "J↓↘→強K",
+        "command": "空中↓↘→強K",
         "name": "【強】空中百裂脚"
     },
     {
         "id": "j236kk",
         "category": "special",
         "str": "other",
-        "command": "J↓↘→KK",
+        "command": "空中↓↘→KK",
         "name": "【OD】空中百裂脚"
     },
     {
@@ -347,7 +354,7 @@
             {
                 "id": "j_sa1",
                 "str": "low",
-                "command": "J↓↘→↓↘→P",
+                "command": "空中↓↘→↓↘→P",
                 "name": "空中SA1"
             }
         ]

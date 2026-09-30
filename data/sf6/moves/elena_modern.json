@@ -1,0 +1,691 @@
+[
+    {
+        "id": "assist_l_variants",
+        "category": "normal",
+        "str": "low",
+        "command": "AUTO弱",
+        "name": "AUTO弱",
+        "variants": [
+            {
+                "id": "assist_l",
+                "str": "low",
+                "command": "AUTO弱",
+                "name": "AUTO弱"
+            },
+            {
+                "id": "assist_l_2",
+                "str": "low",
+                "command": "AUTO弱>弱",
+                "name": "AUTO弱>弱"
+            },
+            {
+                "id": "assist_l_3",
+                "str": "low",
+                "command": "AUTO弱>弱>弱",
+                "name": "AUTO弱>弱>弱"
+            },
+            {
+                "id": "assist_2l",
+                "str": "low",
+                "command": "AUTO↓弱",
+                "name": "AUTO↓弱"
+            },
+            {
+                "id": "assist_2l_2",
+                "str": "low",
+                "command": "AUTO↓弱>弱",
+                "name": "AUTO↓弱>弱"
+            },
+            {
+                "id": "assist_2l_3",
+                "str": "low",
+                "command": "AUTO↓弱>弱>弱",
+                "name": "AUTO↓弱>弱>弱"
+            }
+        ]
+    },
+    {
+        "id": "assist_m_variants",
+        "category": "normal",
+        "str": "mid",
+        "command": "AUTO中",
+        "name": "AUTO中",
+        "variants": [
+            {
+                "id": "assist_m",
+                "str": "mid",
+                "command": "AUTO中",
+                "name": "AUTO中"
+            },
+            {
+                "id": "assist_m_2",
+                "str": "mid",
+                "command": "AUTO中>中",
+                "name": "AUTO中>中"
+            },
+            {
+                "id": "assist_m_3",
+                "str": "mid",
+                "command": "AUTO中>中>中",
+                "name": "AUTO中>中>中"
+            },
+            {
+                "id": "assist_m_4",
+                "str": "mid",
+                "command": "AUTO中>中>中>中",
+                "name": "AUTO中>中>中>中"
+            }
+        ]
+    },
+    {
+        "id": "assist_h_variants",
+        "category": "normal",
+        "str": "high",
+        "command": "AUTO強",
+        "name": "AUTO強",
+        "variants": [
+            {
+                "id": "assist_h",
+                "str": "high",
+                "command": "AUTO強",
+                "name": "AUTO強"
+            },
+            {
+                "id": "assist_h_2",
+                "str": "high",
+                "command": "AUTO強>強",
+                "name": "AUTO強>強"
+            },
+            {
+                "id": "assist_h_3",
+                "str": "high",
+                "command": "AUTO強>強>強",
+                "name": "AUTO強>強>強"
+            },
+            {
+                "id": "assist_h_4",
+                "str": "high",
+                "command": "AUTO強>強>強>強",
+                "name": "AUTO強>強>強>強"
+            },
+            {
+                "id": "assist_h_5",
+                "str": "high",
+                "command": "AUTO強>強>強>強>強",
+                "name": "AUTO強>強>強>強>強"
+            },
+            {
+                "id": "assist_h_6",
+                "str": "high",
+                "command": "AUTO強>強>強>強>強>強",
+                "name": "AUTO強>強>強>強>強>強"
+            },
+            {
+                "id": "assist_h_7",
+                "str": "high",
+                "command": "AUTO強>強>強>強>強>強>強",
+                "name": "AUTO強>強>強>強>強>強>強"
+            }
+        ]
+    },
+    {
+        "id": "4hk",
+        "category": "unique",
+        "str": "high",
+        "command": "←強",
+        "name": "←強"
+    },
+    {
+        "id": "3hk",
+        "category": "unique",
+        "str": "high",
+        "command": "↘強",
+        "name": "↘強"
+    },
+    {
+        "id": "5mp_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "中タゲコン",
+        "name": "中タゲコン",
+        "variants": [
+            {
+                "id": "5mp_5mp",
+                "str": "mid",
+                "command": "中>中",
+                "name": "中>中"
+            }
+        ]
+    },
+    {
+        "id": "6mk",
+        "category": "unique",
+        "str": "mid",
+        "command": "→中",
+        "name": "→中"
+    },
+    {
+        "id": "6mk_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "→中タゲコン",
+        "name": "→中タゲコン",
+        "variants": [
+            {
+                "id": "6mk_mk",
+                "str": "mid",
+                "command": "→中>中",
+                "name": "→中>中"
+            }
+        ]
+    },
+    {
+        "id": "2mk_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "↓中タゲコン",
+        "name": "↓中タゲコン",
+        "variants": [
+            {
+                "id": "2mk_hk",
+                "str": "mid",
+                "command": "↓中>中",
+                "name": "↓中>中"
+            }
+        ]
+    },
+    {
+        "id": "5hp_target",
+        "category": "unique",
+        "str": "high",
+        "command": "強タゲコン",
+        "name": "強タゲコン",
+        "variants": [
+            {
+                "id": "5hp_hp",
+                "str": "high",
+                "command": "強>強",
+                "name": "強>強"
+            }
+        ]
+    },
+    {
+        "id": "6hp",
+        "category": "unique",
+        "str": "high",
+        "command": "→強",
+        "name": "→強"
+    },
+    {
+        "id": "6hp_target",
+        "category": "unique",
+        "str": "high",
+        "command": "→強タゲコン",
+        "name": "→強タゲコン",
+        "variants": [
+            {
+                "id": "6hp_hp",
+                "str": "high",
+                "command": "→強>強",
+                "name": "→強>強"
+            },
+            {
+                "id": "6hp_hp_hp",
+                "str": "high",
+                "command": "→強>強>強",
+                "name": "→強>強>強"
+            }
+        ]
+    },
+    {
+        "id": "jlp_target",
+        "category": "jump",
+        "str": "low",
+        "command": "J弱タゲコン",
+        "name": "J弱タゲコン",
+        "variants": [
+            {
+                "id": "jlp_mk",
+                "str": "low",
+                "command": "J弱>弱",
+                "name": "J弱>弱"
+            }
+        ]
+    },
+    {
+        "id": "jmp_target",
+        "category": "jump",
+        "str": "mid",
+        "command": "J中タゲコン",
+        "name": "J中タゲコン",
+        "variants": [
+            {
+                "id": "jmp_hp",
+                "str": "mid",
+                "command": "J中>中",
+                "name": "J中>中"
+            }
+        ]
+    },
+
+    {
+        "id": "236lk",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱(SP)",
+        "name": "【弱】ライノホーン"
+    },
+    {
+        "id": "236mk",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中",
+        "name": "【中】ライノホーン"
+    },
+    {
+        "id": "236hk",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強",
+        "name": "【強】ライノホーン"
+    },
+    {
+        "id": "236kk",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→〇〇(AUTO SP)",
+        "name": "【OD】ライノホーン"
+    },
+
+    {
+        "id": "623lk",
+        "category": "special",
+        "str": "low",
+        "command": "→↓↘弱",
+        "name": "【弱】スクラッチホイール"
+    },
+    {
+        "id": "623mk",
+        "category": "special",
+        "str": "mid",
+        "command": "→↓↘中(→SP)",
+        "name": "【中】スクラッチホイール"
+    },
+    {
+        "id": "623hk",
+        "category": "special",
+        "str": "high",
+        "command": "→↓↘強",
+        "name": "【強】スクラッチホイール"
+    },
+    {
+        "id": "623kk",
+        "category": "special",
+        "str": "other",
+        "command": "→↓↘〇〇(AUTO →SP)",
+        "name": "【OD】スクラッチホイール"
+    },
+
+    {
+        "id": "links_1_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↙SP",
+        "name": "【弱】リンクシング",
+        "variants": [
+            {
+                "id": "links_1",
+                "str": "low",
+                "command": "↙SP",
+                "name": "【弱】リンクシング"
+            },
+            {
+                "id": "links_1_6lk",
+                "str": "low",
+                "command": "↙SP>→弱",
+                "name": "【弱】リンクシング>→弱"
+            },
+            {
+                "id": "links_1_6mk",
+                "str": "low",
+                "command": "↙SP>→中",
+                "name": "【弱】リンクシング>→中"
+            },
+            {
+                "id": "links_1_6hk",
+                "str": "low",
+                "command": "↙SP>→強",
+                "name": "【弱】リンクシング>→強"
+            }
+        ]
+    },
+    {
+        "id": "links_2_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓SP",
+        "name": "【中】リンクシング",
+        "variants": [
+            {
+                "id": "links_2",
+                "str": "mid",
+                "command": "↓SP",
+                "name": "【中】リンクシング"
+            },
+            {
+                "id": "links_2_6lk",
+                "str": "mid",
+                "command": "↓SP>→弱",
+                "name": "【中】リンクシング>→弱"
+            },
+            {
+                "id": "links_2_6mk",
+                "str": "mid",
+                "command": "↓SP>→中",
+                "name": "【中】リンクシング>→中"
+            },
+            {
+                "id": "links_2_6hk",
+                "str": "mid",
+                "command": "↓SP>→強",
+                "name": "【中】リンクシング>→強"
+            }
+        ]
+    },
+    {
+        "id": "links_3_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↘SP",
+        "name": "【強】リンクシング",
+        "variants": [
+            {
+                "id": "links_3",
+                "str": "high",
+                "command": "↘SP",
+                "name": "【強】リンクシング"
+            },
+            {
+                "id": "links_3_6lk",
+                "str": "high",
+                "command": "↘SP>→弱",
+                "name": "【強】リンクシング>→弱"
+            },
+            {
+                "id": "links_3_6mk",
+                "str": "high",
+                "command": "↘SP>→中",
+                "name": "【強】リンクシング>→中"
+            },
+            {
+                "id": "links_3_6hk",
+                "str": "high",
+                "command": "↘SP>→強",
+                "name": "【強】リンクシング>→強"
+            }
+        ]
+    },
+    {
+        "id": "links_od_variants",
+        "category": "special",
+        "str": "other",
+        "command": "AUTO ↓SP",
+        "name": "【OD】リンクシング",
+        "variants": [
+            {
+                "id": "links_od",
+                "str": "other",
+                "command": "AUTO ↓SP",
+                "name": "【OD】リンクシング"
+            },
+            {
+                "id": "links_od_6lk",
+                "str": "other",
+                "command": "AUTO ↓SP>→弱",
+                "name": "【OD】リンクシング>→弱"
+            },
+            {
+                "id": "links_od_6mk",
+                "str": "other",
+                "command": "AUTO ↓SP>→中",
+                "name": "【OD】リンクシング>→中"
+            },
+            {
+                "id": "links_od_6hk",
+                "str": "other",
+                "command": "AUTO ↓SP>→強",
+                "name": "【OD】リンクシング>→強"
+            }
+        ]
+    },
+    {
+        "id": "lynx_6lp",
+        "category": "special",
+        "str": "low",
+        "command": "↙SP(リンクス)",
+        "name": "【弱】リンクスワール",
+        "variants": [
+            {
+                "id": "lynx_6lp",
+                "str": "low",
+                "command": "↙SP(リンクス)",
+                "name": "【弱】リンクスワール"
+            },
+            {
+                "id": "lynx_6lp_6lk",
+                "str": "low",
+                "command": "↙SP(リンクス)>→弱",
+                "name": "【弱】リンクスワール>→弱"
+            },
+            {
+                "id": "lynx_6lp_6mk",
+                "str": "low",
+                "command": "↙SP(リンクス)>→中",
+                "name": "【弱】リンクスワール>→中"
+            },
+            {
+                "id": "lynx_6lp_6hk",
+                "str": "low",
+                "command": "↙SP(リンクス)>→強",
+                "name": "【弱】リンクスワール>→強"
+            }
+        ]
+    },
+    {
+        "id": "lynx_6mp",
+        "category": "special",
+        "str": "mid",
+        "command": "↓SP(リンクス)",
+        "name": "【中】リンクスワール",
+        "variants": [
+            {
+                "id": "lynx_6mp",
+                "str": "mid",
+                "command": "↓SP(リンクス)",
+                "name": "【中】リンクスワール"
+            },
+            {
+                "id": "lynx_6mp_6lk",
+                "str": "mid",
+                "command": "↓SP(リンクス)>→弱",
+                "name": "【中】リンクスワール>→弱"
+            },
+            {
+                "id": "lynx_6mp_6mk",
+                "str": "mid",
+                "command": "↓SP(リンクス)>→中",
+                "name": "【中】リンクスワール>→中"
+            },
+            {
+                "id": "lynx_6mp_6hk",
+                "str": "mid",
+                "command": "↓SP(リンクス)>→強",
+                "name": "【中】リンクスワール>→強"
+            }
+        ]
+    },
+    {
+        "id": "lynx_6hp",
+        "category": "special",
+        "str": "high",
+        "command": "↘SP(リンクス)",
+        "name": "【強】リンクスワール",
+        "variants": [
+            {
+                "id": "lynx_6hp",
+                "str": "high",
+                "command": "↘SP(リンクス)",
+                "name": "【強】リンクスワール"
+            },
+            {
+                "id": "lynx_6hp_6lk",
+                "str": "high",
+                "command": "↘SP(リンクス)>→弱",
+                "name": "【強】リンクスワール>→弱"
+            },
+            {
+                "id": "lynx_6hp_6mk",
+                "str": "high",
+                "command": "↘SP(リンクス)>→中",
+                "name": "【強】リンクスワール>→中"
+            },
+            {
+                "id": "lynx_6hp_6hk",
+                "str": "high",
+                "command": "↘SP(リンクス)>→強",
+                "name": "【強】リンクスワール>→強"
+            }
+        ]
+    },
+    {
+        "id": "lynx_6pp",
+        "category": "special",
+        "str": "other",
+        "command": "↓SP(ODリンクス)",
+        "name": "【OD】リンクスワール",
+        "variants": [
+            {
+                "id": "lynx_6pp",
+                "str": "other",
+                "command": "↓SP(ODリンクス)",
+                "name": "【OD】リンクスワール"
+            },
+            {
+                "id": "lynx_6pp_6lk",
+                "str": "other",
+                "command": "↓SP(ODリンクス)>→弱",
+                "name": "【OD】リンクスワール>→弱"
+            },
+            {
+                "id": "lynx_6pp_6mk",
+                "str": "other",
+                "command": "↓SP(ODリンクス)>→中",
+                "name": "【OD】リンクスワール>→中"
+            },
+            {
+                "id": "lynx_6pp_6hk",
+                "str": "other",
+                "command": "↓SP(ODリンクス)>→強",
+                "name": "【OD】リンクスワール>→強"
+            }
+        ]
+    },
+    {
+        "id": "214lk",
+        "category": "special",
+        "str": "low",
+        "command": "↓↙←弱",
+        "name": "【弱】スピンサイズ"
+    },
+    {
+        "id": "214mk",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↙←中",
+        "name": "【中】スピンサイズ"
+    },
+    {
+        "id": "214hk",
+        "category": "special",
+        "str": "high",
+        "command": "↓↙←強",
+        "name": "【強】スピンサイズ"
+    },
+    {
+        "id": "214kk",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←〇〇",
+        "name": "【OD】スピンサイズ"
+    },
+    {
+        "id": "214lp_variants",
+        "category": "special",
+        "str": "low",
+        "command": "←SP",
+        "name": "【弱】ムーングライド",
+        "variants": [
+            {
+                "id": "214lp",
+                "str": "low",
+                "command": "←SP",
+                "name": "【弱】ムーングライド"
+            },
+            {
+                "id": "214lp_6p",
+                "str": "low",
+                "command": "←SP>→〇",
+                "name": "【弱】ムーングライド→〇"
+            }
+        ]
+    },
+    {
+        "id": "214pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "AUTO ←SP",
+        "name": "【OD】ムーングライド",
+        "variants": [
+            {
+                "id": "214pp",
+                "str": "other",
+                "command": "AUTO ←SP",
+                "name": "【OD】ムーングライド"
+            },
+            {
+                "id": "214pp_6p",
+                "str": "other",
+                "command": "AUTO ←SP>→〇",
+                "name": "【OD】ムーングライド>→〇"
+            }
+        ]
+    },
+    {
+        "id": "sa1",
+        "category": "sa",
+        "str": "low",
+        "command": "↓↘→↓↘→弱(強SP)",
+        "name": "SA1"
+    },
+    {
+        "id": "sa2",
+        "category": "sa",
+        "str": "mid",
+        "command": "↓↘→↓↘→中(←強SP)",
+        "name": "SA2"
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "↓↙←↓↙←強(↓強SP)",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "other",
+        "command": "【CA】↓↙←↓↙←強(↓強SP)",
+        "name": "CA"
+    }
+]

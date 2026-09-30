@@ -1,0 +1,376 @@
+[
+    {
+        "id": "5hp_h_variants",
+        "category": "unique",
+        "str": "high",
+        "command": "強P(ホールド)",
+        "name": "サイコナックル",
+        "variants": [
+            {
+                "id": "5hp_h_lv1",
+                "str": "high",
+                "command": "強P(ホールド)",
+                "name": "サイコナックル(lv1)"
+            },
+            {
+                "id": "5hp_h_lv2",
+                "str": "high",
+                "command": "強P(最大ホールド)",
+                "name": "サイコナックル(lv2)"
+            }
+        ]
+    },
+    {
+        "id": "6hp",
+        "category": "unique",
+        "str": "high",
+        "command": "→強P",
+        "name": "→強P"
+    },
+    {
+        "id": "5lk_target",
+        "category": "unique",
+        "str": "low",
+        "command": "弱Kタゲコン",
+        "name": "弱Kタゲコン",
+        "variants": [
+            {
+                "id": "5lk_lk",
+                "str": "low",
+                "command": "弱K>弱K",
+                "name": "弱K>弱K"
+            },
+            {
+                "id": "5lk_lk_lk",
+                "str": "low",
+                "command": "弱K>弱K>弱K",
+                "name": "弱K>弱K>弱K"
+            }
+        ]
+    },
+    {
+        "id": "5mp_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "中Pタゲコン",
+        "name": "中Pタゲコン",
+        "variants": [
+            {
+                "id": "5mp_hp",
+                "str": "mid",
+                "command": "中P>強P",
+                "name": "中P>強P"
+            }
+        ]
+    },
+    {
+        "id": "5mk_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "中Kタゲコン",
+        "name": "中Kタゲコン",
+        "variants": [
+            {
+                "id": "5mk_mk",
+                "str": "mid",
+                "command": "中K>中K",
+                "name": "中K>中K"
+            },
+            {
+                "id": "5mk_mk_hp",
+                "str": "mid",
+                "command": "中K>中K>強P",
+                "name": "中K>中K>強P"
+            }
+        ]
+    },
+    {
+        "id": "2hk_target",
+        "category": "unique",
+        "str": "high",
+        "command": "↓強Kタゲコン",
+        "name": "↓強Kタゲコン",
+        "variants": [
+            {
+                "id": "2hk_hp",
+                "str": "high",
+                "command": "↓強K>強P",
+                "name": "↓強K>強P"
+            }
+        ]
+    },
+    {
+        "id": "236p_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→P",
+        "name": "サイコスパーク",
+        "variants": [
+            {
+                "id": "236p",
+                "str": "other",
+                "command": "↓↘→P",
+                "name": "サイコスパーク"
+            },
+            {
+                "id": "236p_6lp",
+                "str": "low",
+                "command": "↓↘→P>→弱P",
+                "name": "サイコスパーク>→弱P"
+            },
+            {
+                "id": "236p_6mp",
+                "str": "mid",
+                "command": "↓↘→P>→中P",
+                "name": "サイコスパーク>→中P"
+            },
+            {
+                "id": "236p_6hp",
+                "str": "high",
+                "command": "↓↘→P>→強P",
+                "name": "サイコスパーク>→強P"
+            }
+        ]
+    },
+    {
+        "id": "236pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→PP",
+        "name": "【OD】サイコスパーク",
+        "variants": [
+            {
+                "id": "236pp",
+                "str": "other",
+                "command": "↓↘→PP",
+                "name": "【OD】サイコスパーク"
+            },
+            {
+                "id": "236pp_6lp",
+                "str": "low",
+                "command": "↓↘→PP>→弱P",
+                "name": "【OD】サイコスパーク>→弱P"
+            },
+            {
+                "id": "236pp_6mp",
+                "str": "mid",
+                "command": "↓↘→PP>→中P",
+                "name": "【OD】サイコスパーク>→中P"
+            },
+            {
+                "id": "236pp_6hp",
+                "str": "high",
+                "command": "↓↘→PP>→強P",
+                "name": "【OD】サイコスパーク>→強P"
+            }
+        ]
+    },
+    {
+        "id": "623lp",
+        "category": "special",
+        "str": "low",
+        "command": "→↓↘弱P",
+        "name": "【弱】サイコアッパー"
+    },
+    {
+        "id": "623mp",
+        "category": "special",
+        "str": "mid",
+        "command": "→↓↘中P",
+        "name": "【中】サイコアッパー"
+    },
+    {
+        "id": "623hp",
+        "category": "special",
+        "str": "high",
+        "command": "→↓↘強P",
+        "name": "【強】サイコアッパー"
+    },
+    {
+        "id": "623pp",
+        "category": "special",
+        "str": "other",
+        "command": "→↓↘PP",
+        "name": "【OD】サイコアッパー"
+    },
+    {
+        "id": "214lp",
+        "category": "special",
+        "str": "low",
+        "command": "↓↙←弱P",
+        "name": "【弱】サイコブリッツ"
+    },
+    {
+        "id": "214mp",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↙←中P",
+        "name": "【中】サイコブリッツ"
+    },
+    {
+        "id": "214hp",
+        "category": "special",
+        "str": "high",
+        "command": "↓↙←強P",
+        "name": "【強】サイコブリッツ"
+    },
+    {
+        "id": "214pp",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←PP",
+        "name": "【OD】サイコブリッツ"
+    },
+    {
+        "id": "236lk_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱K",
+        "name": "【弱】サイコフリッカー",
+        "variants": [
+            {
+                "id": "236lk",
+                "str": "low",
+                "command": "↓↘→弱K",
+                "name": "【弱】サイコフリッカー"
+            },
+            {
+                "id": "236lk_hold",
+                "str": "low",
+                "command": "↓↘→弱K(ホールド)",
+                "name": "【弱】サイコフリッカー(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "236mk_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中K",
+        "name": "【中】サイコフリッカー",
+        "variants": [
+            {
+                "id": "236mk",
+                "str": "mid",
+                "command": "↓↘→中K",
+                "name": "【中】サイコフリッカー"
+            },
+            {
+                "id": "236mk_hold",
+                "str": "mid",
+                "command": "↓↘→中K(ホールド)",
+                "name": "【中】サイコフリッカー(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "236hk_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強K",
+        "name": "【強】サイコフリッカー",
+        "variants": [
+            {
+                "id": "236hk",
+                "str": "high",
+                "command": "↓↘→強K",
+                "name": "【強】サイコフリッカー"
+            },
+            {
+                "id": "236hk_hold",
+                "str": "high",
+                "command": "↓↘→強K(ホールド)",
+                "name": "【強】サイコフリッカー(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "236kk",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→KK",
+        "name": "【OD】サイコフリッカー"
+    },
+    {
+        "id": "killstep_variants",
+        "category": "special",
+        "str": "other",
+        "command": "KK",
+        "name": "キルステップ",
+        "variants": [
+            {
+                "id": "killstep",
+                "str": "other",
+                "command": "KK",
+                "name": "キルステップ"
+            },
+            {
+                "id": "killstep_break",
+                "str": "other",
+                "command": "KK>→P(最速)",
+                "name": "キルステップ>→P(最速)"
+            },
+            {
+                "id": "killstep_chase",
+                "str": "other",
+                "command": "KK>→P(遅らせ)",
+                "name": "キルステップ>→P(遅らせ)"
+            }
+        ]
+    },
+    {
+        "id": "killstep_b",
+        "category": "special",
+        "str": "other",
+        "command": "←KK",
+        "name": "キルステップ(後)"
+    },
+    {
+        "id": "sa1",
+        "category": "sa",
+        "str": "low",
+        "command": "↓↘→↓↘→K",
+        "name": "SA1"
+    },
+    {
+        "id": "sa2_variants",
+        "category": "sa",
+        "str": "mid",
+        "command": "↓↙←↓↙←中P",
+        "name": "SA2",
+        "variants": [
+            {
+                "id": "sa2_lp",
+                "str": "low",
+                "command": "↓↙←↓↙←弱P",
+                "name": "SA2"
+            },
+            {
+                "id": "sa2_mp",
+                "str": "mid",
+                "command": "↓↙←↓↙←中P",
+                "name": "SA2"
+            },
+            {
+                "id": "sa2_hp",
+                "str": "high",
+                "command": "↓↙←↓↙←強P",
+                "name": "SA2"
+            }
+        ]
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "↓↘→↓↘→P",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "other",
+        "command": "【CA】↓↘→↓↘→P",
+        "name": "CA"
+    }
+]

@@ -1,0 +1,483 @@
+[
+    {
+        "id": "assist_l_variants",
+        "category": "normal",
+        "str": "low",
+        "command": "AUTO弱",
+        "name": "AUTO弱",
+        "variants": [
+            {
+                "id": "assist_l_1",
+                "str": "low",
+                "command": "AUTO弱",
+                "name": "AUTO弱"
+            },
+            {
+                "id": "assist_l_2",
+                "str": "low",
+                "command": "AUTO弱>弱",
+                "name": "AUTO弱>弱"
+            },
+            {
+                "id": "assist_2l_1",
+                "str": "low",
+                "command": "AUTO↓弱",
+                "name": "AUTO↓弱"
+            },
+            {
+                "id": "assist_2l_2",
+                "str": "low",
+                "command": "AUTO↓弱>弱",
+                "name": "AUTO↓弱>弱"
+            },
+            {
+                "id": "assist_2l_3",
+                "str": "low",
+                "command": "AUTO↓弱>弱>弱",
+                "name": "AUTO↓弱>弱>弱"
+            }
+        ]
+    },
+    {
+        "id": "assist_m_variants",
+        "category": "normal",
+        "str": "mid",
+        "command": "AUTO中",
+        "name": "AUTO中",
+        "variants": [
+            {
+                "id": "assist_m_1",
+                "str": "mid",
+                "command": "AUTO中",
+                "name": "AUTO中"
+            },
+            {
+                "id": "assist_m_2",
+                "str": "mid",
+                "command": "AUTO中>中",
+                "name": "AUTO中>中"
+            },
+            {
+                "id": "assist_m_3",
+                "str": "mid",
+                "command": "AUTO中>中>中",
+                "name": "AUTO中>中>中"
+            }
+        ]
+    },
+    {
+        "id": "assist_h_variants",
+        "category": "normal",
+        "str": "high",
+        "command": "AUTO強",
+        "name": "AUTO強",
+        "variants": [
+            {
+                "id": "assist_h_1",
+                "str": "high",
+                "command": "AUTO強",
+                "name": "AUTO強"
+            },
+            {
+                "id": "assist_h_2",
+                "str": "high",
+                "command": "AUTO強>強",
+                "name": "AUTO強>強"
+            },
+            {
+                "id": "assist_h_3",
+                "str": "high",
+                "command": "AUTO強>強>強",
+                "name": "AUTO強>強>強"
+            },
+            {
+                "id": "assist_h_4",
+                "str": "high",
+                "command": "AUTO強>強>強>強",
+                "name": "AUTO強>強>強>強"
+            }
+        ]
+    },
+    {
+        "id": "njhk",
+        "category": "jump",
+        "str": "high",
+        "command": "垂直J AUTO強",
+        "name": "垂直J AUTO強"
+    },
+    {
+        "id": "6mp",
+        "category": "unique",
+        "str": "mid",
+        "command": "→中",
+        "name": "→中"
+    },
+    {
+        "id": "6hk",
+        "category": "unique",
+        "str": "high",
+        "command": "→強",
+        "name": "→強"
+    },
+    {
+        "id": "3h",
+        "category": "unique",
+        "str": "high",
+        "command": "↘強",
+        "name": "↘強"
+    },
+    {
+        "id": "hj_8",
+        "category": "unique",
+        "str": "other",
+        "command": "↓↑",
+        "name": "↓↑"
+    },
+    {
+        "id": "hj_9",
+        "category": "unique",
+        "str": "other",
+        "command": "↓↗",
+        "name": "↓↗"
+    },
+    {
+        "id": "hjc",
+        "category": "unique",
+        "str": "other",
+        "command": "HJC",
+        "name": "HJC"
+    },
+    {
+        "id": "214lp_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↓↙←弱",
+        "name": "【弱】サンダースラップ",
+        "variants": [
+            {
+                "id": "214lp",
+                "str": "low",
+                "command": "↓↙←弱",
+                "name": "【弱】サンダースラップ"
+            },
+            {
+                "id": "214lp_6pp",
+                "str": "low",
+                "command": "↓↙←弱>→〇〇",
+                "name": "【弱】サンダースラップ>→〇〇"
+            },
+            {
+                "id": "214lp_cancel",
+                "str": "low",
+                "command": "↓↙←弱+〇",
+                "name": "【弱】サンキャン"
+            }
+        ]
+    },
+    {
+        "id": "214mp_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↙←中",
+        "name": "【中】サンダースラップ",
+        "variants": [
+            {
+                "id": "214mp",
+                "str": "mid",
+                "command": "↓↙←中",
+                "name": "【中】サンダースラップ"
+            },
+            {
+                "id": "214mp_6pp",
+                "str": "mid",
+                "command": "↓↙←中>→〇〇",
+                "name": "【中】サンダースラップ>→〇〇"
+            },
+            {
+                "id": "214mp_cancel",
+                "str": "mid",
+                "command": "↓↙←中+〇",
+                "name": "【中】サンキャン"
+            }
+        ]
+    },
+    {
+        "id": "214hp_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↙←強(→SP)",
+        "name": "【強】サンダースラップ",
+        "variants": [
+            {
+                "id": "214hp",
+                "str": "high",
+                "command": "↓↙←強(→SP)",
+                "name": "【強】サンダースラップ"
+            },
+            {
+                "id": "214hp_6pp",
+                "str": "high",
+                "command": "↓↙←強(→SP)>→〇〇",
+                "name": "【強】サンダースラップ>→〇〇"
+            },
+            {
+                "id": "214hp_cancel",
+                "str": "high",
+                "command": "↓↙←強+〇",
+                "name": "【強】サンキャン"
+            }
+        ]
+    },
+    {
+        "id": "214pp",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←〇〇(AUTO →SP)",
+        "name": "【OD】サンダースラップ"
+    },
+    {
+        "id": "236lk_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱",
+        "name": "【弱】バーニングキック",
+        "variants": [
+            {
+                "id": "236lk",
+                "str": "low",
+                "command": "↓↘→弱",
+                "name": "【弱】バーニングキック"
+            },
+            {
+                "id": "236lk_pp",
+                "str": "low",
+                "command": "↓↘→弱>弱中",
+                "name": "【弱】バーニングキック>弱中"
+            },
+            {
+                "id": "236lk_kk",
+                "str": "low",
+                "command": "↓↘→弱>中強",
+                "name": "【弱】バーニングキック>中強"
+            }
+        ]
+    },
+    {
+        "id": "236mk_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中(←SP)",
+        "name": "【中】バーニングキック",
+        "variants": [
+            {
+                "id": "236mk",
+                "str": "mid",
+                "command": "↓↘→中(←SP)",
+                "name": "【中】バーニングキック"
+            },
+            {
+                "id": "236mk_pp",
+                "str": "mid",
+                "command": "↓↘→中(←SP)>弱中",
+                "name": "【中】バーニングキック>弱中"
+            },
+            {
+                "id": "236mk_kk",
+                "str": "mid",
+                "command": "↓↘→中(←SP)>中強",
+                "name": "【中】バーニングキック>中強"
+            }
+        ]
+    },
+    {
+        "id": "236hk_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強",
+        "name": "【強】バーニングキック",
+        "variants": [
+            {
+                "id": "236hk",
+                "str": "high",
+                "command": "↓↘→強",
+                "name": "【強】バーニングキック"
+            },
+            {
+                "id": "236hk_pp",
+                "str": "high",
+                "command": "↓↘→強>弱中",
+                "name": "【強】バーニングキック>弱中"
+            },
+            {
+                "id": "236hk_kk",
+                "str": "high",
+                "command": "↓↘→強>中強",
+                "name": "【強】バーニングキック>中強"
+            }
+        ]
+    },
+    {
+        "id": "236kk",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→〇〇(AUTO ←SP)",
+        "name": "【OD】バーニングキック"
+    },
+    {
+        "id": "j236lk",
+        "category": "special",
+        "str": "low",
+        "command": "空中↓↘→弱",
+        "name": "【弱】空中バーニングキック"
+    },
+    {
+        "id": "j236mk",
+        "category": "special",
+        "str": "mid",
+        "command": "空中↓↘→中(SP)",
+        "name": "【中】空中バーニングキック"
+    },
+    {
+        "id": "j236hk",
+        "category": "special",
+        "str": "high",
+        "command": "空中↓↘→強",
+        "name": "【強】空中バーニングキック"
+    },
+    {
+        "id": "j236kk",
+        "category": "special",
+        "str": "other",
+        "command": "空中↓↘→〇〇",
+        "name": "【OD】空中バーニングキック"
+    },
+    {
+        "id": "623lp",
+        "category": "special",
+        "str": "low",
+        "command": "→↓↘弱(↙SP)",
+        "name": "【弱】セイスモハンマー"
+    },
+    {
+        "id": "623mp",
+        "category": "special",
+        "str": "mid",
+        "command": "→↓↘中(↓SP)",
+        "name": "【中】セイスモハンマー"
+    },
+    {
+        "id": "623hp",
+        "category": "special",
+        "str": "high",
+        "command": "→↓↘強(↘SP)",
+        "name": "【強】セイスモハンマー"
+    },
+    {
+        "id": "623pp",
+        "category": "special",
+        "str": "other",
+        "command": "→↓↘〇〇(AUTO ↓SP)",
+        "name": "【OD】セイスモハンマー"
+    },
+    {
+        "id": "623p_k",
+        "category": "special",
+        "str": "other",
+        "command": "→↓↘〇+〇",
+        "name": "セイスモキャンセル"
+    },
+    {
+        "id": "214k_variants",
+        "category": "special",
+        "str": "other",
+        "command": "SP",
+        "name": "セービングフォース",
+        "variants": [
+            {
+                "id": "214k_lv1",
+                "str": "other",
+                "command": "SP",
+                "name": "セービングフォース(Lv1)"
+            },
+            {
+                "id": "214k_lv2",
+                "str": "other",
+                "command": "SP(ホールド)",
+                "name": "セービングフォース(Lv2)"
+            },
+            {
+                "id": "214k_lv3",
+                "str": "other",
+                "command": "SP(最大ホールド)",
+                "name": "セービングフォース(Lv3)"
+            },
+            {
+                "id": "214k_66",
+                "str": "other",
+                "command": "SP>前ステ",
+                "name": "セービングフォース>前ステ"
+            }
+        ]
+    },
+    {
+        "id": "214kk_variants",
+        "category": "special",
+        "str": "other",
+        "command": "AUTO SP",
+        "name": "【OD】セービングフォース",
+        "variants": [
+            {
+                "id": "214kk_lv1",
+                "str": "other",
+                "command": "AUTO SP",
+                "name": "【OD】セービングフォース(Lv1)"
+            },
+            {
+                "id": "214kk_lv2",
+                "str": "other",
+                "command": "AUTO SP(ホールド)",
+                "name": "【OD】セービングフォース(Lv2)"
+            },
+            {
+                "id": "214kk_lv3",
+                "str": "other",
+                "command": "AUTO SP(最大ホールド)",
+                "name": "【OD】セービングフォース(Lv3)"
+            },
+            {
+                "id": "214kk_6",
+                "str": "other",
+                "command": "AUTO SP>前ステ",
+                "name": "【OD】セービングフォース>前ステ"
+            }
+        ]
+    },
+    {
+        "id": "sa1",
+        "category": "sa",
+        "str": "low",
+        "command": "↓↘→↓↘→弱(SP強)",
+        "name": "SA1"
+    },
+    {
+        "id": "sa2",
+        "category": "sa",
+        "str": "mid",
+        "command": "↓↙←↓↙←中(←SP強)",
+        "name": "SA2"
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "↓↙←↓↙←強(↓SP強)",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "other",
+        "command": "【CA】↓↙←↓↙←強(↓SP強)",
+        "name": "CA"
+    }
+]

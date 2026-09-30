@@ -1,0 +1,561 @@
+[
+    {
+        "id": "6mp",
+        "category": "unique",
+        "str": "mid",
+        "command": "→中P",
+        "name": "→中P"
+    },
+    {
+        "id": "4hp",
+        "category": "unique",
+        "str": "high",
+        "command": "←強P",
+        "name": "←強P"
+    },
+    {
+        "id": "6hp",
+        "category": "unique",
+        "str": "high",
+        "command": "→強P",
+        "name": "→強P"
+    },
+    {
+        "id": "4lk",
+        "category": "unique",
+        "str": "low",
+        "command": "←弱K",
+        "name": "←弱K"
+    },
+    {
+        "id": "4mk",
+        "category": "unique",
+        "str": "mid",
+        "command": "←中K",
+        "name": "←中K"
+    },
+    {
+        "id": "6mk",
+        "category": "unique",
+        "str": "mid",
+        "command": "→中K",
+        "name": "→中K"
+    },
+    {
+        "id": "6hk",
+        "category": "unique",
+        "str": "high",
+        "command": "→強K",
+        "name": "→強K"
+    },
+    {
+        "id": "3hk",
+        "category": "unique",
+        "str": "high",
+        "command": "↘強K",
+        "name": "↘強K"
+    },
+    {
+        "id": "5mp_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "中Pタゲコン",
+        "name": "中Pタゲコン",
+        "variants": [
+            {
+                "id": "5mp_4hp",
+                "str": "mid",
+                "command": "中P>←強P",
+                "name": "中P>←強P"
+            }
+        ]
+    },
+    {
+        "id": "2mp_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "↓中Pタゲコン",
+        "name": "↓中Pタゲコン",
+        "variants": [
+            {
+                "id": "2mp_2mp",
+                "str": "mid",
+                "command": "↓中P>↓中P",
+                "name": "↓中P>↓中P"
+            }
+        ]
+    },
+    {
+        "id": "2mk_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "↓中Kタゲコン",
+        "name": "↓中Kタゲコン",
+        "variants": [
+            {
+                "id": "2mk_6mp",
+                "str": "mid",
+                "command": "↓中K>→中P",
+                "name": "↓中K>→中P"
+            }
+        ]
+    },
+    {
+        "id": "2hk_target",
+        "category": "unique",
+        "str": "high",
+        "command": "↓強Kタゲコン",
+        "name": "↓強Kタゲコン",
+        "variants": [
+            {
+                "id": "2hk_3hk",
+                "str": "high",
+                "command": "↓強K>↘強K",
+                "name": "↓強K>↘強K"
+            }
+        ]
+    },
+    {
+        "id": "4h6lp_variants",
+        "category": "special",
+        "str": "low",
+        "command": "⇐→弱P",
+        "name": "【弱】ソニックブーム",
+        "variants": [
+            {
+                "id": "4h6lp",
+                "str": "low",
+                "command": "⇐→弱P",
+                "name": "【弱】ソニックブーム"
+            },
+            {
+                "id": "4h6lp_just",
+                "str": "low",
+                "command": "【ジャスト】⇐→弱P",
+                "name": "【弱/ジャスト】ソニックブーム"
+            }
+        ]
+    },
+    {
+        "id": "4h6mp_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "⇐→中P",
+        "name": "【中】ソニックブーム",
+        "variants": [
+            {
+                "id": "4h6mp",
+                "str": "mid",
+                "command": "⇐→中P",
+                "name": "【中】ソニックブーム"
+            },
+            {
+                "id": "4h6mp_just",
+                "str": "mid",
+                "command": "【ジャスト】⇐→中P",
+                "name": "【中/ジャスト】ソニックブーム"
+            }
+        ]
+    },
+    {
+        "id": "4h6hp_variants",
+        "category": "special",
+        "str": "high",
+        "command": "⇐→強P",
+        "name": "【強】ソニックブーム",
+        "variants": [
+            {
+                "id": "4h6hp",
+                "str": "high",
+                "command": "⇐→強P",
+                "name": "【強】ソニックブーム"
+            },
+            {
+                "id": "4h6hp_just",
+                "str": "high",
+                "command": "【ジャスト】⇐→強P",
+                "name": "【強/ジャスト】ソニックブーム"
+            }
+        ]
+    },
+    {
+        "id": "4h6pp",
+        "category": "special",
+        "str": "other",
+        "command": "⇐→PP",
+        "name": "【OD】ソニックブーム"
+    },
+    {
+        "id": "2h8lk_variants",
+        "category": "special",
+        "str": "low",
+        "command": "⇓↑弱K",
+        "name": "【弱】サマーソルトキック",
+        "variants": [
+            {
+                "id": "2h8lk",
+                "str": "low",
+                "command": "⇓↑弱K",
+                "name": "【弱】サマーソルトキック"
+            },
+            {
+                "id": "2h8lk_just",
+                "str": "low",
+                "command": "【ジャスト】⇓↑弱K",
+                "name": "【弱/ジャスト】サマーソルトキック"
+            }
+        ]
+    },
+    {
+        "id": "2h8mk_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "⇓↑中K",
+        "name": "【中】サマーソルトキック",
+        "variants": [
+            {
+                "id": "2h8mk",
+                "str": "mid",
+                "command": "⇓↑中K",
+                "name": "【中】サマーソルトキック"
+            },
+            {
+                "id": "2h8mk_just",
+                "str": "mid",
+                "command": "【ジャスト】⇓↑中K",
+                "name": "【中/ジャスト】サマーソルトキック"
+            }
+        ]
+    },
+    {
+        "id": "2h8hk_variants",
+        "category": "special",
+        "str": "high",
+        "command": "⇓↑強K",
+        "name": "【強】サマーソルトキック",
+        "variants": [
+            {
+                "id": "2h8hk",
+                "str": "high",
+                "command": "⇓↑強K",
+                "name": "【強】サマーソルトキック"
+            },
+            {
+                "id": "2h8hk_just",
+                "str": "high",
+                "command": "【ジャスト】⇓↑強K",
+                "name": "【強/ジャスト】サマーソルトキック"
+            }
+        ]
+    },
+    {
+        "id": "2h8kk",
+        "category": "special",
+        "str": "other",
+        "command": "⇓↑KK",
+        "name": "【OD】サマーソルトキック"
+    },
+    {
+        "id": "214lp_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↓↙←弱P",
+        "name": "【弱】ソニックブレイド",
+        "variants": [
+            {
+                "id": "214lp",
+                "str": "low",
+                "command": "↓↙←弱P",
+                "name": "【弱】ソニックブレイド"
+            },
+            {
+                "id": "214lp_6lp",
+                "str": "low",
+                "command": "↓↙←弱P>→弱P",
+                "name": "【弱】ソニックブレイド>→弱P"
+            },
+            {
+                "id": "214lp_6lp_just",
+                "str": "low",
+                "command": "↓↙←弱P>【ジャスト】→弱P",
+                "name": "【弱】ソニックブレイド>【ジャスト】→弱P"
+            },
+            {
+                "id": "214lp_6mp",
+                "str": "low",
+                "command": "↓↙←弱P>→中P",
+                "name": "【弱】ソニックブレイド>→中P"
+            },
+            {
+                "id": "214lp_6mp_just",
+                "str": "low",
+                "command": "↓↙←弱P>【ジャスト】→中P",
+                "name": "【弱】ソニックブレイド>【ジャスト】→中P"
+            },
+            {
+                "id": "214lp_6hp",
+                "str": "low",
+                "command": "↓↙←弱P>→強P",
+                "name": "【弱】ソニックブレイド>→強P"
+            },
+            {
+                "id": "214lp_6hp_just",
+                "str": "low",
+                "command": "↓↙←弱P>【ジャスト】→強P",
+                "name": "【弱】ソニックブレイド>【ジャスト】→強P"
+            },
+            {
+                "id": "214lp_6pp",
+                "str": "low",
+                "command": "↓↙←弱P>→PP",
+                "name": "【弱】ソニックブレイド>→PP"
+            }
+        ]
+    },
+    {
+        "id": "214mp_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↙←中P",
+        "name": "【中】ソニックブレイド",
+        "variants": [
+            {
+                "id": "214mp",
+                "str": "mid",
+                "command": "↓↙←中P",
+                "name": "【中】ソニックブレイド"
+            },
+            {
+                "id": "214mp_6lp",
+                "str": "mid",
+                "command": "↓↙←中P>→弱P",
+                "name": "【中】ソニックブレイド>→弱P"
+            },
+            {
+                "id": "214mp_6lp_just",
+                "str": "mid",
+                "command": "↓↙←中P>【ジャスト】→弱P",
+                "name": "【中】ソニックブレイド>【ジャスト】→弱P"
+            },
+            {
+                "id": "214mp_6mp",
+                "str": "mid",
+                "command": "↓↙←中P>→中P",
+                "name": "【中】ソニックブレイド>→中P"
+            },
+            {
+                "id": "214mp_6mp_just",
+                "str": "mid",
+                "command": "↓↙←中P>【ジャスト】→中P",
+                "name": "【中】ソニックブレイド>【ジャスト】→中P"
+            },
+            {
+                "id": "214mp_6hp",
+                "str": "mid",
+                "command": "↓↙←中P>→強P",
+                "name": "【中】ソニックブレイド>→強P"
+            },
+            {
+                "id": "214mp_6hp_just",
+                "str": "mid",
+                "command": "↓↙←中P>【ジャスト】→強P",
+                "name": "【中】ソニックブレイド>【ジャスト】→強P"
+            },
+            {
+                "id": "214mp_6pp",
+                "str": "mid",
+                "command": "↓↙←中P>→PP",
+                "name": "【中】ソニックブレイド>→PP"
+            }
+        ]
+    },
+    {
+        "id": "214hp_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↙←強P",
+        "name": "【強】ソニックブレイド",
+        "variants": [
+            {
+                "id": "214hp",
+                "str": "high",
+                "command": "↓↙←強P",
+                "name": "【強】ソニックブレイド"
+            },
+            {
+                "id": "214hp_6lp",
+                "str": "high",
+                "command": "↓↙←強P>→弱P",
+                "name": "【強】ソニックブレイド>→弱P"
+            },
+            {
+                "id": "214hp_6lp_just",
+                "str": "high",
+                "command": "↓↙←強P>【ジャスト】→弱P",
+                "name": "【強】ソニックブレイド>【ジャスト】→弱P"
+            },
+            {
+                "id": "214hp_6mp",
+                "str": "high",
+                "command": "↓↙←強P>→中P",
+                "name": "【強】ソニックブレイド>→中P"
+            },
+            {
+                "id": "214hp_6mp_just",
+                "str": "high",
+                "command": "↓↙←強P>【ジャスト】→中P",
+                "name": "【強】ソニックブレイド>【ジャスト】→中P"
+            },
+            {
+                "id": "214hp_6hp",
+                "str": "high",
+                "command": "↓↙←強P>→強P",
+                "name": "【強】ソニックブレイド>→強P"
+            },
+            {
+                "id": "214hp_6hp_just",
+                "str": "high",
+                "command": "↓↙←強P>【ジャスト】→強P",
+                "name": "【強】ソニックブレイド>【ジャスト】→強P"
+            },
+            {
+                "id": "214hp_6pp",
+                "str": "high",
+                "command": "↓↙←強P>→PP",
+                "name": "【強】ソニックブレイド>→PP"
+            }
+        ]
+    },
+    {
+        "id": "214pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←PP",
+        "name": "【OD】ソニックブレイド",
+        "variants": [
+            {
+                "id": "214lpmp",
+                "str": "other",
+                "command": "↓↙←弱P中P",
+                "name": "【OD弱】ソニックブレイド"
+            },
+            {
+                "id": "214lpmp_6p",
+                "str": "other",
+                "command": "↓↙←弱P中P>→P",
+                "name": "【OD弱】ソニックブレイド>→P"
+            },
+            {
+                "id": "214lpmp_6pp",
+                "str": "other",
+                "command": "↓↙←弱P中P>→PP",
+                "name": "【OD弱】ソニックブレイド>→PP"
+            },
+            {
+                "id": "214lphp",
+                "str": "other",
+                "command": "↓↙←弱P強P",
+                "name": "【OD中】ソニックブレイド"
+            },
+            {
+                "id": "214lphp_6p",
+                "str": "other",
+                "command": "↓↙←弱P強P>→P",
+                "name": "【OD中】ソニックブレイド>→P"
+            },
+            {
+                "id": "214lphp_6pp",
+                "str": "other",
+                "command": "↓↙←弱P強P>→PP",
+                "name": "【OD中】ソニックブレイド>→PP"
+            },
+            {
+                "id": "214mphp",
+                "str": "other",
+                "command": "↓↙←中P強P",
+                "name": "【OD強】ソニックブレイド"
+            },
+            {
+                "id": "214mphp_6p",
+                "str": "other",
+                "command": "↓↙←中P強P>→P",
+                "name": "【OD強】ソニックブレイド>→P"
+            },
+            {
+                "id": "214mphp_6pp",
+                "str": "other",
+                "command": "↓↙←中P強P>→PP",
+                "name": "【OD強】ソニックブレイド>→PP"
+            }
+        ]
+    },
+    {
+        "id": "sa2_pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "PP",
+        "name": "ソニックブレイク",
+        "variants": [
+            {
+                "id": "sa2_pp",
+                "str": "other",
+                "command": "PP",
+                "name": "ソニックブレイク"
+            },
+            {
+                "id": "sa2_p",
+                "str": "other",
+                "command": "P",
+                "name": "ソニックブレイク"
+            }
+        ]
+    },
+    {
+        "id": "sa1_variants",
+        "category": "sa",
+        "str": "low",
+        "command": "⇐→←→P",
+        "name": "SA1",
+        "variants": [
+            {
+                "id": "sa1_lp",
+                "str": "low",
+                "command": "⇐→←→弱P",
+                "name": "SA1(横)"
+            },
+            {
+                "id": "sa1_mp",
+                "str": "mid",
+                "command": "⇐→←→中P",
+                "name": "SA1(横)"
+            },
+            {
+                "id": "sa1_hp",
+                "str": "high",
+                "command": "⇐→←→強P",
+                "name": "SA1(上)"
+            }
+        ]
+    },
+    {
+        "id": "sa2",
+        "category": "sa",
+        "str": "mid",
+        "command": "↓↙←↓↙←P",
+        "name": "SA2"
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "⇐→←→K",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "other",
+        "command": "【CA】⇐→←→K",
+        "name": "CA"
+    }
+]

@@ -1,0 +1,527 @@
+[
+    {
+        "id": "6mp",
+        "category": "unique",
+        "str": "mid",
+        "command": "→中P",
+        "name": "→中P"
+    },
+    {
+        "id": "6hp",
+        "category": "unique",
+        "str": "high",
+        "command": "→強P",
+        "name": "→強P"
+    },
+    {
+        "id": "5mp_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "中Pタゲコン",
+        "name": "中Pタゲコン",
+        "variants": [
+            {
+                "id": "5mp_mk",
+                "str": "mid",
+                "command": "中P>中K",
+                "name": "中P>中K"
+            }
+        ]
+    },
+    {
+        "id": "4mk",
+        "category": "unique",
+        "str": "mid",
+        "command": "←中K",
+        "name": "←中K"
+    },
+    {
+        "id": "4mk_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "←中Kタゲコン",
+        "name": "←中Kタゲコン",
+        "variants": [
+            {
+                "id": "4mk_hp",
+                "str": "mid",
+                "command": "←中K>強P",
+                "name": "←中K>強P"
+            }
+        ]
+    },
+    {
+        "id": "4hp",
+        "category": "unique",
+        "str": "high",
+        "command": "←強P",
+        "name": "←強P"
+    },
+    {
+        "id": "4hp_target",
+        "category": "unique",
+        "str": "high",
+        "command": "←強Pタゲコン",
+        "name": "←強Pタゲコン",
+        "variants": [
+            {
+                "id": "4hp_hp",
+                "str": "high",
+                "command": "←強P>強P",
+                "name": "←強P>強P"
+            }
+        ]
+    },
+    {
+        "id": "jhk_target",
+        "category": "jump",
+        "str": "high",
+        "command": "J強Kタゲコン",
+        "name": "J強Kタゲコン",
+        "variants": [
+            {
+                "id": "jhk_hk",
+                "str": "high",
+                "command": "J強K>強K",
+                "name": "J強K>強K"
+            }
+        ]
+    },
+    {
+        "id": "236lp_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱P",
+        "name": "【弱】サンシュート",
+        "variants": [
+            {
+                "id": "236lp",
+                "str": "low",
+                "command": "↓↘→弱P",
+                "name": "【弱】サンシュート"
+            },
+            {
+                "id": "236lp_hold",
+                "str": "low",
+                "command": "↓↘→弱P(ホールド)",
+                "name": "【弱】サンシュート(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "236mp_variants",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中P",
+        "name": "【中】サンシュート",
+        "variants": [
+            {
+                "id": "236mp",
+                "str": "mid",
+                "command": "↓↘→中P",
+                "name": "【中】サンシュート"
+            },
+            {
+                "id": "236mp_hold",
+                "str": "mid",
+                "command": "↓↘→中P(ホールド)",
+                "name": "【中】サンシュート(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "236hp_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強P",
+        "name": "【強】サンシュート",
+        "variants": [
+            {
+                "id": "236hp",
+                "str": "high",
+                "command": "↓↘→強P",
+                "name": "【強】サンシュート"
+            },
+            {
+                "id": "236hp_hold",
+                "str": "high",
+                "command": "↓↘→強P(ホールド)",
+                "name": "【強】サンシュート(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "236pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→PP",
+        "name": "【OD】サンシュート",
+        "variants": [
+            {
+                "id": "236lpmp",
+                "str": "other",
+                "command": "↓↘→弱P中P",
+                "name": "【OD弱】サンシュート"
+            },
+            {
+                "id": "236lpmp_hold",
+                "str": "other",
+                "command": "↓↘→弱P中P(ホールド)",
+                "name": "【OD弱】サンシュート(ホールド)"
+            },
+            {
+                "id": "236lphp",
+                "str": "other",
+                "command": "↓↘→弱P強P",
+                "name": "【OD中】サンシュート"
+            },
+            {
+                "id": "236lphp_hold",
+                "str": "other",
+                "command": "↓↘→弱P強P(ホールド)",
+                "name": "【OD中】サンシュート(ホールド)"
+            },
+            {
+                "id": "236mphp",
+                "str": "other",
+                "command": "↓↘→中P強P",
+                "name": "【OD強】サンシュート"
+            },
+            {
+                "id": "236mphp_hold",
+                "str": "other",
+                "command": "↓↘→中P強P(ホールド)",
+                "name": "【OD強】サンシュート(ホールド)"
+            }
+        ]
+    },
+    {
+        "id": "214lp_variants",
+        "category": "special",
+        "str": "low",
+        "command": "↓↙←弱P",
+        "name": "【弱】サンフレア",
+        "variants": [
+            {
+                "id": "214lp_lv1",
+                "str": "low",
+                "command": "↓↙←弱P(1溜め)",
+                "name": "【弱】サンフレア(1溜め)"
+            },
+            {
+                "id": "214lp_lv2",
+                "str": "low",
+                "command": "↓↙←弱P(2溜め)",
+                "name": "【弱】サンフレア(2溜め)"
+            },
+            {
+                "id": "214lp_lv3",
+                "str": "low",
+                "command": "↓↙←弱P(3溜め)",
+                "name": "【弱】サンフレア(3溜め)"
+            },
+            {
+                "id": "214lp_lv4",
+                "str": "low",
+                "command": "↓↙←弱P(4溜め)",
+                "name": "【弱】サンフレア(4溜め)"
+            }
+        ]
+    },
+    {
+        "id": "214mp",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↙←中P",
+        "name": "【中】サンフレア"
+    },
+    {
+        "id": "214hp_variants",
+        "category": "special",
+        "str": "high",
+        "command": "↓↙←強P",
+        "name": "【強】サンフレア",
+        "variants": [
+            {
+                "id": "214hp_lv1",
+                "str": "high",
+                "command": "↓↙←強P(Lv1)",
+                "name": "【強】サンフレア(Lv1)"
+            },
+            {
+                "id": "214hp_lv2",
+                "str": "high",
+                "command": "↓↙←強P(Lv2)",
+                "name": "【強】サンフレア(Lv2)"
+            },
+            {
+                "id": "214hp_lv3",
+                "str": "high",
+                "command": "↓↙←強P(Lv3)",
+                "name": "【強】サンフレア(Lv3)"
+            }
+        ]
+    },
+    {
+        "id": "214pp_variants",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←PP",
+        "name": "【OD】サンフレア",
+        "variants": [
+            {
+                "id": "214pp_lv1",
+                "str": "other",
+                "command": "↓↙←PP(Lv1)",
+                "name": "【OD】サンフレア(Lv1)"
+            },
+            {
+                "id": "214pp_lv2",
+                "str": "other",
+                "command": "↓↙←PP(Lv2)",
+                "name": "【OD】サンフレア(Lv2)"
+            },
+            {
+                "id": "214pp_lv3",
+                "str": "other",
+                "command": "↓↙←PP(Lv3)",
+                "name": "【OD】サンフレア(Lv3)"
+            }
+        ]
+    },
+    {
+        "id": "214lp_air",
+        "category": "special",
+        "str": "low",
+        "command": "空中↓↙←弱P",
+        "name": "【弱】ソーラーフレア"
+    },
+    {
+        "id": "214mp_air",
+        "category": "special",
+        "str": "mid",
+        "command": "空中↓↙←中P",
+        "name": "【中】ソーラーフレア"
+    },
+    {
+        "id": "214hp_air_variants",
+        "category": "special",
+        "str": "high",
+        "command": "空中↓↙←強P",
+        "name": "【強】ソーラーフレア",
+        "variants": [
+            {
+                "id": "214hp_air_lv1",
+                "str": "high",
+                "command": "空中↓↙←強P(Lv1)",
+                "name": "【強】ソーラーフレア(Lv1)"
+            },
+            {
+                "id": "214hp_air_lv2",
+                "str": "high",
+                "command": "空中↓↙←強P(Lv2)",
+                "name": "【強】ソーラーフレア(Lv2)"
+            },
+            {
+                "id": "214hp_air_lv3",
+                "str": "high",
+                "command": "空中↓↙←強P(Lv3)",
+                "name": "【強】ソーラーフレア(Lv3)"
+            }
+        ]
+    },
+    {
+        "id": "214pp_air_variants",
+        "category": "special",
+        "str": "other",
+        "command": "空中↓↙←PP",
+        "name": "【OD】ソーラーフレア",
+        "variants": [
+            {
+                "id": "214pp_air_lv1",
+                "str": "other",
+                "command": "空中↓↙←PP(Lv1)",
+                "name": "【OD】ソーラーフレア(Lv1)"
+            },
+            {
+                "id": "214pp_air_lv2",
+                "str": "other",
+                "command": "空中↓↙←PP(Lv2)",
+                "name": "【OD】ソーラーフレア(Lv2)"
+            },
+            {
+                "id": "214pp_air_lv3",
+                "str": "other",
+                "command": "空中↓↙←PP(Lv3)",
+                "name": "【OD】ソーラーフレア(Lv3)"
+            }
+        ]
+    },
+    {
+        "id": "236lk",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱K",
+        "name": "【弱】サンライズ"
+    },
+    {
+        "id": "236mk",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中K",
+        "name": "【中】サンライズ"
+    },
+    {
+        "id": "236hk",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強K",
+        "name": "【強】サンライズ"
+    },
+    {
+        "id": "236kk",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→KK",
+        "name": "【OD】サンライズ"
+    },
+    {
+        "id": "22k",
+        "category": "special",
+        "str": "other",
+        "command": "↓↓K",
+        "name": "サンヴェール"
+    },
+    {
+        "id": "22kk",
+        "category": "special",
+        "str": "other",
+        "command": "↓↓KK",
+        "name": "【OD】サンヴェール"
+    },
+    {
+        "id": "4kkk",
+        "category": "special",
+        "str": "other",
+        "command": "←KKK",
+        "name": "サンバニッシュ(後方)"
+    },
+    {
+        "id": "2kkk",
+        "category": "special",
+        "str": "other",
+        "command": "↓KKK",
+        "name": "サンバニッシュ(上方)"
+    },
+    {
+        "id": "6kkk",
+        "category": "special",
+        "str": "other",
+        "command": "→KKK",
+        "name": "サンバニッシュ(前方)"
+    },
+    {
+        "id": "sa1_variants",
+        "category": "sa",
+        "str": "low",
+        "command": "↓↘→↓↘→K",
+        "name": "SA1",
+        "variants": [
+            {
+                "id": "sa1_lv1",
+                "str": "low",
+                "command": "↓↘→↓↘→K",
+                "name": "SA1(Lv1)"
+            },
+            {
+                "id": "sa1_lv2",
+                "str": "low",
+                "command": "↓↘→↓↘→K(ホールド)",
+                "name": "SA1(Lv2)"
+            },
+            {
+                "id": "sa1_lv3",
+                "str": "low",
+                "command": "↓↘→↓↘→K(最大ホールド)",
+                "name": "SA1(Lv3)"
+            }
+        ]
+    },
+    {
+        "id": "sa2_variants",
+        "category": "sa",
+        "str": "mid",
+        "command": "↓↙←↓↙←P",
+        "name": "SA2",
+        "variants": [
+            {
+                "id": "sa2_lv1_lp",
+                "str": "low",
+                "command": "↓↙←↓↙←弱P",
+                "name": "【弱】SA2(Lv1)"
+            },
+            {
+                "id": "sa2_lv2_lp",
+                "str": "low",
+                "command": "↓↙←↓↙←弱P(ホールド)",
+                "name": "【弱】SA2(Lv2)"
+            },
+            {
+                "id": "sa2_lv3_lp",
+                "str": "low",
+                "command": "↓↙←↓↙←弱P(最大ホールド)",
+                "name": "【弱】SA2(Lv3)"
+            },
+            {
+                "id": "sa2_lv1_mp",
+                "str": "mid",
+                "command": "↓↙←↓↙←中P",
+                "name": "【中】SA2(Lv1)"
+            },
+            {
+                "id": "sa2_lv2_mp",
+                "str": "mid",
+                "command": "↓↙←↓↙←中P(ホールド)",
+                "name": "【中】SA2(Lv2)"
+            },
+            {
+                "id": "sa2_lv3_mp",
+                "str": "mid",
+                "command": "↓↙←↓↙←中P(最大ホールド)",
+                "name": "【中】SA2(Lv3)"
+            },
+            {
+                "id": "sa2_lv1_hp",
+                "str": "high",
+                "command": "↓↙←↓↙←強P",
+                "name": "【強】SA2(Lv1)"
+            },
+            {
+                "id": "sa2_lv2_hp",
+                "str": "high",
+                "command": "↓↙←↓↙←強P(ホールド)",
+                "name": "【強】SA2(Lv2)"
+            },
+            {
+                "id": "sa2_lv3_hp",
+                "str": "high",
+                "command": "↓↙←↓↙←強P(最大ホールド)",
+                "name": "【強】SA2(Lv3)"
+            }
+        ]
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "↓↘→↓↘→P",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "other",
+        "command": "【CA】↓↘→↓↘→P",
+        "name": "CA"
+    }
+]

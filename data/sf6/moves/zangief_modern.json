@@ -1,0 +1,393 @@
+[
+    {
+        "id": "assist_l_variants",
+        "category": "normal",
+        "str": "low",
+        "command": "AUTO弱",
+        "name": "AUTO弱",
+        "variants": [
+            {
+                "id": "assist_l",
+                "str": "low",
+                "command": "AUTO弱",
+                "name": "AUTO弱"
+            },
+            {
+                "id": "assist_l_2",
+                "str": "low",
+                "command": "AUTO弱>弱",
+                "name": "AUTO弱>弱"
+            },
+            {
+                "id": "assist_l_3",
+                "str": "low",
+                "command": "AUTO弱>弱>弱",
+                "name": "AUTO弱>弱>弱"
+            },
+            {
+                "id": "assist_2l",
+                "str": "low",
+                "command": "AUTO↓弱",
+                "name": "AUTO↓弱"
+            },
+            {
+                "id": "assist_2l_2",
+                "str": "low",
+                "command": "AUTO↓弱>弱",
+                "name": "AUTO↓弱>弱"
+            },
+            {
+                "id": "assist_2l_3",
+                "str": "low",
+                "command": "AUTO↓弱>弱>弱",
+                "name": "AUTO↓弱>弱>弱"
+            }
+        ]
+    },
+    {
+        "id": "assist_m_variants",
+        "category": "normal",
+        "str": "mid",
+        "command": "AUTO中",
+        "name": "AUTO中",
+        "variants": [
+            {
+                "id": "assist_m",
+                "str": "mid",
+                "command": "AUTO中",
+                "name": "AUTO中"
+            },
+            {
+                "id": "assist_m_2",
+                "str": "mid",
+                "command": "AUTO中>中",
+                "name": "AUTO中>中"
+            },
+            {
+                "id": "assist_m_3",
+                "str": "mid",
+                "command": "AUTO中>中>中",
+                "name": "AUTO中>中>中"
+            }
+        ]
+    },
+    {
+        "id": "assist_h_variants",
+        "category": "normal",
+        "str": "high",
+        "command": "AUTO強",
+        "name": "AUTO強",
+        "variants": [
+            {
+                "id": "assist_h",
+                "str": "high",
+                "command": "AUTO強",
+                "name": "AUTO強"
+            },
+            {
+                "id": "assist_h_2",
+                "str": "high",
+                "command": "AUTO強>強",
+                "name": "AUTO強>強"
+            },
+            {
+                "id": "assist_h_3",
+                "str": "high",
+                "command": "AUTO強>強>強",
+                "name": "AUTO強>強>強"
+            }
+        ]
+    },
+    {
+        "id": "5hp_h",
+        "category": "normal",
+        "str": "high",
+        "command": "強(ホールド)",
+        "name": "強(ホールド)"
+    },
+    {
+        "id": "jhk_h",
+        "category": "jump",
+        "str": "high",
+        "command": "J強(ホールド)",
+        "name": "J強(ホールド)"
+    },
+    {
+        "id": "3mp",
+        "category": "unique",
+        "str": "mid",
+        "command": "↘中",
+        "name": "↘中"
+    },
+    {
+        "id": "6mk",
+        "category": "unique",
+        "str": "mid",
+        "command": "→中",
+        "name": "→中"
+    },
+    {
+        "id": "6hk",
+        "category": "unique",
+        "str": "high",
+        "command": "→強",
+        "name": "→強"
+    },
+    {
+        "id": "3h",
+        "category": "unique",
+        "str": "high",
+        "command": "↘強",
+        "name": "↘強"
+    },
+    {
+        "id": "j2hp",
+        "category": "jump",
+        "str": "high",
+        "command": "J↓強",
+        "name": "J↓強"
+    },
+    {
+        "id": "njhp",
+        "category": "jump",
+        "str": "high",
+        "command": "垂直J↑強",
+        "name": "垂直J↑強"
+    },
+    {
+        "id": "5mp_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "中タゲコン",
+        "name": "中タゲコン",
+        "variants": [
+            {
+                "id": "5mp_mp",
+                "str": "mid",
+                "command": "中>中",
+                "name": "中>中"
+            },
+            {
+                "id": "5mp_mp_mp",
+                "str": "mid",
+                "command": "中>中>中",
+                "name": "中>中>中"
+            }
+        ]
+    },
+    {
+        "id": "22mk",
+        "category": "unique",
+        "str": "mid",
+        "command": "↓↓中",
+        "name": "↓↓中"
+    },
+    {
+        "id": "22mk_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "↓↓中タゲコン",
+        "name": "↓↓中タゲコン",
+        "variants": [
+            {
+                "id": "22mk_mk",
+                "str": "mid",
+                "command": "↓↓中>中",
+                "name": "↓↓中>中"
+            },
+            {
+                "id": "22mk_mk_mk",
+                "str": "mid",
+                "command": "↓↓中>中>中",
+                "name": "↓↓中>中>中"
+            }
+        ]
+    },
+    {
+        "id": "pp",
+        "category": "special",
+        "str": "other",
+        "command": "中強(↓SP)",
+        "name": "ダブルラリアット"
+    },
+    {
+        "id": "ppp",
+        "category": "special",
+        "str": "other",
+        "command": "〇〇〇(AUTO ↓SP)",
+        "name": "【OD】ダブルラリアット"
+    },
+    {
+        "id": "360lp",
+        "category": "special",
+        "str": "low",
+        "command": "↻弱",
+        "name": "【弱】スクリューパイルドライバー"
+    },
+    {
+        "id": "360mp",
+        "category": "special",
+        "str": "mid",
+        "command": "↻中",
+        "name": "【中】スクリューパイルドライバー"
+    },
+    {
+        "id": "360hp",
+        "category": "special",
+        "str": "high",
+        "command": "↻強(SP)",
+        "name": "【強】スクリューパイルドライバー"
+    },
+    {
+        "id": "360pp",
+        "category": "special",
+        "str": "other",
+        "command": "↻〇〇(AUTO SP)",
+        "name": "【OD】スクリューパイルドライバー"
+    },
+    {
+        "id": "j360k",
+        "category": "special",
+        "str": "other",
+        "command": "空中↻〇(SP)",
+        "name": "ボルシチダイナマイト"
+    },
+    {
+        "id": "j360kk",
+        "category": "special",
+        "str": "other",
+        "command": "空中↻〇〇(AUTO SP)",
+        "name": "【OD】ボルシチダイナマイト"
+    },
+    {
+        "id": "624k_variants",
+        "category": "special",
+        "str": "other",
+        "command": "→↘↓↙←〇(←SP)",
+        "name": "ロシアンスープレックス",
+        "variants": [
+            {
+                "id": "624k",
+                "str": "other",
+                "command": "→↘↓↙←〇(←SP)",
+                "name": "ロシアンスープレックス"
+            },
+            {
+                "id": "624k_far",
+                "str": "other",
+                "command": "→↘↓↙←〇(←SP)",
+                "name": "シベリアンエクスプレス"
+            }
+        ]
+    },
+    {
+        "id": "624kk_variants",
+        "category": "special",
+        "str": "other",
+        "command": "→↘↓↙←〇〇(AUTO ←SP)",
+        "name": "【OD】ロシアンスープレックス",
+        "variants": [
+            {
+                "id": "624kk",
+                "str": "other",
+                "command": "→↘↓↙←〇〇(AUTO ←SP)",
+                "name": "【OD】ロシアンスープレックス"
+            },
+            {
+                "id": "624kk_far",
+                "str": "other",
+                "command": "→↘↓↙←〇〇(AUTO ←SP)",
+                "name": "【OD】シベリアンエクスプレス"
+            }
+        ]
+    },
+    {
+        "id": "22hk",
+        "category": "special",
+        "str": "other",
+        "command": "↓↓強",
+        "name": "ツンドラストーム"
+    },
+    {
+        "id": "sa1",
+        "category": "sa",
+        "str": "low",
+        "command": "↓↘→↓↘→弱(SP強)",
+        "name": "SA1"
+    },
+    {
+        "id": "sa2_variants",
+        "category": "sa",
+        "str": "mid",
+        "command": "↓↘→↓↘→中(←SP強)",
+        "name": "SA2",
+        "variants": [
+            {
+                "id": "sa2",
+                "str": "mid",
+                "command": "↓↘→↓↘→中(←SP強)",
+                "name": "SA2"
+            },
+            {
+                "id": "sa2_hold",
+                "str": "mid",
+                "command": "↓↘→↓↘→中(←SP強)(ホールド)",
+                "name": "SA2(ホールド)"
+            },
+            {
+                "id": "sa2_f",
+                "str": "mid",
+                "command": "↓↘→↓↘→中(←SP強)>→",
+                "name": "SA2>→"
+            },
+            {
+                "id": "sa2_b",
+                "str": "mid",
+                "command": "↓↘→↓↘→中(←SP強)>←",
+                "name": "SA2>←"
+            }
+        ]
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "↻↻強(↓SP強)",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "other",
+        "command": "【CA】↻↻強(↓SP強)",
+        "name": "CA"
+    },
+    {
+        "id": "throw_n",
+        "category": "common",
+        "str": "other",
+        "command": "n投げ",
+        "name": "n投げ"
+    },
+    {
+        "id": "throw_3",
+        "category": "common",
+        "str": "other",
+        "command": "↘投げ",
+        "name": "↘投げ"
+    },
+    {
+        "id": "throw_1",
+        "category": "common",
+        "str": "other",
+        "command": "↙投げ",
+        "name": "↙投げ"
+    },
+    {
+        "id": "throw_2",
+        "category": "common",
+        "str": "other",
+        "command": "↓投げ",
+        "name": "↓投げ"
+    }
+]

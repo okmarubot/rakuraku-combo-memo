@@ -1,0 +1,264 @@
+[
+    {
+        "id": "6hp",
+        "category": "unique",
+        "str": "high",
+        "command": "→強P",
+        "name": "→強P"
+    },
+    {
+        "id": "5mp_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "中Pタゲコン",
+        "name": "中Pタゲコン",
+        "variants": [
+            {
+                "id": "5mp_hp",
+                "str": "mid",
+                "command": "中P>強P",
+                "name": "中P>強P"
+            },
+            {
+                "id": "5mp_hk",
+                "str": "mid",
+                "command": "中P>強K",
+                "name": "中P>強K"
+            },
+            {
+                "id": "5mp_hk_hk",
+                "str": "mid",
+                "command": "中P>強K>強K",
+                "name": "中P>強K>強K"
+            },
+            {
+                "id": "5mp_mk",
+                "str": "mid",
+                "command": "中P>中K",
+                "name": "中P>中K"
+            },
+            {
+                "id": "5mp_mk_mp",
+                "str": "mid",
+                "command": "中P>中K>中P",
+                "name": "中P>中K>中P"
+            },
+            {
+                "id": "5mp_mk_mk",
+                "str": "mid",
+                "command": "中P>中K>中K",
+                "name": "中P>中K>中K"
+            }
+        ]
+    },
+    {
+        "id": "2mk_target",
+        "category": "unique",
+        "str": "mid",
+        "command": "↓中Kタゲコン",
+        "name": "↓中Kタゲコン",
+        "variants": [
+            {
+                "id": "2mk_2hk",
+                "str": "mid",
+                "command": "↓中K>↓強K",
+                "name": "↓中K>↓強K"
+            }
+        ]
+    },
+    {
+        "id": "236lp",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱P",
+        "name": "【弱】パワーウェイブ"
+    },
+    {
+        "id": "236mp",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中P",
+        "name": "【中】パワーウェイブ"
+    },
+    {
+        "id": "236hp",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強P",
+        "name": "ラウンドウェイブ"
+    },
+    {
+        "id": "236pp",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→PP",
+        "name": "【OD】パワーウェイブ"
+    },
+    {
+        "id": "214lp",
+        "category": "special",
+        "str": "low",
+        "command": "↓↙←弱P",
+        "name": "【弱】クイックバーン"
+    },
+    {
+        "id": "214lpmp",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←弱P中P",
+        "name": "【OD】クイックバーン"
+    },
+    {
+        "id": "214mp",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↙←中P",
+        "name": "【中】バーンナックル"
+    },
+    {
+        "id": "214hp",
+        "category": "special",
+        "str": "high",
+        "command": "↓↙←強P",
+        "name": "【強】バーンナックル"
+    },
+    {
+        "id": "214mphp",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←中P強P",
+        "name": "【OD】バーンナックル"
+    },
+    {
+        "id": "236lk",
+        "category": "special",
+        "str": "low",
+        "command": "↓↘→弱K",
+        "name": "【弱】パワーチャージ"
+    },
+    {
+        "id": "236mk",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↘→中K",
+        "name": "【中】パワーチャージ"
+    },
+    {
+        "id": "236hk",
+        "category": "special",
+        "str": "high",
+        "command": "↓↘→強K",
+        "name": "【強】パワーチャージ"
+    },
+    {
+        "id": "236kk",
+        "category": "special",
+        "str": "other",
+        "command": "↓↘→KK",
+        "name": "【OD】パワーチャージ"
+    },
+    {
+        "id": "214lk",
+        "category": "special",
+        "str": "low",
+        "command": "↓↙←弱K",
+        "name": "【弱】クラックシュート"
+    },
+    {
+        "id": "214mk",
+        "category": "special",
+        "str": "mid",
+        "command": "↓↙←中K",
+        "name": "【中】クラックシュート"
+    },
+    {
+        "id": "214hk",
+        "category": "special",
+        "str": "high",
+        "command": "↓↙←強K",
+        "name": "【強】クラックシュート"
+    },
+    {
+        "id": "214kk",
+        "category": "special",
+        "str": "other",
+        "command": "↓↙←KK",
+        "name": "【OD】クラックシュート"
+    },
+    {
+        "id": "623lp",
+        "category": "special",
+        "str": "low",
+        "command": "→↓↘弱P",
+        "name": "【弱】ライジングタックル"
+    },
+    {
+        "id": "623mp",
+        "category": "special",
+        "str": "mid",
+        "command": "→↓↘中P",
+        "name": "【中】ライジングタックル"
+    },
+    {
+        "id": "623hp",
+        "category": "special",
+        "str": "high",
+        "command": "→↓↘強P",
+        "name": "【強】ライジングタックル"
+    },
+    {
+        "id": "623pp",
+        "category": "special",
+        "str": "other",
+        "command": "→↓↘PP",
+        "name": "【OD】ライジングタックル"
+    },
+    {
+        "id": "sa1",
+        "category": "sa",
+        "str": "low",
+        "command": "↓↘→↓↘→K",
+        "name": "SA1"
+    },
+    {
+        "id": "sa2_variants",
+        "category": "sa",
+        "str": "mid",
+        "command": "↓↙←↓↙←P",
+        "name": "SA2",
+        "variants": [
+            {
+                "id": "sa2",
+                "str": "mid",
+                "command": "↓↙←↓↙←P",
+                "name": "SA2"
+            },
+            {
+                "id": "sa2_pp",
+                "str": "mid",
+                "command": "↓↙←↓↙←P>PP",
+                "name": "SA2>PP"
+            },
+            {
+                "id": "sa2_pp_pp",
+                "str": "mid",
+                "command": "↓↙←↓↙←P>PP>PP",
+                "name": "SA2>PP>PP"
+            }
+        ]
+    },
+    {
+        "id": "sa3",
+        "category": "sa",
+        "str": "high",
+        "command": "↓↘→↓↘→P",
+        "name": "SA3"
+    },
+    {
+        "id": "ca",
+        "category": "sa",
+        "str": "other",
+        "command": "【CA】↓↘→↓↘→P",
+        "name": "CA"
+    }
+]

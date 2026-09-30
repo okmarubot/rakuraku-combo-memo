@@ -253,19 +253,19 @@
         "id": "j214p_variants",
         "category": "special",
         "str": "other",
-        "command": "J↓↙←P",
+        "command": "空中↓↙←P",
         "name": "エアフラッシュナックル",
         "variants": [
             {
                 "id": "j214p",
                 "str": "other",
-                "command": "J↓↙←P",
+                "command": "空中↓↙←P",
                 "name": "エアフラッシュナックル"
             },
             {
                 "id": "j214p_hold",
                 "str": "other",
-                "command": "J↓↙←P（ホールド）",
+                "command": "空中↓↙←P（ホールド）",
                 "name": "エアフラッシュナックル（ホールド）"
             }
         ]
@@ -274,7 +274,7 @@
         "id": "j214pp",
         "category": "special",
         "str": "other",
-        "command": "J↓↙←PP",
+        "command": "空中↓↙←PP",
         "name": "【OD】エアフラッシュナックル"
     },
     {
@@ -398,7 +398,7 @@
         "id": "ca",
         "category": "sa",
         "str": "other",
-        "command": "↓↘→↓↘→K",
+        "command": "【CA】↓↘→↓↘→K",
         "name": "CA"
     }
 ]
